@@ -1,0 +1,2611 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.530e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.530e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.530e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.530e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.568e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.568e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.568e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.697e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.697e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.362e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 2,
+        "sharding": "ep8",
+        "seed": 6200,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.571e-03 (worst row 5.636e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 2,
+        "sharding": "ep8",
+        "seed": 6200,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.571e-03 (worst row 5.636e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 2,
+        "sharding": "ep8",
+        "seed": 6200,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.571e-03 (worst row 5.636e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 2,
+        "sharding": "ep8",
+        "seed": 6200,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.571e-03 (worst row 5.636e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 7,
+        "sharding": "ep8",
+        "seed": 6201,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.493e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 7,
+        "sharding": "ep8",
+        "seed": 6201,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.493e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 7,
+        "sharding": "ep8",
+        "seed": 6201,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.493e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 7,
+        "sharding": "ep8",
+        "seed": 6201,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.493e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 17,
+        "sharding": "ep8",
+        "seed": 6202,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.521e-03 (worst row 5.653e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 17,
+        "sharding": "ep8",
+        "seed": 6202,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.521e-03 (worst row 5.653e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 17,
+        "sharding": "ep8",
+        "seed": 6202,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.521e-03 (worst row 5.653e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 17,
+        "sharding": "ep8",
+        "seed": 6202,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.521e-03 (worst row 5.653e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 31,
+        "sharding": "ep8",
+        "seed": 6203,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.607e-03 (worst row 6.075e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 31,
+        "sharding": "ep8",
+        "seed": 6203,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.607e-03 (worst row 6.075e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 31,
+        "sharding": "ep8",
+        "seed": 6203,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.607e-03 (worst row 6.075e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 31,
+        "sharding": "ep8",
+        "seed": 6203,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.608e-03 (worst row 6.075e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 63,
+        "sharding": "ep8",
+        "seed": 6204,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.552e-03 (worst row 5.928e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 63,
+        "sharding": "ep8",
+        "seed": 6204,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.552e-03 (worst row 5.928e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 63,
+        "sharding": "ep8",
+        "seed": 6204,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.551e-03 (worst row 5.928e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 63,
+        "sharding": "ep8",
+        "seed": 6204,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.551e-03 (worst row 5.928e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 64,
+        "sharding": "ep8",
+        "seed": 6205,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.584e-03 (worst row 5.798e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 64,
+        "sharding": "ep8",
+        "seed": 6205,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.584e-03 (worst row 5.798e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 64,
+        "sharding": "ep8",
+        "seed": 6205,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.584e-03 (worst row 5.798e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 64,
+        "sharding": "ep8",
+        "seed": 6205,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.584e-03 (worst row 5.798e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 65,
+        "sharding": "ep8",
+        "seed": 6206,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 6.050e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 65,
+        "sharding": "ep8",
+        "seed": 6206,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 6.050e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 65,
+        "sharding": "ep8",
+        "seed": 6206,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 6.050e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 65,
+        "sharding": "ep8",
+        "seed": 6206,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 6.050e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 127,
+        "sharding": "ep8",
+        "seed": 6207,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.557e-03 (worst row 5.919e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 127,
+        "sharding": "ep8",
+        "seed": 6207,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.557e-03 (worst row 5.919e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 127,
+        "sharding": "ep8",
+        "seed": 6207,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.557e-03 (worst row 5.919e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 127,
+        "sharding": "ep8",
+        "seed": 6207,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.557e-03 (worst row 5.919e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 129,
+        "sharding": "ep8",
+        "seed": 6208,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.535e-03 (worst row 5.966e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 129,
+        "sharding": "ep8",
+        "seed": 6208,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 5.964e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 129,
+        "sharding": "ep8",
+        "seed": 6208,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.535e-03 (worst row 5.964e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 129,
+        "sharding": "ep8",
+        "seed": 6208,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 5.966e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.17600020766258,
+      "candidate_us": 80.87999746203423,
+      "baseline_samples": [
+        90.14400094747543,
+        83.64800363779068,
+        84.54400300979614,
+        84.22400057315826,
+        83.93599838018417,
+        84.1279998421669,
+        84.51200276613235,
+        84.22400057315826,
+        84.09599959850311,
+        83.52000266313553,
+        84.76799726486206,
+        83.55200290679932,
+        83.80799740552902,
+        85.05599945783615,
+        84.44800227880478,
+        83.8719978928566,
+        84.28800106048584,
+        84.28800106048584,
+        83.80799740552902,
+        83.90399813652039
+      ],
+      "candidate_samples": [
+        86.87999844551086,
+        80.38400113582611,
+        80.51200211048126,
+        80.76799660921097,
+        81.18399977684021,
+        81.44000172615051,
+        80.99199831485748,
+        80.32000064849854,
+        81.216000020504,
+        81.40800148248672,
+        81.15199953317642,
+        80.60800284147263,
+        81.28000050783157,
+        81.98399841785431,
+        81.79199695587158,
+        80.60800284147263,
+        80.48000186681747,
+        80.57600259780884,
+        80.6720033288002,
+        80.73599636554718
+      ]
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.22400057315826,
+      "candidate_us": 80.36800101399422,
+      "baseline_samples": [
+        83.74399691820145,
+        84.6719965338707,
+        83.55200290679932,
+        83.67999643087387,
+        84.95999872684479,
+        84.28800106048584,
+        83.8719978928566,
+        83.55200290679932,
+        84.51200276613235,
+        84.89599823951721,
+        83.96799862384796,
+        84.25600081682205,
+        84.03199911117554,
+        83.67999643087387,
+        85.08799970149994,
+        84.60800349712372,
+        84.28800106048584,
+        84.32000130414963,
+        83.83999764919281,
+        84.19200032949448
+      ],
+      "candidate_samples": [
+        86.68799698352814,
+        79.99999821186066,
+        80.35200089216232,
+        80.25600016117096,
+        80.09599894285202,
+        80.38400113582611,
+        80.79999685287476,
+        80.12799918651581,
+        81.40800148248672,
+        80.12799918651581,
+        81.11999928951263,
+        80.54400235414505,
+        81.18399977684021,
+        79.8719972372055,
+        79.80799674987793,
+        80.54400235414505,
+        80.32000064849854,
+        80.64000308513641,
+        79.99999821186066,
+        80.64000308513641
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.111999720335,
+      "candidate_us": 81.18399977684021,
+      "baseline_samples": [
+        83.74399691820145,
+        84.25600081682205,
+        83.90399813652039,
+        84.1279998421669,
+        83.42400193214417,
+        84.16000008583069,
+        84.51200276613235,
+        84.57600325345993,
+        83.45600217580795,
+        84.16000008583069,
+        84.09599959850311,
+        83.48800241947174,
+        84.06399935483932,
+        84.03199911117554,
+        84.28800106048584,
+        84.54400300979614,
+        85.08799970149994,
+        84.44800227880478,
+        83.0719992518425,
+        83.96799862384796
+      ],
+      "candidate_samples": [
+        87.52000331878662,
+        81.50400221347809,
+        81.37600123882294,
+        80.51200211048126,
+        81.69600367546082,
+        80.51200211048126,
+        80.99199831485748,
+        81.02399855852127,
+        81.85599744319916,
+        82.0159986615181,
+        81.18399977684021,
+        80.64000308513641,
+        81.18399977684021,
+        80.79999685287476,
+        81.88799768686295,
+        81.05599880218506,
+        81.66400343179703,
+        81.56800270080566,
+        80.83199709653854,
+        81.15199953317642
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.54400300979614,
+      "candidate_us": 87.23200112581253,
+      "baseline_samples": [
+        83.55200290679932,
+        85.21600067615509,
+        84.41600203514099,
+        85.1840004324913,
+        85.02399921417236,
+        84.41600203514099,
+        84.79999750852585,
+        85.4720026254654,
+        84.25600081682205,
+        85.02399921417236,
+        84.41600203514099,
+        85.08799970149994,
+        84.19200032949448,
+        83.80799740552902,
+        84.73599702119827,
+        84.09599959850311,
+        84.57600325345993,
+        83.96799862384796,
+        84.51200276613235,
+        84.76799726486206
+      ],
+      "candidate_samples": [
+        91.67999774217606,
+        87.23200112581253,
+        86.75199747085571,
+        87.23200112581253,
+        86.87999844551086,
+        87.42400258779526,
+        87.10400015115738,
+        87.13600039482117,
+        87.42400258779526,
+        87.67999708652496,
+        86.59200370311737,
+        86.84799820184708,
+        86.65599673986435,
+        87.93599903583527,
+        87.07199990749359,
+        87.2960016131401,
+        87.36000210046768,
+        87.16800063848495,
+        87.61599659919739,
+        87.2960016131401
+      ]
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.5679960846901,
+      "candidate_us": 171.27999663352966,
+      "baseline_samples": [
+        184.38400328159332,
+        178.5919964313507,
+        177.37600207328796,
+        179.1040003299713,
+        176.256000995636,
+        177.18400061130524,
+        177.85599827766418,
+        178.0800074338913,
+        177.21599340438843,
+        177.44000256061554,
+        177.95200645923615,
+        178.1120002269745,
+        177.2480010986328,
+        177.91999876499176,
+        178.0800074338913,
+        176.28799378871918,
+        177.66399681568146,
+        176.32000148296356,
+        177.279993891716,
+        177.47199535369873
+      ],
+      "candidate_samples": [
+        177.21599340438843,
+        171.61600291728973,
+        171.51999473571777,
+        171.9679981470108,
+        170.17599940299988,
+        171.424001455307,
+        170.9440052509308,
+        170.3999936580658,
+        171.1679995059967,
+        170.56000232696533,
+        171.39199376106262,
+        171.61600291728973,
+        171.03999853134155,
+        170.84799706935883,
+        171.29600048065186,
+        171.26399278640747,
+        170.33599317073822,
+        172.5119948387146,
+        171.424001455307,
+        170.04799842834473
+      ]
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 178.23999375104904,
+      "candidate_us": 171.9680055975914,
+      "baseline_samples": [
+        178.71999740600586,
+        178.20799350738525,
+        178.71999740600586,
+        177.50400304794312,
+        178.68800461292267,
+        177.40799486637115,
+        178.27199399471283,
+        178.1120002269745,
+        177.69600450992584,
+        177.3120015859604,
+        178.46399545669556,
+        178.6240041255951,
+        178.75200510025024,
+        177.824005484581,
+        179.6479970216751,
+        177.279993891716,
+        177.5680035352707,
+        178.3680021762848,
+        177.95200645923615,
+        180.06399273872375
+      ],
+      "candidate_samples": [
+        177.95200645923615,
+        171.51999473571777,
+        172.2240000963211,
+        171.48800194263458,
+        171.83999717235565,
+        171.32799327373505,
+        172.0000058412552,
+        172.2240000963211,
+        172.44799435138702,
+        172.09599912166595,
+        170.9119975566864,
+        172.7679967880249,
+        172.03199863433838,
+        171.87200486660004,
+        171.7119961977005,
+        172.06400632858276,
+        172.2240000963211,
+        171.32799327373505,
+        171.23199999332428,
+        171.9360053539276
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.13600397109985,
+      "candidate_us": 171.24799638986588,
+      "baseline_samples": [
+        178.20799350738525,
+        176.83200538158417,
+        178.49600315093994,
+        177.37600207328796,
+        176.79999768733978,
+        176.5120029449463,
+        177.72799730300903,
+        175.90400576591492,
+        175.64800381660461,
+        175.9359985589981,
+        176.7359972000122,
+        176.96000635623932,
+        176.96000635623932,
+        176.79999768733978,
+        177.37600207328796,
+        177.76000499725342,
+        178.3680021762848,
+        178.17600071430206,
+        177.44000256061554,
+        177.3120015859604
+      ],
+      "candidate_samples": [
+        176.1920005083084,
+        170.43200135231018,
+        170.9119975566864,
+        171.23199999332428,
+        171.424001455307,
+        171.51999473571777,
+        171.55200242996216,
+        170.6559956073761,
+        170.49600183963776,
+        171.07200622558594,
+        171.64799571037292,
+        170.81600427627563,
+        171.9360053539276,
+        171.424001455307,
+        171.1679995059967,
+        172.09599912166595,
+        170.78399658203125,
+        170.1440066099167,
+        172.7679967880249,
+        171.26399278640747
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.72800475358963,
+      "candidate_us": 178.8640022277832,
+      "baseline_samples": [
+        179.3919950723648,
+        177.66399681568146,
+        179.45599555969238,
+        178.75200510025024,
+        177.76000499725342,
+        177.85599827766418,
+        178.46399545669556,
+        176.83200538158417,
+        176.67199671268463,
+        177.50400304794312,
+        176.57600343227386,
+        178.01600694656372,
+        177.37600207328796,
+        177.7919977903366,
+        176.57600343227386,
+        178.3359944820404,
+        177.40799486637115,
+        178.5919964313507,
+        177.69600450992584,
+        176.7359972000122
+      ],
+      "candidate_samples": [
+        183.45600366592407,
+        180.31999468803406,
+        179.3919950723648,
+        179.4240027666092,
+        179.00800704956055,
+        178.847998380661,
+        178.78399789333344,
+        179.19999361038208,
+        177.88800597190857,
+        178.8800060749054,
+        178.847998380661,
+        178.97599935531616,
+        178.30400168895721,
+        179.55200374126434,
+        178.6240041255951,
+        178.01600694656372,
+        177.95200645923615,
+        178.3680021762848,
+        178.5919964313507,
+        179.03999984264374
+      ]
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.8080039024353,
+      "candidate_us": 240.24000018835068,
+      "baseline_samples": [
+        264.6400034427643,
+        259.7759962081909,
+        259.00799036026,
+        259.45600867271423,
+        261.05600595474243,
+        259.90399718284607,
+        260.3200078010559,
+        259.8400115966797,
+        259.96801257133484,
+        260.0319981575012,
+        258.976012468338,
+        258.2719922065735,
+        259.64799523353577,
+        258.14399123191833,
+        258.33600759506226,
+        259.2320144176483,
+        260.19200682640076,
+        260.127991437912,
+        260.127991437912,
+        259.13599133491516
+      ],
+      "candidate_samples": [
+        240.79999327659607,
+        240.1600033044815,
+        239.00799453258514,
+        239.6160066127777,
+        240.31999707221985,
+        239.55200612545013,
+        240.38399755954742,
+        240.31999707221985,
+        238.81599307060242,
+        240.79999327659607,
+        239.99999463558197,
+        240.89600145816803,
+        240.447998046875,
+        240.57599902153015,
+        239.74399268627167,
+        239.3919974565506,
+        239.6160066127777,
+        239.16800320148468,
+        240.7039999961853,
+        240.60800671577454
+      ]
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.7759962081909,
+      "candidate_us": 240.31999707221985,
+      "baseline_samples": [
+        260.6399953365326,
+        258.8160037994385,
+        260.9280049800873,
+        259.5840096473694,
+        259.71201062202454,
+        259.8080039024353,
+        259.3599855899811,
+        260.0319981575012,
+        258.432000875473,
+        260.70401072502136,
+        259.90399718284607,
+        259.8719894886017,
+        259.42400097846985,
+        259.0399980545044,
+        260.51199436187744,
+        261.6960108280182,
+        259.71201062202454,
+        259.74398851394653,
+        259.0399980545044,
+        259.8080039024353
+      ],
+      "candidate_samples": [
+        240.28800427913666,
+        240.31999707221985,
+        240.25599658489227,
+        241.56799912452698,
+        240.447998046875,
+        239.9040013551712,
+        241.7919933795929,
+        239.58399891853333,
+        241.31199717521667,
+        239.58399891853333,
+        239.26399648189545,
+        240.1919960975647,
+        240.447998046875,
+        240.31999707221985,
+        240.6720072031021,
+        240.38399755954742,
+        239.58399891853333,
+        240.38399755954742,
+        240.35200476646423,
+        240.1600033044815
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.39199328422546,
+      "candidate_us": 239.887997508049,
+      "baseline_samples": [
+        260.25599241256714,
+        260.09601354599,
+        258.87998938560486,
+        259.8719894886017,
+        260.8320116996765,
+        260.0319981575012,
+        259.6159875392914,
+        259.39199328422546,
+        258.8160037994385,
+        259.3599855899811,
+        259.39199328422546,
+        258.9440047740936,
+        258.7200105190277,
+        259.45600867271423,
+        259.5199942588806,
+        258.7519884109497,
+        259.2639923095703,
+        258.33600759506226,
+        259.45600867271423,
+        259.20000672340393
+      ],
+      "candidate_samples": [
+        239.84000086784363,
+        239.48800563812256,
+        239.80799317359924,
+        240.22400379180908,
+        240.09600281715393,
+        240.35200476646423,
+        239.9359941482544,
+        239.77600038051605,
+        240.35200476646423,
+        240.38399755954742,
+        239.42400515079498,
+        238.75199258327484,
+        238.94399404525757,
+        239.3919974565506,
+        240.25599658489227,
+        239.84000086784363,
+        240.6720072031021,
+        240.63999950885773,
+        240.92799425125122,
+        239.80799317359924
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.45599377155304,
+      "candidate_us": 262.4959945678711,
+      "baseline_samples": [
+        260.25599241256714,
+        260.25599241256714,
+        260.51199436187744,
+        259.2960000038147,
+        258.62398743629456,
+        261.1840069293976,
+        259.3280076980591,
+        259.552001953125,
+        259.5199942588806,
+        260.44800877571106,
+        259.68000292778015,
+        259.3599855899811,
+        260.44800877571106,
+        259.2320144176483,
+        259.10401344299316,
+        260.25599241256714,
+        259.39199328422546,
+        258.5279941558838,
+        258.7519884109497,
+        258.62398743629456
+      ],
+      "candidate_samples": [
+        264.47999477386475,
+        262.11199164390564,
+        261.34398579597473,
+        263.07201385498047,
+        262.9440128803253,
+        263.5839879512787,
+        262.5280022621155,
+        261.34398579597473,
+        264.1279995441437,
+        263.13599944114685,
+        263.10399174690247,
+        262.4320089817047,
+        262.1760070323944,
+        262.81601190567017,
+        261.8879973888397,
+        262.2720003128052,
+        262.4639868736267,
+        262.11199164390564,
+        261.6640031337738,
+        262.7519965171814
+      ]
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.79199385643005,
+      "candidate_us": 147.2960039973259,
+      "baseline_samples": [
+        161.31199896335602,
+        155.35999834537506,
+        153.6320000886917,
+        152.8639942407608,
+        153.6960005760193,
+        153.28000485897064,
+        154.04799580574036,
+        154.23999726772308,
+        152.96000242233276,
+        154.2080044746399,
+        153.3759981393814,
+        152.96000242233276,
+        152.48000621795654,
+        154.36799824237823,
+        153.9199948310852,
+        154.88000214099884,
+        153.79199385643005,
+        154.14400398731232,
+        153.79199385643005,
+        153.56799960136414
+      ],
+      "candidate_samples": [
+        153.6960005760193,
+        147.77599275112152,
+        147.10399508476257,
+        148.12800288200378,
+        147.39200472831726,
+        147.13600277900696,
+        147.20000326633453,
+        147.5840061903,
+        147.07200229167938,
+        148.00000190734863,
+        146.62399888038635,
+        146.91199362277985,
+        146.97599411010742,
+        147.71200716495514,
+        147.8080004453659,
+        147.07200229167938,
+        146.59200608730316,
+        148.0640023946762,
+        148.22399616241455,
+        146.81600034236908
+      ]
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 154.2080044746399,
+      "candidate_us": 147.71199971437454,
+      "baseline_samples": [
+        155.03999590873718,
+        154.2080044746399,
+        154.94400262832642,
+        154.7199934720993,
+        154.7520011663437,
+        154.84799444675446,
+        153.53600680828094,
+        154.4319987297058,
+        154.2080044746399,
+        152.92799472808838,
+        153.08800339698792,
+        153.9199948310852,
+        152.67199277877808,
+        154.36799824237823,
+        153.6639928817749,
+        155.008003115654,
+        153.6639928817749,
+        153.28000485897064,
+        154.27200496196747,
+        152.8960019350052
+      ],
+      "candidate_samples": [
+        154.08000349998474,
+        147.23199605941772,
+        147.5840061903,
+        147.23199605941772,
+        147.90399372577667,
+        147.64800667762756,
+        147.10399508476257,
+        149.27999675273895,
+        146.7839926481247,
+        147.10399508476257,
+        147.67999947071075,
+        148.54399859905243,
+        148.3519971370697,
+        148.12800288200378,
+        147.13600277900696,
+        146.81600034236908,
+        148.0640023946762,
+        147.74399995803833,
+        148.51200580596924,
+        148.00000190734863
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.9039984345436,
+      "candidate_us": 148.43200147151947,
+      "baseline_samples": [
+        154.08000349998474,
+        154.1759967803955,
+        153.6639928817749,
+        152.92799472808838,
+        152.67199277877808,
+        153.82400155067444,
+        153.72799336910248,
+        155.42399883270264,
+        152.8639942407608,
+        154.94400262832642,
+        154.7520011663437,
+        153.47200632095337,
+        153.53600680828094,
+        153.56799960136414,
+        154.78399395942688,
+        153.82400155067444,
+        155.39200603961945,
+        154.36799824237823,
+        154.91199493408203,
+        153.98399531841278
+      ],
+      "candidate_samples": [
+        154.30399775505066,
+        148.47999811172485,
+        147.93600142002106,
+        147.13600277900696,
+        146.97599411010742,
+        149.1519957780838,
+        148.3840048313141,
+        148.67199957370758,
+        147.87200093269348,
+        148.60799908638,
+        147.61599898338318,
+        149.31200444698334,
+        148.60799908638,
+        148.00000190734863,
+        148.51200580596924,
+        148.3519971370697,
+        148.47999811172485,
+        147.039994597435,
+        149.59999918937683,
+        147.8399932384491
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.9359986782074,
+      "candidate_us": 154.7199934720993,
+      "baseline_samples": [
+        154.65599298477173,
+        153.6960005760193,
+        153.98399531841278,
+        154.81600165367126,
+        154.78399395942688,
+        153.79199385643005,
+        153.28000485897064,
+        152.99199521541595,
+        152.8639942407608,
+        153.888002038002,
+        155.07200360298157,
+        154.59200739860535,
+        153.60000729560852,
+        153.72799336910248,
+        155.13600409030914,
+        154.65599298477173,
+        155.45600652694702,
+        153.56799960136414,
+        153.98399531841278,
+        153.60000729560852
+      ],
+      "candidate_samples": [
+        158.87999534606934,
+        155.29599785804749,
+        155.58399260044098,
+        154.81600165367126,
+        155.4879993200302,
+        154.78399395942688,
+        153.9199948310852,
+        154.08000349998474,
+        154.14400398731232,
+        154.23999726772308,
+        154.91199493408203,
+        155.45600652694702,
+        153.98399531841278,
+        154.40000593662262,
+        155.20000457763672,
+        154.23999726772308,
+        154.65599298477173,
+        153.85599434375763,
+        153.9520025253296,
+        155.5519998073578
+      ]
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 409.67999398708344,
+      "candidate_us": 331.36001229286194,
+      "baseline_samples": [
+        415.583997964859,
+        409.59998965263367,
+        410.68801283836365,
+        408.5119962692261,
+        411.6480052471161,
+        408.54400396347046,
+        410.5600118637085,
+        411.8080139160156,
+        409.2159867286682,
+        411.296010017395,
+        409.7599983215332,
+        408.2239866256714,
+        409.08798575401306,
+        407.3280096054077,
+        409.5039963722229,
+        410.2399945259094,
+        408.8959991931915,
+        410.8479917049408,
+        411.45598888397217,
+        409.2479944229126
+      ],
+      "candidate_samples": [
+        332.44800567626953,
+        331.0079872608185,
+        331.4880132675171,
+        331.87198638916016,
+        330.84800839424133,
+        331.712007522583,
+        331.58400654792786,
+        331.4880132675171,
+        330.81600069999695,
+        331.64799213409424,
+        329.5679986476898,
+        330.3680121898651,
+        331.2320113182068,
+        329.98400926589966,
+        330.9119939804077,
+        330.1759958267212,
+        332.19200372695923,
+        331.9680094718933,
+        331.03999495506287,
+        331.6799998283386
+      ]
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 407.76000916957855,
+      "candidate_us": 330.59200644493103,
+      "baseline_samples": [
+        410.5919897556305,
+        407.23198652267456,
+        407.4240028858185,
+        409.2159867286682,
+        409.2159867286682,
+        406.8480134010315,
+        407.71201252937317,
+        408.60798954963684,
+        406.6239893436432,
+        409.37599539756775,
+        407.1039855480194,
+        407.6800048351288,
+        407.80800580978394,
+        407.9039990901947,
+        410.3040099143982,
+        407.8719913959503,
+        407.1359932422638,
+        406.68800473213196,
+        407.9039990901947,
+        406.5600037574768
+      ],
+      "candidate_samples": [
+        333.50399136543274,
+        329.4079899787903,
+        329.120010137558,
+        329.6639919281006,
+        330.24001121520996,
+        329.6639919281006,
+        330.81600069999695,
+        329.72800731658936,
+        330.59200644493103,
+        331.07200264930725,
+        330.59200644493103,
+        330.7519853115082,
+        329.79199290275574,
+        331.2320113182068,
+        331.64799213409424,
+        331.10401034355164,
+        331.9999873638153,
+        330.27198910713196,
+        330.87998628616333,
+        329.120010137558
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 407.74400532245636,
+      "candidate_us": 324.72001016139984,
+      "baseline_samples": [
+        408.9919924736023,
+        408.1920087337494,
+        409.31200981140137,
+        406.6239893436432,
+        407.1359932422638,
+        408.6399972438812,
+        407.3599874973297,
+        409.92000699043274,
+        408.35198760032654,
+        406.20800852775574,
+        407.51999616622925,
+        407.9039990901947,
+        406.5920114517212,
+        410.5600118637085,
+        407.9680144786835,
+        406.72001242637634,
+        406.7839980125427,
+        407.3280096054077,
+        407.584011554718,
+        409.2159867286682
+      ],
+      "candidate_samples": [
+        326.9439935684204,
+        325.0879943370819,
+        324.16000962257385,
+        324.319988489151,
+        325.6320059299469,
+        323.199987411499,
+        324.38400387763977,
+        324.6400058269501,
+        325.6640136241913,
+        323.96799325942993,
+        327.07199454307556,
+        324.95999336242676,
+        324.0320086479187,
+        325.1200020313263,
+        323.2640027999878,
+        325.439989566803,
+        325.3760039806366,
+        324.8000144958496,
+        324.0000009536743,
+        323.8080143928528
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 408.3999991416931,
+      "candidate_us": 324.7840106487274,
+      "baseline_samples": [
+        410.43201088905334,
+        407.20000863075256,
+        408.4480106830597,
+        408.57601165771484,
+        408.35198760032654,
+        407.20000863075256,
+        408.2239866256714,
+        405.9840142726898,
+        407.6800048351288,
+        410.0160002708435,
+        408.57601165771484,
+        408.86399149894714,
+        408.60798954963684,
+        407.8719913959503,
+        406.5920114517212,
+        409.15200114250183,
+        407.1359932422638,
+        408.6399972438812,
+        408.8959991931915,
+        408.160001039505
+      ],
+      "candidate_samples": [
+        324.8000144958496,
+        324.0320086479187,
+        324.3519961833954,
+        324.44798946380615,
+        324.70399141311646,
+        324.5440125465393,
+        324.0320086479187,
+        325.6320059299469,
+        324.99200105667114,
+        324.864000082016,
+        324.5759904384613,
+        324.6400058269501,
+        325.0879943370819,
+        324.22399520874023,
+        325.79201459884644,
+        327.39201188087463,
+        325.56799054145813,
+        324.7680068016052,
+        325.56799054145813,
+        325.50400495529175
+      ]
+    },
+    {
+      "candidate": "compact128",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 591.9679999351501,
+      "candidate_us": 421.7119961977005,
+      "baseline_samples": [
+        595.0400233268738,
+        594.048023223877,
+        592.3519730567932,
+        592.0959711074829,
+        592.6719903945923,
+        590.9439921379089,
+        594.8799848556519,
+        591.3919806480408,
+        592.3519730567932,
+        588.9279842376709,
+        590.175986289978,
+        591.264009475708,
+        591.5200114250183,
+        592.1599864959717,
+        591.8400287628174,
+        589.8560285568237,
+        591.4880037307739,
+        593.280017375946,
+        594.7200059890747,
+        590.7840132713318
+      ],
+      "candidate_samples": [
+        422.65599966049194,
+        422.7840006351471,
+        422.4959909915924,
+        421.1840033531189,
+        420.22401094436646,
+        423.2960045337677,
+        421.4400053024292,
+        423.1039881706238,
+        422.8479862213135,
+        420.991986989975,
+        421.7599928379059,
+        421.34401202201843,
+        421.4079976081848,
+        421.6639995574951,
+        423.20001125335693,
+        425.1520037651062,
+        421.4400053024292,
+        422.0159947872162,
+        420.3520119190216,
+        421.05600237846375
+      ]
+    },
+    {
+      "candidate": "compact256",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 592.38401055336,
+      "candidate_us": 468.6719924211502,
+      "baseline_samples": [
+        591.5840268135071,
+        590.175986289978,
+        593.6319828033447,
+        592.736005783081,
+        596.2560176849365,
+        592.8320288658142,
+        592.0320153236389,
+        591.9359922409058,
+        593.6319828033447,
+        591.0720229148865,
+        590.2079939842224,
+        589.8240208625793,
+        590.719997882843,
+        591.0400152206421,
+        593.6959981918335,
+        594.2720174789429,
+        593.9840078353882,
+        591.9039845466614,
+        592.7680134773254,
+        594.048023223877
+      ],
+      "candidate_samples": [
+        469.4719910621643,
+        466.17600321769714,
+        467.26399660110474,
+        473.1839895248413,
+        470.17601132392883,
+        468.9280092716217,
+        467.9679870605469,
+        470.40000557899475,
+        469.2800045013428,
+        468.2239890098572,
+        467.51999855041504,
+        466.91200137138367,
+        467.3919975757599,
+        467.8080081939697,
+        469.02400255203247,
+        468.86399388313293,
+        468.4799909591675,
+        467.5520062446594,
+        468.9599871635437,
+        469.4400131702423
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 592.2400057315826,
+      "candidate_us": 421.6479957103729,
+      "baseline_samples": [
+        594.3040251731873,
+        594.8160290718079,
+        591.0400152206421,
+        594.3999886512756,
+        592.0640230178833,
+        591.7440056800842,
+        591.5200114250183,
+        591.8400287628174,
+        592.8320288658142,
+        590.6559824943542,
+        592.0000076293945,
+        596.7680215835571,
+        595.7440137863159,
+        591.264009475708,
+        591.6479825973511,
+        592.4800038337708,
+        594.4960117340088,
+        590.4639959335327,
+        592.415988445282,
+        594.5919752120972
+      ],
+      "candidate_samples": [
+        423.39199781417847,
+        421.7279851436615,
+        420.76799273490906,
+        421.53599858283997,
+        421.53599858283997,
+        420.9280014038086,
+        421.9520092010498,
+        422.5600063800812,
+        423.48799109458923,
+        421.56800627708435,
+        422.2080111503601,
+        423.45601320266724,
+        421.9520092010498,
+        422.0159947872162,
+        420.6399917602539,
+        420.415997505188,
+        420.8959937095642,
+        420.8320081233978,
+        421.85598611831665,
+        421.27999663352966
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 591.4399921894073,
+      "candidate_us": 420.78399658203125,
+      "baseline_samples": [
+        592.4800038337708,
+        590.7840132713318,
+        592.0320153236389,
+        589.7279977798462,
+        591.4880037307739,
+        592.2560095787048,
+        594.2720174789429,
+        594.5600271224976,
+        593.9199924468994,
+        590.1439785957336,
+        591.3919806480408,
+        589.7600054740906,
+        591.8400287628174,
+        590.0160074234009,
+        589.7600054740906,
+        591.1999940872192,
+        590.719997882843,
+        590.3679728507996,
+        592.8320288658142,
+        592.0320153236389
+      ],
+      "candidate_samples": [
+        423.99999499320984,
+        422.5279986858368,
+        421.85598611831665,
+        421.1519956588745,
+        420.76799273490906,
+        422.4959909915924,
+        420.415997505188,
+        420.960009098053,
+        420.54399847984314,
+        419.9039936065674,
+        421.34401202201843,
+        418.33600401878357,
+        421.37598991394043,
+        420.51199078559875,
+        420.9280014038086,
+        420.22401094436646,
+        420.80000042915344,
+        419.8080003261566,
+        420.22401094436646,
+        419.871985912323
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"bs\": 4, \"dist\": \"normal\", \"seed\": 1800, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"seed\": 1801, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 257, \"dist\": \"normal\", \"seed\": 1802, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 128, \"dist\": \"skewed\", \"seed\": 1803, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"seed\": 1804, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 2, \"dist\": \"normal\", \"seed\": 6200, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 7, \"dist\": \"normal\", \"seed\": 6201, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 17, \"dist\": \"normal\", \"seed\": 6202, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 31, \"dist\": \"normal\", \"seed\": 6203, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 63, \"dist\": \"normal\", \"seed\": 6204, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 64, \"dist\": \"normal\", \"seed\": 6205, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 65, \"dist\": \"normal\", \"seed\": 6206, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 127, \"dist\": \"normal\", \"seed\": 6207, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 129, \"dist\": \"normal\", \"seed\": 6208, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"load\": \"decode 1\", \"seed\": 401, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 16, \"load\": \"decode 16\", \"seed\": 402, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 32, \"load\": \"decode 32\", \"seed\": 403, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 8, \"load\": \"verify 1\", \"seed\": 404, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 128, \"load\": \"verify 16\", \"seed\": 405, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 256, \"load\": \"verify 32\", \"seed\": 406, \"sharding\": \"ep8\", \"weight\": 60}": {}
+  },
+  "calibration_us": 3.135999897494912,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "control",
+    "case": {
+      "bs": 256,
+      "sharding": "ep8",
+      "load": "verify 32",
+      "weight": 60,
+      "seed": 406
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       1.578ms        86.44%       1.578ms     197.242us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     151.723us         8.31%     151.723us      37.931us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      22.467us         1.23%      22.467us       5.617us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      22.433us         1.23%      22.433us       5.608us             4  \nvoid at::native::index_elementwise_kernel<128, 4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      12.960us         0.71%      12.960us       3.240us             4  \nvoid at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      12.579us         0.69%      12.579us       3.145us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us      11.522us         0.63%      11.522us       2.880us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us      10.496us         0.57%      10.496us       2.624us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.296us         0.18%       3.296us       0.824us             4  \n                                        cudaGraphLaunch         8.65%     205.792us        30.27%     719.981us     179.995us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        21.61%     514.189us        21.61%     514.189us     514.189us       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        69.73%       1.659ms        69.73%       1.659ms     829.436us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 2.379ms\nSelf CUDA time total: 1.825ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       2.272ms        90.30%       2.272ms     283.966us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     149.306us         5.93%     149.306us      37.326us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      22.224us         0.88%      22.224us       5.556us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      21.971us         0.87%      21.971us       5.493us             4  \nvoid at::native::index_elementwise_kernel<128, 4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      13.036us         0.52%      13.036us       3.259us             4  \nvoid at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      12.491us         0.50%      12.491us       3.123us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us      11.753us         0.47%      11.753us       2.938us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us       9.992us         0.40%       9.992us       2.498us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.329us         0.13%       3.329us       0.832us             4  \n                                        cudaGraphLaunch         4.77%     146.210us        20.99%     642.864us     160.716us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        16.22%     496.654us        16.22%     496.654us     496.654us       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        79.01%       2.420ms        79.01%       2.420ms       1.210ms       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 3.063ms\nSelf CUDA time total: 2.516ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 191,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 128,
+      "spills": 14,
+      "shared": 4096
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 24,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 100,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 100,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 193,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 108,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 128,
+      "spills": 18,
+      "shared": 4096
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 128,
+      "spills": 20,
+      "shared": 4096
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact128",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 191,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 128,
+      "spills": 14,
+      "shared": 4096
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 24,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 100,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 100,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 193,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 108,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 128,
+      "spills": 18,
+      "shared": 4096
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 128,
+      "spills": 20,
+      "shared": 4096
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 128,
+      "spills": 84,
+      "shared": 8192
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "compact256",
+      "function": "_compact_align",
+      "registers": 128,
+      "spills": 202,
+      "shared": 8192
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 24,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 100,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 100,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    }
+  ],
+  "elapsed_s": 51.94519768999999,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_moe_w4a16",
+  "source_files": {
+    "compact128": {
+      "path": "experiments/sources/38b19ba48ecc9efa03b6001c83bf4c0f5c62dacc0590363f986f75d154ef71eb.py",
+      "sha256": "38b19ba48ecc9efa03b6001c83bf4c0f5c62dacc0590363f986f75d154ef71eb"
+    },
+    "compact256": {
+      "path": "experiments/sources/f674397eafefc35616be76e18f2965fce9216058c9fd31ccc77140bcd791b895.py",
+      "sha256": "f674397eafefc35616be76e18f2965fce9216058c9fd31ccc77140bcd791b895"
+    },
+    "compact32": {
+      "path": "experiments/sources/43381cdf3bc6bcf999308ca0feeace88e39c21575be9b3161c0ae7e141f942ff.py",
+      "sha256": "43381cdf3bc6bcf999308ca0feeace88e39c21575be9b3161c0ae7e141f942ff"
+    },
+    "control": {
+      "path": "experiments/sources/0e5bd38fb3ece1ff0805cde3511ce2f573a65a65b99d5b62825d5a7208bbfedc.py",
+      "sha256": "0e5bd38fb3ece1ff0805cde3511ce2f573a65a65b99d5b62825d5a7208bbfedc"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

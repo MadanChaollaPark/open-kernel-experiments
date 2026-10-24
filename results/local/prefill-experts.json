@@ -1,0 +1,4018 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.440e-02 (worst row 6.522e-02) [bound 0.065]; attention input relative L2 error 2.250e-02 (worst row 4.064e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.440e-02 (worst row 6.522e-02) [bound 0.065]; attention input relative L2 error 2.250e-02 (worst row 4.064e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.440e-02 (worst row 6.522e-02) [bound 0.065]; attention input relative L2 error 2.250e-02 (worst row 4.064e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.440e-02 (worst row 6.522e-02) [bound 0.065]; attention input relative L2 error 2.250e-02 (worst row 4.064e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.810e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.944e-02 (worst row 1.200e-01) [bound 0.150]; attention input relative L2 error 4.550e-02 (worst row 8.804e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.944e-02 (worst row 1.200e-01) [bound 0.150]; attention input relative L2 error 4.550e-02 (worst row 8.804e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.944e-02 (worst row 1.200e-01) [bound 0.150]; attention input relative L2 error 4.550e-02 (worst row 8.804e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.944e-02 (worst row 1.200e-01) [bound 0.150]; attention input relative L2 error 4.550e-02 (worst row 8.804e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.814e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.441e-02 (worst row 1.103e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.814e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.441e-02 (worst row 1.103e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.814e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.441e-02 (worst row 1.103e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.814e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.441e-02 (worst row 1.103e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.727e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.496e-02 (worst row 7.847e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.727e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.496e-02 (worst row 7.847e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.727e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.496e-02 (worst row 7.847e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.727e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.496e-02 (worst row 7.847e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.231e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.231e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.231e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.908e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.217e-02 (worst row 8.224e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.908e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.217e-02 (worst row 8.224e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.908e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.217e-02 (worst row 8.224e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.908e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.217e-02 (worst row 8.224e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.214e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.429e-02 (worst row 7.559e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.214e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.429e-02 (worst row 7.559e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.214e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.429e-02 (worst row 7.559e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.214e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.429e-02 (worst row 7.559e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.950e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.951e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.951e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.240e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.110e-02 (worst row 8.954e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.240e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.110e-02 (worst row 8.954e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.240e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.110e-02 (worst row 8.954e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.240e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.110e-02 (worst row 8.954e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.397e-02 (worst row 1.119e-01) [bound 0.125]; attention input relative L2 error 3.533e-02 (worst row 8.395e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.397e-02 (worst row 1.119e-01) [bound 0.125]; attention input relative L2 error 3.533e-02 (worst row 8.395e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.397e-02 (worst row 1.119e-01) [bound 0.125]; attention input relative L2 error 3.533e-02 (worst row 8.395e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.397e-02 (worst row 1.119e-01) [bound 0.125]; attention input relative L2 error 3.533e-02 (worst row 8.395e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.172e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.050e-02 (worst row 7.948e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.172e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.050e-02 (worst row 7.947e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.172e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.050e-02 (worst row 7.948e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.172e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.050e-02 (worst row 7.948e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.173e-02 (worst row 4.654e-02) [bound 0.044]; attention input relative L2 error 1.455e-02 (worst row 3.571e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.173e-02 (worst row 4.654e-02) [bound 0.044]; attention input relative L2 error 1.455e-02 (worst row 3.571e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.173e-02 (worst row 4.654e-02) [bound 0.044]; attention input relative L2 error 1.455e-02 (worst row 3.571e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.161e-02 (worst row 4.634e-02) [bound 0.044]; attention input relative L2 error 1.448e-02 (worst row 3.554e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.161e-02 (worst row 4.635e-02) [bound 0.044]; attention input relative L2 error 1.448e-02 (worst row 3.554e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.161e-02 (worst row 4.634e-02) [bound 0.044]; attention input relative L2 error 1.448e-02 (worst row 3.554e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.161e-02 (worst row 4.634e-02) [bound 0.044]; attention input relative L2 error 1.448e-02 (worst row 3.554e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.023e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.083e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.023e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.083e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.023e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.083e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.389e-02 (worst row 1.020e-01) [bound 0.068]; attention input relative L2 error 2.235e-02 (worst row 8.061e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.389e-02 (worst row 1.020e-01) [bound 0.068]; attention input relative L2 error 2.235e-02 (worst row 8.061e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.389e-02 (worst row 1.020e-01) [bound 0.068]; attention input relative L2 error 2.235e-02 (worst row 8.061e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.389e-02 (worst row 1.020e-01) [bound 0.068]; attention input relative L2 error 2.235e-02 (worst row 8.061e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.043e-01) [bound 0.123]; attention input relative L2 error 3.378e-02 (worst row 7.837e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.043e-01) [bound 0.123]; attention input relative L2 error 3.378e-02 (worst row 7.837e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.043e-01) [bound 0.123]; attention input relative L2 error 3.378e-02 (worst row 7.837e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.160e-02 (worst row 1.043e-01) [bound 0.123]; attention input relative L2 error 3.375e-02 (worst row 7.843e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.160e-02 (worst row 1.043e-01) [bound 0.123]; attention input relative L2 error 3.375e-02 (worst row 7.843e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.160e-02 (worst row 1.043e-01) [bound 0.123]; attention input relative L2 error 3.375e-02 (worst row 7.843e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.160e-02 (worst row 1.043e-01) [bound 0.123]; attention input relative L2 error 3.375e-02 (worst row 7.843e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.017e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.017e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.017e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.734e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.724e-02 (worst row 8.019e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.734e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.724e-02 (worst row 8.019e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.734e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.724e-02 (worst row 8.019e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.734e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.724e-02 (worst row 8.019e-02) [bound 0.089]"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1080.6559920310974,
+      "candidate_us": 1081.9200277328491,
+      "baseline_samples": [
+        1102.6240587234497,
+        1080.7360410690308,
+        1085.6959819793701,
+        1079.103946685791,
+        1081.88796043396,
+        1077.023983001709,
+        1076.799988746643,
+        1080.575942993164
+      ],
+      "candidate_samples": [
+        1102.1759510040283,
+        1086.1120223999023,
+        1080.1600217819214,
+        1081.2480449676514,
+        1081.8560123443604,
+        1081.984043121338,
+        1082.6239585876465,
+        1080.1279544830322
+      ]
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1080.6559920310974,
+      "candidate_us": 1437.1039867401123,
+      "baseline_samples": [
+        1087.007999420166,
+        1080.3840160369873,
+        1080.0319910049438,
+        1080.0960063934326,
+        1080.9279680252075,
+        1078.4000158309937,
+        1082.4639797210693,
+        1083.6479663848877
+      ],
+      "candidate_samples": [
+        1457.2160243988037,
+        1434.9440336227417,
+        1431.488037109375,
+        1437.7599954605103,
+        1432.960033416748,
+        1439.1679763793945,
+        1439.7120475769043,
+        1436.4479780197144
+      ]
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1078.9119601249695,
+      "candidate_us": 1162.3200178146362,
+      "baseline_samples": [
+        1085.1199626922607,
+        1079.103946685791,
+        1083.0399990081787,
+        1078.719973564148,
+        1081.2480449676514,
+        1074.3039846420288,
+        1073.0559825897217,
+        1072.0319747924805
+      ],
+      "candidate_samples": [
+        1179.744005203247,
+        1162.3040437698364,
+        1168.3199405670166,
+        1165.4080152511597,
+        1162.335991859436,
+        1160.159945487976,
+        1156.7039489746094,
+        1153.4719467163086
+      ]
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1074.3520259857178,
+      "candidate_us": 2732.7840328216553,
+      "baseline_samples": [
+        1079.584002494812,
+        1072.2559690475464,
+        1072.4799633026123,
+        1077.4400234222412,
+        1074.1440057754517,
+        1071.3920593261719,
+        1074.560046195984,
+        1075.551986694336
+      ],
+      "candidate_samples": [
+        2740.2238845825195,
+        2732.896089553833,
+        2735.6159687042236,
+        2730.6559085845947,
+        2731.6160202026367,
+        2732.6719760894775,
+        2736.191987991333,
+        2732.5439453125
+      ]
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1074.2239952087402,
+      "candidate_us": 4481.263875961304,
+      "baseline_samples": [
+        1074.9759674072266,
+        1070.1760053634644,
+        1073.632001876831,
+        1075.32799243927,
+        1074.6560096740723,
+        1072.1919536590576,
+        1073.7919807434082,
+        1075.9999752044678
+      ],
+      "candidate_samples": [
+        4492.032051086426,
+        4479.263782501221,
+        4481.247901916504,
+        4481.2798500061035,
+        4484.255790710449,
+        4484.000205993652,
+        4479.360103607178,
+        4478.847980499268
+      ]
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1073.919951915741,
+      "candidate_us": 3133.6320638656616,
+      "baseline_samples": [
+        1076.5119791030884,
+        1073.9519596099854,
+        1073.8879442214966,
+        1074.1759538650513,
+        1073.855996131897,
+        1071.903944015503,
+        1071.8400478363037,
+        1074.623942375183
+      ],
+      "candidate_samples": [
+        3163.2959842681885,
+        3129.823923110962,
+        3138.7839317321777,
+        3143.615961074829,
+        3132.3840618133545,
+        3134.3040466308594,
+        3132.960081100464,
+        3128.2238960266113
+      ]
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1073.024034500122,
+      "candidate_us": 2307.919979095459,
+      "baseline_samples": [
+        1073.5360383987427,
+        1073.7919807434082,
+        1076.5119791030884,
+        1072.5120306015015,
+        1074.3039846420288,
+        1072.160005569458,
+        1072.0959901809692,
+        1070.4319477081299
+      ],
+      "candidate_samples": [
+        2320.672035217285,
+        2309.8878860473633,
+        2311.487913131714,
+        2305.7920932769775,
+        2307.744026184082,
+        2308.095932006836,
+        2307.7120780944824,
+        2303.5199642181396
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1412.5440120697021,
+      "candidate_us": 1415.6000018119812,
+      "baseline_samples": [
+        1425.9840250015259,
+        1410.8480215072632,
+        1409.4719886779785,
+        1411.7439985275269,
+        1413.5680198669434,
+        1408.3199501037598,
+        1413.3440256118774,
+        1419.935941696167
+      ],
+      "candidate_samples": [
+        1429.0239810943604,
+        1414.080023765564,
+        1415.9040451049805,
+        1412.4799966812134,
+        1415.295958518982,
+        1412.8960371017456,
+        1417.5679683685303,
+        1416.543960571289
+      ]
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1419.5040464401245,
+      "candidate_us": 1754.0799975395203,
+      "baseline_samples": [
+        1419.424057006836,
+        1415.8079624176025,
+        1422.8160381317139,
+        1418.336033821106,
+        1420.1279878616333,
+        1416.2559509277344,
+        1421.6320514678955,
+        1419.584035873413
+      ],
+      "candidate_samples": [
+        1759.8079442977905,
+        1757.1519613265991,
+        1755.0400495529175,
+        1751.4879703521729,
+        1749.9840259552002,
+        1751.744031906128,
+        1755.2000284194946,
+        1753.119945526123
+      ]
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1418.0799722671509,
+      "candidate_us": 1508.7679624557495,
+      "baseline_samples": [
+        1423.2319593429565,
+        1418.0799722671509,
+        1417.4079895019531,
+        1418.0799722671509,
+        1416.5760278701782,
+        1421.1839437484741,
+        1418.0799722671509,
+        1417.9519414901733
+      ],
+      "candidate_samples": [
+        1513.9520168304443,
+        1508.3199739456177,
+        1507.0079565048218,
+        1508.6400508880615,
+        1511.2320184707642,
+        1508.7039470672607,
+        1511.3600492477417,
+        1508.8319778442383
+      ]
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1416.0000085830688,
+      "candidate_us": 2908.4479808807373,
+      "baseline_samples": [
+        1420.0639724731445,
+        1417.248010635376,
+        1411.2000465393066,
+        1415.3599739074707,
+        1416.640043258667,
+        1418.0480241775513,
+        1413.375973701477,
+        1413.472056388855
+      ],
+      "candidate_samples": [
+        2912.7039909362793,
+        2908.4479808807373,
+        2904.576063156128,
+        2904.8640727996826,
+        2905.9839248657227,
+        2911.776065826416,
+        2908.4479808807373,
+        2912.9281044006348
+      ]
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1414.0959978103638,
+      "candidate_us": 4653.552055358887,
+      "baseline_samples": [
+        1423.2959747314453,
+        1414.687991142273,
+        1412.4480485916138,
+        1418.9120531082153,
+        1413.5040044784546,
+        1408.735990524292,
+        1416.0959720611572,
+        1410.431981086731
+      ],
+      "candidate_samples": [
+        4658.016204833984,
+        4653.183937072754,
+        4653.9201736450195,
+        4651.77583694458,
+        4657.120227813721,
+        4649.184226989746,
+        4655.327796936035,
+        4652.639865875244
+      ]
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1411.2640023231506,
+      "candidate_us": 3381.8399906158447,
+      "baseline_samples": [
+        1409.9839925765991,
+        1412.8320217132568,
+        1411.8720293045044,
+        1411.3279581069946,
+        1417.9519414901733,
+        1407.3920249938965,
+        1411.2000465393066,
+        1410.7199907302856
+      ],
+      "candidate_samples": [
+        3385.3759765625,
+        3381.5999031066895,
+        3374.687910079956,
+        3389.791965484619,
+        3382.080078125,
+        3380.959987640381,
+        3378.4639835357666,
+        3389.375925064087
+      ]
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1412.816047668457,
+      "candidate_us": 2580.3840160369873,
+      "baseline_samples": [
+        1412.6720428466797,
+        1413.5040044784546,
+        1415.0079488754272,
+        1408.735990524292,
+        1412.9600524902344,
+        1410.5279445648193,
+        1410.1439714431763,
+        1416.2240028381348
+      ],
+      "candidate_samples": [
+        2583.9359760284424,
+        2582.4639797210693,
+        2575.615882873535,
+        2576.9920349121094,
+        2584.5119953155518,
+        2575.808048248291,
+        2581.376075744629,
+        2579.3919563293457
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3424.288034439087,
+      "candidate_us": 3419.9360609054565,
+      "baseline_samples": [
+        3426.0480403900146,
+        3429.7919273376465,
+        3415.168046951294,
+        3420.7680225372314,
+        3424.4160652160645,
+        3424.1600036621094,
+        3417.9201126098633,
+        3424.607992172241
+      ],
+      "candidate_samples": [
+        3430.975914001465,
+        3420.4161167144775,
+        3413.696050643921,
+        3423.743963241577,
+        3421.4398860931396,
+        3419.4560050964355,
+        3415.839910507202,
+        3413.055896759033
+      ]
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3459.8560333251953,
+      "candidate_us": 5176.271915435791,
+      "baseline_samples": [
+        3536.03196144104,
+        3469.3119525909424,
+        3467.679977416992,
+        3451.040029525757,
+        3449.536085128784,
+        3448.7040042877197,
+        3452.0320892333984,
+        3623.6159801483154
+      ],
+      "candidate_samples": [
+        5207.2319984436035,
+        5206.655979156494,
+        5177.631855010986,
+        5170.080184936523,
+        5174.911975860596,
+        5165.408134460449,
+        5168.896198272705,
+        5415.679931640625
+      ]
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3531.983971595764,
+      "candidate_us": 4086.4479541778564,
+      "baseline_samples": [
+        3587.0718955993652,
+        3531.424045562744,
+        3527.3280143737793,
+        3532.543897628784,
+        3522.6879119873047,
+        3532.576084136963,
+        3528.5439491271973,
+        3599.32804107666
+      ],
+      "candidate_samples": [
+        4158.463954925537,
+        4140.480041503906,
+        4077.280044555664,
+        4078.3681869506836,
+        4080.2559852600098,
+        4084.8960876464844,
+        4087.9998207092285,
+        4088.1600379943848
+      ]
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3434.6879720687866,
+      "candidate_us": 7241.600036621094,
+      "baseline_samples": [
+        3484.607934951782,
+        3449.4080543518066,
+        3452.255964279175,
+        3435.0719451904297,
+        3427.743911743164,
+        3428.1599521636963,
+        3428.0319213867188,
+        3434.3039989471436
+      ],
+      "candidate_samples": [
+        7338.016033172607,
+        7304.192066192627,
+        7274.432182312012,
+        7249.567985534668,
+        7229.375839233398,
+        7230.368137359619,
+        7229.343891143799,
+        7233.6320877075195
+      ]
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3441.58399105072,
+      "candidate_us": 15453.328132629395,
+      "baseline_samples": [
+        3453.216075897217,
+        3444.096088409424,
+        3440.959930419922,
+        3435.6160163879395,
+        3437.6959800720215,
+        3442.2080516815186,
+        3438.1439685821533,
+        3448.8320350646973
+      ],
+      "candidate_samples": [
+        15459.296226501465,
+        15454.848289489746,
+        15459.487915039062,
+        15454.463958740234,
+        15452.192306518555,
+        15449.824333190918,
+        15450.207710266113,
+        15452.06356048584
+      ]
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3410.528063774109,
+      "candidate_us": 9558.256149291992,
+      "baseline_samples": [
+        3422.1439361572266,
+        3411.2000465393066,
+        3409.856081008911,
+        3409.0240001678467,
+        3406.3680171966553,
+        3408.4160327911377,
+        3412.832021713257,
+        3412.895917892456
+      ],
+      "candidate_samples": [
+        9548.800468444824,
+        9621.312141418457,
+        9588.383674621582,
+        9551.74446105957,
+        9564.767837524414,
+        9548.864364624023,
+        9586.912155151367,
+        9548.959732055664
+      ]
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3410.6719493865967,
+      "candidate_us": 7068.2079792022705,
+      "baseline_samples": [
+        3419.327974319458,
+        3415.8079624176025,
+        3411.2319946289062,
+        3411.2958908081055,
+        3409.3120098114014,
+        3408.9279174804688,
+        3407.167911529541,
+        3410.111904144287
+      ],
+      "candidate_samples": [
+        7066.431999206543,
+        7067.200183868408,
+        7067.4238204956055,
+        7067.103862762451,
+        7068.992137908936,
+        7070.623874664307,
+        7069.888114929199,
+        7071.616172790527
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4855.407953262329,
+      "candidate_us": 4871.712207794189,
+      "baseline_samples": [
+        4860.320091247559,
+        4850.4958152771,
+        4849.4720458984375,
+        4844.064235687256,
+        4848.383903503418,
+        4975.423812866211,
+        5021.376132965088,
+        5056.9281578063965
+      ],
+      "candidate_samples": [
+        4856.128215789795,
+        4846.496105194092,
+        4847.71203994751,
+        4844.736099243164,
+        4887.296199798584,
+        4911.03982925415,
+        5030.0798416137695,
+        5019.264221191406
+      ]
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4883.535861968994,
+      "candidate_us": 6490.784168243408,
+      "baseline_samples": [
+        4922.880172729492,
+        4880.447864532471,
+        4886.623859405518,
+        4875.807762145996,
+        4878.975868225098,
+        4886.720180511475,
+        4879.712104797363,
+        5015.552043914795
+      ],
+      "candidate_samples": [
+        6519.904136657715,
+        6482.4957847595215,
+        6490.752220153809,
+        6490.816116333008,
+        6488.160133361816,
+        6484.992027282715,
+        6611.87219619751,
+        6675.712108612061
+      ]
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4935.488224029541,
+      "candidate_us": 5389.631986618042,
+      "baseline_samples": [
+        4961.7919921875,
+        4914.624214172363,
+        4893.6638832092285,
+        4890.751838684082,
+        4885.1518630981445,
+        4956.352233886719,
+        5031.807899475098,
+        5024.991989135742
+      ],
+      "candidate_samples": [
+        5400.256156921387,
+        5412.576198577881,
+        5377.18391418457,
+        5379.007816314697,
+        5368.095874786377,
+        5368.224143981934,
+        5525.119781494141,
+        5518.623828887939
+      ]
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4886.2879276275635,
+      "candidate_us": 8717.184066772461,
+      "baseline_samples": [
+        4906.208038330078,
+        4882.080078125,
+        4877.6960372924805,
+        4886.208057403564,
+        4884.096145629883,
+        4886.3677978515625,
+        4892.47989654541,
+        4888.959884643555
+      ],
+      "candidate_samples": [
+        8721.023559570312,
+        8717.280387878418,
+        8710.335731506348,
+        8717.087745666504,
+        8723.83975982666,
+        8713.600158691406,
+        8719.87247467041,
+        8713.824272155762
+      ]
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4902.656078338623,
+      "candidate_us": 16260.46371459961,
+      "baseline_samples": [
+        4934.4000816345215,
+        4905.53617477417,
+        4903.327941894531,
+        4901.984214782715,
+        4913.216114044189,
+        4853.343963623047,
+        4846.015930175781,
+        4844.704151153564
+      ],
+      "candidate_samples": [
+        16266.624450683594,
+        16261.503219604492,
+        16265.983581542969,
+        16260.063171386719,
+        16260.8642578125,
+        16179.136276245117,
+        16116.096496582031,
+        16123.519897460938
+      ]
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4851.087808609009,
+      "candidate_us": 10707.99970626831,
+      "baseline_samples": [
+        4869.53592300415,
+        4847.5518226623535,
+        4849.343776702881,
+        4854.81595993042,
+        4858.975887298584,
+        4847.040176391602,
+        4844.351768493652,
+        4852.831840515137
+      ],
+      "candidate_samples": [
+        10706.527709960938,
+        10708.03165435791,
+        10705.920219421387,
+        10707.967758178711,
+        10713.472366333008,
+        10768.03207397461,
+        10704.768180847168,
+        10770.23983001709
+      ]
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4850.800037384033,
+      "candidate_us": 8362.656116485596,
+      "baseline_samples": [
+        4866.4960861206055,
+        4851.00793838501,
+        4854.656219482422,
+        4848.800182342529,
+        4850.592136383057,
+        4856.448173522949,
+        4849.823951721191,
+        4848.320007324219
+      ],
+      "candidate_samples": [
+        8365.376472473145,
+        8363.327980041504,
+        8365.504264831543,
+        8359.647750854492,
+        8360.575675964355,
+        8359.519958496094,
+        8361.984252929688,
+        8363.519668579102
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 21061.63215637207,
+      "candidate_us": 20901.7915725708,
+      "baseline_samples": [
+        21058.528900146484,
+        21173.75946044922,
+        21417.79136657715,
+        20875.072479248047,
+        20699.00894165039,
+        21064.224243164062,
+        21240.320205688477,
+        21059.040069580078
+      ],
+      "candidate_samples": [
+        19890.432357788086,
+        20435.96839904785,
+        21361.85646057129,
+        21074.495315551758,
+        20554.59213256836,
+        20729.087829589844,
+        21243.23272705078,
+        21239.871978759766
+      ]
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 20930.12809753418,
+      "candidate_us": 34823.02284240723,
+      "baseline_samples": [
+        19261.760711669922,
+        20618.080139160156,
+        20911.87286376953,
+        20948.383331298828,
+        21218.624114990234,
+        20691.52069091797,
+        21170.719146728516,
+        22222.30339050293
+      ],
+      "candidate_samples": [
+        30968.28842163086,
+        32551.326751708984,
+        34752.73513793945,
+        34893.310546875,
+        35110.111236572266,
+        33601.951599121094,
+        35692.06237792969,
+        35630.592346191406
+      ]
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 20818.19248199463,
+      "candidate_us": 25444.543838500977,
+      "baseline_samples": [
+        18984.9910736084,
+        20490.816116333008,
+        20522.911071777344,
+        20848.67286682129,
+        20849.695205688477,
+        20938.688278198242,
+        21132.640838623047,
+        20787.71209716797
+      ],
+      "candidate_samples": [
+        23407.936096191406,
+        24260.38360595703,
+        25019.071578979492,
+        25294.527053833008,
+        25938.24005126953,
+        25607.55157470703,
+        25594.560623168945,
+        25657.184600830078
+      ]
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 19064.224243164062,
+      "candidate_us": 35967.61512756348,
+      "baseline_samples": [
+        18945.280075073242,
+        18961.151123046875,
+        19485.279083251953,
+        19081.98356628418,
+        19664.608001708984,
+        19044.448852539062,
+        19356.704711914062,
+        19046.464920043945
+      ],
+      "candidate_samples": [
+        35542.720794677734,
+        35178.558349609375,
+        36136.03210449219,
+        36407.58514404297,
+        38512.70294189453,
+        35705.76095581055,
+        38169.952392578125,
+        35799.198150634766
+      ]
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 18985.83984375,
+      "candidate_us": 88984.76791381836,
+      "baseline_samples": [
+        18888.19122314453,
+        18972.70393371582,
+        19600.89683532715,
+        18967.039108276367,
+        19133.087158203125,
+        18996.736526489258,
+        19220.544815063477,
+        18974.943161010742
+      ],
+      "candidate_samples": [
+        88107.90252685547,
+        88105.05676269531,
+        92949.15008544922,
+        89102.53143310547,
+        92108.70361328125,
+        88867.00439453125,
+        93367.96569824219,
+        88805.63354492188
+      ]
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 19014.559745788574,
+      "candidate_us": 52692.11196899414,
+      "baseline_samples": [
+        18984.960556030273,
+        18990.079879760742,
+        20087.55111694336,
+        18992.799758911133,
+        19392.54379272461,
+        18975.872039794922,
+        19596.44889831543,
+        19036.319732666016
+      ],
+      "candidate_samples": [
+        52946.43020629883,
+        51786.91101074219,
+        55624.385833740234,
+        52437.79373168945,
+        57614.017486572266,
+        51901.18408203125,
+        56095.13473510742,
+        52395.198822021484
+      ]
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 19040.43197631836,
+      "candidate_us": 39206.59255981445,
+      "baseline_samples": [
+        19028.89633178711,
+        18985.727310180664,
+        19128.95965576172,
+        18986.431121826172,
+        19421.215057373047,
+        18993.98422241211,
+        19613.82484436035,
+        19051.96762084961
+      ],
+      "candidate_samples": [
+        38763.519287109375,
+        38894.081115722656,
+        39019.5198059082,
+        38667.16766357422,
+        43292.92678833008,
+        39393.6653137207,
+        41962.68844604492,
+        39494.20928955078
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 18929.455757141113,
+      "candidate_us": 19029.791831970215,
+      "baseline_samples": [
+        17785.247802734375,
+        18956.863403320312,
+        19189.56756591797,
+        18864.320755004883,
+        18901.31187438965,
+        18902.048110961914,
+        19337.50343322754,
+        19300.832748413086
+      ],
+      "candidate_samples": [
+        17851.327896118164,
+        18288.03253173828,
+        19136.4803314209,
+        19183.616638183594,
+        18913.79165649414,
+        18923.10333251953,
+        19349.056243896484,
+        19295.839309692383
+      ]
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 19311.96880340576,
+      "candidate_us": 31378.128051757812,
+      "baseline_samples": [
+        17886.240005493164,
+        17833.375930786133,
+        19235.488891601562,
+        19595.775604248047,
+        19388.44871520996,
+        19636.064529418945,
+        19467.967987060547,
+        18872.831344604492
+      ],
+      "candidate_samples": [
+        29043.64776611328,
+        29004.928588867188,
+        31577.34489440918,
+        31320.44792175293,
+        31561.53678894043,
+        31126.176834106445,
+        32303.7109375,
+        31435.808181762695
+      ]
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 19385.679244995117,
+      "candidate_us": 23517.776489257812,
+      "baseline_samples": [
+        17982.751846313477,
+        18209.312438964844,
+        18200.992584228516,
+        19461.31134033203,
+        19310.047149658203,
+        19701.50375366211,
+        19632.287979125977,
+        19811.168670654297
+      ],
+      "candidate_samples": [
+        22104.8641204834,
+        22245.695114135742,
+        23488.256454467773,
+        23547.29652404785,
+        23450.271606445312,
+        23813.247680664062,
+        24019.58465576172,
+        24145.919799804688
+      ]
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 17810.416221618652,
+      "candidate_us": 33693.023681640625,
+      "baseline_samples": [
+        17784.576416015625,
+        17787.872314453125,
+        17773.24867248535,
+        17813.472747802734,
+        17807.35969543457,
+        17825.5672454834,
+        17962.24021911621,
+        17936.864852905273
+      ],
+      "candidate_samples": [
+        33456.12716674805,
+        33457.79037475586,
+        34022.84622192383,
+        33535.072326660156,
+        33594.75326538086,
+        33791.29409790039,
+        34801.47171020508,
+        33862.49542236328
+      ]
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 17793.61629486084,
+      "candidate_us": 85567.66510009766,
+      "baseline_samples": [
+        17669.696807861328,
+        17679.584503173828,
+        17653.663635253906,
+        17805.12046813965,
+        18339.807510375977,
+        17832.60726928711,
+        17890.49530029297,
+        17782.11212158203
+      ],
+      "candidate_samples": [
+        84844.54345703125,
+        84848.48022460938,
+        87089.72930908203,
+        85568.19152832031,
+        89459.26666259766,
+        85567.138671875,
+        88295.83740234375,
+        85522.07946777344
+      ]
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 17799.872398376465,
+      "candidate_us": 49633.056640625,
+      "baseline_samples": [
+        17672.992706298828,
+        17660.160064697266,
+        17684.703826904297,
+        17780.736923217773,
+        17935.455322265625,
+        17820.67108154297,
+        17819.007873535156,
+        17841.503143310547
+      ],
+      "candidate_samples": [
+        49062.75177001953,
+        49086.368560791016,
+        49436.5119934082,
+        49804.70275878906,
+        51072.383880615234,
+        49531.16989135742,
+        52112.80059814453,
+        49734.94338989258
+      ]
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 17887.184143066406,
+      "candidate_us": 37506.99234008789,
+      "baseline_samples": [
+        17788.25569152832,
+        17994.272232055664,
+        17911.487579345703,
+        17852.031707763672,
+        18235.9676361084,
+        17862.88070678711,
+        18015.615463256836,
+        17791.90444946289
+      ],
+      "candidate_samples": [
+        37234.27200317383,
+        37318.75228881836,
+        39147.80807495117,
+        37585.601806640625,
+        39905.85708618164,
+        37428.382873535156,
+        38600.67367553711,
+        37256.32095336914
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 21926.575660705566,
+      "candidate_us": 21969.311714172363,
+      "baseline_samples": [
+        21382.75146484375,
+        21494.56024169922,
+        21830.848693847656,
+        22492.191314697266,
+        22681.888580322266,
+        22002.687454223633,
+        22022.27210998535,
+        21850.4638671875
+      ],
+      "candidate_samples": [
+        20901.27944946289,
+        21249.984741210938,
+        21974.271774291992,
+        21868.064880371094,
+        22079.744338989258,
+        22026.079177856445,
+        22066.71905517578,
+        21964.351654052734
+      ]
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 20953.15170288086,
+      "candidate_us": 31493.02387237549,
+      "baseline_samples": [
+        20533.151626586914,
+        20537.120819091797,
+        20563.32778930664,
+        21177.95181274414,
+        21731.03904724121,
+        21051.29623413086,
+        21335.264205932617,
+        20855.00717163086
+      ],
+      "candidate_samples": [
+        29956.768035888672,
+        29892.192840576172,
+        32332.60726928711,
+        31692.127227783203,
+        32100.894927978516,
+        31293.920516967773,
+        31738.975524902344,
+        30936.09619140625
+      ]
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 21962.255477905273,
+      "candidate_us": 25450.767517089844,
+      "baseline_samples": [
+        20812.255859375,
+        21456.192016601562,
+        21635.007858276367,
+        22003.616333007812,
+        21972.22328186035,
+        21952.287673950195,
+        22318.111419677734,
+        22544.832229614258
+      ],
+      "candidate_samples": [
+        23930.912017822266,
+        24814.111709594727,
+        25684.415817260742,
+        25538.400650024414,
+        25402.847290039062,
+        25522.49526977539,
+        25498.687744140625,
+        25389.440536499023
+      ]
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 20633.1844329834,
+      "candidate_us": 35364.606857299805,
+      "baseline_samples": [
+        20578.176498413086,
+        20544.6720123291,
+        20711.488723754883,
+        20553.375244140625,
+        21312.480926513672,
+        20644.960403442383,
+        20621.408462524414,
+        20694.944381713867
+      ],
+      "candidate_samples": [
+        35391.16668701172,
+        34688.60626220703,
+        35846.68731689453,
+        34851.295471191406,
+        36192.9931640625,
+        34923.648834228516,
+        36729.248046875,
+        35338.04702758789
+      ]
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 20569.680213928223,
+      "candidate_us": 78827.8694152832,
+      "baseline_samples": [
+        20562.816619873047,
+        20550.783157348633,
+        20801.69677734375,
+        20576.5438079834,
+        21042.272567749023,
+        20543.392181396484,
+        21200.288772583008,
+        20550.432205200195
+      ],
+      "candidate_samples": [
+        78939.453125,
+        78553.47442626953,
+        81087.29553222656,
+        78535.5224609375,
+        82133.98742675781,
+        78585.95275878906,
+        82422.65319824219,
+        78716.2857055664
+      ]
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 20575.583457946777,
+      "candidate_us": 48232.27119445801,
+      "baseline_samples": [
+        20537.18376159668,
+        20520.92742919922,
+        21273.439407348633,
+        20594.01512145996,
+        20868.480682373047,
+        20557.151794433594,
+        21064.895629882812,
+        20540.639877319336
+      ],
+      "candidate_samples": [
+        47996.9596862793,
+        48222.36633300781,
+        50565.85693359375,
+        48173.08807373047,
+        49720.79849243164,
+        48112.48016357422,
+        50310.142517089844,
+        48242.1760559082
+      ]
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 20655.888557434082,
+      "candidate_us": 38175.37498474121,
+      "baseline_samples": [
+        20548.351287841797,
+        20551.616668701172,
+        21280.5118560791,
+        20723.424911499023,
+        21374.624252319336,
+        20588.35220336914,
+        21311.77520751953,
+        20574.304580688477
+      ],
+      "candidate_samples": [
+        36872.703552246094,
+        36878.01742553711,
+        40534.46578979492,
+        38413.56658935547,
+        40006.752014160156,
+        37937.18338012695,
+        40609.66491699219,
+        37651.77536010742
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 26708.335876464844,
+      "candidate_us": 26878.464698791504,
+      "baseline_samples": [
+        25606.464385986328,
+        26583.168029785156,
+        26894.784927368164,
+        27156.959533691406,
+        27475.45623779297,
+        26752.960205078125,
+        26519.10400390625,
+        26663.711547851562
+      ],
+      "candidate_samples": [
+        25871.967315673828,
+        26759.584426879883,
+        26996.5763092041,
+        26533.536911010742,
+        26786.048889160156,
+        26970.88050842285,
+        27246.335983276367,
+        26994.911193847656
+      ]
+    },
+    {
+      "candidate": "marlin_m16",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 26889.5845413208,
+      "candidate_us": 38767.23289489746,
+      "baseline_samples": [
+        25287.551879882812,
+        26396.608352661133,
+        26688.159942626953,
+        26945.152282714844,
+        27368.160247802734,
+        27168.895721435547,
+        26884.096145629883,
+        26895.07293701172
+      ],
+      "candidate_samples": [
+        35676.09786987305,
+        37176.734924316406,
+        37618.24035644531,
+        38278.785705566406,
+        40623.07357788086,
+        39537.31155395508,
+        39255.680084228516,
+        39391.231536865234
+      ]
+    },
+    {
+      "candidate": "marlin_m32",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 26840.23952484131,
+      "candidate_us": 30711.7919921875,
+      "baseline_samples": [
+        25410.49575805664,
+        26826.047897338867,
+        26529.34455871582,
+        26992.704391479492,
+        26854.43115234375,
+        27005.632400512695,
+        26971.391677856445,
+        26778.688430786133
+      ],
+      "candidate_samples": [
+        28977.02407836914,
+        30294.879913330078,
+        31176.223754882812,
+        30825.34408569336,
+        31840.4483795166,
+        31392.63916015625,
+        30530.847549438477,
+        30598.23989868164
+      ]
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 25133.10432434082,
+      "candidate_us": 40736.703872680664,
+      "baseline_samples": [
+        25143.903732299805,
+        25093.47152709961,
+        25099.93553161621,
+        25118.175506591797,
+        25636.703491210938,
+        25122.304916381836,
+        25691.13540649414,
+        25197.311401367188
+      ],
+      "candidate_samples": [
+        41177.47116088867,
+        40375.614166259766,
+        40706.65740966797,
+        40497.37548828125,
+        42527.2331237793,
+        40597.408294677734,
+        42450.52719116211,
+        40766.75033569336
+      ]
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 25117.487907409668,
+      "candidate_us": 89651.92031860352,
+      "baseline_samples": [
+        25100.543975830078,
+        25120.54443359375,
+        26161.151885986328,
+        25097.56851196289,
+        25587.10479736328,
+        25100.767135620117,
+        25518.65577697754,
+        25114.431381225586
+      ],
+      "candidate_samples": [
+        90469.5053100586,
+        88807.13653564453,
+        92004.22668457031,
+        88751.32751464844,
+        92511.93237304688,
+        88813.82751464844,
+        90642.40264892578,
+        88834.33532714844
+      ]
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 25105.664253234863,
+      "candidate_us": 55163.841247558594,
+      "baseline_samples": [
+        25128.60870361328,
+        25106.33659362793,
+        25088.544845581055,
+        25104.991912841797,
+        25574.81575012207,
+        25093.82438659668,
+        25679.519653320312,
+        25079.423904418945
+      ],
+      "candidate_samples": [
+        55163.169860839844,
+        54882.36618041992,
+        55995.391845703125,
+        55164.512634277344,
+        57434.112548828125,
+        54977.95104980469,
+        57167.7131652832,
+        55159.423828125
+      ]
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 25134.303092956543,
+      "candidate_us": 43952.335357666016,
+      "baseline_samples": [
+        25150.7511138916,
+        25098.047256469727,
+        25116.89567565918,
+        25197.7596282959,
+        25350.94451904297,
+        25117.855072021484,
+        25419.93522644043,
+        25114.97688293457
+      ],
+      "candidate_samples": [
+        44149.21569824219,
+        43110.52703857422,
+        44221.59957885742,
+        43569.889068603516,
+        45486.270904541016,
+        43755.455017089844,
+        45245.887756347656,
+        43539.68048095703
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"batch\": 1, \"ctx\": 0, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 300, \"seed\": 2100}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 3000, \"dist\": \"normal\", \"layer\": \"full\", \"page\": 1, \"q_len\": 753, \"seed\": 2101}": {
+      "local_start": 160
+    },
+    "{\"batch\": 2, \"ctx\": 2500, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 753, \"seed\": 2102}": {
+      "local_start": 160
+    },
+    "{\"batch\": 3, \"ctx\": 5000, \"dist\": \"outliers\", \"layer\": \"full\", \"page\": 1, \"q_len\": 200, \"seed\": 2103}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 4096, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 4096, \"seed\": 2104}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"turn 1\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1001, \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"turn 1\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1002, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"turn 4\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1003, \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"turn 4\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1004, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 0, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1006, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 32768, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1007, \"weight\": 138}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 32768, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1008, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 65536, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1010, \"weight\": 16}": {
+      "local_start": 160
+    }
+  },
+  "calibration_us": 3.3599999733269215,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "control",
+    "case": {
+      "batch": 1,
+      "ctx": 32768,
+      "layer": "sliding",
+      "q_len": 16384,
+      "page": 1,
+      "dist": "soft",
+      "load": "first turn",
+      "weight": 138,
+      "repeats": 6,
+      "seed": 1007
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us      47.617ms        65.86%      47.617ms       5.952ms             8  \n         nvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      10.033ms        13.88%      10.033ms     836.100us            12  \n         nvjet_sm90_tst_320x128_64x3_1x2_h_bz_coopB_TNT         0.00%       0.000us         0.00%       0.000us       0.000us       5.889ms         8.15%       5.889ms       1.472ms             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.611ms         2.23%       1.611ms     402.666us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.594ms         2.20%       1.594ms     398.466us             4  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.218ms         1.68%       1.218ms     304.378us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us       1.190ms         1.65%       1.190ms     297.481us             4  \n         nvjet_sm90_tss_128x256_64x4_2x1_v_bz_coopA_NNN         0.00%       0.000us         0.00%       0.000us       0.000us       1.146ms         1.59%       1.146ms     143.265us             8  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     506.626us         0.70%     506.626us     126.657us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us     336.642us         0.47%     336.642us      84.160us             4  \nvoid at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us     319.778us         0.44%     319.778us      79.944us             4  \n                                _qk_rms_norm_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     170.946us         0.24%     170.946us      42.737us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     166.944us         0.23%     166.944us      41.736us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us     108.384us         0.15%     108.384us      27.096us             4  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us      98.146us         0.14%      98.146us      24.537us             4  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 73.026ms\nSelf CUDA time total: 72.301ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us      49.948ms        66.74%      49.948ms       6.244ms             8  \n         nvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      10.101ms        13.50%      10.101ms     841.751us            12  \n         nvjet_sm90_tst_320x128_64x3_1x2_h_bz_coopB_TNT         0.00%       0.000us         0.00%       0.000us       0.000us       5.901ms         7.89%       5.901ms       1.475ms             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.627ms         2.17%       1.627ms     406.777us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.605ms         2.14%       1.605ms     401.313us             4  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.269ms         1.70%       1.269ms     317.256us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us       1.211ms         1.62%       1.211ms     302.625us             4  \n         nvjet_sm90_tss_128x256_64x4_2x1_v_bz_coopA_NNN         0.00%       0.000us         0.00%       0.000us       0.000us       1.154ms         1.54%       1.154ms     144.244us             8  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     513.696us         0.69%     513.696us     128.424us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us     337.632us         0.45%     337.632us      84.408us             4  \nvoid at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us     321.120us         0.43%     321.120us      80.280us             4  \n                                _qk_rms_norm_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     175.711us         0.23%     175.711us      43.928us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     164.063us         0.22%     164.063us      41.016us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us     110.145us         0.15%     110.145us      27.536us             4  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us      99.745us         0.13%      99.745us      24.936us             4  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 75.673ms\nSelf CUDA time total: 74.838ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m128_n64_k64",
+      "function": "_nv_mm",
+      "registers": 168,
+      "spills": 0,
+      "shared": 57344
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 236,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 235,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 236,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 235,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 236,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 235,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 236,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 235,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 236,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 235,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 236,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 235,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 236,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m32_n64_k64",
+      "function": "_nv_mm",
+      "registers": 235,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n128_k64",
+      "function": "_nv_mm",
+      "registers": 237,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 128,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 107,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 128,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 107,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 128,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 107,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 128,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 107,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 128,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 107,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 128,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 107,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 128,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "triton_m64_n64_k64",
+      "function": "_nv_mm",
+      "registers": 107,
+      "spills": 0,
+      "shared": 32768
+    }
+  ],
+  "elapsed_s": 93.703238331,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_prefill_layer",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/4989732e775b756a7799e9d5fff7537ab2de28218d6f8435d07d4149956d2baa.py",
+      "sha256": "4989732e775b756a7799e9d5fff7537ab2de28218d6f8435d07d4149956d2baa"
+    },
+    "marlin_m16": {
+      "path": "experiments/sources/fad768de0128b4f97f26f3df0ee83ea796bd95e9e990542d34c2560b533048b9.py",
+      "sha256": "fad768de0128b4f97f26f3df0ee83ea796bd95e9e990542d34c2560b533048b9"
+    },
+    "marlin_m32": {
+      "path": "experiments/sources/b8c0b11fa36507458da21954a5575847235f1c812dbe8a52fe6d29d327e2a801.py",
+      "sha256": "b8c0b11fa36507458da21954a5575847235f1c812dbe8a52fe6d29d327e2a801"
+    },
+    "triton_m128_n64_k64": {
+      "path": "experiments/sources/49af7d60f02e81b0b292f019c76cb7e50a2540881a1ae49b749355690b5c5f9c.py",
+      "sha256": "49af7d60f02e81b0b292f019c76cb7e50a2540881a1ae49b749355690b5c5f9c"
+    },
+    "triton_m32_n64_k64": {
+      "path": "experiments/sources/339149e7e8af5ae1637d78924947b2f308740676d0d5bca40821108ea33319cd.py",
+      "sha256": "339149e7e8af5ae1637d78924947b2f308740676d0d5bca40821108ea33319cd"
+    },
+    "triton_m64_n128_k64": {
+      "path": "experiments/sources/cd558c7bf328e8d002b94bd09c9207d0c105ae05b19cbf864e22cb68bc4c9fc0.py",
+      "sha256": "cd558c7bf328e8d002b94bd09c9207d0c105ae05b19cbf864e22cb68bc4c9fc0"
+    },
+    "triton_m64_n64_k64": {
+      "path": "experiments/sources/85c76de83b9b0c90035e450f967708816082c262b850fcc71a40762922313fcb.py",
+      "sha256": "85c76de83b9b0c90035e450f967708816082c262b850fcc71a40762922313fcb"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

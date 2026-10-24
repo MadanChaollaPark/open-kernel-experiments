@@ -1,0 +1,21 @@
+{
+  "source": "outputs/moe_compact_dispatch.py",
+  "sha256": "2969fb6977357fdf5f5c3c99b9e8f8526e560d87b567dbb052e3d973d2942b3c",
+  "initial_result": "outputs/moe-compact-dispatch.json",
+  "repeat_result": "outputs/moe-compact-dispatch-repeat-v2.json",
+  "candidate_checks": {
+    "initial": 23,
+    "repeat": 19,
+    "total": 42
+  },
+  "total_comparison_checks": 107,
+  "repeated_local_scores": [
+    1.1715,
+    1.1696
+  ],
+  "control_scores": [
+    1.1595,
+    1.1598
+  ],
+  "scope": "Native no-invalid-block-scan specialization only with compact metadata up to1024tokens. Original nativeEP fallback above1024. Includes extra no-local, one-local, all-local route tests."
+}

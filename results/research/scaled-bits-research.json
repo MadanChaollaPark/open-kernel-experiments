@@ -1,0 +1,92 @@
+{
+  "updated_at": "2026-10-24T10:07:11.033700+09:00",
+  "status": "All 66 full MoE checks passed, all candidates slower than control; not promoted",
+  "basis": "Pinned SGLang/Marlin dequant.h uses raw exponent fields and delayed bias correction. Current custom kernel uses warp shuffle lookups.",
+  "native_source": "work/marlin_dequant.h",
+  "native_source_image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "method": "Raw BF16 representation of FP4*2^-126 multiplied by BF16(SF*2^118) gives exact BF16(FP4*SF*2^-8). Restore2^8 with global scale before required output BF16 rounding. Storage remains packed4bit weights and8bit scales.",
+  "helper_sha256": "5241948072e458053d49880cbbce19863a18e75722c74cbc579e1089f1bfaca3",
+  "numeric_check": "work/test_fp4_scaled_probe.py: exhaustive256byte-patterns x254finiteFP8scales and65536random independent words/scales, direct and native-style nibble packing. Independent FP4value table and torchFP8float conversion provide reference.",
+  "probe_precompile": "outputs/fp4-scaled-probe-precompile.json",
+  "mma_precompile": "outputs/moe-scaled-bits-precompile.json",
+  "benchmark_runner": "work/run_moe_scaled_bits.py",
+  "variants": [
+    "global_bits_s8",
+    "global_packed_s8",
+    "global_packed_s16",
+    "async_packed_s8",
+    "async_packed_s16"
+  ],
+  "guard": "Run benchmark only after numerical probe passes. End-to-end correctness still required; scaled accumulation can differ at extreme underflow ranges.",
+  "numeric_proof": {
+    "gpu": "NVIDIA H200",
+    "validation": [
+      {
+        "case": "exhaustive",
+        "packed": false,
+        "values": 520192,
+        "mismatches": 0,
+        "max_abs": 0.0,
+        "passed": true
+      },
+      {
+        "case": "exhaustive",
+        "packed": true,
+        "values": 520192,
+        "mismatches": 0,
+        "max_abs": 0.0,
+        "passed": true
+      },
+      {
+        "case": "random_independent",
+        "packed": false,
+        "values": 524288,
+        "mismatches": 0,
+        "max_abs": 0.0,
+        "passed": true
+      },
+      {
+        "case": "random_independent",
+        "packed": true,
+        "values": 524288,
+        "mismatches": 0,
+        "max_abs": 0.0,
+        "passed": true
+      }
+    ],
+    "all_passed": true
+  },
+  "numeric_values_checked": 2088960,
+  "mma_compile": [
+    {
+      "variant": "global_bits_s8",
+      "compiled": true,
+      "elapsed_s": 27.410283138
+    },
+    {
+      "variant": "global_packed_s8",
+      "compiled": true,
+      "elapsed_s": 18.59071978
+    },
+    {
+      "variant": "async_packed_s8",
+      "compiled": true,
+      "elapsed_s": 19.858985874
+    }
+  ],
+  "benchmark_result": "outputs/moe-scaled-bits.json",
+  "local_scores": {
+    "control": 1.1571,
+    "async_packed_s16": 1.1111,
+    "async_packed_s8": 1.1062,
+    "global_packed_s16": 1.1053,
+    "global_packed_s8": 1.0714,
+    "global_bits_s8": 1.0504
+  },
+  "m1_us_including_graph_overhead": {
+    "control": 81.168,
+    "async_packed_s16": 103.744
+  },
+  "next": "Apply paired bit conversion to scalar GEMV, replacing warp lookups; preserve precision and validate separately.",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

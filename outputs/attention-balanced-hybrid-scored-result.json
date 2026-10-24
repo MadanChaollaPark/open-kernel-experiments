@@ -1,0 +1,10 @@
+{
+  "id": "509471d6c70c4e0f",
+  "board": "muse_attention_decode",
+  "mode": "run",
+  "status": "queued",
+  "created_at": 1792803589.9360707,
+  "content_hash": "edfe69bd69751b440747148bb95cb260ccc7e54383071fa32342e0b81eb5f401",
+  "duplicate_of": null,
+  "archive_note": "Selected fields from official CLI JSON; logs and host paths omitted."
+}

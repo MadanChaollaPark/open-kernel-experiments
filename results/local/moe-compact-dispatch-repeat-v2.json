@@ -1,0 +1,1255 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7200,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7200,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7201,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7201,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 1024,
+        "sharding": "ep8",
+        "seed": 7202,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1024,
+        "sharding": "ep8",
+        "seed": 7202,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 1025,
+        "sharding": "ep8",
+        "seed": 7203,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1025,
+        "sharding": "ep8",
+        "seed": 7203,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7204,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.608e-03 (worst row 5.608e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7204,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.608e-03 (worst row 5.608e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7205,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.529e-03 (worst row 5.743e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7205,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.529e-03 (worst row 5.742e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 7206,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.561e-03 (worst row 6.044e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 7206,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.561e-03 (worst row 6.044e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7207,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.538e-03 (worst row 6.068e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7207,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.537e-03 (worst row 6.068e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 85.88799834251404,
+      "candidate_us": 81.93599805235863,
+      "baseline_samples": [
+        90.71999788284302,
+        85.28000116348267,
+        86.75199747085571,
+        85.75999736785889,
+        85.91999858617783,
+        85.56800335645676,
+        85.79199761152267,
+        86.33600175380707,
+        85.85599809885025,
+        86.11200004816055,
+        86.2400010228157,
+        85.95199882984161,
+        85.4400023818016,
+        85.40800213813782,
+        86.30400151014328,
+        85.40800213813782,
+        85.53600311279297,
+        84.70399677753448,
+        86.01599931716919,
+        86.68799698352814
+      ],
+      "candidate_samples": [
+        89.05600011348724,
+        81.95199817419052,
+        82.11199939250946,
+        81.79199695587158,
+        81.82399719953537,
+        83.13599973917007,
+        81.28000050783157,
+        81.727996468544,
+        81.216000020504,
+        82.20800012350082,
+        82.04799890518188,
+        81.56800270080566,
+        82.78399705886841,
+        82.84799754619598,
+        81.91999793052673,
+        81.60000294446945,
+        81.98399841785431,
+        81.18399977684021,
+        82.43200182914734,
+        81.69600367546082
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 85.9839990735054,
+      "candidate_us": 82.2720006108284,
+      "baseline_samples": [
+        86.04799956083298,
+        85.95199882984161,
+        85.21600067615509,
+        86.01599931716919,
+        86.68799698352814,
+        86.01599931716919,
+        86.07999980449677,
+        84.95999872684479,
+        86.17600053548813,
+        86.20800077915192,
+        86.30400151014328,
+        85.24800091981888,
+        85.95199882984161,
+        85.66399663686752,
+        85.50400286912918,
+        85.75999736785889,
+        86.30400151014328,
+        86.40000224113464,
+        85.34400165081024,
+        85.66399663686752
+      ],
+      "candidate_samples": [
+        87.87199854850769,
+        82.24000036716461,
+        82.40000158548355,
+        81.82399719953537,
+        82.8159973025322,
+        82.56000280380249,
+        82.84799754619598,
+        81.28000050783157,
+        82.17599987983704,
+        82.30400085449219,
+        82.68799632787704,
+        81.79199695587158,
+        81.85599744319916,
+        81.44000172615051,
+        82.04799890518188,
+        83.00799876451492,
+        82.07999914884567,
+        82.04799890518188,
+        82.40000158548355,
+        83.13599973917007
+      ]
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 178.3199980854988,
+      "candidate_us": 171.07200622558594,
+      "baseline_samples": [
+        185.18400192260742,
+        178.94400656223297,
+        179.4240027666092,
+        177.50400304794312,
+        178.49600315093994,
+        178.75200510025024,
+        179.58399653434753,
+        178.65599691867828,
+        177.95200645923615,
+        176.35199427604675,
+        178.43200266361237,
+        176.70400440692902,
+        177.72799730300903,
+        178.847998380661,
+        178.3680021762848,
+        177.47199535369873,
+        178.1120002269745,
+        177.98399925231934,
+        177.18400061130524,
+        178.27199399471283
+      ],
+      "candidate_samples": [
+        177.47199535369873,
+        171.07200622558594,
+        172.09599912166595,
+        170.78399658203125,
+        170.3999936580658,
+        171.51999473571777,
+        171.83999717235565,
+        170.75200378894806,
+        170.9440052509308,
+        171.58399522304535,
+        170.49600183963776,
+        171.39199376106262,
+        171.424001455307,
+        170.6559956073761,
+        170.6559956073761,
+        170.78399658203125,
+        170.43200135231018,
+        171.9679981470108,
+        172.35200107097626,
+        171.07200622558594
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.85599827766418,
+      "candidate_us": 171.9680055975914,
+      "baseline_samples": [
+        178.56000363826752,
+        177.05599963665009,
+        178.01600694656372,
+        177.76000499725342,
+        177.91999876499176,
+        178.17600071430206,
+        178.49600315093994,
+        178.0800074338913,
+        179.1359931230545,
+        177.7919977903366,
+        177.05599963665009,
+        177.34399437904358,
+        177.44000256061554,
+        177.72799730300903,
+        178.3359944820404,
+        178.0800074338913,
+        177.279993891716,
+        177.66399681568146,
+        178.46399545669556,
+        177.76000499725342
+      ],
+      "candidate_samples": [
+        178.14399302005768,
+        171.48800194263458,
+        172.0000058412552,
+        171.29600048065186,
+        173.3119934797287,
+        173.69599640369415,
+        170.59199512004852,
+        171.87200486660004,
+        171.77599668502808,
+        172.19200730323792,
+        171.29600048065186,
+        173.08799922466278,
+        172.38399386405945,
+        170.97599804401398,
+        172.57599532604218,
+        171.9360053539276,
+        169.95200514793396,
+        173.37599396705627,
+        172.28800058364868,
+        171.80800437927246
+      ]
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.552001953125,
+      "candidate_us": 240.83199352025986,
+      "baseline_samples": [
+        264.95999097824097,
+        258.91199707984924,
+        258.59200954437256,
+        259.16799902915955,
+        260.672003030777,
+        262.2399926185608,
+        259.42400097846985,
+        259.7759962081909,
+        259.2960000038147,
+        260.3200078010559,
+        259.5840096473694,
+        259.13599133491516,
+        259.5199942588806,
+        258.976012468338,
+        259.5199942588806,
+        259.90399718284607,
+        260.127991437912,
+        260.8320116996765,
+        258.432000875473,
+        259.6159875392914
+      ],
+      "candidate_samples": [
+        241.69600009918213,
+        240.86399376392365,
+        240.6720072031021,
+        239.26399648189545,
+        241.43999814987183,
+        242.2720044851303,
+        239.84000086784363,
+        240.09600281715393,
+        242.3039972782135,
+        242.01600253582,
+        241.2160038948059,
+        240.28800427913666,
+        239.99999463558197,
+        239.71199989318848,
+        240.89600145816803,
+        239.9040013551712,
+        243.29599738121033,
+        242.08000302314758,
+        240.79999327659607,
+        240.60800671577454
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.6160024404526,
+      "candidate_us": 241.03999882936478,
+      "baseline_samples": [
+        261.1840069293976,
+        260.51199436187744,
+        259.0399980545044,
+        259.64799523353577,
+        260.70401072502136,
+        260.44800877571106,
+        259.68000292778015,
+        259.00799036026,
+        259.16799902915955,
+        259.552001953125,
+        259.2320144176483,
+        258.7839961051941,
+        260.22401452064514,
+        259.2320144176483,
+        259.5840096473694,
+        260.0640058517456,
+        259.8400115966797,
+        260.19200682640076,
+        259.5199942588806,
+        258.65599513053894
+      ],
+      "candidate_samples": [
+        242.01600253582,
+        241.08800292015076,
+        241.02400243282318,
+        241.31199717521667,
+        240.51199853420258,
+        242.0479953289032,
+        240.447998046875,
+        240.09600281715393,
+        240.63999950885773,
+        240.22400379180908,
+        240.51199853420258,
+        239.6160066127777,
+        241.34400486946106,
+        241.56799912452698,
+        240.6720072031021,
+        240.35200476646423,
+        241.05599522590637,
+        241.5360063314438,
+        241.5360063314438,
+        241.56799912452698
+      ]
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 154.07999604940414,
+      "candidate_us": 148.0639949440956,
+      "baseline_samples": [
+        160.47999262809753,
+        154.7520011663437,
+        154.33600544929504,
+        153.888002038002,
+        154.91199493408203,
+        153.76000106334686,
+        153.82400155067444,
+        153.72799336910248,
+        153.76000106334686,
+        153.50399911403656,
+        153.6639928817749,
+        154.36799824237823,
+        154.7199934720993,
+        153.3759981393814,
+        154.36799824237823,
+        155.2640050649643,
+        154.65599298477173,
+        153.98399531841278,
+        152.67199277877808,
+        154.1759967803955
+      ],
+      "candidate_samples": [
+        155.58399260044098,
+        148.67199957370758,
+        148.80000054836273,
+        148.70400726795197,
+        148.41599762439728,
+        148.47999811172485,
+        147.45600521564484,
+        146.464005112648,
+        147.0080018043518,
+        147.5840061903,
+        147.5200057029724,
+        147.87200093269348,
+        148.03199470043182,
+        148.5760062932968,
+        147.45600521564484,
+        148.3200043439865,
+        148.47999811172485,
+        148.0959951877594,
+        146.62399888038635,
+        146.81600034236908
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 154.2240008711815,
+      "candidate_us": 148.51199835538864,
+      "baseline_samples": [
+        155.13600409030914,
+        154.08000349998474,
+        153.888002038002,
+        154.14400398731232,
+        154.04799580574036,
+        154.40000593662262,
+        153.6639928817749,
+        153.76000106334686,
+        154.78399395942688,
+        153.05599570274353,
+        154.4640064239502,
+        154.1759967803955,
+        154.4959992170334,
+        154.04799580574036,
+        154.4640064239502,
+        154.27200496196747,
+        155.03999590873718,
+        155.13600409030914,
+        154.30399775505066,
+        153.1199961900711
+      ],
+      "candidate_samples": [
+        153.9199948310852,
+        147.8399932384491,
+        148.80000054836273,
+        148.3200043439865,
+        148.15999567508698,
+        148.95999431610107,
+        148.6400067806244,
+        148.47999811172485,
+        148.95999431610107,
+        149.27999675273895,
+        147.93600142002106,
+        148.5760062932968,
+        148.54399859905243,
+        148.60799908638,
+        148.67199957370758,
+        148.3519971370697,
+        148.03199470043182,
+        148.3840048313141,
+        147.5519984960556,
+        147.5519984960556
+      ]
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 411.3599956035614,
+      "candidate_us": 304.8799932003021,
+      "baseline_samples": [
+        411.9679927825928,
+        411.3599956035614,
+        410.14400124549866,
+        411.3599956035614,
+        411.3920032978058,
+        410.3679955005646,
+        408.9919924736023,
+        409.05600786209106,
+        408.2239866256714,
+        409.31200981140137,
+        409.2159867286682,
+        409.280002117157,
+        411.3599956035614,
+        413.2480025291443,
+        412.31998801231384,
+        411.45598888397217,
+        412.00000047683716,
+        410.0160002708435,
+        411.8080139160156,
+        411.3920032978058
+      ],
+      "candidate_samples": [
+        308.0959916114807,
+        304.28799986839294,
+        303.74398827552795,
+        304.76799607276917,
+        304.9600124359131,
+        304.86398935317993,
+        303.1040132045746,
+        303.1040132045746,
+        304.4799864292145,
+        305.11999130249023,
+        304.064005613327,
+        304.8959970474243,
+        304.83201146125793,
+        305.11999130249023,
+        305.4080009460449,
+        304.25599217414856,
+        305.9200048446655,
+        305.759996175766,
+        306.5600097179413,
+        306.2080144882202
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 410.3679955005646,
+      "candidate_us": 309.4400018453598,
+      "baseline_samples": [
+        410.14400124549866,
+        407.99999237060547,
+        409.2479944229126,
+        412.416011095047,
+        411.52000427246094,
+        409.92000699043274,
+        408.9919924736023,
+        411.6480052471161,
+        410.68801283836365,
+        410.14400124549866,
+        409.4400107860565,
+        408.60798954963684,
+        408.4480106830597,
+        411.00800037384033,
+        411.3920032978058,
+        411.23199462890625,
+        411.6480052471161,
+        411.6480052471161,
+        410.5919897556305,
+        408.2239866256714
+      ],
+      "candidate_samples": [
+        310.04801392555237,
+        309.56798791885376,
+        308.19201469421387,
+        309.5040023326874,
+        310.2400004863739,
+        310.14400720596313,
+        307.93601274490356,
+        310.2400004863739,
+        310.2720081806183,
+        309.3760013580322,
+        309.08799171447754,
+        309.7600042819977,
+        309.56798791885376,
+        309.05601382255554,
+        307.2960078716278,
+        309.56798791885376,
+        307.8399896621704,
+        309.3760013580322,
+        308.73599648475647,
+        309.08799171447754
+      ]
+    },
+    {
+      "candidate": "compact_all",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 594.6559906005859,
+      "candidate_us": 389.3920034170151,
+      "baseline_samples": [
+        600.8960008621216,
+        593.887984752655,
+        595.8080291748047,
+        597.6639986038208,
+        595.2000021934509,
+        594.111979007721,
+        593.7920212745667,
+        590.8799767494202,
+        592.4479961395264,
+        592.1919941902161,
+        594.6239829063416,
+        595.3919887542725,
+        594.6879982948303,
+        595.8719849586487,
+        595.6799983978271,
+        593.7280058860779,
+        593.6319828033447,
+        598.1119871139526,
+        596.7040061950684,
+        594.111979007721
+      ],
+      "candidate_samples": [
+        390.04799723625183,
+        388.19199800491333,
+        389.44000005722046,
+        389.631986618042,
+        390.20800590515137,
+        389.631986618042,
+        391.2320137023926,
+        388.60800862312317,
+        388.67199420928955,
+        387.87201046943665,
+        388.35200667381287,
+        390.4320001602173,
+        389.7919952869415,
+        389.3440067768097,
+        388.19199800491333,
+        390.3360068798065,
+        388.0000114440918,
+        390.24001359939575,
+        387.9680037498474,
+        388.9920115470886
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 594.5279896259308,
+      "candidate_us": 394.6719914674759,
+      "baseline_samples": [
+        593.6639904975891,
+        599.232017993927,
+        598.4640121459961,
+        595.6479907035828,
+        593.1519865989685,
+        595.2960252761841,
+        594.8160290718079,
+        596.7680215835571,
+        596.3839888572693,
+        594.7200059890747,
+        593.3759808540344,
+        594.2720174789429,
+        595.6159830093384,
+        594.0799713134766,
+        593.7280058860779,
+        594.048023223877,
+        597.4400043487549,
+        594.3359732627869,
+        594.0160155296326,
+        592.6079750061035
+      ],
+      "candidate_samples": [
+        397.69598841667175,
+        396.2880074977875,
+        395.9999978542328,
+        395.32798528671265,
+        393.5999870300293,
+        394.49599385261536,
+        396.2880074977875,
+        396.0320055484772,
+        394.8479890823364,
+        395.9999978542328,
+        394.01599764823914,
+        394.9759900569916,
+        394.0800130367279,
+        393.312007188797,
+        394.8479890823364,
+        393.98398995399475,
+        394.01599764823914,
+        394.1760063171387,
+        393.95201206207275,
+        394.49599385261536
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"bs\": 4, \"dist\": \"normal\", \"seed\": 1800, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"seed\": 1801, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 257, \"dist\": \"normal\", \"seed\": 1802, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 128, \"dist\": \"skewed\", \"seed\": 1803, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"seed\": 1804, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"routing_pattern\": \"all_nonlocal\", \"seed\": 7200, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"routing_pattern\": \"all_nonlocal\", \"seed\": 7201, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1024, \"dist\": \"normal\", \"routing_pattern\": \"all_nonlocal\", \"seed\": 7202, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1025, \"dist\": \"normal\", \"routing_pattern\": \"all_nonlocal\", \"seed\": 7203, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"routing_pattern\": \"all_local\", \"seed\": 7204, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"routing_pattern\": \"all_local\", \"seed\": 7205, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 257, \"dist\": \"normal\", \"routing_pattern\": \"one_local\", \"seed\": 7206, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"routing_pattern\": \"one_local\", \"seed\": 7207, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"load\": \"decode 1\", \"seed\": 401, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 16, \"load\": \"decode 16\", \"seed\": 402, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 32, \"load\": \"decode 32\", \"seed\": 403, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 8, \"load\": \"verify 1\", \"seed\": 404, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 128, \"load\": \"verify 16\", \"seed\": 405, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 256, \"load\": \"verify 32\", \"seed\": 406, \"sharding\": \"ep8\", \"weight\": 60}": {}
+  },
+  "calibration_us": 3.295999951660633,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "compact_all",
+    "case": {
+      "bs": 256,
+      "sharding": "ep8",
+      "load": "verify 32",
+      "weight": 60,
+      "seed": 406
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       1.475ms        87.03%       1.475ms     184.387us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     148.841us         8.78%     148.841us      37.210us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      22.785us         1.34%      22.785us       5.696us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      22.498us         1.33%      22.498us       5.625us             4  \nvoid group_routes<256>(int const*, int*, int*, int*,...         0.00%       0.000us         0.00%       0.000us       0.000us      22.177us         1.31%      22.177us       5.544us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.457us         0.20%       3.457us       0.864us             4  \n                                        cudaGraphLaunch         6.39%     408.453us        79.00%       5.047ms       1.262ms       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        72.60%       4.638ms        72.60%       4.638ms       4.638ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        21.00%       1.342ms        21.00%       1.342ms     670.909us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 6.388ms\nSelf CUDA time total: 1.695ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       2.272ms        90.20%       2.272ms     283.985us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     148.117us         5.88%     148.117us      37.029us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      23.248us         0.92%      23.248us       5.812us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      22.896us         0.91%      22.896us       5.724us             4  \nvoid at::native::index_elementwise_kernel<128, 4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      13.565us         0.54%      13.565us       3.391us             4  \nvoid at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      12.122us         0.48%      12.122us       3.031us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us      12.056us         0.48%      12.056us       3.014us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us      10.872us         0.43%      10.872us       2.718us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.977us         0.16%       3.977us       0.994us             4  \n                                        cudaGraphLaunch         4.01%     373.474us        76.45%       7.113ms       1.778ms       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        72.43%       6.739ms        72.43%       6.739ms       6.739ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        23.55%       2.191ms        23.55%       2.191ms       1.096ms       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 9.304ms\nSelf CUDA time total: 2.519ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "compact_all",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "compact_all",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "compact_all",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "compact_all",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact_all",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    }
+  ],
+  "elapsed_s": 23.211563888,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_moe_w4a16",
+  "source_files": {
+    "compact_all": {
+      "path": "experiments/sources/2969fb6977357fdf5f5c3c99b9e8f8526e560d87b567dbb052e3d973d2942b3c.py",
+      "sha256": "2969fb6977357fdf5f5c3c99b9e8f8526e560d87b567dbb052e3d973d2942b3c"
+    },
+    "control": {
+      "path": "experiments/sources/757047f55753e2d4c48702a02d3302f39ab4673cfe4959d4dd66ad131b32c72f.py",
+      "sha256": "757047f55753e2d4c48702a02d3302f39ab4673cfe4959d4dd66ad131b32c72f"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

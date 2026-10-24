@@ -1,0 +1,72 @@
+{
+  "status": "rejected: correct but slower",
+  "source": "work/moe_warp_mma_async.cu",
+  "builder": "work/build_moe_warp_mma_async.py",
+  "runner": "work/run_moe_warp_mma_async.py",
+  "method": "2/4/8-stage cp.async ring buffers for packed NVFP4 weights and FP8 scales; exact BF16 dequant and FP32 MMA remain unchanged. Shared data loaded into registers before reuse. Existing K-split reduction unchanged.",
+  "difference_from_rejected_vector_variant": "Replaces serial global weight loads with coalesced16-byte asynchronous copies overlapped with current-tile compute. Tests only M1, current MoE CUDA-grouping source elsewhere.",
+  "correctness_notes": [
+    "Uniform CTA waits and barriers protect all shared buffers.",
+    "Final iterations drain pending async groups before reading or returning.",
+    "Weights remain packed NVFP4 and FP8 scales; no input-derived persistent state."
+  ],
+  "precompile_evidence": "outputs/moe-warp-mma-async-precompile.json",
+  "precompile": [
+    {
+      "pipeline_stages": 2,
+      "compiled": true,
+      "elapsed_s": 25.640784855
+    },
+    {
+      "pipeline_stages": 4,
+      "compiled": true,
+      "elapsed_s": 19.010082270999998
+    },
+    {
+      "pipeline_stages": 8,
+      "compiled": true,
+      "elapsed_s": 16.436560872
+    }
+  ],
+  "module_loading": "CUDA modules loaded during prepare before timed calls.",
+  "evidence": "outputs/moe-warp-mma-async.json",
+  "checks": {
+    "passed": 66,
+    "total": 66
+  },
+  "scores": {
+    "control": 1.1611,
+    "p4_s16": 1.0851,
+    "p8_s8": 1.0829,
+    "p4_s8": 1.0823,
+    "p4_s32": 1.0818,
+    "p2_s8": 1.0741
+  },
+  "single_token_us": {
+    "control": 77.52,
+    "p4_s16": 115.97,
+    "p8_s8": 117.74,
+    "p4_s8": 117.25,
+    "p4_s32": 117.92,
+    "p2_s8": 122.26
+  },
+  "decision": "Prefetch changes only slightly improve the older vector MMA result; still far slower than current native path. Do not repeat pipeline-depth tuning without new evidence.",
+  "resources": {
+    "/okc-compile-cache/tvm-ffi/okc_moe_warp_mma_async_p2_v1_9e9d3de61b747d98/okc_moe_warp_mma_async_p2_v1.so": {
+      "max_regs": 48,
+      "max_local": 0,
+      "max_shared": 3328
+    },
+    "/okc-compile-cache/tvm-ffi/okc_moe_warp_mma_async_p4_v1_df201bc6c27c084f/okc_moe_warp_mma_async_p4_v1.so": {
+      "max_regs": 48,
+      "max_local": 0,
+      "max_shared": 5632
+    },
+    "/okc-compile-cache/tvm-ffi/okc_moe_warp_mma_async_p8_v1_5943668979c0e650/okc_moe_warp_mma_async_p8_v1.so": {
+      "max_regs": 46,
+      "max_local": 0,
+      "max_shared": 10240
+    }
+  },
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

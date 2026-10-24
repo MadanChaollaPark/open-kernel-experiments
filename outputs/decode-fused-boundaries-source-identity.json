@@ -1,0 +1,10 @@
+{
+  "source": "outputs/decode_fused_boundaries.py",
+  "local_sha256": "2719e246bf951b88e8f4a64f4b18934426682ff172e0875ca9048bdb2b2e8527",
+  "validation": "outputs/decode-fused-boundaries.json",
+  "candidate": "normmap_router_pad",
+  "local_score_speedup": 1.2132,
+  "control_score_speedup": 1.1335,
+  "scored_submit_receipt": "outputs/decode-fused-boundaries-scored-submit.json",
+  "scored_submission_reason": "Exact source passed100/100localchecks; 1.2132local versus1.1335control. Scored run queued while check also pending; officialbest unchanged until confirmation."
+}

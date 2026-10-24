@@ -1,0 +1,285 @@
+{
+  "updated_at": "2026-10-24T01:56:23.914836+00:00",
+  "goal_achieved": false,
+  "verified_candidates": [
+    {
+      "problem": "muse_attention_decode",
+      "source": "outputs/attention_fused_hybrid.py",
+      "local_file_sha256": "6f16fd800408cc510c5fe9e3e8372269cb7ee4f786578ca2bb9301d73210b68c",
+      "server_content_identifier": "6e16e1561d3ff408e6e2060f1ca4df5c755631e5041c25393919cff573cdf9e2",
+      "official_job": "b4833dc1766c4451",
+      "mode": "run",
+      "receipt": "outputs/attention-fused-hybrid-scored-result.json",
+      "scored_job": "b4833dc1766c4451",
+      "scored_status": "done",
+      "speedup": 1.4806597124603154,
+      "speedup_ci": [
+        1.4584498167734106,
+        1.5086080789383463
+      ],
+      "score_us": 2543.6634550836707,
+      "passed": true,
+      "flags": []
+    },
+    {
+      "problem": "muse_decode_layer",
+      "source": "outputs/decode_fused_boundaries.py",
+      "local_file_sha256": "2719e246bf951b88e8f4a64f4b18934426682ff172e0875ca9048bdb2b2e8527",
+      "server_content_identifier": "da6e92892826175e2a9e82d2e2de4128160ac24ae2cd11ab6c88de0eafcb1011",
+      "official_job": "59fa310d73a342ea",
+      "mode": "run",
+      "receipt": "outputs/decode-fused-boundaries-scored-result.json",
+      "scored_job": "59fa310d73a342ea",
+      "scored_status": "done",
+      "speedup": 1.1851971048615961,
+      "speedup_ci": [
+        1.1674191482886722,
+        1.20297506143452
+      ],
+      "score_us": 19085.686175922216,
+      "passed": true,
+      "flags": []
+    },
+    {
+      "problem": "muse_bf16_proj",
+      "source": "outputs/dense_warp_hybrid.py",
+      "local_file_sha256": "08580ff0ab7f9495ab68f096a8d472b49859ea1f1b9e8bbb64e74d4b49001cb1",
+      "server_content_identifier": "af274c952097112e472774473010d268a9985dfba9eb3a679b6afe01d5e154ac",
+      "source_identity_evidence": "outputs/dense-warp-hybrid-source-identity.json",
+      "official_job": "8eb008273d6c4ec6",
+      "mode": "run",
+      "receipt": "outputs/dense-warp-hybrid-scored-result.json",
+      "scored_job": "8eb008273d6c4ec6",
+      "scored_status": "done",
+      "speedup": 1.2194559404711167,
+      "speedup_ci": [
+        1.20116410136405,
+        1.2377477795781833
+      ],
+      "score_us": 3961.4387364693966,
+      "passed": true,
+      "flags": []
+    },
+    {
+      "problem": "muse_moe_w4a16",
+      "source": "outputs/moe_candidate.py",
+      "local_file_sha256": "0e5bd38fb3ece1ff0805cde3511ce2f573a65a65b99d5b62825d5a7208bbfedc",
+      "server_content_identifier": "7b15f9bd4c9c3ff813f9a3eca98be9fdb61e2bf7c31b14829effccb8f0d818d3",
+      "official_job": "1ca1569ded2347ef",
+      "mode": "run",
+      "receipt": "outputs/moe-hybrid-scored-result.json",
+      "scored_job": "1ca1569ded2347ef",
+      "scored_status": "done",
+      "speedup": 1.0970535542407223,
+      "speedup_ci": [
+        1.0805977509271114,
+        1.113509357554333
+      ],
+      "score_us": 12258.7452071178,
+      "passed": true,
+      "flags": []
+    },
+    {
+      "problem": "muse_prefill_layer",
+      "source": "outputs/prefill_grouped_tma.py",
+      "local_file_sha256": "662c5f568800f1ab8a572e1f3f2d13e45dbb0d0668039796528ded1f78a6cf3c",
+      "server_content_identifier": "82a1b72f2e3d41386a0ba3ec2ab5600e90c306d36239370a25ca88d97ed2b3d9",
+      "official_job": "762a6d1810654813",
+      "mode": "run",
+      "receipt": "outputs/prefill-grouped-tma-scored-result.json",
+      "speedup": 1.1205735348790602,
+      "speedup_ci": [
+        1.1037649318558742,
+        1.137382137902246
+      ],
+      "score_us": 345719.301716162,
+      "passed": true,
+      "flags": [],
+      "scored_job": "762a6d1810654813",
+      "scored_status": "done"
+    }
+  ],
+  "previous_scored": [
+    {
+      "problem": "muse_attention_decode",
+      "source": "outputs/attention_hybrid.py",
+      "local_file_sha256": "dc58ccc282578206b18086ceec13d08ffeccc8f9050aec711021184209fc3ac0",
+      "server_content_identifier": "2740674d36d3eb28671868ec7a997d12f5b44edbd97add4c8edf99cf5939464b",
+      "source_identity_evidence": "outputs/attention-source-identity.json",
+      "official_job": "666bb44af8734655",
+      "mode": "run",
+      "speedup": 1.4375051437739554,
+      "speedup_ci": [
+        1.4159425666173462,
+        1.4590677209305647
+      ],
+      "score_us": 2620.0254074306413,
+      "passed": true,
+      "flags": [],
+      "receipt": "outputs/attention-hybrid-scored-result.json"
+    },
+    {
+      "problem": "muse_bf16_proj",
+      "source": "outputs/dense_candidate.py",
+      "local_file_sha256": "5176a493c191728fa00e83e1753b476234c354bdd2aaf648b0df9eae5084bfb5",
+      "server_content_identifier": "b2cbb30271ed2d890791fc6bb13aa748d0dd35c008ebbcd29dda476ef75f6a0d",
+      "source_identity_evidence": "outputs/dense-source-identity.json",
+      "official_job": "6c23232b7c04403c",
+      "mode": "run",
+      "speedup": 1.1693842025682826,
+      "speedup_ci": [
+        1.1518434395297583,
+        1.1869249656068066
+      ],
+      "score_us": 4131.063160756116,
+      "passed": true,
+      "flags": [],
+      "receipt": "outputs/dense-first-scored-result.json"
+    },
+    {
+      "problem": "muse_decode_layer",
+      "source": "outputs/decode_candidate.py",
+      "local_file_sha256": "d7b57b24a010f47444824e1f59c199d88fdfe934f067d5d858b684bd192ab1d5",
+      "server_content_identifier": "4239c73422bb6b5190faeec33ef4f763ec31dccfdfb6dff57486fe21b51baf11",
+      "official_job": "874f921f39a94ae8",
+      "mode": "run",
+      "receipt": "outputs/decode-hybrid-scored-result.json",
+      "scored_job": "874f921f39a94ae8",
+      "scored_status": "done",
+      "speedup": 1.0919341338016166,
+      "speedup_ci": [
+        1.0755551217945925,
+        1.1083131458086408
+      ],
+      "score_us": 20715.80995572181,
+      "passed": true,
+      "flags": []
+    },
+    {
+      "problem": "muse_bf16_proj",
+      "source": "outputs/dense_fullvec_hybrid.py",
+      "local_file_sha256": "b8353c5801f5d95d203442781b5c9d2662318964deec6e9a7af6179df7510a67",
+      "server_content_identifier": "ef6d4ac1d00b139c3d408a700574a1ac294ae3ecb96b258a3bc2eadd69a56b08",
+      "official_job": "ed3ba90938fb4111",
+      "mode": "run",
+      "receipt": "outputs/dense-fullvec-hybrid-scored-result.json",
+      "scored_job": "ed3ba90938fb4111",
+      "scored_status": "done",
+      "speedup": 1.2096912415178704,
+      "speedup_ci": [
+        1.1915458728951023,
+        1.2278366101406384
+      ],
+      "score_us": 3993.415703281866,
+      "passed": true,
+      "flags": []
+    }
+  ],
+  "verified_checks": {
+    "muse_decode_layer": {
+      "problem": "muse_decode_layer",
+      "source": "outputs/decode_compact_align.py",
+      "local_file_sha256": "8f6051b2eb4e6267f7df19ab306bfc14bddb0d4a8d397f978011062c7fcb7bf9",
+      "server_content_identifier": "4b6bbd6430826025836ac1d42d33fca6638fda44a52f7fa66116447971d857f9",
+      "official_job": "a859d804c166468c",
+      "mode": "check",
+      "receipt": "outputs/decode-compact-align-check-result.json",
+      "speedup": 1.1988937952529568,
+      "speedup_ci": [
+        1.1809103883241625,
+        1.216877202181751
+      ],
+      "passed": true,
+      "flags": [],
+      "scored_job": "8290bde5fbb24dbd",
+      "scored_status": "queued"
+    },
+    "muse_moe_w4a16": {
+      "problem": "muse_moe_w4a16",
+      "source": "outputs/moe_cuda_align.py",
+      "local_file_sha256": "757047f55753e2d4c48702a02d3302f39ab4673cfe4959d4dd66ad131b32c72f",
+      "server_content_identifier": "bc611cab99ee717914025cb3d461eeb8e0a3bbd214cbfcb0943c7178755c96f8",
+      "official_job": "5eaf609ac8df4852",
+      "mode": "check",
+      "receipt": "outputs/moe-cuda-align-check-result.json",
+      "speedup": 1.1550410964011397,
+      "speedup_ci": [
+        1.1377154799551226,
+        1.1723667128471567
+      ],
+      "passed": true,
+      "flags": [],
+      "scored_job": "d807437847834796",
+      "scored_status": "queued"
+    },
+    "muse_attention_decode": {
+      "problem": "muse_attention_decode",
+      "source": "outputs/attention_balanced_hybrid.py",
+      "local_file_sha256": "a4c2ab31edd4cdf088df05e6035a13274a86171bf65a266af0ce1141a1802d69",
+      "server_content_identifier": "edfe69bd69751b440747148bb95cb260ccc7e54383071fa32342e0b81eb5f401",
+      "official_job": "11c710581a574570",
+      "mode": "check",
+      "receipt": "outputs/attention-balanced-hybrid-check-result.json",
+      "speedup": 1.4938647136287944,
+      "speedup_ci": [
+        1.4714567429243623,
+        1.5228990883163276
+      ],
+      "passed": true,
+      "flags": [],
+      "scored_job": "509471d6c70c4e0f",
+      "scored_status": "queued"
+    }
+  },
+  "previous_checks": [
+    {
+      "source": "outputs/decode_fullvec.py",
+      "local_file_sha256": "5ec7cf8bb1189ecb46a3abe49ac65eff0e3d5a04d732b1aa307e6b79068fb819",
+      "job": "de5e66061add4ebe",
+      "speedup": 1.1099938583297937,
+      "passed": true,
+      "flags": [],
+      "receipt": "outputs/decode-fullvec-official-result.json",
+      "note": "Off-board check; scored decoder record remains separate."
+    },
+    {
+      "problem": "muse_decode_layer",
+      "source": "outputs/decode_fused_boundaries.py",
+      "local_file_sha256": "2719e246bf951b88e8f4a64f4b18934426682ff172e0875ca9048bdb2b2e8527",
+      "server_content_identifier": "da6e92892826175e2a9e82d2e2de4128160ac24ae2cd11ab6c88de0eafcb1011",
+      "official_job": "25465f776d6e4103",
+      "mode": "check",
+      "receipt": "outputs/decode-fused-boundaries-official-result.json",
+      "scored_job": "59fa310d73a342ea",
+      "scored_status": "done",
+      "speedup": 1.170174635378109,
+      "speedup_ci": [
+        1.1526220158474374,
+        1.1877272549087805
+      ],
+      "score_us": 19330.704423182855,
+      "passed": true,
+      "flags": []
+    },
+    {
+      "problem": "muse_moe_w4a16",
+      "source": "outputs/moe_compact_align.py",
+      "local_file_sha256": "43381cdf3bc6bcf999308ca0feeace88e39c21575be9b3161c0ae7e141f942ff",
+      "server_content_identifier": "4568a160feb06ad8a109abc67c9c14da1d287f33d515bcb546f5bc1af6104ddb",
+      "official_job": "7bb485824a7d4770",
+      "mode": "check",
+      "receipt": "outputs/moe-compact-align-check-result.json",
+      "speedup": 1.1304512169646619,
+      "speedup_ci": [
+        1.1134944487101919,
+        1.1474079852191317
+      ],
+      "passed": true,
+      "flags": [],
+      "scored_job": "03f46ab2688f45eb",
+      "scored_status": "queued"
+    }
+  ],
+  "goal_status": "paused",
+  "archive_status": "Stopped at user request; no further optimization scheduled"
+}

@@ -1,0 +1,19 @@
+{
+  "source": "outputs/decode_compact_align.py",
+  "sha256": "8f6051b2eb4e6267f7df19ab306bfc14bddb0d4a8d397f978011062c7fcb7bf9",
+  "validation": [
+    "outputs/decode-compact-align.json",
+    "outputs/decode-align-fused.json"
+  ],
+  "candidate_checks": 50,
+  "candidate_total": 50,
+  "local_speedups": [
+    1.2279,
+    1.2287
+  ],
+  "control_speedups": [
+    1.2103,
+    1.208
+  ],
+  "selection": "Repeated exact source; fused and single-token hybrid differ by less than0.2percent and do not justify extra complexity yet."
+}

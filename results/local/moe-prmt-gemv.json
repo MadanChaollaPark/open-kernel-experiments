@@ -1,0 +1,2388 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.589e-03 (worst row 4.666e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.589e-03 (worst row 4.666e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.589e-03 (worst row 4.666e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.364e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.364e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.364e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.364e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7200,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7200,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7200,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7200,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7201,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7201,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7201,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7201,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1024,
+        "sharding": "ep8",
+        "seed": 7202,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 1024,
+        "sharding": "ep8",
+        "seed": 7202,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 1024,
+        "sharding": "ep8",
+        "seed": 7202,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 1024,
+        "sharding": "ep8",
+        "seed": 7202,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1025,
+        "sharding": "ep8",
+        "seed": 7203,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 1025,
+        "sharding": "ep8",
+        "seed": 7203,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 1025,
+        "sharding": "ep8",
+        "seed": 7203,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 1025,
+        "sharding": "ep8",
+        "seed": 7203,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7204,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.608e-03 (worst row 5.608e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7204,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.598e-03 (worst row 4.598e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7204,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.598e-03 (worst row 4.598e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7204,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.598e-03 (worst row 4.598e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7205,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.528e-03 (worst row 5.743e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7205,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.528e-03 (worst row 5.743e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7205,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.528e-03 (worst row 5.742e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7205,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.529e-03 (worst row 5.743e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 7206,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.561e-03 (worst row 6.044e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 7206,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.561e-03 (worst row 6.044e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 7206,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.561e-03 (worst row 6.044e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 7206,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.561e-03 (worst row 6.044e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7207,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.537e-03 (worst row 6.068e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7207,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.538e-03 (worst row 6.068e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7207,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.538e-03 (worst row 6.068e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7207,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.538e-03 (worst row 6.068e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 4.636e-03 (worst row 4.773e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 4.636e-03 (worst row 4.773e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 4.636e-03 (worst row 4.773e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 85.53600311279297,
+      "candidate_us": 81.91999793052673,
+      "baseline_samples": [
+        91.16800129413605,
+        84.99199897050858,
+        85.56800335645676,
+        85.95199882984161,
+        85.82399785518646,
+        84.54400300979614,
+        84.54400300979614,
+        84.51200276613235,
+        85.4720026254654,
+        86.30400151014328,
+        85.56800335645676,
+        84.22400057315826,
+        85.50400286912918,
+        85.85599809885025,
+        84.95999872684479,
+        85.24800091981888,
+        85.40800213813782,
+        86.40000224113464,
+        85.91999858617783,
+        85.91999858617783
+      ],
+      "candidate_samples": [
+        88.79999816417694,
+        82.2720006108284,
+        81.95199817419052,
+        81.4720019698143,
+        82.20800012350082,
+        82.2720006108284,
+        82.62400329113007,
+        80.92799782752991,
+        82.2720006108284,
+        81.69600367546082,
+        82.30400085449219,
+        81.88799768686295,
+        80.76799660921097,
+        81.69600367546082,
+        82.5280025601387,
+        80.83199709653854,
+        82.11199939250946,
+        81.56800270080566,
+        81.18399977684021,
+        81.31200075149536
+      ]
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.84799787402153,
+      "candidate_us": 87.79199793934822,
+      "baseline_samples": [
+        84.76799726486206,
+        84.86399799585342,
+        85.7279971241951,
+        84.44800227880478,
+        84.83199775218964,
+        86.07999980449677,
+        84.32000130414963,
+        84.73599702119827,
+        85.7279971241951,
+        84.73599702119827,
+        85.7279971241951,
+        85.85599809885025,
+        86.2400010228157,
+        84.60800349712372,
+        85.02399921417236,
+        84.79999750852585,
+        84.32000130414963,
+        85.28000116348267,
+        84.76799726486206,
+        85.34400165081024
+      ],
+      "candidate_samples": [
+        94.30400282144547,
+        87.74399757385254,
+        88.3840024471283,
+        88.67199718952179,
+        87.23200112581253,
+        87.90399879217148,
+        88.73599767684937,
+        87.20000088214874,
+        87.36000210046768,
+        87.90399879217148,
+        87.71199733018875,
+        87.80799806118011,
+        88.28800171613693,
+        87.67999708652496,
+        87.74399757385254,
+        87.77599781751633,
+        88.32000195980072,
+        87.67999708652496,
+        87.61599659919739,
+        88.8959988951683
+      ]
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 85.28000116348267,
+      "candidate_us": 109.0560033917427,
+      "baseline_samples": [
+        85.1840004324913,
+        85.85599809885025,
+        85.4400023818016,
+        84.79999750852585,
+        85.11999994516373,
+        86.01599931716919,
+        85.4400023818016,
+        84.99199897050858,
+        85.75999736785889,
+        85.56800335645676,
+        86.07999980449677,
+        85.02399921417236,
+        84.89599823951721,
+        85.63199639320374,
+        84.95999872684479,
+        85.24800091981888,
+        84.54400300979614,
+        85.31200140714645,
+        85.05599945783615,
+        85.34400165081024
+      ],
+      "candidate_samples": [
+        114.9120032787323,
+        109.6000000834465,
+        109.02400314807892,
+        109.24799740314484,
+        109.0880036354065,
+        110.33599823713303,
+        108.38399827480316,
+        109.0880036354065,
+        108.86400192975998,
+        109.56799983978271,
+        109.27999764680862,
+        109.02400314807892,
+        108.67200046777725,
+        108.41599851846695,
+        108.38399827480316,
+        108.41599851846695,
+        107.96800255775452,
+        109.8560020327568,
+        108.92800241708755,
+        109.31199789047241
+      ]
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 85.4720026254654,
+      "candidate_us": 108.99200290441513,
+      "baseline_samples": [
+        85.66399663686752,
+        85.31200140714645,
+        84.28800106048584,
+        84.03199911117554,
+        85.40800213813782,
+        86.17600053548813,
+        85.34400165081024,
+        84.63999629020691,
+        84.99199897050858,
+        86.20800077915192,
+        85.40800213813782,
+        85.56800335645676,
+        85.79199761152267,
+        85.53600311279297,
+        85.24800091981888,
+        85.60000360012054,
+        85.91999858617783,
+        86.94399893283844,
+        84.83199775218964,
+        86.33600175380707
+      ],
+      "candidate_samples": [
+        114.59200084209442,
+        109.0560033917427,
+        109.47199910879135,
+        108.38399827480316,
+        108.41599851846695,
+        109.56799983978271,
+        109.76000130176544,
+        108.83200168609619,
+        108.83200168609619,
+        108.73600095510483,
+        108.38399827480316,
+        109.18399691581726,
+        108.92800241708755,
+        108.86400192975998,
+        110.01600325107574,
+        109.76000130176544,
+        108.38399827480316,
+        110.20799726247787,
+        109.18399691581726,
+        108.57599973678589
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.12000012397766,
+      "candidate_us": 170.43200135231018,
+      "baseline_samples": [
+        183.96799266338348,
+        176.92799866199493,
+        176.96000635623932,
+        177.59999632835388,
+        177.95200645923615,
+        178.27199399471283,
+        177.63200402259827,
+        176.54399573802948,
+        176.7359972000122,
+        176.89600586891174,
+        175.9680062532425,
+        177.40799486637115,
+        176.5120029449463,
+        176.5120029449463,
+        178.65599691867828,
+        177.279993891716,
+        176.86399817466736,
+        177.50400304794312,
+        176.96000635623932,
+        178.01600694656372
+      ],
+      "candidate_samples": [
+        177.50400304794312,
+        170.3999936580658,
+        170.84799706935883,
+        172.12800681591034,
+        170.43200135231018,
+        170.6559956073761,
+        170.27199268341064,
+        170.1440066099167,
+        170.17599940299988,
+        172.09599912166595,
+        171.26399278640747,
+        170.43200135231018,
+        170.75200378894806,
+        169.0240055322647,
+        171.9360053539276,
+        170.1440066099167,
+        169.69600319862366,
+        169.72799599170685,
+        170.1119989156723,
+        170.84799706935883
+      ]
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.2480010986328,
+      "candidate_us": 170.6239953637123,
+      "baseline_samples": [
+        177.95200645923615,
+        177.2480010986328,
+        177.15199291706085,
+        176.4799952507019,
+        176.09600722789764,
+        177.824005484581,
+        177.0240068435669,
+        177.05599963665009,
+        177.50400304794312,
+        177.18400061130524,
+        176.32000148296356,
+        177.824005484581,
+        177.5359958410263,
+        177.72799730300903,
+        177.2480010986328,
+        177.59999632835388,
+        177.2480010986328,
+        177.40799486637115,
+        176.41599476337433,
+        176.60799622535706
+      ],
+      "candidate_samples": [
+        178.27199399471283,
+        170.17599940299988,
+        170.8800047636032,
+        170.78399658203125,
+        170.9119975566864,
+        170.6559956073761,
+        169.76000368595123,
+        172.0000058412552,
+        171.29600048065186,
+        170.8800047636032,
+        170.46399414539337,
+        169.69600319862366,
+        170.59199512004852,
+        171.90399765968323,
+        170.23999989032745,
+        170.23999989032745,
+        170.30400037765503,
+        169.44000124931335,
+        170.01600563526154,
+        171.00800573825836
+      ]
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.35999822616577,
+      "candidate_us": 170.9439978003502,
+      "baseline_samples": [
+        177.44000256061554,
+        176.5120029449463,
+        178.3359944820404,
+        178.5919964313507,
+        175.74399709701538,
+        177.279993891716,
+        176.83200538158417,
+        177.76000499725342,
+        176.89600586891174,
+        176.4799952507019,
+        176.79999768733978,
+        177.2480010986328,
+        176.54399573802948,
+        177.66399681568146,
+        177.7919977903366,
+        178.43200266361237,
+        177.59999632835388,
+        177.98399925231934,
+        176.12800002098083,
+        178.01600694656372
+      ],
+      "candidate_samples": [
+        179.07199263572693,
+        170.8800047636032,
+        170.6240028142929,
+        170.3999936580658,
+        170.3999936580658,
+        171.32799327373505,
+        170.97599804401398,
+        171.4559942483902,
+        170.52799463272095,
+        170.9119975566864,
+        171.39199376106262,
+        172.12800681591034,
+        171.61600291728973,
+        169.69600319862366,
+        170.49600183963776,
+        171.1679995059967,
+        171.7119961977005,
+        169.72799599170685,
+        171.77599668502808,
+        170.6240028142929
+      ]
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.2639974951744,
+      "candidate_us": 170.55999487638474,
+      "baseline_samples": [
+        177.08800733089447,
+        177.59999632835388,
+        178.27199399471283,
+        176.79999768733978,
+        176.4799952507019,
+        177.279993891716,
+        177.63200402259827,
+        177.44000256061554,
+        177.7919977903366,
+        175.4560023546219,
+        176.35199427604675,
+        177.279993891716,
+        177.15199291706085,
+        178.1120002269745,
+        177.2480010986328,
+        177.05599963665009,
+        177.72799730300903,
+        177.15199291706085,
+        175.4560023546219,
+        177.3120015859604
+      ],
+      "candidate_samples": [
+        177.88800597190857,
+        170.27199268341064,
+        172.03199863433838,
+        170.43200135231018,
+        169.72799599170685,
+        170.97599804401398,
+        171.74400389194489,
+        169.5680022239685,
+        171.58399522304535,
+        171.7119961977005,
+        170.52799463272095,
+        170.71999609470367,
+        170.75200378894806,
+        169.08800601959229,
+        170.3999936580658,
+        170.3680008649826,
+        171.26399278640747,
+        170.43200135231018,
+        170.30400037765503,
+        170.59199512004852
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 257.87200033664703,
+      "candidate_us": 239.34400081634521,
+      "baseline_samples": [
+        263.5839879512787,
+        258.36798548698425,
+        258.8160037994385,
+        257.88798928260803,
+        257.63198733329773,
+        258.1759989261627,
+        257.56800174713135,
+        257.31199979782104,
+        257.6639950275421,
+        259.2639923095703,
+        257.27999210357666,
+        257.7280104160309,
+        257.88798928260803,
+        259.64799523353577,
+        258.84801149368286,
+        257.85601139068604,
+        257.4400007724762,
+        257.4400007724762,
+        257.9520046710968,
+        257.63198733329773
+      ],
+      "candidate_samples": [
+        239.99999463558197,
+        239.32799696922302,
+        239.6160066127777,
+        238.68800699710846,
+        240.28800427913666,
+        239.3600046634674,
+        240.48000574111938,
+        239.45599794387817,
+        239.96800184249878,
+        239.84000086784363,
+        238.49600553512573,
+        238.01599442958832,
+        239.55200612545013,
+        237.85600066184998,
+        239.45599794387817,
+        238.97600173950195,
+        238.0799949169159,
+        237.63200640678406,
+        238.8480007648468,
+        238.36800456047058
+      ]
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 257.9360008239746,
+      "candidate_us": 239.53600227832794,
+      "baseline_samples": [
+        257.9199969768524,
+        257.9520046710968,
+        259.0720057487488,
+        260.0319981575012,
+        258.62398743629456,
+        259.20000672340393,
+        258.7519884109497,
+        258.2400143146515,
+        258.30399990081787,
+        259.8080039024353,
+        257.31199979782104,
+        257.4079930782318,
+        257.2160065174103,
+        256.54399394989014,
+        257.1519911289215,
+        258.2400143146515,
+        257.85601139068604,
+        257.79199600219727,
+        257.60000944137573,
+        257.53599405288696
+      ],
+      "candidate_samples": [
+        241.08800292015076,
+        240.06399512290955,
+        240.09600281715393,
+        239.29600417613983,
+        239.29600417613983,
+        239.00799453258514,
+        240.03200232982635,
+        239.6160066127777,
+        237.31200397014618,
+        239.9040013551712,
+        237.66399919986725,
+        239.48800563812256,
+        238.52799832820892,
+        240.57599902153015,
+        239.68000710010529,
+        239.58399891853333,
+        238.97600173950195,
+        238.8480007648468,
+        240.38399755954742,
+        237.5359982252121
+      ]
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 257.9360008239746,
+      "candidate_us": 239.50400203466415,
+      "baseline_samples": [
+        259.45600867271423,
+        259.3280076980591,
+        258.8160037994385,
+        258.36798548698425,
+        258.87998938560486,
+        259.0720057487488,
+        258.33600759506226,
+        257.31199979782104,
+        257.4400007724762,
+        257.56800174713135,
+        257.5039863586426,
+        257.2160065174103,
+        257.9520046710968,
+        257.9199969768524,
+        257.7280104160309,
+        259.45600867271423,
+        257.4720084667206,
+        257.79199600219727,
+        257.9520046710968,
+        257.9199969768524
+      ],
+      "candidate_samples": [
+        240.4160052537918,
+        239.9359941482544,
+        241.2160038948059,
+        239.9040013551712,
+        239.99999463558197,
+        240.1919960975647,
+        239.9359941482544,
+        238.46399784088135,
+        239.16800320148468,
+        239.71199989318848,
+        238.36800456047058,
+        238.87999355793,
+        239.55200612545013,
+        239.45599794387817,
+        239.42400515079498,
+        238.78400027751923,
+        238.5919988155365,
+        239.80799317359924,
+        239.45599794387817,
+        236.83199286460876
+      ]
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.432000875473,
+      "candidate_us": 240.1599958539009,
+      "baseline_samples": [
+        257.9199969768524,
+        258.14399123191833,
+        257.85601139068604,
+        256.73601031303406,
+        257.05599784851074,
+        258.30399990081787,
+        258.91199707984924,
+        257.79199600219727,
+        258.2080066204071,
+        258.7519884109497,
+        260.127991437912,
+        259.10401344299316,
+        259.74398851394653,
+        261.28000020980835,
+        258.7839961051941,
+        259.2320144176483,
+        259.16799902915955,
+        258.2080066204071,
+        258.5600018501282,
+        258.0159902572632
+      ],
+      "candidate_samples": [
+        240.7359927892685,
+        239.96800184249878,
+        238.43200504779816,
+        238.91200125217438,
+        239.04000222682953,
+        239.23200368881226,
+        239.32799696922302,
+        238.304004073143,
+        240.7039999961853,
+        238.8480007648468,
+        241.95200204849243,
+        242.5599992275238,
+        241.40800535678864,
+        241.02400243282318,
+        240.6720072031021,
+        240.1919960975647,
+        239.87199366092682,
+        240.60800671577454,
+        240.12799561023712,
+        240.1919960975647
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 154.12800014019012,
+      "candidate_us": 147.50400185585022,
+      "baseline_samples": [
+        160.96000373363495,
+        153.76000106334686,
+        154.01600301265717,
+        154.55999970436096,
+        154.36799824237823,
+        153.79199385643005,
+        154.27200496196747,
+        155.2319973707199,
+        152.96000242233276,
+        153.60000729560852,
+        153.60000729560852,
+        154.23999726772308,
+        153.24799716472626,
+        154.81600165367126,
+        154.91199493408203,
+        154.55999970436096,
+        153.05599570274353,
+        154.27200496196747,
+        152.8639942407608,
+        153.4080058336258
+      ],
+      "candidate_samples": [
+        153.21600437164307,
+        147.32800424098969,
+        147.96799421310425,
+        147.77599275112152,
+        148.03199470043182,
+        147.45600521564484,
+        147.8080004453659,
+        147.8399932384491,
+        146.91199362277985,
+        147.74399995803833,
+        146.4959979057312,
+        147.5200057029724,
+        147.13600277900696,
+        147.48799800872803,
+        147.35999703407288,
+        147.16799557209015,
+        148.67199957370758,
+        148.22399616241455,
+        147.039994597435,
+        147.23199605941772
+      ]
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 154.7199934720993,
+      "candidate_us": 260.8320116996765,
+      "baseline_samples": [
+        155.87200224399567,
+        154.14400398731232,
+        153.6960005760193,
+        156.44800662994385,
+        156.38400614261627,
+        153.43999862670898,
+        153.43999862670898,
+        154.9759954214096,
+        155.2640050649643,
+        155.008003115654,
+        154.1759967803955,
+        155.07200360298157,
+        155.58399260044098,
+        154.65599298477173,
+        154.78399395942688,
+        154.14400398731232,
+        154.81600165367126,
+        154.27200496196747,
+        153.888002038002,
+        153.50399911403656
+      ],
+      "candidate_samples": [
+        266.2400007247925,
+        261.85598969459534,
+        259.5840096473694,
+        260.3200078010559,
+        262.30400800704956,
+        261.21601462364197,
+        260.96001267433167,
+        259.90399718284607,
+        260.6079876422882,
+        261.05600595474243,
+        261.34398579597473,
+        260.127991437912,
+        261.4719867706299,
+        262.2399926185608,
+        259.74398851394653,
+        259.8080039024353,
+        260.70401072502136,
+        260.99199056625366,
+        259.3280076980591,
+        260.3839933872223
+      ]
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 154.2080044746399,
+      "candidate_us": 329.8559933900833,
+      "baseline_samples": [
+        153.9520025253296,
+        154.2080044746399,
+        153.9520025253296,
+        154.40000593662262,
+        153.82400155067444,
+        154.04799580574036,
+        154.2080044746399,
+        153.82400155067444,
+        154.88000214099884,
+        155.42399883270264,
+        154.7199934720993,
+        154.78399395942688,
+        154.2080044746399,
+        153.43999862670898,
+        153.53600680828094,
+        155.8080017566681,
+        154.2080044746399,
+        154.55999970436096,
+        154.59200739860535,
+        153.60000729560852
+      ],
+      "candidate_samples": [
+        336.60799264907837,
+        330.84800839424133,
+        328.67199182510376,
+        330.3360044956207,
+        330.4319977760315,
+        331.32800459861755,
+        329.8240005970001,
+        329.8240005970001,
+        330.0800025463104,
+        330.2080035209656,
+        329.120010137558,
+        329.0880024433136,
+        328.19199562072754,
+        329.120010137558,
+        330.04799485206604,
+        329.8879861831665,
+        328.92799377441406,
+        330.6240141391754,
+        329.24801111221313,
+        328.92799377441406
+      ]
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 154.54400330781937,
+      "candidate_us": 334.3839943408966,
+      "baseline_samples": [
+        155.5519998073578,
+        154.1759967803955,
+        154.94400262832642,
+        155.32800555229187,
+        154.11199629306793,
+        155.5519998073578,
+        155.39200603961945,
+        154.33600544929504,
+        154.59200739860535,
+        154.11199629306793,
+        153.82400155067444,
+        154.30399775505066,
+        154.84799444675446,
+        155.2319973707199,
+        154.4319987297058,
+        154.94400262832642,
+        155.20000457763672,
+        154.4959992170334,
+        153.98399531841278,
+        154.30399775505066
+      ],
+      "candidate_samples": [
+        339.32799100875854,
+        334.3360126018524,
+        333.72798562049866,
+        333.0880105495453,
+        333.98398756980896,
+        335.1359963417053,
+        334.84798669815063,
+        334.3679904937744,
+        334.46401357650757,
+        334.01599526405334,
+        334.75199341773987,
+        334.84798669815063,
+        334.81600880622864,
+        333.6319923400879,
+        334.52799916267395,
+        334.56000685691833,
+        332.99198746681213,
+        333.3440124988556,
+        334.3999981880188,
+        333.6000144481659
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 408.9760035276413,
+      "candidate_us": 303.5999983549118,
+      "baseline_samples": [
+        411.8399918079376,
+        409.92000699043274,
+        408.5119962692261,
+        406.1119854450226,
+        406.6239893436432,
+        410.46398878097534,
+        410.0160002708435,
+        408.6720049381256,
+        408.09598565101624,
+        408.83201360702515,
+        409.0240001678467,
+        406.3360095024109,
+        406.72001242637634,
+        410.43201088905334,
+        410.0480079650879,
+        410.8160138130188,
+        408.9280068874359,
+        410.0799858570099,
+        409.2479944229126,
+        408.735990524292
+      ],
+      "candidate_samples": [
+        303.77599596977234,
+        304.1279911994934,
+        305.85598945617676,
+        302.592009305954,
+        303.9039969444275,
+        306.46398663520813,
+        302.8480112552643,
+        302.65599489212036,
+        303.26399207115173,
+        301.82400345802307,
+        302.3679852485657,
+        303.42400074005127,
+        303.51999402046204,
+        303.6159873008728,
+        305.184006690979,
+        304.54400181770325,
+        302.39999294281006,
+        304.03199791908264,
+        303.5840094089508,
+        303.96801233291626
+      ]
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 407.1039855480194,
+      "candidate_us": 303.0080050230026,
+      "baseline_samples": [
+        410.94401478767395,
+        406.43200278282166,
+        407.80800580978394,
+        407.1039855480194,
+        407.77599811553955,
+        406.49598836898804,
+        406.43200278282166,
+        407.1039855480194,
+        405.85601329803467,
+        408.03200006484985,
+        407.1039855480194,
+        406.75199031829834,
+        406.5920114517212,
+        408.4799885749817,
+        408.03200006484985,
+        407.6800048351288,
+        408.2239866256714,
+        405.40799498558044,
+        406.94400668144226,
+        407.9360067844391
+      ],
+      "candidate_samples": [
+        305.34398555755615,
+        303.42400074005127,
+        303.74398827552795,
+        304.32000756263733,
+        303.9039969444275,
+        302.2719919681549,
+        303.0399978160858,
+        301.31199955940247,
+        302.5600016117096,
+        303.45600843429565,
+        302.43200063705444,
+        302.91199684143066,
+        302.3679852485657,
+        304.86398935317993,
+        303.1359910964966,
+        303.42400074005127,
+        302.3679852485657,
+        302.97601222991943,
+        302.43200063705444,
+        302.11201310157776
+      ]
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 406.5439999103546,
+      "candidate_us": 302.20799148082733,
+      "baseline_samples": [
+        408.5119962692261,
+        405.56800365448,
+        406.6559970378876,
+        407.00799226760864,
+        407.48798847198486,
+        406.23998641967773,
+        405.1840007305145,
+        405.5359959602356,
+        406.6559970378876,
+        408.4160029888153,
+        407.55200386047363,
+        407.3919951915741,
+        408.4799885749817,
+        405.2799940109253,
+        406.3360095024109,
+        405.44000267982483,
+        407.1039855480194,
+        406.43200278282166,
+        405.3120017051697,
+        405.1840007305145
+      ],
+      "candidate_samples": [
+        302.4640083312988,
+        302.7839958667755,
+        301.40799283981323,
+        302.8160035610199,
+        303.6479949951172,
+        301.37598514556885,
+        301.40799283981323,
+        302.8480112552643,
+        300.7679879665375,
+        302.2719919681549,
+        301.7599880695343,
+        302.592009305954,
+        301.63198709487915,
+        303.51999402046204,
+        303.1359910964966,
+        301.7280101776123,
+        301.9520044326782,
+        302.14399099349976,
+        300.6719946861267,
+        304.80000376701355
+      ]
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 406.43200278282166,
+      "candidate_us": 302.71999537944794,
+      "baseline_samples": [
+        406.2719941139221,
+        408.60798954963684,
+        407.0720076560974,
+        406.17600083351135,
+        407.1359932422638,
+        407.039999961853,
+        407.1359932422638,
+        406.97601437568665,
+        405.63198924064636,
+        406.0159921646118,
+        405.66399693489075,
+        405.4720103740692,
+        406.2719941139221,
+        406.7839980125427,
+        406.5920114517212,
+        407.20000863075256,
+        406.75199031829834,
+        404.9600064754486,
+        406.20800852775574,
+        406.0800075531006
+      ],
+      "candidate_samples": [
+        304.9280047416687,
+        300.927996635437,
+        303.0720055103302,
+        303.0720055103302,
+        304.4799864292145,
+        303.48798632621765,
+        302.3039996623993,
+        302.2719919681549,
+        303.3599853515625,
+        302.7519881725311,
+        302.4959862232208,
+        302.3039996623993,
+        300.35200715065,
+        301.34400725364685,
+        302.047997713089,
+        304.0960133075714,
+        302.68800258636475,
+        302.3679852485657,
+        303.0399978160858,
+        303.71201038360596
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 590.1600122451782,
+      "candidate_us": 387.39199936389923,
+      "baseline_samples": [
+        594.6559906005859,
+        589.8240208625793,
+        588.6080265045166,
+        589.792013168335,
+        593.3120250701904,
+        590.8160209655762,
+        588.8320207595825,
+        590.0480151176453,
+        590.8799767494202,
+        589.4079804420471,
+        588.15997838974,
+        591.4880037307739,
+        591.0720229148865,
+        588.7359976768494,
+        588.0640149116516,
+        590.2720093727112,
+        589.7600054740906,
+        591.4239883422852,
+        592.0320153236389,
+        591.1039710044861
+      ],
+      "candidate_samples": [
+        389.18399810791016,
+        387.1999979019165,
+        386.01601123809814,
+        387.29599118232727,
+        388.5760009288788,
+        385.15201210975647,
+        387.84000277519226,
+        387.4880075454712,
+        386.0799968242645,
+        387.58400082588196,
+        386.33599877357483,
+        386.04798913002014,
+        387.9680037498474,
+        388.2879912853241,
+        386.0799968242645,
+        387.58400082588196,
+        387.84000277519226,
+        387.90398836135864,
+        386.84800267219543,
+        386.8800103664398
+      ]
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 589.4080102443695,
+      "candidate_us": 387.4399960041046,
+      "baseline_samples": [
+        590.9759998321533,
+        589.0880227088928,
+        589.3120169639587,
+        586.8160128593445,
+        588.8000130653381,
+        590.2400016784668,
+        591.6159749031067,
+        587.6479744911194,
+        587.0400071144104,
+        590.9759998321533,
+        590.0160074234009,
+        591.0400152206421,
+        591.808021068573,
+        590.9119844436646,
+        589.5040035247803,
+        588.096022605896,
+        587.5840187072754,
+        588.5760188102722,
+        589.6959900856018,
+        588.15997838974
+      ],
+      "candidate_samples": [
+        388.92799615859985,
+        387.6799941062927,
+        385.888010263443,
+        387.1999979019165,
+        387.00801134109497,
+        388.0639970302582,
+        388.7999951839447,
+        386.78398728370667,
+        388.12801241874695,
+        386.52798533439636,
+        387.58400082588196,
+        385.8239948749542,
+        387.87201046943665,
+        387.7120018005371,
+        386.8800103664398,
+        387.87201046943665,
+        387.2640132904053,
+        387.29599118232727,
+        388.480007648468,
+        386.30399107933044
+      ]
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 589.3599987030029,
+      "candidate_us": 387.7919912338257,
+      "baseline_samples": [
+        590.3360247612,
+        587.8080129623413,
+        587.9679918289185,
+        591.808021068573,
+        590.5600190162659,
+        588.5120034217834,
+        588.9599919319153,
+        587.552011013031,
+        590.1119709014893,
+        590.0480151176453,
+        590.1119709014893,
+        588.2880091667175,
+        589.3120169639587,
+        588.9279842376709,
+        591.0080075263977,
+        589.792013168335,
+        589.4079804420471,
+        587.8720283508301,
+        588.8320207595825,
+        590.9119844436646
+      ],
+      "candidate_samples": [
+        388.2560133934021,
+        388.2240056991577,
+        386.55999302864075,
+        388.44799995422363,
+        387.58400082588196,
+        387.4880075454712,
+        388.51198554039,
+        387.4239921569824,
+        387.7759873867035,
+        388.0319893360138,
+        387.8079950809479,
+        388.2560133934021,
+        387.87201046943665,
+        389.4079923629761,
+        385.76000928878784,
+        385.8560025691986,
+        387.5519931316376,
+        386.59200072288513,
+        387.64798641204834,
+        388.8320028781891
+      ]
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 589.2800092697144,
+      "candidate_us": 387.29599118232727,
+      "baseline_samples": [
+        592.7039980888367,
+        588.1919860839844,
+        588.1919860839844,
+        588.8320207595825,
+        590.2400016784668,
+        587.9039764404297,
+        588.5760188102722,
+        588.9279842376709,
+        591.0080075263977,
+        590.4319882392883,
+        589.792013168335,
+        588.2560014724731,
+        589.5040035247803,
+        589.3440246582031,
+        586.0480070114136,
+        591.3599729537964,
+        589.2159938812256,
+        589.3759727478027,
+        588.9599919319153,
+        589.3759727478027
+      ],
+      "candidate_samples": [
+        388.38401436805725,
+        386.30399107933044,
+        387.03998923301697,
+        387.1679902076721,
+        388.480007648468,
+        386.2079977989197,
+        386.6559863090515,
+        386.4319920539856,
+        388.51198554039,
+        387.1679902076721,
+        389.0880048274994,
+        388.5439932346344,
+        388.96000385284424,
+        386.52798533439636,
+        387.5519931316376,
+        386.1759901046753,
+        387.4239921569824,
+        386.75200939178467,
+        387.7759873867035,
+        388.67199420928955
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"bs\": 4, \"dist\": \"normal\", \"seed\": 1800, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"seed\": 1801, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 257, \"dist\": \"normal\", \"seed\": 1802, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 128, \"dist\": \"skewed\", \"seed\": 1803, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"seed\": 1804, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"routing_pattern\": \"all_nonlocal\", \"seed\": 7200, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"routing_pattern\": \"all_nonlocal\", \"seed\": 7201, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1024, \"dist\": \"normal\", \"routing_pattern\": \"all_nonlocal\", \"seed\": 7202, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1025, \"dist\": \"normal\", \"routing_pattern\": \"all_nonlocal\", \"seed\": 7203, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"routing_pattern\": \"all_local\", \"seed\": 7204, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"routing_pattern\": \"all_local\", \"seed\": 7205, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 257, \"dist\": \"normal\", \"routing_pattern\": \"one_local\", \"seed\": 7206, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"routing_pattern\": \"one_local\", \"seed\": 7207, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"load\": \"decode 1\", \"seed\": 401, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 16, \"load\": \"decode 16\", \"seed\": 402, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 32, \"load\": \"decode 32\", \"seed\": 403, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 8, \"load\": \"verify 1\", \"seed\": 404, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 128, \"load\": \"verify 16\", \"seed\": 405, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 256, \"load\": \"verify 32\", \"seed\": 406, \"sharding\": \"ep8\", \"weight\": 60}": {}
+  },
+  "calibration_us": 3.3919999841600657,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "prmt_w8",
+    "case": {
+      "bs": 256,
+      "sharding": "ep8",
+      "load": "verify 32",
+      "weight": 60,
+      "seed": 406
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       1.468ms        86.79%       1.468ms     183.474us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     150.657us         8.91%     150.657us      37.664us             4  \nvoid group_routes<256>(int const*, int*, int*, int*,...         0.00%       0.000us         0.00%       0.000us       0.000us      24.097us         1.42%      24.097us       6.024us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      22.848us         1.35%      22.848us       5.712us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      22.464us         1.33%      22.464us       5.616us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.328us         0.20%       3.328us       0.832us             4  \n                                        cudaGraphLaunch         4.10%     153.696us        57.30%       2.149ms     537.252us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        53.20%       1.995ms        53.20%       1.995ms       1.995ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        42.70%       1.602ms        42.70%       1.602ms     800.804us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 3.751ms\nSelf CUDA time total: 1.691ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       2.251ms        90.20%       2.251ms     281.377us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     147.958us         5.93%     147.958us      36.989us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      22.400us         0.90%      22.400us       5.600us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      22.176us         0.89%      22.176us       5.544us             4  \nvoid at::native::index_elementwise_kernel<128, 4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      13.408us         0.54%      13.408us       3.352us             4  \nvoid at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      13.309us         0.53%      13.309us       3.327us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us      11.775us         0.47%      11.775us       2.944us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us      10.080us         0.40%      10.080us       2.520us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.360us         0.13%       3.360us       0.840us             4  \n                                        cudaGraphLaunch         3.74%     159.862us        44.01%       1.883ms     470.848us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        40.27%       1.724ms        40.27%       1.724ms       1.724ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        55.99%       2.396ms        55.99%       2.396ms       1.198ms       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 4.279ms\nSelf CUDA time total: 2.495ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "lookup_w4",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "lookup_w4",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "prmt_w4",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "prmt_w4",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "prmt_w8",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "prmt_w8",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    }
+  ],
+  "elapsed_s": 26.353344687,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_moe_w4a16",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/2969fb6977357fdf5f5c3c99b9e8f8526e560d87b567dbb052e3d973d2942b3c.py",
+      "sha256": "2969fb6977357fdf5f5c3c99b9e8f8526e560d87b567dbb052e3d973d2942b3c"
+    },
+    "lookup_w4": {
+      "path": "experiments/sources/cd40757baef08744364df8f4040ee76fba30ad283558b9d52e1e7509de026460.py",
+      "sha256": "cd40757baef08744364df8f4040ee76fba30ad283558b9d52e1e7509de026460"
+    },
+    "prmt_w4": {
+      "path": "experiments/sources/dfc8904ef83b0bdfacecbbeb4a47ece34aa7da0cc0facbf9e5954a6d0d3ebce4.py",
+      "sha256": "dfc8904ef83b0bdfacecbbeb4a47ece34aa7da0cc0facbf9e5954a6d0d3ebce4"
+    },
+    "prmt_w8": {
+      "path": "experiments/sources/372c3581e1c289f853d6a7ed5f9ed0ce3021dd58482d6f4f9e6750a38cdc97f6.py",
+      "sha256": "372c3581e1c289f853d6a7ed5f9ed0ce3021dd58482d6f4f9e6750a38cdc97f6"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

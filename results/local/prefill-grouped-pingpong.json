@@ -1,0 +1,4116 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.810e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.950e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.951e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.949e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.949e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.950e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.949e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.950e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1092.1279788017273,
+      "candidate_us": 1093.4880375862122,
+      "baseline_samples": [
+        1106.8480014801025,
+        1099.4240045547485,
+        1090.9119844436646,
+        1092.3839807510376,
+        1093.34397315979,
+        1090.3680324554443,
+        1090.880036354065,
+        1091.871976852417
+      ],
+      "candidate_samples": [
+        1097.4080562591553,
+        1090.0800228118896,
+        1092.2880172729492,
+        1088.8639688491821,
+        1095.296025276184,
+        1092.6400423049927,
+        1094.3360328674316,
+        1094.7200059890747
+      ]
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1088.0640149116516,
+      "candidate_us": 1084.2719674110413,
+      "baseline_samples": [
+        1093.9199924468994,
+        1084.6400260925293,
+        1088.1919860839844,
+        1088.6720418930054,
+        1089.1519784927368,
+        1087.7439975738525,
+        1085.3760242462158,
+        1087.9360437393188
+      ],
+      "candidate_samples": [
+        1089.951992034912,
+        1084.3199491500854,
+        1087.231993675232,
+        1085.055947303772,
+        1084.223985671997,
+        1083.7759971618652,
+        1082.8479528427124,
+        1078.976035118103
+      ]
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1085.71195602417,
+      "candidate_us": 1084.6239924430847,
+      "baseline_samples": [
+        1087.712049484253,
+        1083.616018295288,
+        1083.9359760284424,
+        1088.3519649505615,
+        1087.5519514083862,
+        1084.671974182129,
+        1085.3439569473267,
+        1086.0799551010132
+      ],
+      "candidate_samples": [
+        1086.4959955215454,
+        1084.831953048706,
+        1084.4160318374634,
+        1085.055947303772,
+        1085.759997367859,
+        1083.2959413528442,
+        1081.88796043396,
+        1082.5920104980469
+      ]
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1082.8800201416016,
+      "candidate_us": 1082.543969154358,
+      "baseline_samples": [
+        1082.97598361969,
+        1082.7840566635132,
+        1084.1920375823975,
+        1081.055998802185,
+        1080.448031425476,
+        1082.2399854660034,
+        1084.8640203475952,
+        1083.232045173645
+      ],
+      "candidate_samples": [
+        1082.3999643325806,
+        1082.8160047531128,
+        1081.2159776687622,
+        1081.4399719238281,
+        1084.3520164489746,
+        1082.6879739761353,
+        1083.4239721298218,
+        1081.9200277328491
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1083.9040279388428,
+      "candidate_us": 1086.5439772605896,
+      "baseline_samples": [
+        1085.536003112793,
+        1083.9680433273315,
+        1083.6479663848877,
+        1082.9440355300903,
+        1084.7359895706177,
+        1083.840012550354,
+        1083.616018295288,
+        1084.447979927063
+      ],
+      "candidate_samples": [
+        1089.3759727478027,
+        1083.1999778747559,
+        1085.6319665908813,
+        1084.4160318374634,
+        1086.2079858779907,
+        1087.391972541809,
+        1089.311957359314,
+        1086.8799686431885
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1087.7119898796082,
+      "candidate_us": 1087.6320004463196,
+      "baseline_samples": [
+        1085.4079723358154,
+        1087.6799821853638,
+        1086.6880416870117,
+        1087.231993675232,
+        1091.040015220642,
+        1087.8080129623413,
+        1087.7439975738525,
+        1090.2719497680664
+      ],
+      "candidate_samples": [
+        1090.6239748001099,
+        1088.0000591278076,
+        1083.5200548171997,
+        1091.9359922409058,
+        1089.0239477157593,
+        1086.4640474319458,
+        1087.2639417648315,
+        1083.359956741333
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1089.5040035247803,
+      "candidate_us": 1089.5200371742249,
+      "baseline_samples": [
+        1091.8079614639282,
+        1089.1200304031372,
+        1088.7680053710938,
+        1084.9920511245728,
+        1089.8879766464233,
+        1086.8159532546997,
+        1091.9359922409058,
+        1089.9200439453125
+      ],
+      "candidate_samples": [
+        1092.9919481277466,
+        1088.0639553070068,
+        1096.4800119400024,
+        1088.6720418930054,
+        1092.5120115280151,
+        1086.7199897766113,
+        1086.1120223999023,
+        1090.3680324554443
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1427.4720549583435,
+      "candidate_us": 1428.9120435714722,
+      "baseline_samples": [
+        1433.7279796600342,
+        1426.2399673461914,
+        1423.1679439544678,
+        1431.5840005874634,
+        1426.84805393219,
+        1428.096055984497,
+        1420.896053314209,
+        1429.3760061264038
+      ],
+      "candidate_samples": [
+        1436.4160299301147,
+        1430.3359985351562,
+        1427.2639751434326,
+        1425.6960153579712,
+        1428.8320541381836,
+        1429.8880100250244,
+        1428.9920330047607,
+        1425.439953804016
+      ]
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1425.2960085868835,
+      "candidate_us": 1426.9760251045227,
+      "baseline_samples": [
+        1432.703971862793,
+        1424.9600172042847,
+        1432.3519468307495,
+        1425.0240325927734,
+        1422.752022743225,
+        1428.096055984497,
+        1425.5679845809937,
+        1424.8000383377075
+      ],
+      "candidate_samples": [
+        1432.31999874115,
+        1428.6079406738281,
+        1426.5919923782349,
+        1427.3600578308105,
+        1423.3280420303345,
+        1426.527976989746,
+        1426.2080192565918,
+        1428.704023361206
+      ]
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1427.5040030479431,
+      "candidate_us": 1427.616000175476,
+      "baseline_samples": [
+        1426.4320135116577,
+        1423.4880208969116,
+        1425.663948059082,
+        1427.4879693984985,
+        1433.6320161819458,
+        1430.176019668579,
+        1427.5200366973877,
+        1429.3440580368042
+      ],
+      "candidate_samples": [
+        1431.9039583206177,
+        1425.1199960708618,
+        1422.592043876648,
+        1420.799970626831,
+        1427.8719425201416,
+        1434.7200393676758,
+        1427.3600578308105,
+        1428.8640022277832
+      ]
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1427.6800155639648,
+      "candidate_us": 1430.512011051178,
+      "baseline_samples": [
+        1427.3600578308105,
+        1428.544044494629,
+        1427.9999732971191,
+        1425.7279634475708,
+        1425.2480268478394,
+        1425.1840114593506,
+        1432.8960180282593,
+        1430.5280447006226
+      ],
+      "candidate_samples": [
+        1432.6720237731934,
+        1431.712031364441,
+        1435.7759952545166,
+        1428.8320541381836,
+        1425.8559942245483,
+        1426.8159866333008,
+        1431.5520524978638,
+        1429.4719696044922
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1427.0560145378113,
+      "candidate_us": 1429.7600388526917,
+      "baseline_samples": [
+        1426.7840385437012,
+        1430.5280447006226,
+        1427.3279905319214,
+        1424.448013305664,
+        1425.1199960708618,
+        1428.7359714508057,
+        1429.152011871338,
+        1426.1759519577026
+      ],
+      "candidate_samples": [
+        1432.8320026397705,
+        1427.7119636535645,
+        1429.9520254135132,
+        1427.3920059204102,
+        1429.5680522918701,
+        1427.7759790420532,
+        1431.0400485992432,
+        1432.31999874115
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1429.1200041770935,
+      "candidate_us": 1430.3359985351562,
+      "baseline_samples": [
+        1430.2400350570679,
+        1429.2800426483154,
+        1427.7440309524536,
+        1428.9599657058716,
+        1429.6000003814697,
+        1431.7439794540405,
+        1423.6160516738892,
+        1427.2960424423218
+      ],
+      "candidate_samples": [
+        1434.8160028457642,
+        1427.839994430542,
+        1429.8880100250244,
+        1426.5600442886353,
+        1430.783987045288,
+        1432.5759410858154,
+        1431.8079948425293,
+        1425.920009613037
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1425.6959557533264,
+      "candidate_us": 1425.935983657837,
+      "baseline_samples": [
+        1431.5520524978638,
+        1424.7679710388184,
+        1424.7360229492188,
+        1427.9040098190308,
+        1424.6400594711304,
+        1424.064040184021,
+        1426.9440174102783,
+        1426.6239404678345
+      ],
+      "candidate_samples": [
+        1426.0159730911255,
+        1425.887942314148,
+        1425.4720211029053,
+        1427.3920059204102,
+        1427.3920059204102,
+        1423.1040477752686,
+        1425.9840250015259,
+        1425.1519441604614
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3458.672046661377,
+      "candidate_us": 3455.3760290145874,
+      "baseline_samples": [
+        3448.8959312438965,
+        3440.51194190979,
+        3436.768054962158,
+        3458.944082260132,
+        3464.2560482025146,
+        3460.3519439697266,
+        3468.1921005249023,
+        3458.400011062622
+      ],
+      "candidate_samples": [
+        3449.120044708252,
+        3438.8480186462402,
+        3436.3839626312256,
+        3441.0879611968994,
+        3463.3920192718506,
+        3462.912082672119,
+        3461.632013320923,
+        3466.752052307129
+      ]
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3476.7839908599854,
+      "candidate_us": 3475.071907043457,
+      "baseline_samples": [
+        3512.6399993896484,
+        3498.2080459594727,
+        3478.1439304351807,
+        3478.208065032959,
+        3468.9600467681885,
+        3475.42405128479,
+        3469.088077545166,
+        3470.5920219421387
+      ],
+      "candidate_samples": [
+        3517.0559883117676,
+        3511.199951171875,
+        3475.6479263305664,
+        3468.1921005249023,
+        3474.4958877563477,
+        3469.95210647583,
+        3480.288028717041,
+        3474.208116531372
+      ]
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3539.232015609741,
+      "candidate_us": 3543.615937232971,
+      "baseline_samples": [
+        3553.215980529785,
+        3543.8079833984375,
+        3536.832094192505,
+        3538.464069366455,
+        3539.9999618530273,
+        3540.479898452759,
+        3537.3120307922363,
+        3510.848045349121
+      ],
+      "candidate_samples": [
+        3552.288055419922,
+        3544.735908508301,
+        3547.5199222564697,
+        3535.8080863952637,
+        3547.6160049438477,
+        3534.8479747772217,
+        3542.4959659576416,
+        3535.680055618286
+      ]
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3468.33598613739,
+      "candidate_us": 3467.2319889068604,
+      "baseline_samples": [
+        3466.4320945739746,
+        3466.6240215301514,
+        3469.248056411743,
+        3467.423915863037,
+        3462.6240730285645,
+        3518.399953842163,
+        3556.960105895996,
+        3674.463987350464
+      ],
+      "candidate_samples": [
+        3471.935987472534,
+        3464.2560482025146,
+        3468.8000679016113,
+        3464.128017425537,
+        3463.007926940918,
+        3465.6639099121094,
+        3568.448066711426,
+        3660.1920127868652
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3471.776008605957,
+      "candidate_us": 3478.495955467224,
+      "baseline_samples": [
+        3487.2639179229736,
+        3470.2401161193848,
+        3478.559970855713,
+        3471.8079566955566,
+        3471.7440605163574,
+        3466.8478965759277,
+        3470.367908477783,
+        3693.7921047210693
+      ],
+      "candidate_samples": [
+        3483.0079078674316,
+        3476.223945617676,
+        3482.719898223877,
+        3478.6880016326904,
+        3469.95210647583,
+        3478.303909301758,
+        3470.2401161193848,
+        3683.648109436035
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3469.6320295333862,
+      "candidate_us": 3476.7520427703857,
+      "baseline_samples": [
+        3470.9761142730713,
+        3469.0239429473877,
+        3473.5360145568848,
+        3466.559886932373,
+        3466.9439792633057,
+        3470.2401161193848,
+        3471.328020095825,
+        3463.96803855896
+      ],
+      "candidate_samples": [
+        3478.4960746765137,
+        3477.0240783691406,
+        3470.911979675293,
+        3476.191997528076,
+        3478.912115097046,
+        3475.935935974121,
+        3476.480007171631,
+        3478.912115097046
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3468.527913093567,
+      "candidate_us": 3465.8879041671753,
+      "baseline_samples": [
+        3477.855920791626,
+        3468.89591217041,
+        3459.808111190796,
+        3468.1599140167236,
+        3463.871955871582,
+        3471.07195854187,
+        3462.5918865203857,
+        3624.1281032562256
+      ],
+      "candidate_samples": [
+        3472.831964492798,
+        3471.328020095825,
+        3471.9040393829346,
+        3463.2320404052734,
+        3464.927911758423,
+        3466.8478965759277,
+        3464.576005935669,
+        3463.871955871582
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4929.167985916138,
+      "candidate_us": 4929.503917694092,
+      "baseline_samples": [
+        4937.952041625977,
+        4931.136131286621,
+        4923.3598709106445,
+        4929.567813873291,
+        4932.415962219238,
+        4927.775859832764,
+        4928.768157958984,
+        4920.032024383545
+      ],
+      "candidate_samples": [
+        4937.151908874512,
+        4931.551933288574,
+        4928.927898406982,
+        4925.504207611084,
+        4934.879779815674,
+        4929.599761962891,
+        4927.231788635254,
+        4929.408073425293
+      ]
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4954.1120529174805,
+      "candidate_us": 4961.0559940338135,
+      "baseline_samples": [
+        4952.320098876953,
+        4955.904006958008,
+        4937.727928161621,
+        4944.223880767822,
+        4935.296058654785,
+        5026.75199508667,
+        5053.696155548096,
+        5072.127819061279
+      ],
+      "candidate_samples": [
+        4960.063934326172,
+        4947.840213775635,
+        4946.623802185059,
+        4941.855907440186,
+        4962.048053741455,
+        4972.032070159912,
+        5067.488193511963,
+        5073.855876922607
+      ]
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4984.70401763916,
+      "candidate_us": 4993.423938751221,
+      "baseline_samples": [
+        4978.015899658203,
+        4952.544212341309,
+        4953.152179718018,
+        4916.927814483643,
+        4991.392135620117,
+        5035.935878753662,
+        5061.503887176514,
+        5130.144119262695
+      ],
+      "candidate_samples": [
+        4958.623886108398,
+        4955.872058868408,
+        4956.736087799072,
+        4931.488037109375,
+        5031.871795654297,
+        5028.223991394043,
+        5129.40788269043,
+        5127.583980560303
+      ]
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4947.216033935547,
+      "candidate_us": 4946.255922317505,
+      "baseline_samples": [
+        4998.496055603027,
+        4945.024013519287,
+        4946.720123291016,
+        4942.272186279297,
+        4947.711944580078,
+        4943.871974945068,
+        4982.751846313477,
+        4992.095947265625
+      ],
+      "candidate_samples": [
+        4971.9038009643555,
+        4949.855804443359,
+        4940.415859222412,
+        4938.464164733887,
+        4942.65604019165,
+        4937.056064605713,
+        4995.488166809082,
+        4988.063812255859
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4966.000080108643,
+      "candidate_us": 4962.383985519409,
+      "baseline_samples": [
+        5052.99186706543,
+        4996.064186096191,
+        4993.4401512146,
+        4960.73579788208,
+        4959.968090057373,
+        4963.776111602783,
+        4955.679893493652,
+        4968.224048614502
+      ],
+      "candidate_samples": [
+        5054.815769195557,
+        4994.304180145264,
+        4986.527919769287,
+        4963.263988494873,
+        4961.503982543945,
+        4961.215972900391,
+        4958.943843841553,
+        4954.912185668945
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4914.559841156006,
+      "candidate_us": 4912.431955337524,
+      "baseline_samples": [
+        4905.759811401367,
+        4893.951892852783,
+        4895.264148712158,
+        4896.512031555176,
+        4923.3598709106445,
+        5076.288223266602,
+        5070.591926574707,
+        5075.232028961182
+      ],
+      "candidate_samples": [
+        4897.6640701293945,
+        4900.383949279785,
+        4892.640113830566,
+        4888.832092285156,
+        4924.479961395264,
+        4990.655899047852,
+        5074.751853942871,
+        5071.743965148926
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4934.223890304565,
+      "candidate_us": 4934.6559047698975,
+      "baseline_samples": [
+        4945.568084716797,
+        4929.503917694092,
+        4934.207916259766,
+        4928.736209869385,
+        4934.239864349365,
+        4924.191951751709,
+        4987.264156341553,
+        5066.944122314453
+      ],
+      "candidate_samples": [
+        4936.063766479492,
+        4925.087928771973,
+        4938.464164733887,
+        4923.391819000244,
+        4932.767868041992,
+        4933.248043060303,
+        5069.5037841796875,
+        5068.992137908936
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 21695.51944732666,
+      "candidate_us": 14010.624408721924,
+      "baseline_samples": [
+        19224.000930786133,
+        19193.695068359375,
+        21310.943603515625,
+        21653.087615966797,
+        21876.28746032715,
+        21737.951278686523,
+        21762.720108032227,
+        21813.663482666016
+      ],
+      "candidate_samples": [
+        13161.664009094238,
+        13133.79192352295,
+        14033.920288085938,
+        14049.759864807129,
+        14016.83235168457,
+        13953.59992980957,
+        14103.520393371582,
+        14004.416465759277
+      ]
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 20714.672088623047,
+      "candidate_us": 17313.440322875977,
+      "baseline_samples": [
+        19502.27165222168,
+        20082.687377929688,
+        20061.983108520508,
+        21616.89567565918,
+        21481.279373168945,
+        20595.199584960938,
+        21207.3917388916,
+        20834.144592285156
+      ],
+      "candidate_samples": [
+        16277.376174926758,
+        16323.52066040039,
+        16623.48747253418,
+        17604.768753051758,
+        17480.575561523438,
+        17356.639862060547,
+        17720.064163208008,
+        17270.240783691406
+      ]
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 19274.320602416992,
+      "candidate_us": 96943.1381225586,
+      "baseline_samples": [
+        19332.256317138672,
+        19215.58380126953,
+        20201.663970947266,
+        19216.384887695312,
+        20460.76774597168,
+        19201.95198059082,
+        19784.28840637207,
+        19213.760375976562
+      ],
+      "candidate_samples": [
+        97358.14666748047,
+        96452.06451416016,
+        98001.57165527344,
+        96105.88836669922,
+        98719.29931640625,
+        96528.12957763672,
+        98142.05169677734,
+        96010.42938232422
+      ]
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 21383.551597595215,
+      "candidate_us": 18155.695915222168,
+      "baseline_samples": [
+        19183.935165405273,
+        20569.34356689453,
+        21304.99267578125,
+        21604.671478271484,
+        21458.784103393555,
+        21633.024215698242,
+        21580.86395263672,
+        21308.319091796875
+      ],
+      "candidate_samples": [
+        16474.367141723633,
+        16397.567749023438,
+        18370.912551879883,
+        18368.09539794922,
+        18219.45571899414,
+        18369.632720947266,
+        18091.936111450195,
+        18014.87922668457
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 19515.18440246582,
+      "candidate_us": 24018.320083618164,
+      "baseline_samples": [
+        19211.74430847168,
+        19233.728408813477,
+        19259.552001953125,
+        20556.255340576172,
+        19506.784439086914,
+        19523.584365844727,
+        19569.37599182129,
+        19831.743240356445
+      ],
+      "candidate_samples": [
+        22735.008239746094,
+        22674.047470092773,
+        24090.208053588867,
+        24379.487991333008,
+        24374.975204467773,
+        23318.336486816406,
+        24189.56756591797,
+        23946.43211364746
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 19592.86403656006,
+      "candidate_us": 22967.93556213379,
+      "baseline_samples": [
+        19135.23292541504,
+        19214.784622192383,
+        20367.008209228516,
+        19488.704681396484,
+        20302.656173706055,
+        19693.66455078125,
+        19589.759826660156,
+        19595.96824645996
+      ],
+      "candidate_samples": [
+        21485.984802246094,
+        21485.88752746582,
+        23121.471405029297,
+        22253.34358215332,
+        23502.239227294922,
+        23351.551055908203,
+        23239.776611328125,
+        22814.39971923828
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 21555.27973175049,
+      "candidate_us": 16720.160484313965,
+      "baseline_samples": [
+        19247.5528717041,
+        20836.03286743164,
+        21571.264266967773,
+        21539.295196533203,
+        21684.831619262695,
+        21618.207931518555,
+        21595.552444458008,
+        21249.85694885254
+      ],
+      "candidate_samples": [
+        15158.75244140625,
+        15449.088096618652,
+        16814.52751159668,
+        16843.488693237305,
+        16810.495376586914,
+        16784.160614013672,
+        16656.160354614258,
+        16600.543975830078
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 19594.975471496582,
+      "candidate_us": 12869.311809539795,
+      "baseline_samples": [
+        17940.832138061523,
+        17967.872619628906,
+        19694.591522216797,
+        19492.128372192383,
+        19495.359420776367,
+        20777.408599853516,
+        20894.847869873047,
+        20759.35935974121
+      ],
+      "candidate_samples": [
+        12430.944442749023,
+        12459.360122680664,
+        12752.639770507812,
+        12757.472038269043,
+        12981.151580810547,
+        13272.576332092285,
+        13479.29573059082,
+        13180.447578430176
+      ]
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 19511.584281921387,
+      "candidate_us": 16111.48738861084,
+      "baseline_samples": [
+        18374.752044677734,
+        18605.53550720215,
+        18771.583557128906,
+        19663.96713256836,
+        19738.01612854004,
+        19677.536010742188,
+        19554.46434020996,
+        19468.704223632812
+      ],
+      "candidate_samples": [
+        15398.46420288086,
+        15448.991775512695,
+        16013.471603393555,
+        16144.607543945312,
+        16372.608184814453,
+        16435.199737548828,
+        16225.664138793945,
+        16078.367233276367
+      ]
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 17886.303901672363,
+      "candidate_us": 92594.38705444336,
+      "baseline_samples": [
+        17881.40869140625,
+        17886.079788208008,
+        17886.52801513672,
+        17927.711486816406,
+        18245.439529418945,
+        17849.472045898438,
+        18048.992156982422,
+        17823.040008544922
+      ],
+      "candidate_samples": [
+        92607.49053955078,
+        92455.1010131836,
+        92509.56726074219,
+        92581.28356933594,
+        93861.34338378906,
+        92258.23974609375,
+        94885.75744628906,
+        92993.1869506836
+      ]
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 19989.903450012207,
+      "candidate_us": 16800.31967163086,
+      "baseline_samples": [
+        18465.375900268555,
+        18722.463607788086,
+        18774.560928344727,
+        20028.640747070312,
+        20552.799224853516,
+        20160.991668701172,
+        19994.335174560547,
+        19985.471725463867
+      ],
+      "candidate_samples": [
+        15889.151573181152,
+        15864.768028259277,
+        16123.48747253418,
+        16809.215545654297,
+        17206.1767578125,
+        17166.624069213867,
+        16824.127197265625,
+        16791.423797607422
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 18219.183921813965,
+      "candidate_us": 21735.183715820312,
+      "baseline_samples": [
+        17850.528717041016,
+        17837.888717651367,
+        18322.368621826172,
+        18141.43943786621,
+        18295.103073120117,
+        18238.65509033203,
+        18462.207794189453,
+        18199.7127532959
+      ],
+      "candidate_samples": [
+        21362.688064575195,
+        21384.83238220215,
+        21654.111862182617,
+        21769.567489624023,
+        22148.51188659668,
+        21895.263671875,
+        22068.927764892578,
+        21700.7999420166
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 18319.567680358887,
+      "candidate_us": 21303.56788635254,
+      "baseline_samples": [
+        17950.624465942383,
+        18008.19206237793,
+        18132.543563842773,
+        18321.247100830078,
+        18841.472625732422,
+        19510.303497314453,
+        18515.615463256836,
+        18317.888259887695
+      ],
+      "candidate_samples": [
+        20408.479690551758,
+        20447.359085083008,
+        21551.20086669922,
+        21345.823287963867,
+        21261.31248474121,
+        21682.30438232422,
+        21566.463470458984,
+        21127.775192260742
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 19885.519981384277,
+      "candidate_us": 15171.232223510742,
+      "baseline_samples": [
+        19056.800842285156,
+        18731.712341308594,
+        18739.871978759766,
+        19967.008590698242,
+        19804.031372070312,
+        19983.200073242188,
+        20169.567108154297,
+        20080.928802490234
+      ],
+      "candidate_samples": [
+        14661.343574523926,
+        14597.760200500488,
+        14983.136177062988,
+        15164.064407348633,
+        15178.400039672852,
+        15384.608268737793,
+        15507.904052734375,
+        15618.144035339355
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 22281.44073486328,
+      "candidate_us": 16703.392028808594,
+      "baseline_samples": [
+        21722.11265563965,
+        21359.167098999023,
+        21358.30307006836,
+        22247.264862060547,
+        22315.616607666016,
+        22531.26335144043,
+        22746.17576599121,
+        22692.319869995117
+      ],
+      "candidate_samples": [
+        16419.519424438477,
+        16400.5126953125,
+        16416.671752929688,
+        16720.38459777832,
+        16826.847076416016,
+        16686.399459838867,
+        16935.712814331055,
+        16738.367080688477
+      ]
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 21964.0474319458,
+      "candidate_us": 19580.76763153076,
+      "baseline_samples": [
+        20737.056732177734,
+        21666.303634643555,
+        21648.479461669922,
+        21964.927673339844,
+        22275.840759277344,
+        22383.87107849121,
+        22349.151611328125,
+        21963.167190551758
+      ],
+      "candidate_samples": [
+        18579.519271850586,
+        18872.159957885742,
+        19135.20050048828,
+        19529.888153076172,
+        19794.17610168457,
+        19775.55274963379,
+        19663.808822631836,
+        19631.64710998535
+      ]
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 20779.455184936523,
+      "candidate_us": 86878.5285949707,
+      "baseline_samples": [
+        20911.487579345703,
+        20735.93521118164,
+        22022.687911987305,
+        20714.496612548828,
+        22017.248153686523,
+        20719.392776489258,
+        20822.975158691406,
+        20726.783752441406
+      ],
+      "candidate_samples": [
+        86044.50988769531,
+        86225.341796875,
+        88908.89739990234,
+        86718.20831298828,
+        88778.94592285156,
+        86608.67309570312,
+        88811.26403808594,
+        87038.84887695312
+      ]
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 22138.303756713867,
+      "candidate_us": 19989.392280578613,
+      "baseline_samples": [
+        20772.768020629883,
+        21621.503829956055,
+        21592.479705810547,
+        22078.59230041504,
+        22198.015213012695,
+        22959.936141967773,
+        22913.280487060547,
+        22312.959671020508
+      ],
+      "candidate_samples": [
+        18830.78384399414,
+        19287.647247314453,
+        19527.16827392578,
+        20063.1046295166,
+        19919.16847229004,
+        20445.85609436035,
+        20117.82455444336,
+        20059.616088867188
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 21201.871871948242,
+      "candidate_us": 24920.51124572754,
+      "baseline_samples": [
+        20876.15966796875,
+        20899.616241455078,
+        21261.823654174805,
+        21141.92008972168,
+        21883.55255126953,
+        21121.280670166016,
+        21372.512817382812,
+        22632.095336914062
+      ],
+      "candidate_samples": [
+        23991.392135620117,
+        24168.127059936523,
+        24959.29527282715,
+        24881.72721862793,
+        25226.40037536621,
+        24471.359252929688,
+        25097.471237182617,
+        25419.456481933594
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 21194.111824035645,
+      "candidate_us": 24161.952018737793,
+      "baseline_samples": [
+        21035.295486450195,
+        20913.312911987305,
+        21972.896575927734,
+        21141.887664794922,
+        21728.00064086914,
+        21193.920135498047,
+        21494.943618774414,
+        21194.303512573242
+      ],
+      "candidate_samples": [
+        23211.07292175293,
+        23199.23210144043,
+        24508.447647094727,
+        24476.608276367188,
+        24831.296920776367,
+        23846.71974182129,
+        24426.591873168945,
+        23897.31216430664
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 22318.84765625,
+      "candidate_us": 18778.94401550293,
+      "baseline_samples": [
+        21476.640701293945,
+        22325.3116607666,
+        22312.3836517334,
+        22576.89666748047,
+        22255.327224731445,
+        22553.3447265625,
+        22557.376861572266,
+        22195.968627929688
+      ],
+      "candidate_samples": [
+        18022.048950195312,
+        18021.120071411133,
+        18762.943267822266,
+        18851.680755615234,
+        19031.328201293945,
+        18888.383865356445,
+        18772.031784057617,
+        18785.856246948242
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 27440.735816955566,
+      "candidate_us": 21313.888549804688,
+      "baseline_samples": [
+        25594.783782958984,
+        26541.59927368164,
+        26682.111740112305,
+        27673.568725585938,
+        27360.383987426758,
+        28156.768798828125,
+        27521.087646484375,
+        28319.360733032227
+      ],
+      "candidate_samples": [
+        20163.488388061523,
+        20321.216583251953,
+        21222.240447998047,
+        21627.424240112305,
+        21405.536651611328,
+        21913.34342956543,
+        21047.679901123047,
+        21630.687713623047
+      ]
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 26491.024017333984,
+      "candidate_us": 24111.151695251465,
+      "baseline_samples": [
+        25764.95933532715,
+        26493.88885498047,
+        26546.30470275879,
+        26488.1591796875,
+        26407.77587890625,
+        26718.048095703125,
+        26464.86473083496,
+        27077.056884765625
+      ],
+      "candidate_samples": [
+        22986.080169677734,
+        23489.152908325195,
+        24168.28727722168,
+        23986.656188964844,
+        24382.52830505371,
+        24489.31121826172,
+        24265.087127685547,
+        24054.01611328125
+      ]
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 25336.015701293945,
+      "candidate_us": 97437.82424926758,
+      "baseline_samples": [
+        25434.751510620117,
+        25310.911178588867,
+        25322.336196899414,
+        25349.695205688477,
+        26498.559951782227,
+        25295.743942260742,
+        26635.77651977539,
+        25320.35255432129
+      ],
+      "candidate_samples": [
+        97561.0580444336,
+        96230.01861572266,
+        97989.18151855469,
+        96465.50750732422,
+        99503.8070678711,
+        96743.64471435547,
+        98443.42041015625,
+        97314.59045410156
+      ]
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 26765.151977539062,
+      "candidate_us": 24462.81623840332,
+      "baseline_samples": [
+        26283.84017944336,
+        26154.016494750977,
+        27228.288650512695,
+        27264.223098754883,
+        26804.86488342285,
+        26558.368682861328,
+        26725.439071655273,
+        27110.912322998047
+      ],
+      "candidate_samples": [
+        23324.800491333008,
+        23525.888442993164,
+        24676.639556884766,
+        25021.024703979492,
+        24513.66424560547,
+        24538.87939453125,
+        24411.968231201172,
+        24391.51954650879
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 25762.255668640137,
+      "candidate_us": 29681.32781982422,
+      "baseline_samples": [
+        25413.91944885254,
+        25452.287673950195,
+        25798.04801940918,
+        25701.215744018555,
+        25981.664657592773,
+        25726.463317871094,
+        26592.12875366211,
+        25813.40789794922
+      ],
+      "candidate_samples": [
+        28664.447784423828,
+        28776.86309814453,
+        30819.616317749023,
+        29840.67153930664,
+        30018.112182617188,
+        29318.9754486084,
+        30428.096771240234,
+        29521.984100341797
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 25834.335327148438,
+      "candidate_us": 28763.58413696289,
+      "baseline_samples": [
+        25318.784713745117,
+        25486.24038696289,
+        25983.07228088379,
+        25781.919479370117,
+        26649.05548095703,
+        25771.360397338867,
+        26129.472732543945,
+        25886.751174926758
+      ],
+      "candidate_samples": [
+        27641.088485717773,
+        27789.888381958008,
+        28515.071868896484,
+        28881.759643554688,
+        29812.288284301758,
+        28786.304473876953,
+        29243.520736694336,
+        28740.863800048828
+      ]
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 26628.655433654785,
+      "candidate_us": 23258.975982666016,
+      "baseline_samples": [
+        25424.415588378906,
+        26240.415573120117,
+        26325.34408569336,
+        26737.184524536133,
+        26572.63946533203,
+        27013.376235961914,
+        26775.360107421875,
+        26684.67140197754
+      ],
+      "candidate_samples": [
+        21700.223922729492,
+        22409.696578979492,
+        23117.759704589844,
+        23220.415115356445,
+        23668.06411743164,
+        23452.768325805664,
+        23635.87188720703,
+        23297.536849975586
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"batch\": 1, \"ctx\": 0, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 300, \"seed\": 2100}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 3000, \"dist\": \"normal\", \"layer\": \"full\", \"page\": 1, \"q_len\": 753, \"seed\": 2101}": {
+      "local_start": 160
+    },
+    "{\"batch\": 2, \"ctx\": 2500, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 753, \"seed\": 2102}": {
+      "local_start": 160
+    },
+    "{\"batch\": 3, \"ctx\": 5000, \"dist\": \"outliers\", \"layer\": \"full\", \"page\": 1, \"q_len\": 200, \"seed\": 2103}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 4096, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 4096, \"seed\": 2104}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"turn 1\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1001, \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"turn 1\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1002, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"turn 4\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1003, \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"turn 4\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1004, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 0, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1006, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 32768, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1007, \"weight\": 138}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 32768, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1008, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 65536, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1010, \"weight\": 16}": {
+      "local_start": 160
+    }
+  },
+  "calibration_us": 3.008000086992979,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "control",
+    "case": {
+      "batch": 1,
+      "ctx": 32768,
+      "layer": "sliding",
+      "q_len": 16384,
+      "page": 1,
+      "dist": "soft",
+      "load": "first turn",
+      "weight": 138,
+      "repeats": 6,
+      "seed": 1007
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n_ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniv...         0.00%       0.000us         0.00%       0.000us       0.000us      19.743ms        38.60%      19.743ms       2.468ms             8  \n         nvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      10.241ms        20.02%      10.241ms     853.410us            12  \n         nvjet_sm90_tst_320x128_64x3_1x2_h_bz_coopB_TNT         0.00%       0.000us         0.00%       0.000us       0.000us       6.010ms        11.75%       6.010ms       1.503ms             4  \n                                       _dequant_runtime         0.00%       0.000us         0.00%       0.000us       0.000us       5.263ms        10.29%       5.263ms     657.909us             8  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.609ms         3.14%       1.609ms     402.167us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.602ms         3.13%       1.602ms     400.382us             4  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.270ms         2.48%       1.270ms     317.551us             4  \n         nvjet_sm90_tss_128x256_64x4_2x1_v_bz_coopA_NNN         0.00%       0.000us         0.00%       0.000us       0.000us       1.160ms         2.27%       1.160ms     145.011us             8  \n                                       _activate_scaled         0.00%       0.000us         0.00%       0.000us       0.000us     979.997us         1.92%     979.997us     244.999us             4  \n                                        _scatter_scaled         0.00%       0.000us         0.00%       0.000us       0.000us     770.974us         1.51%     770.974us     192.743us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     524.446us         1.03%     524.446us     131.112us             4  \n                                                  _pack         0.00%       0.000us         0.00%       0.000us       0.000us     445.694us         0.87%     445.694us     111.423us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us     337.824us         0.66%     337.824us      84.456us             4  \nvoid at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us     321.310us         0.63%     321.310us      80.327us             4  \n                                _qk_rms_norm_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     176.319us         0.34%     176.319us      44.080us             4  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 52.103ms\nSelf CUDA time total: 51.153ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us      50.315ms        66.62%      50.315ms       6.289ms             8  \n         nvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      10.293ms        13.63%      10.293ms     857.769us            12  \n         nvjet_sm90_tst_320x128_64x3_1x2_h_bz_coopB_TNT         0.00%       0.000us         0.00%       0.000us       0.000us       6.025ms         7.98%       6.025ms       1.506ms             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.626ms         2.15%       1.626ms     406.617us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.600ms         2.12%       1.600ms     399.945us             4  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.271ms         1.68%       1.271ms     317.824us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us       1.205ms         1.60%       1.205ms     301.257us             4  \n         nvjet_sm90_tss_128x256_64x4_2x1_v_bz_coopA_NNN         0.00%       0.000us         0.00%       0.000us       0.000us       1.163ms         1.54%       1.163ms     145.340us             8  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     517.538us         0.69%     517.538us     129.385us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us     336.160us         0.45%     336.160us      84.040us             4  \nvoid at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us     322.498us         0.43%     322.498us      80.625us             4  \n                                _qk_rms_norm_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     176.544us         0.23%     176.544us      44.136us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     166.785us         0.22%     166.785us      41.696us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us     111.263us         0.15%     111.263us      27.816us             4  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us      98.081us         0.13%      98.081us      24.520us             4  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 76.441ms\nSelf CUDA time total: 75.530ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "control",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "control",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "control",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_128_128_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_128_256_64_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_128_128_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_128_2_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "pingpong_64_256_64_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    }
+  ],
+  "elapsed_s": 73.85381325899999,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_prefill_layer",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/662c5f568800f1ab8a572e1f3f2d13e45dbb0d0668039796528ded1f78a6cf3c.py",
+      "sha256": "662c5f568800f1ab8a572e1f3f2d13e45dbb0d0668039796528ded1f78a6cf3c"
+    },
+    "pingpong_128_128_128_1_1": {
+      "path": "experiments/sources/4c01daa937bd1d2078b4274e0f4168e0934c7f3aa5334488c5973b4198a3272a.py",
+      "sha256": "4c01daa937bd1d2078b4274e0f4168e0934c7f3aa5334488c5973b4198a3272a"
+    },
+    "pingpong_128_256_64_1_1": {
+      "path": "experiments/sources/0595207bcb1e5cce62cca7514b599bbd6df161d986b920526d2a1e6c1dd33919.py",
+      "sha256": "0595207bcb1e5cce62cca7514b599bbd6df161d986b920526d2a1e6c1dd33919"
+    },
+    "pingpong_64_128_128_1_1": {
+      "path": "experiments/sources/bae4c3eea61d4ddc212338e5300946aef48c4ca38ceb8dec1f918a0ce2b8d0b2.py",
+      "sha256": "bae4c3eea61d4ddc212338e5300946aef48c4ca38ceb8dec1f918a0ce2b8d0b2"
+    },
+    "pingpong_64_256_128_1_1": {
+      "path": "experiments/sources/a33a4cd1a534f6456360929c0b015ed42b01eeb96fa26c180dd8acea79f6424d.py",
+      "sha256": "a33a4cd1a534f6456360929c0b015ed42b01eeb96fa26c180dd8acea79f6424d"
+    },
+    "pingpong_64_256_128_2_1": {
+      "path": "experiments/sources/53d4019feefa78b327f8dd4699dce81627c1a32751bf0be366088fc4f7d85259.py",
+      "sha256": "53d4019feefa78b327f8dd4699dce81627c1a32751bf0be366088fc4f7d85259"
+    },
+    "pingpong_64_256_64_1_1": {
+      "path": "experiments/sources/30ce0e46e6c35a3297099e044c5c87bb66261d01361adc73215a6825a82c33b9.py",
+      "sha256": "30ce0e46e6c35a3297099e044c5c87bb66261d01361adc73215a6825a82c33b9"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

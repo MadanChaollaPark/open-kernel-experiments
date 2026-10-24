@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "schedule_configurations": 1440,
+  "max_lock": 263,
+  "checks": [
+    "all K tiles covered exactly once",
+    "each column has complete ordered reduction indices",
+    "split contributors share lock index",
+    "lock index bounded by grid"
+  ],
+  "scope": "CPU model of copied equations only; GPU correctness still required"
+}

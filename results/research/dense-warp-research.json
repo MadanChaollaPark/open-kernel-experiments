@@ -1,0 +1,34 @@
+{
+  "status": "selective hybrid passed local tests, official check queued",
+  "hypothesis": "Vectorized CUDA warp GEMV may reduce overhead for single-token dense projections; distribute K across one/two/four warps per row and retain FP32 sums.",
+  "cpu_compile": "outputs/dense-warp-precompile.json",
+  "source_sha256": "37b636fc09b79050457a660efacde9dd2d6f0d491695438d44888a088a00e441",
+  "source": "outputs/dense_warp_hybrid.py",
+  "runner": "work/run_dense_warp.py",
+  "control": "outputs/dense_fullvec_hybrid.py",
+  "preserved_precision": "BF16 inputs, BF16 projection weights, original FP32 router weights, FP32 accumulation and router output.",
+  "updated_at": "2026-10-24T00:01:31.522727+00:00",
+  "hybrid_evidence": "outputs/dense-warp-hybrid.json",
+  "hybrid_checks": {
+    "passed": 195,
+    "total": 195
+  },
+  "hybrid_scores": {
+    "r16p16_m1": 1.1943,
+    "control": 1.185
+  },
+  "official_check": {
+    "job": "5e4952994ff54358",
+    "passed": true,
+    "speedup": 1.2116385050090164,
+    "interval": [
+      1.1934639274338812,
+      1.2298130825841516
+    ],
+    "flags": [],
+    "evidence": "outputs/dense-warp-hybrid-check-result.json",
+    "interpretation": "Within uncertainty of existing scored1.209691; no clear gain established."
+  },
+  "scored_job": "8eb008273d6c4ec6",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

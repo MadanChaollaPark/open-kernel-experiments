@@ -1,0 +1,6544 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 1,
+        "ctx": 10,
+        "layer": "sliding",
+        "seed": 1900
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.203e-02 (worst row 5.203e-02) [bound 0.106]; attention input relative L2 error 3.065e-02 (worst row 3.065e-02) [bound 0.062]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 10,
+        "layer": "sliding",
+        "seed": 1900
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.203e-02 (worst row 5.203e-02) [bound 0.106]; attention input relative L2 error 3.065e-02 (worst row 3.065e-02) [bound 0.062]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 1,
+        "ctx": 10,
+        "layer": "sliding",
+        "seed": 1900
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.203e-02 (worst row 5.203e-02) [bound 0.106]; attention input relative L2 error 3.065e-02 (worst row 3.065e-02) [bound 0.062]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 1,
+        "ctx": 10,
+        "layer": "sliding",
+        "seed": 1900
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.203e-02 (worst row 5.203e-02) [bound 0.106]; attention input relative L2 error 3.065e-02 (worst row 3.065e-02) [bound 0.062]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "seed": 1901
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.894e-02 (worst row 7.894e-02) [bound 0.150]; attention input relative L2 error 5.630e-02 (worst row 5.630e-02) [bound 0.142]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "seed": 1901
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.894e-02 (worst row 7.894e-02) [bound 0.150]; attention input relative L2 error 5.630e-02 (worst row 5.630e-02) [bound 0.142]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "seed": 1901
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.894e-02 (worst row 7.894e-02) [bound 0.150]; attention input relative L2 error 5.630e-02 (worst row 5.630e-02) [bound 0.142]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "seed": 1901
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.894e-02 (worst row 7.894e-02) [bound 0.150]; attention input relative L2 error 5.630e-02 (worst row 5.630e-02) [bound 0.142]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 8,
+        "ctx": 2047,
+        "layer": "sliding",
+        "seed": 1902
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.895e-02 (worst row 1.009e-01) [bound 0.150]; attention input relative L2 error 4.634e-02 (worst row 7.118e-02) [bound 0.110]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 8,
+        "ctx": 2047,
+        "layer": "sliding",
+        "seed": 1902
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.895e-02 (worst row 1.009e-01) [bound 0.150]; attention input relative L2 error 4.634e-02 (worst row 7.118e-02) [bound 0.110]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 8,
+        "ctx": 2047,
+        "layer": "sliding",
+        "seed": 1902
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.895e-02 (worst row 1.009e-01) [bound 0.150]; attention input relative L2 error 4.634e-02 (worst row 7.118e-02) [bound 0.110]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 8,
+        "ctx": 2047,
+        "layer": "sliding",
+        "seed": 1902
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.895e-02 (worst row 1.009e-01) [bound 0.150]; attention input relative L2 error 4.634e-02 (worst row 7.118e-02) [bound 0.110]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "layer": "sliding",
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1903
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.323e-02 (worst row 9.440e-02) [bound 0.150]; attention input relative L2 error 4.825e-02 (worst row 7.280e-02) [bound 0.123]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "layer": "sliding",
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1903
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.323e-02 (worst row 9.440e-02) [bound 0.150]; attention input relative L2 error 4.825e-02 (worst row 7.280e-02) [bound 0.123]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "layer": "sliding",
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1903
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.323e-02 (worst row 9.440e-02) [bound 0.150]; attention input relative L2 error 4.825e-02 (worst row 7.280e-02) [bound 0.123]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "layer": "sliding",
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1903
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.323e-02 (worst row 9.440e-02) [bound 0.150]; attention input relative L2 error 4.825e-02 (worst row 7.280e-02) [bound 0.123]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 3,
+        "ctx": 6000,
+        "layer": "full",
+        "q_len": 8,
+        "dist": "outliers",
+        "seed": 1904
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.831e-02 (worst row 1.045e-01) [bound 0.150]; attention input relative L2 error 3.460e-02 (worst row 5.814e-02) [bound 0.086]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 3,
+        "ctx": 6000,
+        "layer": "full",
+        "q_len": 8,
+        "dist": "outliers",
+        "seed": 1904
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.831e-02 (worst row 1.045e-01) [bound 0.150]; attention input relative L2 error 3.460e-02 (worst row 5.814e-02) [bound 0.086]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 3,
+        "ctx": 6000,
+        "layer": "full",
+        "q_len": 8,
+        "dist": "outliers",
+        "seed": 1904
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.831e-02 (worst row 1.045e-01) [bound 0.150]; attention input relative L2 error 3.460e-02 (worst row 5.814e-02) [bound 0.086]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 3,
+        "ctx": 6000,
+        "layer": "full",
+        "q_len": 8,
+        "dist": "outliers",
+        "seed": 1904
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.831e-02 (worst row 1.045e-01) [bound 0.150]; attention input relative L2 error 3.460e-02 (worst row 5.814e-02) [bound 0.086]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 5,
+        "ctx": 5000,
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1905
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.796e-02 (worst row 9.890e-02) [bound 0.150]; attention input relative L2 error 4.459e-02 (worst row 7.115e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 5,
+        "ctx": 5000,
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1905
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.796e-02 (worst row 9.890e-02) [bound 0.150]; attention input relative L2 error 4.459e-02 (worst row 7.115e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 5,
+        "ctx": 5000,
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1905
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.796e-02 (worst row 9.890e-02) [bound 0.150]; attention input relative L2 error 4.459e-02 (worst row 7.115e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 5,
+        "ctx": 5000,
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1905
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.796e-02 (worst row 9.890e-02) [bound 0.150]; attention input relative L2 error 4.459e-02 (worst row 7.115e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 33,
+        "ctx": 20000,
+        "layer": "full",
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1906
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.454e-02 (worst row 1.019e-01) [bound 0.150]; attention input relative L2 error 4.905e-02 (worst row 7.107e-02) [bound 0.122]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 33,
+        "ctx": 20000,
+        "layer": "full",
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1906
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.454e-02 (worst row 1.019e-01) [bound 0.150]; attention input relative L2 error 4.905e-02 (worst row 7.107e-02) [bound 0.122]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 33,
+        "ctx": 20000,
+        "layer": "full",
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1906
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.454e-02 (worst row 1.019e-01) [bound 0.150]; attention input relative L2 error 4.905e-02 (worst row 7.107e-02) [bound 0.122]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 33,
+        "ctx": 20000,
+        "layer": "full",
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1906
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.454e-02 (worst row 1.019e-01) [bound 0.150]; attention input relative L2 error 4.905e-02 (worst row 7.107e-02) [bound 0.122]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 2,
+        "ctx": 300000,
+        "layer": "sliding",
+        "q_len": 8,
+        "seed": 1907
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.358e-02 (worst row 9.561e-02) [bound 0.150]; attention input relative L2 error 5.004e-02 (worst row 6.620e-02) [bound 0.119]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 2,
+        "ctx": 300000,
+        "layer": "sliding",
+        "q_len": 8,
+        "seed": 1907
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.358e-02 (worst row 9.561e-02) [bound 0.150]; attention input relative L2 error 5.004e-02 (worst row 6.620e-02) [bound 0.119]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 2,
+        "ctx": 300000,
+        "layer": "sliding",
+        "q_len": 8,
+        "seed": 1907
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.358e-02 (worst row 9.561e-02) [bound 0.150]; attention input relative L2 error 5.004e-02 (worst row 6.620e-02) [bound 0.119]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 2,
+        "ctx": 300000,
+        "layer": "sliding",
+        "q_len": 8,
+        "seed": 1907
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.358e-02 (worst row 9.561e-02) [bound 0.150]; attention input relative L2 error 5.004e-02 (worst row 6.620e-02) [bound 0.119]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 1,
+        "ctx": 1048576,
+        "layer": "full",
+        "q_len": 8,
+        "seed": 1908
+      },
+      "ok": true,
+      "message": "update relative L2 error 8.478e-02 (worst row 1.024e-01) [bound 0.150]; attention input relative L2 error 5.657e-02 (worst row 7.306e-02) [bound 0.140]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 1048576,
+        "layer": "full",
+        "q_len": 8,
+        "seed": 1908
+      },
+      "ok": true,
+      "message": "update relative L2 error 8.478e-02 (worst row 1.024e-01) [bound 0.150]; attention input relative L2 error 5.657e-02 (worst row 7.306e-02) [bound 0.140]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 1,
+        "ctx": 1048576,
+        "layer": "full",
+        "q_len": 8,
+        "seed": 1908
+      },
+      "ok": true,
+      "message": "update relative L2 error 8.478e-02 (worst row 1.024e-01) [bound 0.150]; attention input relative L2 error 5.657e-02 (worst row 7.306e-02) [bound 0.140]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 1,
+        "ctx": 1048576,
+        "layer": "full",
+        "q_len": 8,
+        "seed": 1908
+      },
+      "ok": true,
+      "message": "update relative L2 error 8.478e-02 (worst row 1.024e-01) [bound 0.150]; attention input relative L2 error 5.657e-02 (worst row 7.306e-02) [bound 0.140]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 4,
+        "ctx": 7000,
+        "layer": "sliding",
+        "q_len": 8,
+        "page": 1,
+        "kv_scale": 0.015625,
+        "seed": 1909
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.813e-02 (worst row 1.028e-01) [bound 0.150]; attention input relative L2 error 4.438e-02 (worst row 7.140e-02) [bound 0.110]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 7000,
+        "layer": "sliding",
+        "q_len": 8,
+        "page": 1,
+        "kv_scale": 0.015625,
+        "seed": 1909
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.813e-02 (worst row 1.028e-01) [bound 0.150]; attention input relative L2 error 4.438e-02 (worst row 7.140e-02) [bound 0.110]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 4,
+        "ctx": 7000,
+        "layer": "sliding",
+        "q_len": 8,
+        "page": 1,
+        "kv_scale": 0.015625,
+        "seed": 1909
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.813e-02 (worst row 1.028e-01) [bound 0.150]; attention input relative L2 error 4.438e-02 (worst row 7.140e-02) [bound 0.110]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 4,
+        "ctx": 7000,
+        "layer": "sliding",
+        "q_len": 8,
+        "page": 1,
+        "kv_scale": 0.015625,
+        "seed": 1909
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.813e-02 (worst row 1.028e-01) [bound 0.150]; attention input relative L2 error 4.438e-02 (worst row 7.140e-02) [bound 0.110]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "dist": "soft",
+        "page": 1,
+        "seed": 1910
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.706e-02 (worst row 4.706e-02) [bound 0.120]; attention input relative L2 error 2.733e-02 (worst row 2.733e-02) [bound 0.069]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "dist": "soft",
+        "page": 1,
+        "seed": 1910
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.706e-02 (worst row 4.706e-02) [bound 0.120]; attention input relative L2 error 2.733e-02 (worst row 2.733e-02) [bound 0.069]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "dist": "soft",
+        "page": 1,
+        "seed": 1910
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.706e-02 (worst row 4.706e-02) [bound 0.120]; attention input relative L2 error 2.733e-02 (worst row 2.733e-02) [bound 0.069]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "dist": "soft",
+        "page": 1,
+        "seed": 1910
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.706e-02 (worst row 4.706e-02) [bound 0.120]; attention input relative L2 error 2.733e-02 (worst row 2.733e-02) [bound 0.069]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 4,
+        "ctx": 6000,
+        "layer": "sliding",
+        "q_len": 8,
+        "dist": "soft",
+        "seed": 1911
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.519e-02 (worst row 6.869e-02) [bound 0.127]; attention input relative L2 error 3.624e-02 (worst row 4.846e-02) [bound 0.084]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 6000,
+        "layer": "sliding",
+        "q_len": 8,
+        "dist": "soft",
+        "seed": 1911
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.519e-02 (worst row 6.869e-02) [bound 0.127]; attention input relative L2 error 3.624e-02 (worst row 4.846e-02) [bound 0.084]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 4,
+        "ctx": 6000,
+        "layer": "sliding",
+        "q_len": 8,
+        "dist": "soft",
+        "seed": 1911
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.519e-02 (worst row 6.869e-02) [bound 0.127]; attention input relative L2 error 3.624e-02 (worst row 4.846e-02) [bound 0.084]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 4,
+        "ctx": 6000,
+        "layer": "sliding",
+        "q_len": 8,
+        "dist": "soft",
+        "seed": 1911
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.519e-02 (worst row 6.869e-02) [bound 0.127]; attention input relative L2 error 3.624e-02 (worst row 4.846e-02) [bound 0.084]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 16,
+        "ctx": 20000,
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft",
+        "page": 1,
+        "seed": 1912
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.065e-02 (worst row 8.877e-02) [bound 0.150]; attention input relative L2 error 3.908e-02 (worst row 4.720e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 20000,
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft",
+        "page": 1,
+        "seed": 1912
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.065e-02 (worst row 8.877e-02) [bound 0.150]; attention input relative L2 error 3.908e-02 (worst row 4.720e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 16,
+        "ctx": 20000,
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft",
+        "page": 1,
+        "seed": 1912
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.065e-02 (worst row 8.877e-02) [bound 0.150]; attention input relative L2 error 3.908e-02 (worst row 4.720e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 16,
+        "ctx": 20000,
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft",
+        "page": 1,
+        "seed": 1912
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.065e-02 (worst row 8.877e-02) [bound 0.150]; attention input relative L2 error 3.908e-02 (worst row 4.720e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "repeats": 60,
+        "seed": 801
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.128e-02 (worst row 6.128e-02) [bound 0.135]; attention input relative L2 error 4.628e-02 (worst row 4.628e-02) [bound 0.102]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "repeats": 60,
+        "seed": 801
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.128e-02 (worst row 6.128e-02) [bound 0.135]; attention input relative L2 error 4.628e-02 (worst row 4.628e-02) [bound 0.102]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "repeats": 60,
+        "seed": 801
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.128e-02 (worst row 6.128e-02) [bound 0.135]; attention input relative L2 error 4.628e-02 (worst row 4.628e-02) [bound 0.102]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "repeats": 60,
+        "seed": 801
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.128e-02 (worst row 6.128e-02) [bound 0.135]; attention input relative L2 error 4.628e-02 (worst row 4.628e-02) [bound 0.102]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 16,
+        "repeats": 60,
+        "seed": 802
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.965e-02 (worst row 6.965e-02) [bound 0.150]; attention input relative L2 error 4.871e-02 (worst row 4.871e-02) [bound 0.121]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 16,
+        "repeats": 60,
+        "seed": 802
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.965e-02 (worst row 6.965e-02) [bound 0.150]; attention input relative L2 error 4.871e-02 (worst row 4.871e-02) [bound 0.121]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 16,
+        "repeats": 60,
+        "seed": 802
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.965e-02 (worst row 6.965e-02) [bound 0.150]; attention input relative L2 error 4.871e-02 (worst row 4.871e-02) [bound 0.121]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 16,
+        "repeats": 60,
+        "seed": 802
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.965e-02 (worst row 6.965e-02) [bound 0.150]; attention input relative L2 error 4.871e-02 (worst row 4.871e-02) [bound 0.121]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 803
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.093e-02 (worst row 7.068e-02) [bound 0.126]; attention input relative L2 error 3.304e-02 (worst row 4.955e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 803
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.093e-02 (worst row 7.068e-02) [bound 0.126]; attention input relative L2 error 3.304e-02 (worst row 4.954e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 803
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.093e-02 (worst row 7.068e-02) [bound 0.126]; attention input relative L2 error 3.304e-02 (worst row 4.955e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 803
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.093e-02 (worst row 7.068e-02) [bound 0.126]; attention input relative L2 error 3.304e-02 (worst row 4.955e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 804
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.202e-02 (worst row 8.197e-02) [bound 0.150]; attention input relative L2 error 4.175e-02 (worst row 6.007e-02) [bound 0.105]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 804
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.202e-02 (worst row 8.197e-02) [bound 0.150]; attention input relative L2 error 4.175e-02 (worst row 6.007e-02) [bound 0.105]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 804
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.202e-02 (worst row 8.197e-02) [bound 0.150]; attention input relative L2 error 4.175e-02 (worst row 6.007e-02) [bound 0.105]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 804
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.202e-02 (worst row 8.197e-02) [bound 0.150]; attention input relative L2 error 4.175e-02 (worst row 6.007e-02) [bound 0.105]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 805
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.347e-02 (worst row 7.356e-02) [bound 0.131]; attention input relative L2 error 3.523e-02 (worst row 5.114e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 805
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.347e-02 (worst row 7.356e-02) [bound 0.131]; attention input relative L2 error 3.523e-02 (worst row 5.114e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 805
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.347e-02 (worst row 7.356e-02) [bound 0.131]; attention input relative L2 error 3.523e-02 (worst row 5.114e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 805
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.347e-02 (worst row 7.356e-02) [bound 0.131]; attention input relative L2 error 3.523e-02 (worst row 5.114e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 806
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.343e-02 (worst row 7.952e-02) [bound 0.150]; attention input relative L2 error 3.912e-02 (worst row 5.400e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 806
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.343e-02 (worst row 7.952e-02) [bound 0.150]; attention input relative L2 error 3.912e-02 (worst row 5.400e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 806
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.343e-02 (worst row 7.952e-02) [bound 0.150]; attention input relative L2 error 3.912e-02 (worst row 5.400e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 806
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.343e-02 (worst row 7.952e-02) [bound 0.150]; attention input relative L2 error 3.912e-02 (worst row 5.400e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 807
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.763e-02 (worst row 8.454e-02) [bound 0.150]; attention input relative L2 error 4.307e-02 (worst row 5.554e-02) [bound 0.103]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 807
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.763e-02 (worst row 8.454e-02) [bound 0.150]; attention input relative L2 error 4.307e-02 (worst row 5.554e-02) [bound 0.103]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 807
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.763e-02 (worst row 8.454e-02) [bound 0.150]; attention input relative L2 error 4.307e-02 (worst row 5.554e-02) [bound 0.103]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 807
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.763e-02 (worst row 8.454e-02) [bound 0.150]; attention input relative L2 error 4.307e-02 (worst row 5.554e-02) [bound 0.103]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 808
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.303e-02 (worst row 9.108e-02) [bound 0.150]; attention input relative L2 error 3.928e-02 (worst row 4.909e-02) [bound 0.098]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 808
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.303e-02 (worst row 9.108e-02) [bound 0.150]; attention input relative L2 error 3.928e-02 (worst row 4.909e-02) [bound 0.098]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 808
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.303e-02 (worst row 9.108e-02) [bound 0.150]; attention input relative L2 error 3.928e-02 (worst row 4.909e-02) [bound 0.098]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 808
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.303e-02 (worst row 9.108e-02) [bound 0.150]; attention input relative L2 error 3.928e-02 (worst row 4.909e-02) [bound 0.098]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 809
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.536e-02 (worst row 1.004e-01) [bound 0.131]; attention input relative L2 error 3.690e-02 (worst row 7.102e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 809
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.536e-02 (worst row 1.004e-01) [bound 0.131]; attention input relative L2 error 3.690e-02 (worst row 7.102e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 809
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.536e-02 (worst row 1.004e-01) [bound 0.131]; attention input relative L2 error 3.690e-02 (worst row 7.102e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 809
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.536e-02 (worst row 1.004e-01) [bound 0.131]; attention input relative L2 error 3.690e-02 (worst row 7.102e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 810
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.562e-02 (worst row 9.487e-02) [bound 0.150]; attention input relative L2 error 4.376e-02 (worst row 5.775e-02) [bound 0.107]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 810
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.562e-02 (worst row 9.487e-02) [bound 0.150]; attention input relative L2 error 4.376e-02 (worst row 5.775e-02) [bound 0.107]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 810
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.562e-02 (worst row 9.487e-02) [bound 0.150]; attention input relative L2 error 4.376e-02 (worst row 5.775e-02) [bound 0.107]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 810
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.562e-02 (worst row 9.487e-02) [bound 0.150]; attention input relative L2 error 4.376e-02 (worst row 5.775e-02) [bound 0.107]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 811
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.897e-02 (worst row 9.533e-02) [bound 0.141]; attention input relative L2 error 3.896e-02 (worst row 6.582e-02) [bound 0.093]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 811
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.897e-02 (worst row 9.533e-02) [bound 0.141]; attention input relative L2 error 3.896e-02 (worst row 6.582e-02) [bound 0.093]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 811
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.897e-02 (worst row 9.533e-02) [bound 0.141]; attention input relative L2 error 3.896e-02 (worst row 6.582e-02) [bound 0.093]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 811
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.897e-02 (worst row 9.533e-02) [bound 0.141]; attention input relative L2 error 3.896e-02 (worst row 6.582e-02) [bound 0.093]"
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 812
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.400e-02 (worst row 9.556e-02) [bound 0.150]; attention input relative L2 error 4.244e-02 (worst row 6.249e-02) [bound 0.103]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 812
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.400e-02 (worst row 9.556e-02) [bound 0.150]; attention input relative L2 error 4.244e-02 (worst row 6.249e-02) [bound 0.103]"
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 812
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.400e-02 (worst row 9.556e-02) [bound 0.150]; attention input relative L2 error 4.244e-02 (worst row 6.249e-02) [bound 0.103]"
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 812
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.400e-02 (worst row 9.556e-02) [bound 0.150]; attention input relative L2 error 4.244e-02 (worst row 6.249e-02) [bound 0.103]"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "repeats": 60,
+        "seed": 801
+      },
+      "baseline_us": 186.319999396801,
+      "candidate_us": 148.24000000953674,
+      "baseline_samples": [
+        187.45599687099457,
+        187.48800456523895,
+        186.36800348758698,
+        187.99999356269836,
+        184.4480037689209,
+        185.56800484657288,
+        186.27199530601501,
+        185.248002409935,
+        187.29600310325623,
+        185.5359971523285,
+        186.14399433135986,
+        186.71999871730804,
+        186.68800592422485,
+        185.95199286937714,
+        186.0799938440323,
+        186.65599822998047,
+        188.4479969739914,
+        186.5600049495697,
+        186.0799938440323,
+        184.86399948596954
+      ],
+      "candidate_samples": [
+        148.83199334144592,
+        147.96799421310425,
+        147.48799800872803,
+        147.20000326633453,
+        147.74399995803833,
+        147.93600142002106,
+        149.79200065135956,
+        149.02399480342865,
+        148.44800531864166,
+        147.87200093269348,
+        148.22399616241455,
+        148.6400067806244,
+        148.80000054836273,
+        148.41599762439728,
+        146.7519998550415,
+        148.25600385665894,
+        148.60799908638,
+        147.45600521564484,
+        148.8640010356903,
+        147.67999947071075
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "repeats": 60,
+        "seed": 801
+      },
+      "baseline_us": 186.52799725532532,
+      "candidate_us": 152.25600451231003,
+      "baseline_samples": [
+        186.24000251293182,
+        186.94399297237396,
+        185.31200289726257,
+        186.68800592422485,
+        186.5919977426529,
+        186.11200153827667,
+        185.69600582122803,
+        187.3600035905838,
+        186.39999628067017,
+        186.27199530601501,
+        186.91200017929077,
+        186.5919977426529,
+        186.68800592422485,
+        186.36800348758698,
+        186.46399676799774,
+        183.74399840831757,
+        187.26399540901184,
+        186.68800592422485,
+        186.71999871730804,
+        186.17600202560425
+      ],
+      "candidate_samples": [
+        152.44799852371216,
+        153.34400534629822,
+        152.51199901103973,
+        152.5759994983673,
+        151.07199549674988,
+        150.87999403476715,
+        151.90400183200836,
+        150.36800503730774,
+        151.8079936504364,
+        151.7760008573532,
+        151.71200037002563,
+        152.8320014476776,
+        153.08800339698792,
+        153.21600437164307,
+        152.41600573062897,
+        152.41600573062897,
+        151.2639969587326,
+        152.51199901103973,
+        151.296004652977,
+        152.0960032939911
+      ]
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "repeats": 60,
+        "seed": 801
+      },
+      "baseline_us": 185.92000007629395,
+      "candidate_us": 147.7920040488243,
+      "baseline_samples": [
+        186.75200641155243,
+        185.37600338459015,
+        186.43200397491455,
+        185.92000007629395,
+        184.32000279426575,
+        185.31200289726257,
+        187.0719939470291,
+        185.92000007629395,
+        187.1040016412735,
+        186.46399676799774,
+        185.7919991016388,
+        184.38400328159332,
+        186.11200153827667,
+        186.5600049495697,
+        185.59999763965607,
+        186.78399920463562,
+        185.92000007629395,
+        185.72799861431122,
+        187.77599930763245,
+        185.56800484657288
+      ],
+      "candidate_samples": [
+        149.21599626541138,
+        147.87200093269348,
+        148.83199334144592,
+        148.3840048313141,
+        147.32800424098969,
+        149.4079977273941,
+        147.42399752140045,
+        147.96799421310425,
+        147.71200716495514,
+        148.44800531864166,
+        147.67999947071075,
+        147.67999947071075,
+        146.08000218868256,
+        147.23199605941772,
+        146.4959979057312,
+        146.7519998550415,
+        148.60799908638,
+        148.3200043439865,
+        146.91199362277985,
+        148.3840048313141
+      ]
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "repeats": 60,
+        "seed": 801
+      },
+      "baseline_us": 185.87200343608856,
+      "candidate_us": 147.8400006890297,
+      "baseline_samples": [
+        186.17600202560425,
+        185.66399812698364,
+        185.85599958896637,
+        185.5040043592453,
+        187.391996383667,
+        184.92799997329712,
+        187.58399784564972,
+        185.92000007629395,
+        185.82400679588318,
+        184.51200425624847,
+        185.5359971523285,
+        184.89600718021393,
+        187.04000115394592,
+        186.11200153827667,
+        188.48000466823578,
+        183.6480051279068,
+        186.14399433135986,
+        185.37600338459015,
+        186.46399676799774,
+        185.88800728321075
+      ],
+      "candidate_samples": [
+        149.98400211334229,
+        147.87200093269348,
+        147.2959965467453,
+        147.20000326633453,
+        147.8080004453659,
+        146.62399888038635,
+        148.3200043439865,
+        148.73600006103516,
+        147.67999947071075,
+        148.19200336933136,
+        147.5200057029724,
+        147.42399752140045,
+        146.91199362277985,
+        148.15999567508698,
+        148.41599762439728,
+        146.84799313545227,
+        148.6400067806244,
+        148.0640023946762,
+        148.51200580596924,
+        147.64800667762756
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 16,
+        "repeats": 60,
+        "seed": 802
+      },
+      "baseline_us": 197.32800126075745,
+      "candidate_us": 159.4720035791397,
+      "baseline_samples": [
+        201.12000405788422,
+        196.51199877262115,
+        197.34400510787964,
+        199.74400103092194,
+        195.8719938993454,
+        197.4720060825348,
+        195.19999623298645,
+        196.60800695419312,
+        197.31199741363525,
+        197.63199985027313,
+        197.79199361801147,
+        196.96000218391418,
+        198.7520009279251,
+        196.96000218391418,
+        198.97599518299103,
+        197.31199741363525,
+        197.4399983882904,
+        195.8719938993454,
+        199.42399859428406,
+        195.13599574565887
+      ],
+      "candidate_samples": [
+        161.79199516773224,
+        159.32799875736237,
+        158.75199437141418,
+        159.39199924468994,
+        157.6640009880066,
+        161.18399798870087,
+        162.01600432395935,
+        160.5760008096695,
+        160.0639969110489,
+        159.8079949617386,
+        157.6640009880066,
+        157.85600244998932,
+        159.45599973201752,
+        159.36000645160675,
+        160.64000129699707,
+        158.91200304031372,
+        159.13599729537964,
+        159.4880074262619,
+        160.22400557994843,
+        159.90400314331055
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 16,
+        "repeats": 60,
+        "seed": 802
+      },
+      "baseline_us": 196.75200432538986,
+      "candidate_us": 163.03999722003937,
+      "baseline_samples": [
+        196.60800695419312,
+        196.8960016965866,
+        198.04799556732178,
+        197.4720060825348,
+        196.25599682331085,
+        195.360004901886,
+        196.8960016965866,
+        196.16000354290009,
+        196.60800695419312,
+        197.66399264335632,
+        197.91999459266663,
+        195.5520063638687,
+        199.0399956703186,
+        196.28800451755524,
+        198.04799556732178,
+        196.06399536132812,
+        197.6960003376007,
+        196.48000597953796,
+        196.57599925994873,
+        200.00000298023224
+      ],
+      "candidate_samples": [
+        164.06400501728058,
+        163.29599916934967,
+        162.56000101566315,
+        162.56000101566315,
+        163.10399770736694,
+        164.38399255275726,
+        163.13600540161133,
+        162.7199947834015,
+        161.95200383663177,
+        161.47199273109436,
+        161.6639941930771,
+        163.2319986820221,
+        164.2879992723465,
+        162.9759967327118,
+        163.455992937088,
+        164.8000031709671,
+        162.49600052833557,
+        162.62400150299072,
+        162.75200247764587,
+        164.15999829769135
+      ]
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 16,
+        "repeats": 60,
+        "seed": 802
+      },
+      "baseline_us": 197.02400267124176,
+      "candidate_us": 159.00800377130508,
+      "baseline_samples": [
+        195.96800208091736,
+        198.0160027742386,
+        195.3279972076416,
+        197.4399983882904,
+        198.55999946594238,
+        195.74399292469025,
+        195.99999487400055,
+        197.4399983882904,
+        197.02400267124176,
+        197.34400510787964,
+        196.86399400234222,
+        197.02400267124176,
+        198.17599654197693,
+        196.70400023460388,
+        198.30399751663208,
+        197.53600656986237,
+        196.9279944896698,
+        196.76800072193146,
+        195.8719938993454,
+        197.85599410533905
+      ],
+      "candidate_samples": [
+        160.64000129699707,
+        159.93599593639374,
+        159.7760021686554,
+        159.29600596427917,
+        158.49600732326508,
+        158.24000537395477,
+        159.13599729537964,
+        159.29600596427917,
+        158.78400206565857,
+        158.84800255298615,
+        156.89599514007568,
+        159.29600596427917,
+        157.44000673294067,
+        159.8079949617386,
+        158.65600109100342,
+        158.9760035276413,
+        158.04800391197205,
+        159.61599349975586,
+        157.95199573040009,
+        159.04000401496887
+      ]
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 16,
+        "repeats": 60,
+        "seed": 802
+      },
+      "baseline_us": 197.11999595165253,
+      "candidate_us": 158.60799700021744,
+      "baseline_samples": [
+        197.7279931306839,
+        196.57599925994873,
+        195.99999487400055,
+        197.50399887561798,
+        195.8400011062622,
+        197.24799692630768,
+        196.44799828529358,
+        198.14400374889374,
+        196.73599302768707,
+        196.99199497699738,
+        198.08000326156616,
+        196.99199497699738,
+        197.11999595165253,
+        197.9839950799942,
+        197.1839964389801,
+        195.48800587654114,
+        197.11999595165253,
+        197.63199985027313,
+        197.05599546432495,
+        197.34400510787964
+      ],
+      "candidate_samples": [
+        160.12799739837646,
+        157.18400478363037,
+        158.1760048866272,
+        158.62399339675903,
+        158.78400206565857,
+        159.5200002193451,
+        159.64800119400024,
+        158.91200304031372,
+        157.79200196266174,
+        157.47199952602386,
+        158.87999534606934,
+        158.2079976797104,
+        158.2079976797104,
+        157.79200196266174,
+        158.55999290943146,
+        159.84000265598297,
+        159.13599729537964,
+        158.87999534606934,
+        158.59200060367584,
+        158.27199816703796
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 803
+      },
+      "baseline_us": 274.6559977531433,
+      "candidate_us": 233.5520014166832,
+      "baseline_samples": [
+        278.78400683403015,
+        273.8879919052124,
+        277.5680124759674,
+        275.64799785614014,
+        273.3120024204254,
+        274.6559977531433,
+        274.6559977531433,
+        274.4640111923218,
+        273.0880081653595,
+        275.1680016517639,
+        277.0879864692688,
+        275.4560112953186,
+        272.99201488494873,
+        272.96000719070435,
+        275.1680016517639,
+        272.2559869289398,
+        279.35999631881714,
+        274.59201216697693,
+        276.8320143222809,
+        273.27999472618103
+      ],
+      "candidate_samples": [
+        235.03999412059784,
+        233.43999683856964,
+        232.09600150585175,
+        234.3679964542389,
+        234.65600609779358,
+        235.07200181484222,
+        233.2800030708313,
+        233.2800030708313,
+        233.8559925556183,
+        233.66400599479675,
+        233.37599635124207,
+        232.03200101852417,
+        233.2800030708313,
+        234.46400463581085,
+        233.08800160884857,
+        231.74400627613068,
+        234.6239984035492,
+        232.63999819755554,
+        234.0800017118454,
+        234.27200317382812
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 803
+      },
+      "baseline_us": 261.00800931453705,
+      "candidate_us": 229.12000119686127,
+      "baseline_samples": [
+        260.6399953365326,
+        260.1599991321564,
+        262.1760070323944,
+        260.19200682640076,
+        261.59998774528503,
+        261.1199915409088,
+        261.0880136489868,
+        259.96801257133484,
+        261.1519992351532,
+        259.93600487709045,
+        260.9280049800873,
+        261.4400088787079,
+        262.7840042114258,
+        261.9839906692505,
+        259.68000292778015,
+        261.9520127773285,
+        261.79200410842896,
+        260.22401452064514,
+        260.6079876422882,
+        260.80000400543213
+      ],
+      "candidate_samples": [
+        237.05600202083588,
+        229.18400168418884,
+        228.70400547981262,
+        230.52799701690674,
+        230.20799458026886,
+        229.0239930152893,
+        231.07199370861053,
+        227.9359996318817,
+        229.5680046081543,
+        229.12000119686127,
+        228.57600450515747,
+        228.32000255584717,
+        229.12000119686127,
+        228.7999987602234,
+        227.29599475860596,
+        229.12000119686127,
+        228.60799729824066,
+        230.30400276184082,
+        231.1359941959381,
+        229.8559993505478
+      ]
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 803
+      },
+      "baseline_us": 260.44800877571106,
+      "candidate_us": 222.35199809074402,
+      "baseline_samples": [
+        260.44800877571106,
+        261.3759934902191,
+        259.5199942588806,
+        259.2320144176483,
+        262.0159983634949,
+        258.62398743629456,
+        259.42400097846985,
+        261.1199915409088,
+        260.44800877571106,
+        260.44800877571106,
+        260.80000400543213,
+        260.3200078010559,
+        260.127991437912,
+        259.45600867271423,
+        259.99999046325684,
+        260.672003030777,
+        262.2080147266388,
+        260.6399953365326,
+        260.96001267433167,
+        261.1840069293976
+      ],
+      "candidate_samples": [
+        228.38400304317474,
+        223.23200106620789,
+        224.12799298763275,
+        220.5439954996109,
+        222.08000719547272,
+        220.47999501228333,
+        223.00800681114197,
+        222.20799326896667,
+        221.21599316596985,
+        223.61600399017334,
+        222.1119999885559,
+        222.4320024251938,
+        221.98399901390076,
+        221.3120013475418,
+        223.4880030155182,
+        221.95200622081757,
+        223.77599775791168,
+        222.56000339984894,
+        222.3680019378662,
+        222.33599424362183
+      ]
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 803
+      },
+      "baseline_us": 273.6479938030243,
+      "candidate_us": 232.06400126218796,
+      "baseline_samples": [
+        272.99201488494873,
+        273.98398518562317,
+        274.3360102176666,
+        277.8240144252777,
+        271.93599939346313,
+        274.944007396698,
+        272.70400524139404,
+        271.4560031890869,
+        274.1439938545227,
+        272.7360129356384,
+        272.7679908275604,
+        273.75999093055725,
+        274.6239900588989,
+        276.16000175476074,
+        272.92799949645996,
+        277.0560085773468,
+        277.0879864692688,
+        273.0560004711151,
+        273.53599667549133,
+        271.263986825943
+      ],
+      "candidate_samples": [
+        233.66400599479675,
+        232.80000686645508,
+        231.4240038394928,
+        231.51999711990356,
+        232.67200589179993,
+        231.87200725078583,
+        231.90400004386902,
+        231.7119985818863,
+        233.91999304294586,
+        233.08800160884857,
+        230.5919975042343,
+        232.35200345516205,
+        230.71999847888947,
+        231.36000335216522,
+        231.455996632576,
+        230.6559979915619,
+        233.2479953765869,
+        232.2240024805069,
+        233.69599878787994,
+        233.69599878787994
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 804
+      },
+      "baseline_us": 425.55201053619385,
+      "candidate_us": 343.04000437259674,
+      "baseline_samples": [
+        428.73600125312805,
+        429.05598878860474,
+        424.2880046367645,
+        426.62400007247925,
+        426.30401253700256,
+        425.24799704551697,
+        425.4080057144165,
+        425.79200863838196,
+        425.4400134086609,
+        425.4080057144165,
+        423.2960045337677,
+        426.0160028934479,
+        425.6640076637268,
+        425.1520037651062,
+        425.9519875049591,
+        424.3519902229309,
+        425.6959855556488,
+        425.4400134086609,
+        424.4160056114197,
+        425.79200863838196
+      ],
+      "candidate_samples": [
+        345.08800506591797,
+        343.1040048599243,
+        342.6879942417145,
+        341.5679931640625,
+        342.272013425827,
+        342.97600388526917,
+        343.1040048599243,
+        343.4560000896454,
+        341.7600095272064,
+        342.6240086555481,
+        344.09600496292114,
+        343.6799943447113,
+        343.48800778388977,
+        342.848002910614,
+        344.1919982433319,
+        343.3600068092346,
+        343.1999981403351,
+        341.91998839378357,
+        341.66398644447327,
+        342.9119884967804
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 804
+      },
+      "baseline_us": 424.25601184368134,
+      "candidate_us": 348.9920049905777,
+      "baseline_samples": [
+        424.127995967865,
+        424.19201135635376,
+        423.9040017127991,
+        423.007994890213,
+        424.44801330566406,
+        424.4160056114197,
+        425.4080057144165,
+        424.54400658607483,
+        423.23198914527893,
+        423.23198914527893,
+        424.0320026874542,
+        426.2720048427582,
+        423.6159920692444,
+        425.7600009441376,
+        422.9759871959686,
+        427.42401361465454,
+        424.3519902229309,
+        423.74399304389954,
+        425.50399899482727,
+        424.3200123310089
+      ],
+      "candidate_samples": [
+        351.29600763320923,
+        347.3280072212219,
+        348.5119938850403,
+        350.0159978866577,
+        347.7120101451874,
+        348.7040102481842,
+        350.14399886131287,
+        350.271999835968,
+        349.4400084018707,
+        348.9600121974945,
+        349.3439853191376,
+        349.0560054779053,
+        347.51999378204346,
+        349.0239977836609,
+        352.09599137306213,
+        347.29599952697754,
+        349.5360016822815,
+        347.51999378204346,
+        347.29599952697754,
+        348.86398911476135
+      ]
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 804
+      },
+      "baseline_us": 410.92799603939056,
+      "candidate_us": 332.68798887729645,
+      "baseline_samples": [
+        410.17600893974304,
+        410.5280041694641,
+        412.28801012039185,
+        411.296010017395,
+        411.23199462890625,
+        410.97599267959595,
+        410.68801283836365,
+        412.6400053501129,
+        409.9839925765991,
+        410.0160002708435,
+        413.1839871406555,
+        410.5280041694641,
+        413.2480025291443,
+        410.68801283836365,
+        409.824013710022,
+        411.5520119667053,
+        410.0160002708435,
+        410.8799993991852,
+        412.0959937572479,
+        411.6159975528717
+      ],
+      "candidate_samples": [
+        337.15200424194336,
+        332.15999603271484,
+        330.3360044956207,
+        332.73598551750183,
+        333.75999331474304,
+        331.87198638916016,
+        331.07200264930725,
+        332.63999223709106,
+        331.32800459861755,
+        331.39199018478394,
+        333.0560028553009,
+        333.3120048046112,
+        333.1199884414673,
+        332.41599798202515,
+        332.832008600235,
+        332.96000957489014,
+        331.167995929718,
+        333.24798941612244,
+        332.4800133705139,
+        334.30400490760803
+      ]
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 804
+      },
+      "baseline_us": 411.5840047597885,
+      "candidate_us": 333.871990442276,
+      "baseline_samples": [
+        413.2159948348999,
+        410.5600118637085,
+        411.74399852752686,
+        411.3599956035614,
+        412.6720130443573,
+        412.00000047683716,
+        410.8799993991852,
+        409.824013710022,
+        411.0719859600067,
+        410.3359878063202,
+        411.71199083328247,
+        410.2399945259094,
+        411.6159975528717,
+        411.5520119667053,
+        412.57598996162415,
+        411.1360013484955,
+        412.28801012039185,
+        410.8799993991852,
+        412.3519957065582,
+        412.76800632476807
+      ],
+      "candidate_samples": [
+        341.95199608802795,
+        333.5359990596771,
+        334.01599526405334,
+        334.01599526405334,
+        334.3999981880188,
+        334.46401357650757,
+        332.73598551750183,
+        333.18400382995605,
+        333.98398756980896,
+        333.0560028553009,
+        334.56000685691833,
+        332.96000957489014,
+        332.0319950580597,
+        335.32801270484924,
+        332.5119912624359,
+        333.6640000343323,
+        333.75999331474304,
+        334.4320058822632,
+        334.6880078315735,
+        333.6000144481659
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 805
+      },
+      "baseline_us": 243.58399957418442,
+      "candidate_us": 217.74400025606155,
+      "baseline_samples": [
+        243.6479926109314,
+        243.77599358558655,
+        243.74400079250336,
+        242.75200068950653,
+        243.9039945602417,
+        243.52000653743744,
+        240.89600145816803,
+        244.32000517845154,
+        243.42399835586548,
+        245.60000002384186,
+        245.08799612522125,
+        241.98399484157562,
+        244.60799992084503,
+        243.3920055627823,
+        242.5920069217682,
+        243.74400079250336,
+        244.00000274181366,
+        243.45600605010986,
+        242.14400351047516,
+        242.8160011768341
+      ],
+      "candidate_samples": [
+        221.3120013475418,
+        217.50399470329285,
+        218.1439995765686,
+        219.00799870491028,
+        217.75999665260315,
+        218.46400201320648,
+        216.35200083255768,
+        217.0879989862442,
+        218.84800493717194,
+        216.48000180721283,
+        217.72800385951996,
+        216.3199931383133,
+        216.5440022945404,
+        219.67999637126923,
+        218.27200055122375,
+        216.60800278186798,
+        217.72800385951996,
+        218.4000015258789,
+        216.15999937057495,
+        219.9680060148239
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 805
+      },
+      "baseline_us": 243.53600293397903,
+      "candidate_us": 221.98399901390076,
+      "baseline_samples": [
+        243.55199933052063,
+        242.46400594711304,
+        242.40000545978546,
+        243.77599358558655,
+        244.00000274181366,
+        243.80800127983093,
+        242.5920069217682,
+        243.9039945602417,
+        244.86400187015533,
+        243.42399835586548,
+        242.68800020217896,
+        243.80800127983093,
+        245.08799612522125,
+        242.94400215148926,
+        243.6479926109314,
+        242.91199445724487,
+        242.43199825286865,
+        242.62399971485138,
+        243.52000653743744,
+        243.83999407291412
+      ],
+      "candidate_samples": [
+        225.43999552726746,
+        221.98399901390076,
+        222.59199619293213,
+        220.768004655838,
+        222.20799326896667,
+        222.46399521827698,
+        221.343994140625,
+        221.8559980392456,
+        223.39199483394623,
+        222.33599424362183,
+        220.89600563049316,
+        223.03999960422516,
+        220.86399793624878,
+        223.39199483394623,
+        221.8559980392456,
+        224.41600263118744,
+        221.88800573349,
+        220.44800221920013,
+        221.98399901390076,
+        221.91999852657318
+      ]
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 805
+      },
+      "baseline_us": 242.3200011253357,
+      "candidate_us": 215.85600078105927,
+      "baseline_samples": [
+        244.22399699687958,
+        241.02400243282318,
+        243.48799884319305,
+        240.51199853420258,
+        242.65600740909576,
+        243.3920055627823,
+        243.00800263881683,
+        241.2479966878891,
+        243.68000030517578,
+        241.5360063314438,
+        242.20800399780273,
+        241.85599386692047,
+        243.6479926109314,
+        244.35199797153473,
+        242.17599630355835,
+        241.5360063314438,
+        241.60000681877136,
+        242.43199825286865,
+        243.16799640655518,
+        241.31199717521667
+      ],
+      "candidate_samples": [
+        219.26400065422058,
+        215.68000316619873,
+        217.02399849891663,
+        215.7440036535263,
+        218.49599480628967,
+        214.65599536895752,
+        215.29600024223328,
+        216.95999801158905,
+        215.29600024223328,
+        217.92000532150269,
+        215.61600267887115,
+        215.2000069618225,
+        215.7759964466095,
+        218.27200055122375,
+        216.15999937057495,
+        218.6560034751892,
+        215.93600511550903,
+        214.81600403785706,
+        215.58399498462677,
+        216.25599265098572
+      ]
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 805
+      },
+      "baseline_us": 241.99999868869781,
+      "candidate_us": 216.8480008840561,
+      "baseline_samples": [
+        242.78399348258972,
+        244.06400322914124,
+        243.3599978685379,
+        241.7919933795929,
+        242.43199825286865,
+        243.58400702476501,
+        242.01600253582,
+        241.7919933795929,
+        243.55199933052063,
+        241.11999571323395,
+        241.43999814987183,
+        240.60800671577454,
+        241.72799289226532,
+        241.43999814987183,
+        241.98399484157562,
+        242.08000302314758,
+        243.29599738121033,
+        242.97599494457245,
+        241.69600009918213,
+        241.85599386692047
+      ],
+      "candidate_samples": [
+        219.7760045528412,
+        217.98400580883026,
+        216.19200706481934,
+        218.55999529361725,
+        217.8560048341751,
+        216.86400473117828,
+        217.72800385951996,
+        215.58399498462677,
+        216.8319970369339,
+        217.056006193161,
+        217.47200191020966,
+        216.09599888324738,
+        214.9440050125122,
+        217.40800142288208,
+        215.7759964466095,
+        216.38399362564087,
+        215.96799790859222,
+        216.76799654960632,
+        216.70399606227875,
+        217.66400337219238
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 806
+      },
+      "baseline_us": 629.8080086708069,
+      "candidate_us": 499.64798986911774,
+      "baseline_samples": [
+        636.7040276527405,
+        629.6640038490295,
+        630.5599808692932,
+        629.5040249824524,
+        628.8959980010986,
+        631.4240097999573,
+        631.0399770736694,
+        633.247971534729,
+        632.1920156478882,
+        628.607988357544,
+        630.2719712257385,
+        628.1599998474121,
+        631.168007850647,
+        628.928005695343,
+        630.016028881073,
+        629.9520134925842,
+        628.4160017967224,
+        628.607988357544,
+        628.2879710197449,
+        627.776026725769
+      ],
+      "candidate_samples": [
+        502.5920271873474,
+        497.3120093345642,
+        498.78400564193726,
+        500.7359981536865,
+        497.0239996910095,
+        500.95999240875244,
+        501.21599435806274,
+        503.87197732925415,
+        498.4000027179718,
+        499.83999133110046,
+        499.455988407135,
+        498.33598732948303,
+        497.98399209976196,
+        499.455988407135,
+        497.95201420783997,
+        500.8320212364197,
+        503.1999945640564,
+        498.1119930744171,
+        499.87199902534485,
+        500.8320212364197
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 806
+      },
+      "baseline_us": 630.160003900528,
+      "candidate_us": 504.9920082092285,
+      "baseline_samples": [
+        631.775975227356,
+        628.1279921531677,
+        630.3679943084717,
+        629.5999884605408,
+        632.2879791259766,
+        628.7680268287659,
+        631.5199732780457,
+        629.9520134925842,
+        627.3919939994812,
+        628.9920210838318,
+        630.9760212898254,
+        630.9120059013367,
+        632.1280002593994,
+        630.7200193405151,
+        627.9360055923462,
+        633.5359811782837,
+        627.776026725769,
+        627.232015132904,
+        628.3199787139893,
+        631.4560174942017
+      ],
+      "candidate_samples": [
+        507.7120065689087,
+        504.67199087142944,
+        502.7199983596802,
+        506.24001026153564,
+        504.32002544403076,
+        504.9920082092285,
+        505.98400831222534,
+        502.1119713783264,
+        504.6079754829407,
+        507.87198543548584,
+        502.24000215530396,
+        505.18399477005005,
+        501.8560290336609,
+        505.18399477005005,
+        505.9199929237366,
+        504.9920082092285,
+        505.40798902511597,
+        506.84797763824463,
+        504.0000081062317,
+        504.15998697280884
+      ]
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 806
+      },
+      "baseline_us": 628.4800171852112,
+      "candidate_us": 498.28800559043884,
+      "baseline_samples": [
+        626.7840266227722,
+        633.0879926681519,
+        628.4800171852112,
+        627.4880170822144,
+        628.4800171852112,
+        627.4880170822144,
+        631.2639713287354,
+        629.2799711227417,
+        627.0719766616821,
+        631.5199732780457,
+        628.7040114402771,
+        627.295970916748,
+        629.0240287780762,
+        625.6319880485535,
+        627.1679997444153,
+        628.9600133895874,
+        627.2000074386597,
+        628.7999749183655,
+        628.607988357544,
+        625.9520053863525
+      ],
+      "candidate_samples": [
+        500.0320076942444,
+        498.1440007686615,
+        497.0560073852539,
+        500.06401538848877,
+        498.4320104122162,
+        497.79200553894043,
+        499.07198548316956,
+        497.98399209976196,
+        502.01600790023804,
+        501.98400020599365,
+        495.61598896980286,
+        496.6079890727997,
+        500.8320212364197,
+        498.81601333618164,
+        498.4639883041382,
+        496.0319995880127,
+        497.1520006656647,
+        499.0079998970032,
+        496.73599004745483,
+        497.0879852771759
+      ]
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 806
+      },
+      "baseline_us": 628.495991230011,
+      "candidate_us": 498.7359941005707,
+      "baseline_samples": [
+        628.8319826126099,
+        628.2879710197449,
+        628.2560229301453,
+        628.383994102478,
+        627.1039843559265,
+        628.6399960517883,
+        625.823974609375,
+        630.1760077476501,
+        628.607988357544,
+        625.8559823036194,
+        626.4640092849731,
+        627.9039978981018,
+        629.4080018997192,
+        628.8959980010986,
+        630.2400231361389,
+        628.2240152359009,
+        630.4960250854492,
+        630.9120059013367,
+        629.8879981040955,
+        626.4320015907288
+      ],
+      "candidate_samples": [
+        498.84799122810364,
+        498.6239969730377,
+        500.5760192871094,
+        500.60802698135376,
+        498.23999404907227,
+        500.38397312164307,
+        497.3120093345642,
+        500.0320076942444,
+        500.60802698135376,
+        500.63997507095337,
+        498.23999404907227,
+        497.98399209976196,
+        499.1360008716583,
+        498.9120066165924,
+        497.2800016403198,
+        498.27200174331665,
+        497.3120093345642,
+        499.29600954055786,
+        497.1520006656647,
+        497.98399209976196
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 807
+      },
+      "baseline_us": 285.3119969367981,
+      "candidate_us": 221.68000042438507,
+      "baseline_samples": [
+        289.6000146865845,
+        284.5439910888672,
+        286.75198554992676,
+        272.7360129356384,
+        286.49601340293884,
+        287.26398944854736,
+        285.3119969367981,
+        286.4319980144501,
+        272.09600806236267,
+        282.943993806839,
+        286.6879999637604,
+        271.2959945201874,
+        285.8879864215851,
+        285.3119969367981,
+        272.8320062160492,
+        274.0800082683563,
+        284.7679853439331,
+        286.46400570869446,
+        287.3600125312805,
+        270.24000883102417
+      ],
+      "candidate_samples": [
+        222.71999716758728,
+        221.88800573349,
+        221.98399901390076,
+        220.99199891090393,
+        221.40799462795258,
+        222.1119999885559,
+        222.27199375629425,
+        221.343994140625,
+        222.1439927816391,
+        220.06399929523468,
+        223.68000447750092,
+        221.69600427150726,
+        220.38400173187256,
+        221.47199511528015,
+        220.89600563049316,
+        223.39199483394623,
+        222.59199619293213,
+        220.7999974489212,
+        221.66399657726288,
+        221.24800086021423
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 807
+      },
+      "baseline_us": 285.0079983472824,
+      "candidate_us": 227.9519960284233,
+      "baseline_samples": [
+        291.9999957084656,
+        284.7039997577667,
+        286.3680124282837,
+        286.8799865245819,
+        285.5679988861084,
+        270.9119915962219,
+        273.18400144577026,
+        285.3119969367981,
+        275.10398626327515,
+        287.87198662757874,
+        272.0000147819519,
+        284.5439910888672,
+        286.27198934555054,
+        272.2240090370178,
+        284.5120131969452,
+        285.47200560569763,
+        274.27199482917786,
+        285.91999411582947,
+        286.3999903202057,
+        284.12801027297974
+      ],
+      "candidate_samples": [
+        232.38399624824524,
+        228.28799486160278,
+        228.41599583625793,
+        227.35999524593353,
+        226.68799757957458,
+        227.77600586414337,
+        227.4560034275055,
+        227.13600099086761,
+        229.21599447727203,
+        228.7680059671402,
+        228.5439968109131,
+        226.3679951429367,
+        227.58400440216064,
+        227.87199914455414,
+        229.8240065574646,
+        228.03199291229248,
+        227.4239957332611,
+        228.2239943742752,
+        227.1679937839508,
+        228.64000499248505
+      ]
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 807
+      },
+      "baseline_us": 285.0880026817322,
+      "candidate_us": 220.94400227069855,
+      "baseline_samples": [
+        288.2559895515442,
+        284.960001707077,
+        286.24001145362854,
+        273.824006319046,
+        285.0559949874878,
+        282.81599283218384,
+        285.21600365638733,
+        284.5120131969452,
+        285.91999411582947,
+        286.9440019130707,
+        285.12001037597656,
+        285.0559949874878,
+        284.31999683380127,
+        285.21600365638733,
+        284.5120131969452,
+        272.19200134277344,
+        283.29598903656006,
+        285.63201427459717,
+        285.66399216651917,
+        285.2799892425537
+      ],
+      "candidate_samples": [
+        223.83999824523926,
+        221.0880070924759,
+        220.5439954996109,
+        221.6320037841797,
+        221.76000475883484,
+        220.47999501228333,
+        220.47999501228333,
+        221.02400660514832,
+        220.86399793624878,
+        219.29599344730377,
+        221.02400660514832,
+        221.5999960899353,
+        222.4320024251938,
+        220.5120027065277,
+        220.57600319385529,
+        221.82400524616241,
+        219.7760045528412,
+        221.76000475883484,
+        220.19200026988983,
+        220.67199647426605
+      ]
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 807
+      },
+      "baseline_us": 286.0960066318512,
+      "candidate_us": 222.52799570560455,
+      "baseline_samples": [
+        286.1120104789734,
+        284.7360074520111,
+        287.58400678634644,
+        284.09600257873535,
+        286.1439883708954,
+        286.3680124282837,
+        287.87198662757874,
+        284.7039997577667,
+        286.1439883708954,
+        286.080002784729,
+        286.3680124282837,
+        284.86400842666626,
+        284.0319871902466,
+        286.080002784729,
+        273.1519937515259,
+        287.55199909210205,
+        285.8240008354187,
+        288.1920039653778,
+        286.17599606513977,
+        284.2240035533905
+      ],
+      "candidate_samples": [
+        223.68000447750092,
+        222.6880043745041,
+        222.75200486183167,
+        223.26399385929108,
+        222.3680019378662,
+        221.88800573349,
+        222.01600670814514,
+        222.6880043745041,
+        222.3680019378662,
+        223.23200106620789,
+        222.08000719547272,
+        222.01600670814514,
+        222.46399521827698,
+        222.88000583648682,
+        223.26399385929108,
+        221.79199755191803,
+        221.82400524616241,
+        221.88800573349,
+        222.59199619293213,
+        223.36000204086304
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 808
+      },
+      "baseline_us": 298.0000078678131,
+      "candidate_us": 241.61600321531296,
+      "baseline_samples": [
+        305.5360019207001,
+        298.0479896068573,
+        297.9840040206909,
+        297.5040078163147,
+        299.0399897098541,
+        294.3679988384247,
+        284.5439910888672,
+        297.4399924278259,
+        297.37600684165955,
+        299.45600032806396,
+        296.3840067386627,
+        299.1040050983429,
+        298.72000217437744,
+        297.9840040206909,
+        297.760009765625,
+        298.0160117149353,
+        298.3039915561676,
+        298.335999250412,
+        294.9120104312897,
+        298.5920011997223
+      ],
+      "candidate_samples": [
+        242.11199581623077,
+        240.6720072031021,
+        240.28800427913666,
+        239.87199366092682,
+        240.6720072031021,
+        241.31199717521667,
+        243.45600605010986,
+        241.4720058441162,
+        242.62399971485138,
+        243.0720031261444,
+        241.66400730609894,
+        241.63199961185455,
+        242.01600253582,
+        241.18399620056152,
+        242.23999679088593,
+        241.60000681877136,
+        239.04000222682953,
+        242.2720044851303,
+        241.60000681877136,
+        242.23999679088593
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 808
+      },
+      "baseline_us": 297.3119914531708,
+      "candidate_us": 246.288001537323,
+      "baseline_samples": [
+        296.640008687973,
+        298.7839877605438,
+        297.3119914531708,
+        299.00801181793213,
+        299.8720109462738,
+        298.880010843277,
+        295.26400566101074,
+        295.3599989414215,
+        283.55199098587036,
+        296.7680096626282,
+        297.3119914531708,
+        301.88798904418945,
+        297.3119914531708,
+        297.08799719810486,
+        297.66398668289185,
+        300.4159927368164,
+        297.85600304603577,
+        296.1600124835968,
+        296.60800099372864,
+        294.5919930934906
+      ],
+      "candidate_samples": [
+        246.36800587177277,
+        246.20799720287323,
+        247.6480007171631,
+        246.848002076149,
+        245.92000246047974,
+        246.36800587177277,
+        244.89599466323853,
+        244.7039932012558,
+        246.87999486923218,
+        245.2480047941208,
+        246.20799720287323,
+        247.0400035381317,
+        244.86400187015533,
+        246.59200012683868,
+        245.7599937915802,
+        244.9599951505661,
+        247.39199876785278,
+        246.17600440979004,
+        247.26399779319763,
+        246.94399535655975
+      ]
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 808
+      },
+      "baseline_us": 298.0000078678131,
+      "candidate_us": 240.33600091934204,
+      "baseline_samples": [
+        298.20799827575684,
+        297.2800135612488,
+        298.68799448013306,
+        297.5679934024811,
+        298.7520098686218,
+        299.1040050983429,
+        286.3680124282837,
+        298.11200499534607,
+        296.9599962234497,
+        297.88801074028015,
+        300.06399750709534,
+        297.7280020713806,
+        297.3119914531708,
+        297.3119914531708,
+        298.880010843277,
+        299.23200607299805,
+        296.28801345825195,
+        299.6479868888855,
+        297.21599817276,
+        299.19999837875366
+      ],
+      "candidate_samples": [
+        241.08800292015076,
+        238.5600060224533,
+        238.97600173950195,
+        241.02400243282318,
+        240.1919960975647,
+        238.81599307060242,
+        239.1359955072403,
+        239.51999843120575,
+        240.9919947385788,
+        240.89600145816803,
+        240.48000574111938,
+        239.84000086784363,
+        239.26399648189545,
+        239.07199501991272,
+        241.2160038948059,
+        242.23999679088593,
+        240.06399512290955,
+        240.79999327659607,
+        241.69600009918213,
+        240.76800048351288
+      ]
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 808
+      },
+      "baseline_us": 298.4960079193115,
+      "candidate_us": 240.4640018939972,
+      "baseline_samples": [
+        298.3680069446564,
+        299.6479868888855,
+        298.43199253082275,
+        298.40001463890076,
+        299.1679906845093,
+        298.4960079193115,
+        299.45600032806396,
+        297.69599437713623,
+        298.4960079193115,
+        299.8400032520294,
+        295.6480085849762,
+        297.34399914741516,
+        296.8960106372833,
+        294.71999406814575,
+        298.94399642944336,
+        299.0719974040985,
+        299.0719974040985,
+        299.6160089969635,
+        301.34400725364685,
+        295.3599989414215
+      ],
+      "candidate_samples": [
+        242.68800020217896,
+        239.58399891853333,
+        239.00799453258514,
+        239.74399268627167,
+        241.11999571323395,
+        240.31999707221985,
+        241.34400486946106,
+        242.8479939699173,
+        240.54400622844696,
+        240.1919960975647,
+        241.72799289226532,
+        241.31199717521667,
+        240.86399376392365,
+        240.35200476646423,
+        240.38399755954742,
+        241.98399484157562,
+        241.63199961185455,
+        239.96800184249878,
+        240.22400379180908,
+        239.3919974565506
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 809
+      },
+      "baseline_us": 579.0239870548248,
+      "candidate_us": 449.20000433921814,
+      "baseline_samples": [
+        591.3599729537964,
+        579.0719985961914,
+        578.1440138816833,
+        581.279993057251,
+        577.6000022888184,
+        579.9040198326111,
+        579.9999833106995,
+        576.2240290641785,
+        579.3280005455017,
+        578.1760215759277,
+        577.9839754104614,
+        576.416015625,
+        579.0719985961914,
+        579.7439813613892,
+        577.4080157279968,
+        578.9759755134583,
+        578.8800120353699,
+        579.4240236282349,
+        580.2879929542542,
+        577.023983001709
+      ],
+      "candidate_samples": [
+        453.18400859832764,
+        448.8320052623749,
+        446.78398966789246,
+        448.89599084854126,
+        449.0880072116852,
+        448.7360119819641,
+        447.1040070056915,
+        447.07199931144714,
+        449.72801208496094,
+        449.7919976711273,
+        448.5439956188202,
+        449.69600439071655,
+        448.15999269485474,
+        448.7040042877197,
+        450.1760005950928,
+        449.47201013565063,
+        449.72801208496094,
+        449.3120014667511,
+        450.23998618125916,
+        450.01599192619324
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 809
+      },
+      "baseline_us": 578.9919793605804,
+      "candidate_us": 449.0399956703186,
+      "baseline_samples": [
+        581.4080238342285,
+        577.567994594574,
+        579.2319774627686,
+        579.2319774627686,
+        579.2319774627686,
+        577.7919888496399,
+        576.1280059814453,
+        578.4639716148376,
+        578.6240100860596,
+        579.7119736671448,
+        579.0079832077026,
+        578.9759755134583,
+        579.9999833106995,
+        582.2399854660034,
+        578.0159831047058,
+        577.1520137786865,
+        580.5760025978088,
+        578.9440274238586,
+        578.656017780304,
+        580.4479718208313
+      ],
+      "candidate_samples": [
+        453.0560076236725,
+        448.06399941444397,
+        448.41599464416504,
+        450.3999948501587,
+        449.1199851036072,
+        450.1439929008484,
+        448.15999269485474,
+        450.20800828933716,
+        448.7999975681305,
+        450.1439929008484,
+        449.47201013565063,
+        448.7360119819641,
+        448.35200905799866,
+        448.89599084854126,
+        450.75199007987976,
+        449.50398802757263,
+        449.44000244140625,
+        448.2879936695099,
+        448.06399941444397,
+        448.96000623703003
+      ]
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 809
+      },
+      "baseline_us": 578.8159966468811,
+      "candidate_us": 448.7200081348419,
+      "baseline_samples": [
+        578.0799984931946,
+        578.8159966468811,
+        577.8239965438843,
+        577.4719715118408,
+        579.7119736671448,
+        578.9120197296143,
+        578.2719850540161,
+        578.8159966468811,
+        577.6000022888184,
+        579.4240236282349,
+        577.4080157279968,
+        578.7519812583923,
+        579.1360139846802,
+        578.9759755134583,
+        580.3200006484985,
+        579.9679756164551,
+        579.039990901947,
+        576.5439867973328,
+        579.9999833106995,
+        578.6880254745483
+      ],
+      "candidate_samples": [
+        455.7119905948639,
+        448.38398694992065,
+        450.23998618125916,
+        448.2559859752655,
+        448.09600710868835,
+        447.9359984397888,
+        450.5600035190582,
+        447.36000895500183,
+        449.50398802757263,
+        449.69600439071655,
+        448.86401295661926,
+        447.80799746513367,
+        449.18400049209595,
+        448.60801100730896,
+        448.8320052623749,
+        447.87201285362244,
+        449.5680034160614,
+        448.2240080833435,
+        447.4560022354126,
+        449.66399669647217
+      ]
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 809
+      },
+      "baseline_us": 578.687995672226,
+      "candidate_us": 449.5999962091446,
+      "baseline_samples": [
+        578.5279870033264,
+        578.8159966468811,
+        577.5039792060852,
+        578.719973564148,
+        582.751989364624,
+        578.656017780304,
+        576.479971408844,
+        578.3680081367493,
+        577.0879983901978,
+        581.2159776687622,
+        579.0079832077026,
+        579.4240236282349,
+        577.3760080337524,
+        576.6400098800659,
+        579.2639851570129,
+        580.3840160369873,
+        578.7839889526367,
+        576.6400098800659,
+        580.5119872093201,
+        576.6080021858215
+      ],
+      "candidate_samples": [
+        453.5999894142151,
+        450.52799582481384,
+        446.8480050563812,
+        449.50398802757263,
+        447.9680061340332,
+        451.03999972343445,
+        449.1199851036072,
+        450.49598813056946,
+        450.23998618125916,
+        450.01599192619324,
+        450.5600035190582,
+        450.72001218795776,
+        452.2239863872528,
+        449.69600439071655,
+        448.86401295661926,
+        447.519987821579,
+        449.0880072116852,
+        449.21600818634033,
+        449.1199851036072,
+        448.2240080833435
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 810
+      },
+      "baseline_us": 759.3600153923035,
+      "candidate_us": 629.8559904098511,
+      "baseline_samples": [
+        770.3999876976013,
+        761.9519829750061,
+        760.6080174446106,
+        761.247992515564,
+        759.3600153923035,
+        763.1679773330688,
+        758.5600018501282,
+        760.8960270881653,
+        758.0479979515076,
+        759.3600153923035,
+        760.7359886169434,
+        758.8480114936829,
+        758.8480114936829,
+        760.4479789733887,
+        762.1440291404724,
+        758.7519884109497,
+        757.7279806137085,
+        758.4959864616394,
+        757.6640248298645,
+        756.767988204956
+      ],
+      "candidate_samples": [
+        631.55198097229,
+        630.1440000534058,
+        631.2639713287354,
+        629.7919750213623,
+        630.5599808692932,
+        627.3599863052368,
+        629.3759942054749,
+        628.4800171852112,
+        632.0000290870667,
+        629.3759942054749,
+        630.2719712257385,
+        629.9520134925842,
+        630.9760212898254,
+        627.6159882545471,
+        630.1440000534058,
+        629.9200057983398,
+        626.9760131835938,
+        629.1519999504089,
+        628.2560229301453,
+        628.383994102478
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 810
+      },
+      "baseline_us": 758.3839893341064,
+      "candidate_us": 627.6479959487915,
+      "baseline_samples": [
+        760.09601354599,
+        757.311999797821,
+        757.5680017471313,
+        760.1600289344788,
+        757.311999797821,
+        758.6879730224609,
+        757.1520209312439,
+        758.1760287284851,
+        757.7599883079529,
+        758.4959864616394,
+        760.1280212402344,
+        761.1200213432312,
+        756.8640112876892,
+        758.2719922065735,
+        755.8079957962036,
+        760.5440020561218,
+        756.7999958992004,
+        758.8480114936829,
+        759.1680288314819,
+        760.5119943618774
+      ],
+      "candidate_samples": [
+        631.1039924621582,
+        628.5439729690552,
+        628.607988357544,
+        625.8559823036194,
+        626.7200112342834,
+        627.1359920501709,
+        627.232015132904,
+        627.45600938797,
+        628.7040114402771,
+        627.7440190315247,
+        626.9760131835938,
+        627.1679997444153,
+        630.016028881073,
+        628.5439729690552,
+        627.776026725769,
+        626.5599727630615,
+        627.5519728660583,
+        625.8879899978638,
+        629.7600269317627,
+        628.2879710197449
+      ]
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 810
+      },
+      "baseline_us": 758.9600086212158,
+      "candidate_us": 629.1039884090424,
+      "baseline_samples": [
+        757.311999797821,
+        759.3600153923035,
+        758.7519884109497,
+        757.1520209312439,
+        760.8960270881653,
+        757.2159767150879,
+        759.4239711761475,
+        757.2479844093323,
+        759.552001953125,
+        757.9200267791748,
+        758.1440210342407,
+        757.6000094413757,
+        759.1680288314819,
+        762.9759907722473,
+        762.4639868736267,
+        759.552001953125,
+        757.7279806137085,
+        760.3200078010559,
+        761.7279887199402,
+        758.6879730224609
+      ],
+      "candidate_samples": [
+        629.472017288208,
+        628.1279921531677,
+        626.3999938964844,
+        629.2480230331421,
+        625.5999803543091,
+        629.7919750213623,
+        630.4640173912048,
+        632.4160099029541,
+        628.607988357544,
+        627.8079748153687,
+        628.0959844589233,
+        628.8959980010986,
+        627.1359920501709,
+        627.7440190315247,
+        629.1199922561646,
+        629.1519999504089,
+        629.9840211868286,
+        629.0879845619202,
+        630.7200193405151,
+        629.3759942054749
+      ]
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 810
+      },
+      "baseline_us": 759.8879933357239,
+      "candidate_us": 628.495991230011,
+      "baseline_samples": [
+        762.2079849243164,
+        762.5920176506042,
+        760.5440020561218,
+        761.8240118026733,
+        761.3120079040527,
+        761.1839771270752,
+        761.6959810256958,
+        759.7119808197021,
+        760.8640193939209,
+        757.9200267791748,
+        757.4399709701538,
+        758.624017238617,
+        754.7199726104736,
+        760.0640058517456,
+        759.1999769210815,
+        759.1360211372375,
+        757.311999797821,
+        759.4879865646362,
+        760.0640058517456,
+        757.1200132369995
+      ],
+      "candidate_samples": [
+        631.6480040550232,
+        627.1359920501709,
+        628.7040114402771,
+        631.55198097229,
+        631.3599944114685,
+        629.6319961547852,
+        630.3359866142273,
+        630.9760212898254,
+        632.0000290870667,
+        629.8239827156067,
+        628.6720037460327,
+        627.6800036430359,
+        628.1599998474121,
+        628.1279921531677,
+        627.3599863052368,
+        627.8719902038574,
+        628.3199787139893,
+        628.0959844589233,
+        628.2879710197449,
+        627.839982509613
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 811
+      },
+      "baseline_us": 751.664012670517,
+      "candidate_us": 615.2639985084534,
+      "baseline_samples": [
+        758.8800191879272,
+        752.0319819450378,
+        751.7120242118835,
+        751.0719895362854,
+        748.7360239028931,
+        754.4320225715637,
+        749.9840259552002,
+        752.3199915885925,
+        752.7040243148804,
+        749.567985534668,
+        754.1760206222534,
+        750.0799894332886,
+        751.4560222625732,
+        751.6160011291504,
+        749.4720220565796,
+        752.4799704551697,
+        752.2240281105042,
+        748.4480142593384,
+        748.8319873809814,
+        752.672016620636
+      ],
+      "candidate_samples": [
+        615.1360273361206,
+        615.3920292854309,
+        615.0079965591431,
+        614.0480041503906,
+        615.6160235404968,
+        615.2639985084534,
+        615.3600215911865,
+        613.0880117416382,
+        615.2639985084534,
+        615.3600215911865,
+        614.7840023040771,
+        614.5920157432556,
+        617.3120141029358,
+        616.4479851722717,
+        615.8080101013184,
+        618.2079911231995,
+        615.8400177955627,
+        613.6000156402588,
+        613.1200194358826,
+        613.8240098953247
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 811
+      },
+      "baseline_us": 751.7279982566833,
+      "candidate_us": 615.5360043048859,
+      "baseline_samples": [
+        751.039981842041,
+        750.5599856376648,
+        752.2879838943481,
+        750.2400279045105,
+        750.2719759941101,
+        751.2959837913513,
+        751.7439723014832,
+        753.279983997345,
+        751.9040107727051,
+        751.1360049247742,
+        750.7519721984863,
+        752.5439858436584,
+        751.7120242118835,
+        751.3279914855957,
+        753.6960244178772,
+        753.1200051307678,
+        752.6400089263916,
+        750.432014465332,
+        752.672016620636,
+        752.3519992828369
+      ],
+      "candidate_samples": [
+        615.9999966621399,
+        616.2559986114502,
+        615.5200004577637,
+        613.8240098953247,
+        616.3520216941833,
+        614.2399907112122,
+        617.4399852752686,
+        615.5200004577637,
+        614.1120195388794,
+        615.1679754257202,
+        615.552008152008,
+        615.3280138969421,
+        615.552008152008,
+        614.6559715270996,
+        614.1440272331238,
+        616.0320043563843,
+        616.5440082550049,
+        615.2960062026978,
+        616.4799928665161,
+        615.776002407074
+      ]
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 811
+      },
+      "baseline_us": 753.0880272388458,
+      "candidate_us": 615.8080101013184,
+      "baseline_samples": [
+        753.6320090293884,
+        752.672016620636,
+        753.216028213501,
+        753.4080147743225,
+        754.2399764060974,
+        751.1039972305298,
+        752.6080012321472,
+        757.0239901542664,
+        751.6480088233948,
+        756.7999958992004,
+        755.5840015411377,
+        757.0559978485107,
+        751.9040107727051,
+        754.2080283164978,
+        754.9440264701843,
+        752.672016620636,
+        752.9600262641907,
+        751.9040107727051,
+        752.5439858436584,
+        750.6240010261536
+      ],
+      "candidate_samples": [
+        615.0079965591431,
+        615.3280138969421,
+        615.3280138969421,
+        615.7439947128296,
+        614.3680214881897,
+        618.399977684021,
+        614.4959926605225,
+        615.7119870185852,
+        616.1919832229614,
+        616.6399717330933,
+        618.1120276451111,
+        617.0880198478699,
+        613.1200194358826,
+        614.7519946098328,
+        616.8959736824036,
+        618.336021900177,
+        616.0640120506287,
+        615.8720254898071,
+        618.1439757347107,
+        615.4559850692749
+      ]
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 811
+      },
+      "baseline_us": 753.5839974880219,
+      "candidate_us": 616.6880130767822,
+      "baseline_samples": [
+        757.4080228805542,
+        753.7279725074768,
+        753.0879974365234,
+        753.5039782524109,
+        753.3760070800781,
+        753.9839744567871,
+        753.2479763031006,
+        755.2000284194946,
+        753.4719705581665,
+        756.3520073890686,
+        755.4879784584045,
+        751.9680261611938,
+        750.976026058197,
+        753.216028213501,
+        751.6480088233948,
+        754.2719841003418,
+        753.6640167236328,
+        754.5920014381409,
+        754.2080283164978,
+        752.3199915885925
+      ],
+      "candidate_samples": [
+        620.6719875335693,
+        617.0240044593811,
+        615.776002407074,
+        617.6639795303345,
+        615.3600215911865,
+        615.9039735794067,
+        614.3680214881897,
+        617.0880198478699,
+        614.9439811706543,
+        619.1359758377075,
+        617.3120141029358,
+        617.7279949188232,
+        615.1360273361206,
+        617.5680160522461,
+        615.1999831199646,
+        617.247998714447,
+        614.4959926605225,
+        616.2239909172058,
+        617.4079775810242,
+        616.3520216941833
+      ]
+    },
+    {
+      "candidate": "compact32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 812
+      },
+      "baseline_us": 1087.9520177841187,
+      "candidate_us": 938.3360147476196,
+      "baseline_samples": [
+        1092.4479961395264,
+        1090.3680324554443,
+        1084.8000049591064,
+        1089.184045791626,
+        1085.6319665908813,
+        1092.095971107483,
+        1088.096022605896,
+        1087.7759456634521,
+        1091.1040306091309,
+        1087.8080129623413,
+        1088.3519649505615,
+        1086.4959955215454,
+        1088.5759592056274,
+        1087.391972541809,
+        1088.4480476379395,
+        1084.8640203475952,
+        1085.0239992141724,
+        1085.7280492782593,
+        1085.5679512023926,
+        1088.6720418930054
+      ],
+      "candidate_samples": [
+        940.608024597168,
+        937.3440146446228,
+        937.2159838676453,
+        939.0400052070618,
+        937.8560185432434,
+        938.3360147476196,
+        935.3280067443848,
+        938.368022441864,
+        941.0240054130554,
+        933.7599873542786,
+        938.3040070533752,
+        938.6240243911743,
+        940.5120015144348,
+        935.3280067443848,
+        939.1360282897949,
+        935.7759952545166,
+        938.5920166969299,
+        938.3360147476196,
+        938.0480051040649,
+        939.520001411438
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 812
+      },
+      "baseline_us": 1088.0640149116516,
+      "candidate_us": 937.0560050010681,
+      "baseline_samples": [
+        1086.7520570755005,
+        1085.7919454574585,
+        1087.2639417648315,
+        1090.2400016784668,
+        1089.311957359314,
+        1088.9919996261597,
+        1084.5119953155518,
+        1087.2000455856323,
+        1086.6880416870117,
+        1090.4959440231323,
+        1089.4720554351807,
+        1086.5600109100342,
+        1090.5280113220215,
+        1090.0479555130005,
+        1088.0320072174072,
+        1089.9200439453125,
+        1088.096022605896,
+        1086.3679647445679,
+        1089.568018913269,
+        1086.3679647445679
+      ],
+      "candidate_samples": [
+        938.431978225708,
+        938.5920166969299,
+        937.9839897155762,
+        937.6639723777771,
+        935.8400106430054,
+        935.3280067443848,
+        935.7759952545166,
+        936.1600279808044,
+        939.1679763793945,
+        936.3840222358704,
+        941.7920112609863,
+        939.3280148506165,
+        937.2159838676453,
+        936.4799857139587,
+        937.9839897155762,
+        936.896026134491,
+        937.9519820213318,
+        936.896026134491,
+        936.4799857139587,
+        936.896026134491
+      ]
+    },
+    {
+      "candidate": "fused32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 812
+      },
+      "baseline_us": 1085.536003112793,
+      "candidate_us": 936.1279904842377,
+      "baseline_samples": [
+        1085.2479934692383,
+        1086.6880416870117,
+        1085.3760242462158,
+        1087.7759456634521,
+        1083.616018295288,
+        1083.583950996399,
+        1085.6959819793701,
+        1085.3760242462158,
+        1086.4319801330566,
+        1088.1279706954956,
+        1084.8000049591064,
+        1085.15202999115,
+        1084.8959684371948,
+        1088.1919860839844,
+        1083.9040279388428,
+        1083.6479663848877,
+        1089.311957359314,
+        1085.8880281448364,
+        1085.8559608459473,
+        1086.4959955215454
+      ],
+      "candidate_samples": [
+        937.7279877662659,
+        936.2879991531372,
+        934.9759817123413,
+        936.7679953575134,
+        933.2799911499023,
+        934.0159893035889,
+        936.191976070404,
+        935.8720183372498,
+        936.3200068473816,
+        939.2639994621277,
+        935.2319836616516,
+        935.1680278778076,
+        936.5760087966919,
+        936.191976070404,
+        937.7279877662659,
+        935.9999895095825,
+        935.6160163879395,
+        934.3680143356323,
+        938.3999705314636,
+        936.0640048980713
+      ]
+    },
+    {
+      "candidate": "hybrid32",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 812
+      },
+      "baseline_us": 1085.9839916229248,
+      "candidate_us": 936.6400241851807,
+      "baseline_samples": [
+        1088.5440111160278,
+        1087.7439975738525,
+        1084.8640203475952,
+        1084.1280221939087,
+        1086.2079858779907,
+        1086.2079858779907,
+        1084.2880010604858,
+        1087.0720148086548,
+        1087.7759456634521,
+        1086.176037788391,
+        1085.7919454574585,
+        1085.0239992141724,
+        1085.7919454574585,
+        1084.928035736084,
+        1087.6480340957642,
+        1086.400032043457,
+        1084.2560529708862,
+        1086.6880416870117,
+        1085.6640338897705,
+        1083.456039428711
+      ],
+      "candidate_samples": [
+        937.279999256134,
+        936.1600279808044,
+        936.2879991531372,
+        936.2239837646484,
+        936.9919896125793,
+        936.2239837646484,
+        937.5680088996887,
+        937.2159838676453,
+        938.3360147476196,
+        932.703971862793,
+        935.1360201835632,
+        937.9519820213318,
+        932.5439929962158,
+        936.3840222358704,
+        937.1839761734009,
+        935.1360201835632,
+        937.8880262374878,
+        934.4639778137207,
+        936.896026134491,
+        937.0560050010681
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"batch\": 1, \"ctx\": 10, \"layer\": \"sliding\", \"seed\": 1900}": {
+      "local_start": 32
+    },
+    "{\"batch\": 1, \"ctx\": 3000, \"layer\": \"full\", \"seed\": 1901}": {
+      "local_start": 32
+    },
+    "{\"batch\": 8, \"ctx\": 2047, \"layer\": \"sliding\", \"seed\": 1902}": {
+      "local_start": 160
+    },
+    "{\"batch\": 9, \"ctx\": 5000, \"layer\": \"sliding\", \"page\": 1, \"seed\": 1903, \"spread\": \"mixed\"}": {
+      "local_start": 160
+    },
+    "{\"batch\": 3, \"ctx\": 6000, \"dist\": \"outliers\", \"layer\": \"full\", \"q_len\": 8, \"seed\": 1904}": {
+      "local_start": 0
+    },
+    "{\"batch\": 5, \"ctx\": 5000, \"layer\": \"sliding\", \"page\": 1, \"q_len\": 8, \"seed\": 1905, \"spread\": \"mixed\"}": {
+      "local_start": 160
+    },
+    "{\"batch\": 33, \"ctx\": 20000, \"layer\": \"full\", \"page\": 1, \"seed\": 1906, \"spread\": \"mixed\"}": {
+      "local_start": 160
+    },
+    "{\"batch\": 2, \"ctx\": 300000, \"layer\": \"sliding\", \"q_len\": 8, \"seed\": 1907}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 1048576, \"layer\": \"full\", \"q_len\": 8, \"seed\": 1908}": {
+      "local_start": 32
+    },
+    "{\"batch\": 4, \"ctx\": 7000, \"kv_scale\": 0.015625, \"layer\": \"sliding\", \"page\": 1, \"q_len\": 8, \"seed\": 1909}": {
+      "local_start": 224
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"page\": 1, \"seed\": 1910}": {
+      "local_start": 32
+    },
+    "{\"batch\": 4, \"ctx\": 6000, \"dist\": \"soft\", \"layer\": \"sliding\", \"q_len\": 8, \"seed\": 1911}": {
+      "local_start": 160
+    },
+    "{\"batch\": 16, \"ctx\": 20000, \"dist\": \"soft\", \"layer\": \"full\", \"page\": 1, \"seed\": 1912, \"spread\": \"mixed\"}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"decode 1\", \"page\": 1, \"repeats\": 60, \"seed\": 801, \"weight\": 46}": {
+      "local_start": 32
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"decode 1\", \"page\": 1, \"repeats\": 60, \"seed\": 802, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 16, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"decode 16\", \"page\": 1, \"seed\": 803, \"spread\": \"agentic\", \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 16, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"decode 16\", \"page\": 1, \"seed\": 804, \"spread\": \"agentic\", \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 32, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"decode 32\", \"page\": 1, \"seed\": 805, \"spread\": \"agentic\", \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 32, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"decode 32\", \"page\": 1, \"seed\": 806, \"spread\": \"agentic\", \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"verify 1\", \"page\": 1, \"q_len\": 8, \"seed\": 807, \"weight\": 46}": {
+      "local_start": 128
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"verify 1\", \"page\": 1, \"q_len\": 8, \"seed\": 808, \"weight\": 16}": {
+      "local_start": 224
+    },
+    "{\"batch\": 16, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"verify 16\", \"page\": 1, \"q_len\": 8, \"seed\": 809, \"spread\": \"agentic\", \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 16, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"verify 16\", \"page\": 1, \"q_len\": 8, \"seed\": 810, \"spread\": \"agentic\", \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 32, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"verify 32\", \"page\": 1, \"q_len\": 8, \"seed\": 811, \"spread\": \"agentic\", \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 32, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"verify 32\", \"page\": 1, \"q_len\": 8, \"seed\": 812, \"spread\": \"agentic\", \"weight\": 16}": {
+      "local_start": 160
+    }
+  },
+  "calibration_us": 3.1999999191612005,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "compact32",
+    "case": {
+      "batch": 32,
+      "ctx": 80000,
+      "layer": "sliding",
+      "page": 1,
+      "q_len": 8,
+      "spread": "agentic",
+      "dist": "soft",
+      "load": "verify 32",
+      "weight": 46,
+      "seed": 811
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       1.781ms        65.60%       1.781ms     222.601us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     164.668us         6.07%     164.668us      41.167us             4  \n                                              dense__mm         0.00%       0.000us         0.00%       0.000us       0.000us     150.237us         5.53%     150.237us      37.559us             4  \n               nvjet_sm90_tst_128x128_64x6_2x1_v_bz_TNT         0.00%       0.000us         0.00%       0.000us       0.000us     138.300us         5.09%     138.300us      17.287us             8  \n                nvjet_sm90_tst_128x64_64x8_1x2_h_bz_NNT         0.00%       0.000us         0.00%       0.000us       0.000us     124.959us         4.60%     124.959us      31.240us             4  \n                nvjet_sm90_tst_96x64_64x10_2x4_h_bz_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      77.888us         2.87%      77.888us      19.472us             4  \n                                   attention__attention         0.00%       0.000us         0.00%       0.000us       0.000us      76.959us         2.84%      76.959us      19.240us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us      34.528us         1.27%      34.528us       8.632us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us      29.792us         1.10%      29.792us       7.448us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      23.199us         0.85%      23.199us       5.800us             4  \n                                attention__finish_heads         0.00%       0.000us         0.00%       0.000us       0.000us      21.822us         0.80%      21.822us       5.455us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      21.215us         0.78%      21.215us       5.304us             4  \n                               attention__prepare_heads         0.00%       0.000us         0.00%       0.000us       0.000us      13.728us         0.51%      13.728us       3.432us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us      12.704us         0.47%      12.704us       3.176us             4  \nvoid sglang::muse_spark::routing_kernel<sglang::muse...         0.00%       0.000us         0.00%       0.000us       0.000us      12.481us         0.46%      12.481us       3.120us             4  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 4.266ms\nSelf CUDA time total: 2.714ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       2.199ms        67.52%       2.199ms     274.861us             8  \n         nvjet_sm90_tss_64x32_64x16_1x2_h_bz_splitK_NNT         0.00%       0.000us         0.00%       0.000us       0.000us     176.255us         5.41%     176.255us      22.032us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     162.366us         4.99%     162.366us      40.591us             4  \n               nvjet_sm90_tst_128x128_64x6_2x1_v_bz_TNT         0.00%       0.000us         0.00%       0.000us       0.000us     138.301us         4.25%     138.301us      17.288us             8  \n                nvjet_sm90_tst_128x64_64x8_1x2_h_bz_TNT         0.00%       0.000us         0.00%       0.000us       0.000us     135.519us         4.16%     135.519us      33.880us             4  \n                nvjet_sm90_tst_96x64_64x10_2x4_h_bz_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      78.623us         2.41%      78.623us      19.656us             4  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us      76.479us         2.35%      76.479us      19.120us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us      34.016us         1.04%      34.016us       8.504us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us      30.625us         0.94%      30.625us       7.656us             4  \nvoid at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us      24.738us         0.76%      24.738us       6.184us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      22.816us         0.70%      22.816us       5.704us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      20.384us         0.63%      20.384us       5.096us             4  \nvoid cutlass::device_kernel<flash::FlashAttnFwdCombi...         0.00%       0.000us         0.00%       0.000us       0.000us      16.096us         0.49%      16.096us       4.024us             4  \nvoid cublasLt::splitKreduce_kernel<32, 16, int, floa...         0.00%       0.000us         0.00%       0.000us       0.000us      14.751us         0.45%      14.751us       1.844us             8  \nvoid sglang::muse_spark::routing_kernel<sglang::muse...         0.00%       0.000us         0.00%       0.000us       0.000us      13.344us         0.41%      13.344us       3.336us             4  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 4.801ms\nSelf CUDA time total: 3.256ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 55,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 62,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 49152
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 56,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 56,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 55,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 62,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 49152
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 147456
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 24,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 24,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__fullvec",
+      "registers": 64,
+      "spills": 0,
+      "shared": 64
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__fullvec",
+      "registers": 64,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__fullvec",
+      "registers": 65,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__fullvec",
+      "registers": 32,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "compact32",
+      "function": "dense__fullvec",
+      "registers": 65,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__attention",
+      "registers": 95,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__attention",
+      "registers": 161,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__prepare_heads",
+      "registers": 31,
+      "spills": 8,
+      "shared": 0
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__finish_heads",
+      "registers": 64,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention__finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 75,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 111,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 110,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 102,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 102,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 75,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 110,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__finish",
+      "registers": 28,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "attention_inline__finish_heads",
+      "registers": 96,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "_px_norm_map",
+      "registers": 56,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "compact32",
+      "function": "_sliced_boundary",
+      "registers": 100,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 24,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 118,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "compact32",
+      "function": "_compact_align",
+      "registers": 94,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 55,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 62,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 49152
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 56,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 56,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 55,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 62,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 49152
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "control",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 147456
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 24,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 24,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "dense__fullvec",
+      "registers": 64,
+      "spills": 0,
+      "shared": 64
+    },
+    {
+      "candidate": "control",
+      "function": "dense__fullvec",
+      "registers": 64,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "control",
+      "function": "dense__fullvec",
+      "registers": 65,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "control",
+      "function": "dense__fullvec",
+      "registers": 32,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "control",
+      "function": "dense__fullvec",
+      "registers": 65,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "control",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "attention__attention",
+      "registers": 95,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "control",
+      "function": "attention__attention",
+      "registers": 161,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "attention__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "attention__prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "attention__prepare_heads",
+      "registers": 31,
+      "spills": 8,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "attention__finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "attention__finish_heads",
+      "registers": 64,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "attention__finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 75,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 111,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 110,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 102,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 102,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 75,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 110,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__finish",
+      "registers": 28,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "attention_inline__finish_heads",
+      "registers": 96,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_px_norm_map",
+      "registers": 56,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "control",
+      "function": "_sliced_boundary",
+      "registers": 100,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 55,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 62,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 49152
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 56,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 56,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 55,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 62,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 49152
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 147456
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 24,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 24,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__fullvec",
+      "registers": 64,
+      "spills": 0,
+      "shared": 64
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__fullvec",
+      "registers": 64,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__fullvec",
+      "registers": 65,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__fullvec",
+      "registers": 32,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "fused32",
+      "function": "dense__fullvec",
+      "registers": 65,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__attention",
+      "registers": 95,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__attention",
+      "registers": 161,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__prepare_heads",
+      "registers": 31,
+      "spills": 8,
+      "shared": 0
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__finish_heads",
+      "registers": 64,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention__finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 75,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 111,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 110,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 102,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 102,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 75,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 110,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__finish",
+      "registers": 28,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "attention_inline__finish_heads",
+      "registers": 96,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "_px_norm_map",
+      "registers": 56,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "fused32",
+      "function": "_sliced_boundary",
+      "registers": 100,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "fused32",
+      "function": "_px_norm_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "fused32",
+      "function": "_px_norm_align",
+      "registers": 64,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "fused32",
+      "function": "_px_norm_align",
+      "registers": 100,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "fused32",
+      "function": "_px_norm_align",
+      "registers": 64,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "fused32",
+      "function": "_px_norm_align",
+      "registers": 87,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 55,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 62,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 49152
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 56,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 56,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 55,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 62,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 49152
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 147456
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 24,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 24,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__fullvec",
+      "registers": 64,
+      "spills": 0,
+      "shared": 64
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__fullvec",
+      "registers": 64,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__fullvec",
+      "registers": 65,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__fullvec",
+      "registers": 32,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "dense__fullvec",
+      "registers": 65,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__attention",
+      "registers": 95,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__attention",
+      "registers": 161,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__prepare_heads",
+      "registers": 31,
+      "spills": 8,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__finish_heads",
+      "registers": 64,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention__finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 75,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 111,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 110,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 102,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 102,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 75,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 110,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__finish",
+      "registers": 28,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "attention_inline__finish_heads",
+      "registers": 96,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "_px_norm_map",
+      "registers": 56,
+      "spills": 0,
+      "shared": 16
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "_sliced_boundary",
+      "registers": 100,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "_compact_align",
+      "registers": 118,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "hybrid32",
+      "function": "_compact_align",
+      "registers": 94,
+      "spills": 0,
+      "shared": 1024
+    }
+  ],
+  "elapsed_s": 291.170066915,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_decode_layer",
+  "source_files": {
+    "compact32": {
+      "path": "experiments/sources/8f6051b2eb4e6267f7df19ab306bfc14bddb0d4a8d397f978011062c7fcb7bf9.py",
+      "sha256": "8f6051b2eb4e6267f7df19ab306bfc14bddb0d4a8d397f978011062c7fcb7bf9"
+    },
+    "control": {
+      "path": "experiments/sources/2719e246bf951b88e8f4a64f4b18934426682ff172e0875ca9048bdb2b2e8527.py",
+      "sha256": "2719e246bf951b88e8f4a64f4b18934426682ff172e0875ca9048bdb2b2e8527"
+    },
+    "fused32": {
+      "path": "experiments/sources/5ec88822954c9e19b0913802c8e373308d2d00402aac3efee29f4855475201bc.py",
+      "sha256": "5ec88822954c9e19b0913802c8e373308d2d00402aac3efee29f4855475201bc"
+    },
+    "hybrid32": {
+      "path": "experiments/sources/0f2d2d9b6a84e98bd7bdec964fefb2944e698446d152318b1839758781467724.py",
+      "sha256": "0f2d2d9b6a84e98bd7bdec964fefb2944e698446d152318b1839758781467724"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

@@ -1,0 +1,2590 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.568e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.364e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.691e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.691e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7200,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7200,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7200,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7200,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7201,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7201,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7201,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7201,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1024,
+        "sharding": "ep8",
+        "seed": 7202,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 1024,
+        "sharding": "ep8",
+        "seed": 7202,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 1024,
+        "sharding": "ep8",
+        "seed": 7202,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 1024,
+        "sharding": "ep8",
+        "seed": 7202,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1025,
+        "sharding": "ep8",
+        "seed": 7203,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 1025,
+        "sharding": "ep8",
+        "seed": 7203,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 1025,
+        "sharding": "ep8",
+        "seed": 7203,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 1025,
+        "sharding": "ep8",
+        "seed": 7203,
+        "dist": "normal",
+        "routing_pattern": "all_nonlocal"
+      },
+      "ok": true,
+      "message": "Additional empty-route check: expected exact zero BF16 output"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7204,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.608e-03 (worst row 5.608e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7204,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.608e-03 (worst row 5.608e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7204,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.608e-03 (worst row 5.608e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 7204,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.608e-03 (worst row 5.608e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7205,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.528e-03 (worst row 5.743e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7205,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.528e-03 (worst row 5.743e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7205,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.528e-03 (worst row 5.743e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7205,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.529e-03 (worst row 5.743e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 7206,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.561e-03 (worst row 6.044e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 7206,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.561e-03 (worst row 6.044e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 7206,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.561e-03 (worst row 6.044e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 7206,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.561e-03 (worst row 6.044e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7207,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.537e-03 (worst row 6.068e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7207,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.537e-03 (worst row 6.068e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7207,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.537e-03 (worst row 6.068e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 7207,
+        "dist": "normal",
+        "routing_pattern": "one_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.537e-03 (worst row 6.068e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 7300,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.550e-03 (worst row 5.800e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 7300,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.551e-03 (worst row 5.799e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 7300,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.550e-03 (worst row 5.800e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 7300,
+        "dist": "normal",
+        "routing_pattern": "all_local"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.551e-03 (worst row 5.799e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 127,
+        "sharding": "ep8",
+        "seed": 7301,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.565e-03 (worst row 5.953e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 127,
+        "sharding": "ep8",
+        "seed": 7301,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.565e-03 (worst row 5.953e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 127,
+        "sharding": "ep8",
+        "seed": 7301,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.565e-03 (worst row 5.953e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 127,
+        "sharding": "ep8",
+        "seed": 7301,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.565e-03 (worst row 5.953e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 129,
+        "sharding": "ep8",
+        "seed": 7302,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.527e-03 (worst row 5.955e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 129,
+        "sharding": "ep8",
+        "seed": 7302,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.527e-03 (worst row 5.955e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 129,
+        "sharding": "ep8",
+        "seed": 7302,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.526e-03 (worst row 5.960e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 129,
+        "sharding": "ep8",
+        "seed": 7302,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.526e-03 (worst row 5.955e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.545e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.160e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.159e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.06399935483932,
+      "candidate_us": 80.99199831485748,
+      "baseline_samples": [
+        90.81599861383438,
+        83.52000266313553,
+        83.93599838018417,
+        84.89599823951721,
+        83.61600339412689,
+        84.70399677753448,
+        83.96799862384796,
+        85.21600067615509,
+        84.35200154781342,
+        84.41600203514099,
+        83.77599716186523,
+        84.03199911117554,
+        84.70399677753448,
+        83.67999643087387,
+        84.95999872684479,
+        84.09599959850311,
+        83.90399813652039,
+        85.40800213813782,
+        83.5840031504631,
+        83.77599716186523
+      ],
+      "candidate_samples": [
+        87.52000331878662,
+        80.79999685287476,
+        80.54400235414505,
+        81.216000020504,
+        81.18399977684021,
+        80.89599758386612,
+        81.15199953317642,
+        80.51200211048126,
+        80.73599636554718,
+        81.24800026416779,
+        81.08799904584885,
+        80.51200211048126,
+        81.05599880218506,
+        80.60800284147263,
+        80.92799782752991,
+        80.76799660921097,
+        81.05599880218506,
+        81.4720019698143,
+        81.18399977684021,
+        80.6720033288002
+      ]
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.19200032949448,
+      "candidate_us": 80.46400174498558,
+      "baseline_samples": [
+        84.1279998421669,
+        83.55200290679932,
+        83.90399813652039,
+        84.79999750852585,
+        84.35200154781342,
+        83.90399813652039,
+        84.89599823951721,
+        83.64800363779068,
+        83.67999643087387,
+        84.95999872684479,
+        84.99199897050858,
+        85.1840004324913,
+        84.63999629020691,
+        84.19200032949448,
+        84.22400057315826,
+        84.16000008583069,
+        84.19200032949448,
+        84.73599702119827,
+        84.09599959850311,
+        84.06399935483932
+      ],
+      "candidate_samples": [
+        85.95199882984161,
+        80.51200211048126,
+        80.1599994301796,
+        80.44800162315369,
+        79.83999699354172,
+        80.28800040483475,
+        80.92799782752991,
+        81.53600245714188,
+        80.19199967384338,
+        80.51200211048126,
+        79.9039974808693,
+        80.92799782752991,
+        80.48000186681747,
+        79.80799674987793,
+        80.32000064849854,
+        80.48000186681747,
+        80.35200089216232,
+        80.51200211048126,
+        80.48000186681747,
+        80.09599894285202
+      ]
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.44800227880478,
+      "candidate_us": 81.10399916768074,
+      "baseline_samples": [
+        84.51200276613235,
+        84.89599823951721,
+        84.63999629020691,
+        83.90399813652039,
+        84.51200276613235,
+        83.90399813652039,
+        84.28800106048584,
+        85.11999994516373,
+        84.22400057315826,
+        84.76799726486206,
+        85.34400165081024,
+        84.70399677753448,
+        83.3280012011528,
+        84.28800106048584,
+        84.19200032949448,
+        84.19200032949448,
+        85.24800091981888,
+        84.3840017914772,
+        83.90399813652039,
+        84.86399799585342
+      ],
+      "candidate_samples": [
+        86.71999722719193,
+        81.37600123882294,
+        82.14399963617325,
+        81.63200318813324,
+        80.99199831485748,
+        80.86399734020233,
+        81.34400099515915,
+        81.56800270080566,
+        80.83199709653854,
+        80.83199709653854,
+        80.92799782752991,
+        80.9599980711937,
+        80.92799782752991,
+        81.216000020504,
+        81.216000020504,
+        81.56800270080566,
+        80.60800284147263,
+        81.216000020504,
+        80.19199967384338,
+        80.9599980711937
+      ]
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.06399935483932,
+      "candidate_us": 80.99199831485748,
+      "baseline_samples": [
+        83.80799740552902,
+        83.99999886751175,
+        85.50400286912918,
+        84.19200032949448,
+        83.67999643087387,
+        84.3840017914772,
+        83.80799740552902,
+        83.48800241947174,
+        84.89599823951721,
+        84.41600203514099,
+        83.77599716186523,
+        84.03199911117554,
+        83.48800241947174,
+        85.02399921417236,
+        84.32000130414963,
+        84.09599959850311,
+        83.80799740552902,
+        83.96799862384796,
+        84.22400057315826,
+        84.44800227880478
+      ],
+      "candidate_samples": [
+        86.97599917650223,
+        80.76799660921097,
+        80.4160013794899,
+        81.28000050783157,
+        82.0159986615181,
+        81.02399855852127,
+        80.9599980711937,
+        79.99999821186066,
+        80.73599636554718,
+        81.08799904584885,
+        80.48000186681747,
+        81.40800148248672,
+        81.40800148248672,
+        81.24800026416779,
+        81.24800026416779,
+        81.15199953317642,
+        80.38400113582611,
+        80.51200211048126,
+        80.6720033288002,
+        80.25600016117096
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 176.89600586891174,
+      "candidate_us": 170.59199512004852,
+      "baseline_samples": [
+        183.9040070772171,
+        178.0479997396469,
+        176.79999768733978,
+        176.2239933013916,
+        176.7359972000122,
+        176.67199671268463,
+        177.34399437904358,
+        177.37600207328796,
+        177.05599963665009,
+        177.69600450992584,
+        176.1920005083084,
+        178.68800461292267,
+        176.64000391960144,
+        176.89600586891174,
+        178.0800074338913,
+        175.99999904632568,
+        177.0240068435669,
+        176.89600586891174,
+        176.86399817466736,
+        176.79999768733978
+      ],
+      "candidate_samples": [
+        175.55199563503265,
+        171.7119961977005,
+        170.59199512004852,
+        170.59199512004852,
+        169.95200514793396,
+        170.9440052509308,
+        170.6240028142929,
+        170.27199268341064,
+        169.5680022239685,
+        170.17599940299988,
+        170.01600563526154,
+        170.75200378894806,
+        170.1440066099167,
+        170.1440066099167,
+        171.03999853134155,
+        170.20800709724426,
+        170.6559956073761,
+        170.84799706935883,
+        170.0800061225891,
+        170.6240028142929
+      ]
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 176.9919991493225,
+      "candidate_us": 170.3839972615242,
+      "baseline_samples": [
+        176.67199671268463,
+        177.21599340438843,
+        176.57600343227386,
+        176.70400440692902,
+        177.05599963665009,
+        176.92799866199493,
+        175.84000527858734,
+        177.72799730300903,
+        177.34399437904358,
+        177.2480010986328,
+        178.30400168895721,
+        176.7680048942566,
+        176.79999768733978,
+        176.1920005083084,
+        177.18400061130524,
+        177.3120015859604,
+        177.44000256061554,
+        177.15199291706085,
+        176.256000995636,
+        176.35199427604675
+      ],
+      "candidate_samples": [
+        176.7680048942566,
+        171.1360067129135,
+        170.23999989032745,
+        170.6559956073761,
+        169.76000368595123,
+        171.23199999332428,
+        169.91999745368958,
+        170.3999936580658,
+        170.0800061225891,
+        171.1679995059967,
+        170.20800709724426,
+        169.3439930677414,
+        169.98399794101715,
+        171.03999853134155,
+        171.1360067129135,
+        169.50400173664093,
+        170.6240028142929,
+        170.3680008649826,
+        170.59199512004852,
+        169.5680022239685
+      ]
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.5680035352707,
+      "candidate_us": 171.12000286579132,
+      "baseline_samples": [
+        177.98399925231934,
+        177.3120015859604,
+        178.0479997396469,
+        177.50400304794312,
+        177.824005484581,
+        178.9119988679886,
+        176.92799866199493,
+        178.27199399471283,
+        178.97599935531616,
+        176.64000391960144,
+        178.49600315093994,
+        177.95200645923615,
+        177.08800733089447,
+        177.37600207328796,
+        178.27199399471283,
+        177.37600207328796,
+        176.86399817466736,
+        177.18400061130524,
+        176.57600343227386,
+        177.63200402259827
+      ],
+      "candidate_samples": [
+        178.52799594402313,
+        171.77599668502808,
+        170.43200135231018,
+        171.39199376106262,
+        170.43200135231018,
+        170.33599317073822,
+        171.2000072002411,
+        170.52799463272095,
+        171.6800034046173,
+        170.81600427627563,
+        171.32799327373505,
+        171.03999853134155,
+        170.33599317073822,
+        170.81600427627563,
+        170.49600183963776,
+        171.32799327373505,
+        171.48800194263458,
+        170.3999936580658,
+        171.26399278640747,
+        171.26399278640747
+      ]
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.40799486637115,
+      "candidate_us": 170.86400091648102,
+      "baseline_samples": [
+        178.81600558757782,
+        176.9919991493225,
+        177.40799486637115,
+        177.72799730300903,
+        176.1920005083084,
+        177.72799730300903,
+        177.85599827766418,
+        177.40799486637115,
+        177.37600207328796,
+        177.05599963665009,
+        176.64000391960144,
+        176.57600343227386,
+        177.5359958410263,
+        177.50400304794312,
+        177.66399681568146,
+        177.05599963665009,
+        178.1120002269745,
+        177.95200645923615,
+        177.05599963665009,
+        176.89600586891174
+      ],
+      "candidate_samples": [
+        177.0240068435669,
+        171.51999473571777,
+        170.1440066099167,
+        170.1440066099167,
+        171.77599668502808,
+        170.20800709724426,
+        172.44799435138702,
+        171.10399901866913,
+        171.00800573825836,
+        170.6240028142929,
+        172.19200730323792,
+        170.56000232696533,
+        171.1679995059967,
+        170.0800061225891,
+        170.71999609470367,
+        170.46399414539337,
+        171.9679981470108,
+        171.26399278640747,
+        169.69600319862366,
+        169.24799978733063
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.1920027732849,
+      "candidate_us": 238.76800388097763,
+      "baseline_samples": [
+        263.5839879512787,
+        256.7040026187897,
+        257.88798928260803,
+        258.2400143146515,
+        257.9840123653412,
+        256.9279968738556,
+        257.4079930782318,
+        258.8160037994385,
+        258.5600018501282,
+        258.2719922065735,
+        258.4959864616394,
+        258.14399123191833,
+        257.4400007724762,
+        257.4720084667206,
+        258.7839961051941,
+        257.9840123653412,
+        256.9600045681,
+        258.30399990081787,
+        258.65599513053894,
+        258.8160037994385
+      ],
+      "candidate_samples": [
+        239.84000086784363,
+        237.92000114917755,
+        239.42400515079498,
+        237.56800591945648,
+        237.7920001745224,
+        237.7600073814392,
+        238.43200504779816,
+        238.68800699710846,
+        239.04000222682953,
+        238.0480021238327,
+        239.84000086784363,
+        238.52799832820892,
+        239.3919974565506,
+        237.98400163650513,
+        239.6160066127777,
+        238.304004073143,
+        238.8480007648468,
+        239.19999599456787,
+        240.28800427913666,
+        239.26399648189545
+      ]
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 257.58400559425354,
+      "candidate_us": 238.48000168800354,
+      "baseline_samples": [
+        260.3839933872223,
+        258.2080066204071,
+        258.65599513053894,
+        259.39199328422546,
+        256.79999589920044,
+        256.99201226234436,
+        257.34400749206543,
+        257.3759853839874,
+        257.24801421165466,
+        257.4400007724762,
+        257.31199979782104,
+        257.56800174713135,
+        257.9840123653412,
+        257.60000944137573,
+        256.9279968738556,
+        257.63198733329773,
+        257.79199600219727,
+        257.1519911289215,
+        257.79199600219727,
+        258.1759989261627
+      ],
+      "candidate_samples": [
+        240.79999327659607,
+        238.68800699710846,
+        239.3600046634674,
+        238.0799949169159,
+        239.29600417613983,
+        238.36800456047058,
+        238.87999355793,
+        238.5919988155365,
+        238.20799589157104,
+        238.97600173950195,
+        239.07199501991272,
+        239.1040027141571,
+        238.20799589157104,
+        238.14399540424347,
+        237.15199530124664,
+        239.3600046634674,
+        238.0480021238327,
+        236.89599335193634,
+        237.98400163650513,
+        237.5040054321289
+      ]
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.39999318122864,
+      "candidate_us": 239.1039952635765,
+      "baseline_samples": [
+        259.0399980545044,
+        258.4640085697174,
+        258.5600018501282,
+        257.85601139068604,
+        258.59200954437256,
+        259.00799036026,
+        258.4640085697174,
+        258.7519884109497,
+        258.39999318122864,
+        259.3599855899811,
+        258.1759989261627,
+        259.16799902915955,
+        257.31199979782104,
+        258.39999318122864,
+        257.2160065174103,
+        257.82400369644165,
+        258.1759989261627,
+        257.85601139068604,
+        258.14399123191833,
+        257.1200132369995
+      ],
+      "candidate_samples": [
+        239.58399891853333,
+        239.99999463558197,
+        238.14399540424347,
+        237.69600689411163,
+        238.75199258327484,
+        238.0799949169159,
+        239.3600046634674,
+        239.1359955072403,
+        238.71999979019165,
+        239.00799453258514,
+        239.26399648189545,
+        239.45599794387817,
+        239.1359955072403,
+        239.07199501991272,
+        239.19999599456787,
+        239.26399648189545,
+        239.23200368881226,
+        239.07199501991272,
+        238.71999979019165,
+        238.78400027751923
+      ]
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 257.55199790000916,
+      "candidate_us": 238.68799954652786,
+      "baseline_samples": [
+        259.2320144176483,
+        257.34400749206543,
+        258.62398743629456,
+        258.11201333999634,
+        257.34400749206543,
+        257.53599405288696,
+        257.9840123653412,
+        257.56800174713135,
+        258.08000564575195,
+        257.63198733329773,
+        257.1839988231659,
+        258.33600759506226,
+        258.1759989261627,
+        257.24801421165466,
+        256.415992975235,
+        258.2080066204071,
+        256.6719949245453,
+        257.3759853839874,
+        256.8959891796112,
+        257.27999210357666
+      ],
+      "candidate_samples": [
+        241.63199961185455,
+        238.43200504779816,
+        238.65599930286407,
+        238.3359968662262,
+        239.04000222682953,
+        238.20799589157104,
+        239.84000086784363,
+        238.65599930286407,
+        240.22400379180908,
+        239.23200368881226,
+        238.71999979019165,
+        238.01599442958832,
+        238.14399540424347,
+        239.51999843120575,
+        238.81599307060242,
+        238.43200504779816,
+        239.1040027141571,
+        237.88799345493317,
+        238.46399784088135,
+        238.97600173950195
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 152.92799472808838,
+      "candidate_us": 146.86399698257446,
+      "baseline_samples": [
+        160.25599837303162,
+        153.34400534629822,
+        152.6080071926117,
+        152.67199277877808,
+        153.4080058336258,
+        152.76800096035004,
+        154.65599298477173,
+        152.92799472808838,
+        153.28000485897064,
+        152.5759994983673,
+        152.44799852371216,
+        152.8639942407608,
+        153.79199385643005,
+        152.92799472808838,
+        152.319997549057,
+        152.92799472808838,
+        153.1199961900711,
+        153.08800339698792,
+        152.51199901103973,
+        152.92799472808838
+      ],
+      "candidate_samples": [
+        153.3759981393814,
+        148.60799908638,
+        146.55999839305878,
+        146.91199362277985,
+        146.40000462532043,
+        147.35999703407288,
+        146.2399959564209,
+        145.9520012140274,
+        146.17599546909332,
+        146.30399644374847,
+        147.93600142002106,
+        146.68799936771393,
+        146.33600413799286,
+        147.71200716495514,
+        147.13600277900696,
+        147.39200472831726,
+        146.81600034236908,
+        145.9839940071106,
+        147.8080004453659,
+        147.45600521564484
+      ]
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.24799716472626,
+      "candidate_us": 146.4800015091896,
+      "baseline_samples": [
+        154.30399775505066,
+        155.07200360298157,
+        152.54400670528412,
+        154.55999970436096,
+        153.1520038843155,
+        152.41600573062897,
+        151.58399939537048,
+        152.92799472808838,
+        154.4319987297058,
+        152.5759994983673,
+        154.33600544929504,
+        151.96800231933594,
+        152.48000621795654,
+        153.888002038002,
+        153.53600680828094,
+        154.11199629306793,
+        152.79999375343323,
+        153.50399911403656,
+        153.31199765205383,
+        153.18399667739868
+      ],
+      "candidate_samples": [
+        154.23999726772308,
+        146.43199741840363,
+        146.27200365066528,
+        146.2080031633377,
+        147.10399508476257,
+        147.2959965467453,
+        146.40000462532043,
+        146.4959979057312,
+        148.25600385665894,
+        145.9520012140274,
+        146.88000082969666,
+        146.7519998550415,
+        146.27200365066528,
+        146.2080031633377,
+        146.17599546909332,
+        146.94400131702423,
+        146.464005112648,
+        147.45600521564484,
+        145.82400023937225,
+        146.97599411010742
+      ]
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.4079983830452,
+      "candidate_us": 146.86399698257446,
+      "baseline_samples": [
+        154.4640064239502,
+        153.24799716472626,
+        153.43999862670898,
+        154.04799580574036,
+        153.3759981393814,
+        153.21600437164307,
+        151.8079936504364,
+        153.05599570274353,
+        153.6639928817749,
+        153.6320000886917,
+        154.08000349998474,
+        152.73599326610565,
+        154.1759967803955,
+        152.76800096035004,
+        153.50399911403656,
+        152.8639942407608,
+        154.27200496196747,
+        152.92799472808838,
+        154.08000349998474,
+        152.67199277877808
+      ],
+      "candidate_samples": [
+        154.04799580574036,
+        147.32800424098969,
+        147.039994597435,
+        146.88000082969666,
+        148.00000190734863,
+        146.7200070619583,
+        146.2399959564209,
+        146.84799313545227,
+        147.8399932384491,
+        146.43199741840363,
+        147.67999947071075,
+        146.43199741840363,
+        147.77599275112152,
+        147.16799557209015,
+        146.27200365066528,
+        146.81600034236908,
+        146.40000462532043,
+        146.59200608730316,
+        146.91199362277985,
+        146.68799936771393
+      ]
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.07199954986572,
+      "candidate_us": 146.94400131702423,
+      "baseline_samples": [
+        153.05599570274353,
+        153.56799960136414,
+        152.70400047302246,
+        152.6080071926117,
+        153.6320000886917,
+        153.3759981393814,
+        153.6639928817749,
+        153.1199961900711,
+        152.51199901103973,
+        153.08800339698792,
+        153.21600437164307,
+        153.21600437164307,
+        152.8960019350052,
+        152.51199901103973,
+        152.38399803638458,
+        152.8320014476776,
+        152.6080071926117,
+        153.6960005760193,
+        153.18399667739868,
+        152.73599326610565
+      ],
+      "candidate_samples": [
+        152.63999998569489,
+        147.0080018043518,
+        146.7839926481247,
+        146.5280055999756,
+        147.23199605941772,
+        146.88000082969666,
+        147.45600521564484,
+        146.7519998550415,
+        147.10399508476257,
+        147.16799557209015,
+        147.20000326633453,
+        147.67999947071075,
+        146.81600034236908,
+        146.68799936771393,
+        146.43199741840363,
+        146.81600034236908,
+        147.48799800872803,
+        146.33600413799286,
+        148.12800288200378,
+        145.88800072669983
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 406.6240042448044,
+      "candidate_us": 301.34400725364685,
+      "baseline_samples": [
+        410.3359878063202,
+        407.61598944664,
+        406.72001242637634,
+        407.3919951915741,
+        405.5039882659912,
+        405.69600462913513,
+        406.5279960632324,
+        405.8240056037903,
+        406.72001242637634,
+        408.32000970840454,
+        405.7280123233795,
+        406.39999508857727,
+        406.8480134010315,
+        406.17600083351135,
+        405.88799118995667,
+        406.20800852775574,
+        408.9280068874359,
+        407.23198652267456,
+        406.3679873943329,
+        406.9119989871979
+      ],
+      "candidate_samples": [
+        303.9039969444275,
+        301.7919957637787,
+        301.4400005340576,
+        302.2400140762329,
+        301.7280101776123,
+        301.2160062789917,
+        301.08800530433655,
+        300.54399371147156,
+        301.7280101776123,
+        300.83200335502625,
+        300.8959889411926,
+        301.05599761009216,
+        300.9600043296814,
+        302.11201310157776,
+        301.2480139732361,
+        300.6399869918823,
+        302.91199684143066,
+        302.17599868774414,
+        301.12001299858093,
+        301.7280101776123
+      ]
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 406.6559970378876,
+      "candidate_us": 300.86399614810944,
+      "baseline_samples": [
+        407.9039990901947,
+        406.6559970378876,
+        404.9279987812042,
+        406.49598836898804,
+        407.45601058006287,
+        406.14399313926697,
+        406.43200278282166,
+        407.3599874973297,
+        408.03200006484985,
+        406.0479998588562,
+        406.8480134010315,
+        407.61598944664,
+        406.72001242637634,
+        406.3040018081665,
+        406.5920114517212,
+        406.6559970378876,
+        406.23998641967773,
+        407.99999237060547,
+        406.9119989871979,
+        405.88799118995667
+      ],
+      "candidate_samples": [
+        303.99999022483826,
+        301.6960024833679,
+        300.927996635437,
+        300.4159927368164,
+        301.82400345802307,
+        299.1679906845093,
+        300.6399869918823,
+        300.28799176216125,
+        300.7040023803711,
+        302.623987197876,
+        300.79999566078186,
+        301.2799918651581,
+        300.9600043296814,
+        301.40799283981323,
+        300.7360100746155,
+        300.6719946861267,
+        300.79999566078186,
+        300.9920120239258,
+        302.43200063705444,
+        299.80799555778503
+      ]
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 407.21599757671356,
+      "candidate_us": 309.5039874315262,
+      "baseline_samples": [
+        408.03200006484985,
+        407.51999616622925,
+        406.0800075531006,
+        406.6239893436432,
+        408.03200006484985,
+        406.46401047706604,
+        405.7599902153015,
+        407.4240028858185,
+        408.6720049381256,
+        407.80800580978394,
+        408.4799885749817,
+        406.46401047706604,
+        406.39999508857727,
+        407.3280096054077,
+        407.48798847198486,
+        406.23998641967773,
+        407.8400135040283,
+        407.1039855480194,
+        406.39999508857727,
+        406.8799912929535
+      ],
+      "candidate_samples": [
+        309.02400612831116,
+        310.8159899711609,
+        308.80001187324524,
+        310.5280101299286,
+        308.03200602531433,
+        309.9200129508972,
+        308.896005153656,
+        310.91201305389404,
+        308.7039887905121,
+        309.56798791885376,
+        309.4399869441986,
+        308.54400992393494,
+        310.4639947414398,
+        309.82398986816406,
+        309.59999561309814,
+        308.896005153656,
+        310.5599880218506,
+        309.02400612831116,
+        310.2720081806183,
+        307.96799063682556
+      ]
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 406.7839980125427,
+      "candidate_us": 300.9760081768036,
+      "baseline_samples": [
+        407.74399042129517,
+        406.8480134010315,
+        406.17600083351135,
+        407.00799226760864,
+        406.75199031829834,
+        407.1039855480194,
+        407.48798847198486,
+        406.49598836898804,
+        405.5039882659912,
+        405.8240056037903,
+        406.49598836898804,
+        407.3919951915741,
+        407.1680009365082,
+        407.1680009365082,
+        406.0479998588562,
+        405.60001134872437,
+        406.23998641967773,
+        406.8160057067871,
+        406.5920114517212,
+        409.85599160194397
+      ],
+      "candidate_samples": [
+        301.40799283981323,
+        300.9600043296814,
+        301.37598514556885,
+        300.5119860172272,
+        301.7599880695343,
+        300.4480004310608,
+        300.4800081253052,
+        301.4400005340576,
+        300.1280128955841,
+        299.29599165916443,
+        302.8480112552643,
+        301.88798904418945,
+        301.2799918651581,
+        300.28799176216125,
+        299.3279993534088,
+        301.2480139732361,
+        300.7679879665375,
+        300.86401104927063,
+        301.2799918651581,
+        300.9920120239258
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 592.2880172729492,
+      "candidate_us": 389.040008187294,
+      "baseline_samples": [
+        594.9119925498962,
+        591.5200114250183,
+        591.1039710044861,
+        592.8000211715698,
+        592.0640230178833,
+        595.583975315094,
+        590.719997882843,
+        593.0560231208801,
+        592.9279923439026,
+        592.1919941902161,
+        592.2880172729492,
+        592.2880172729492,
+        592.5760269165039,
+        593.2480096817017,
+        590.8799767494202,
+        593.3120250701904,
+        592.0640230178833,
+        592.8959846496582,
+        590.4639959335327,
+        590.5600190162659
+      ],
+      "candidate_samples": [
+        390.8480107784271,
+        389.60000872612,
+        388.89598846435547,
+        389.95200395584106,
+        389.5680010318756,
+        388.9920115470886,
+        388.5760009288788,
+        388.38401436805725,
+        389.8560106754303,
+        388.7679874897003,
+        387.64798641204834,
+        389.0880048274994,
+        388.60800862312317,
+        389.4079923629761,
+        389.60000872612,
+        389.15199041366577,
+        388.96000385284424,
+        388.7999951839447,
+        387.03998923301697,
+        389.18399810791016
+      ]
+    },
+    {
+      "candidate": "m16_32_c32",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 590.0160074234009,
+      "candidate_us": 397.5040018558502,
+      "baseline_samples": [
+        590.8480286598206,
+        589.2159938812256,
+        591.4559960365295,
+        589.3759727478027,
+        588.8000130653381,
+        591.7760133743286,
+        590.4639959335327,
+        589.3440246582031,
+        589.2800092697144,
+        589.6959900856018,
+        589.24800157547,
+        591.7760133743286,
+        588.6719822883606,
+        589.4719958305359,
+        590.4960036277771,
+        590.5280113220215,
+        590.9439921379089,
+        592.736005783081,
+        590.3360247612,
+        588.3200168609619
+      ],
+      "candidate_samples": [
+        399.80798959732056,
+        395.83998918533325,
+        396.7039883136749,
+        397.95199036598206,
+        398.0480134487152,
+        397.5040018558502,
+        397.40800857543945,
+        398.75200390815735,
+        396.7359960079193,
+        397.8239893913269,
+        398.1119990348816,
+        397.024005651474,
+        396.1600065231323,
+        397.5040018558502,
+        396.479994058609,
+        398.8479971885681,
+        398.3680009841919,
+        394.81601119041443,
+        399.23200011253357,
+        396.5120017528534
+      ]
+    },
+    {
+      "candidate": "m8_16_c8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 590.831995010376,
+      "candidate_us": 396.62399888038635,
+      "baseline_samples": [
+        592.0640230178833,
+        591.7119979858398,
+        591.0400152206421,
+        590.0480151176453,
+        590.6239748001099,
+        590.9759998321533,
+        590.1439785957336,
+        590.6559824943542,
+        591.7760133743286,
+        589.5040035247803,
+        590.6879901885986,
+        589.8240208625793,
+        590.399980545044,
+        591.1359786987305,
+        589.631974697113,
+        590.4639959335327,
+        591.5520191192627,
+        594.6559906005859,
+        591.7440056800842,
+        593.4079885482788
+      ],
+      "candidate_samples": [
+        397.63200283050537,
+        396.60799503326416,
+        394.9120044708252,
+        394.81601119041443,
+        394.75199580192566,
+        397.599995136261,
+        396.8000113964081,
+        397.63200283050537,
+        395.7439959049225,
+        396.64000272750854,
+        397.72799611091614,
+        395.52000164985657,
+        395.83998918533325,
+        395.7439959049225,
+        395.904004573822,
+        396.2239921092987,
+        397.37600088119507,
+        398.1119990348816,
+        399.23200011253357,
+        399.4239866733551
+      ]
+    },
+    {
+      "candidate": "m8_32_c16",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 593.1839942932129,
+      "candidate_us": 429.392009973526,
+      "baseline_samples": [
+        592.6719903945923,
+        592.0640230178833,
+        594.0160155296326,
+        591.6799902915955,
+        592.5440192222595,
+        594.3999886512756,
+        594.111979007721,
+        593.4399962425232,
+        593.824028968811,
+        591.1679863929749,
+        591.8400287628174,
+        592.0640230178833,
+        592.3519730567932,
+        594.4960117340088,
+        591.3919806480408,
+        594.9440002441406,
+        595.4560041427612,
+        594.0160155296326,
+        595.6799983978271,
+        592.9279923439026
+      ],
+      "candidate_samples": [
+        430.91198801994324,
+        430.65598607063293,
+        427.42401361465454,
+        428.8319945335388,
+        431.4880073070526,
+        429.4080138206482,
+        429.4719994068146,
+        430.4960072040558,
+        433.3440065383911,
+        427.93598771095276,
+        428.8319945335388,
+        428.16001176834106,
+        428.384006023407,
+        429.3760061264038,
+        428.70399355888367,
+        431.0080111026764,
+        429.28001284599304,
+        430.07999658584595,
+        429.3439984321594,
+        430.400013923645
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"bs\": 4, \"dist\": \"normal\", \"seed\": 1800, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"seed\": 1801, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 257, \"dist\": \"normal\", \"seed\": 1802, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 128, \"dist\": \"skewed\", \"seed\": 1803, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"seed\": 1804, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"routing_pattern\": \"all_nonlocal\", \"seed\": 7200, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"routing_pattern\": \"all_nonlocal\", \"seed\": 7201, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1024, \"dist\": \"normal\", \"routing_pattern\": \"all_nonlocal\", \"seed\": 7202, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1025, \"dist\": \"normal\", \"routing_pattern\": \"all_nonlocal\", \"seed\": 7203, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"routing_pattern\": \"all_local\", \"seed\": 7204, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"routing_pattern\": \"all_local\", \"seed\": 7205, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 257, \"dist\": \"normal\", \"routing_pattern\": \"one_local\", \"seed\": 7206, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"routing_pattern\": \"one_local\", \"seed\": 7207, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 128, \"dist\": \"normal\", \"routing_pattern\": \"all_local\", \"seed\": 7300, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 127, \"dist\": \"normal\", \"seed\": 7301, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 129, \"dist\": \"normal\", \"seed\": 7302, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"load\": \"decode 1\", \"seed\": 401, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 16, \"load\": \"decode 16\", \"seed\": 402, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 32, \"load\": \"decode 32\", \"seed\": 403, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 8, \"load\": \"verify 1\", \"seed\": 404, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 128, \"load\": \"verify 16\", \"seed\": 405, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 256, \"load\": \"verify 32\", \"seed\": 406, \"sharding\": \"ep8\", \"weight\": 60}": {}
+  },
+  "calibration_us": 3.135999897494912,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "control",
+    "case": {
+      "bs": 256,
+      "sharding": "ep8",
+      "load": "verify 32",
+      "weight": 60,
+      "seed": 406
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       1.478ms        86.87%       1.478ms     184.778us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     152.119us         8.94%     152.119us      38.030us             4  \nvoid group_routes<256>(int const*, int*, int*, int*,...         0.00%       0.000us         0.00%       0.000us       0.000us      22.939us         1.35%      22.939us       5.735us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      22.776us         1.34%      22.776us       5.694us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      22.266us         1.31%      22.266us       5.567us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.359us         0.20%       3.359us       0.840us             4  \n                                        cudaGraphLaunch         3.86%     128.981us        51.04%       1.704ms     425.962us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        47.17%       1.575ms        47.17%       1.575ms       1.575ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        48.96%       1.635ms        48.96%       1.635ms     817.297us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 3.338ms\nSelf CUDA time total: 1.702ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       2.256ms        90.14%       2.256ms     281.999us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     149.456us         5.97%     149.456us      37.364us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      23.271us         0.93%      23.271us       5.818us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      22.312us         0.89%      22.312us       5.578us             4  \nvoid at::native::index_elementwise_kernel<128, 4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      13.124us         0.52%      13.124us       3.281us             4  \nvoid at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      12.836us         0.51%      12.836us       3.209us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us      11.971us         0.48%      11.971us       2.993us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us      10.338us         0.41%      10.338us       2.585us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.328us         0.13%       3.328us       0.832us             4  \n                                        cudaGraphLaunch         2.97%     124.071us        41.98%       1.755ms     438.656us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        39.01%       1.631ms        39.01%       1.631ms       1.631ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        58.02%       2.425ms        58.02%       2.425ms       1.213ms       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 4.180ms\nSelf CUDA time total: 2.503ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "m16_32_c32",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "m16_32_c32",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "m16_32_c32",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "m16_32_c32",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "m16_32_c32",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "m8_16_c8",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "m8_16_c8",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "m8_16_c8",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "m8_16_c8",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "m8_16_c8",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "m8_32_c16",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "m8_32_c16",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "m8_32_c16",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "m8_32_c16",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "m8_32_c16",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    }
+  ],
+  "elapsed_s": 24.133639881,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_moe_w4a16",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/2969fb6977357fdf5f5c3c99b9e8f8526e560d87b567dbb052e3d973d2942b3c.py",
+      "sha256": "2969fb6977357fdf5f5c3c99b9e8f8526e560d87b567dbb052e3d973d2942b3c"
+    },
+    "m16_32_c32": {
+      "path": "experiments/sources/dc87affc97aeca3b493b81f052653daaf44c82ca01b06330e1eb29ff5e8597a8.py",
+      "sha256": "dc87affc97aeca3b493b81f052653daaf44c82ca01b06330e1eb29ff5e8597a8"
+    },
+    "m8_16_c8": {
+      "path": "experiments/sources/f6cd08cc4fc0101165b6126a7e50b3fdd9a9156f42f246a6d1371271be9e9074.py",
+      "sha256": "f6cd08cc4fc0101165b6126a7e50b3fdd9a9156f42f246a6d1371271be9e9074"
+    },
+    "m8_32_c16": {
+      "path": "experiments/sources/9b95b986efb059d55a69d2e20ffd0d7571aca32cc856766faa2e60fbe9cd7439.py",
+      "sha256": "9b95b986efb059d55a69d2e20ffd0d7571aca32cc856766faa2e60fbe9cd7439"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

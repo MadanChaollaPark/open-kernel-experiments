@@ -1,0 +1,6 @@
+{
+  "source": "outputs/attention_balanced_hybrid.py",
+  "sha256": "a4c2ab31edd4cdf088df05e6035a13274a86171bf65a266af0ce1141a1802d69",
+  "local_result": "outputs/attention-balanced-hybrid.json",
+  "promotion": "official check only; repeated local gain about 1.3%"
+}

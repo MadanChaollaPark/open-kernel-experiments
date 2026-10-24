@@ -1,0 +1,752 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "grouped_fp32_min0",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": false,
+      "message": "grouped_fp32_min0: RuntimeError: Check failed: (false) is false: CutlassSegmentGEMMSM90(tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, bool)::<lambda()>::<lambda()> failed to dispatch data type \u0002  "
+    },
+    {
+      "candidate": "grouped_fp32_min4096",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "grouped_fp32_min4096",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "grouped_fp32_min4096",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "grouped_fp32_min4096",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.231e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "grouped_fp32_min4096",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": false,
+      "message": "grouped_fp32_min4096: RuntimeError: Check failed: (false) is false: CutlassSegmentGEMMSM90(tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, tvm::ffi::TensorView, bool)::<lambda()>::<lambda()> failed to dispatch data type \u0002  "
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.951e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.173e-02 (worst row 4.654e-02) [bound 0.044]; attention input relative L2 error 1.455e-02 (worst row 3.571e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.023e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.083e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.043e-01) [bound 0.123]; attention input relative L2 error 3.378e-02 (worst row 7.837e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.017e-02) [bound 0.089]"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1082.4320316314697,
+      "candidate_us": 1082.1120142936707,
+      "baseline_samples": [
+        1086.4319801330566,
+        1083.3280086517334,
+        1080.9919834136963,
+        1080.7039737701416,
+        1081.536054611206,
+        1084.7680568695068,
+        1084.2880010604858,
+        1079.6480178833008
+      ],
+      "candidate_samples": [
+        1086.3360166549683,
+        1084.2880010604858,
+        1082.8800201416016,
+        1083.6479663848877,
+        1081.3440084457397,
+        1080.8639526367188,
+        1081.1840295791626,
+        1079.967975616455
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1430.6559562683105,
+      "candidate_us": 1426.6240000724792,
+      "baseline_samples": [
+        1433.0559968948364,
+        1428.671956062317,
+        1431.1360120773315,
+        1426.527976989746,
+        1423.6160516738892,
+        1430.2079677581787,
+        1431.1039447784424,
+        1431.1360120773315
+      ],
+      "candidate_samples": [
+        1429.1199445724487,
+        1426.7840385437012,
+        1423.8719940185547,
+        1426.84805393219,
+        1434.272050857544,
+        1425.1840114593506,
+        1426.4639616012573,
+        1425.279974937439
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3444.656014442444,
+      "candidate_us": 3448.032021522522,
+      "baseline_samples": [
+        3465.888023376465,
+        3445.7919597625732,
+        3445.631980895996,
+        3443.6800479888916,
+        3437.6320838928223,
+        3443.4239864349365,
+        3442.2080516815186,
+        3539.3919944763184
+      ],
+      "candidate_samples": [
+        3446.49600982666,
+        3446.0160732269287,
+        3449.536085128784,
+        3449.183940887451,
+        3445.631980895996,
+        3448.2879638671875,
+        3447.7760791778564,
+        3541.951894760132
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4947.695970535278,
+      "candidate_us": 4946.815967559814,
+      "baseline_samples": [
+        4958.559989929199,
+        4921.728134155273,
+        4920.032024383545,
+        4920.959949493408,
+        4936.831951141357,
+        4964.7040367126465,
+        4967.520236968994,
+        5006.432056427002
+      ],
+      "candidate_samples": [
+        4931.839942932129,
+        4926.239967346191,
+        4927.264213562012,
+        4928.095817565918,
+        4961.7919921875,
+        4966.368198394775,
+        5011.903762817383,
+        5015.200138092041
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 20759.77611541748,
+      "candidate_us": 20805.61637878418,
+      "baseline_samples": [
+        19798.368453979492,
+        20650.720596313477,
+        20881.05583190918,
+        20872.800827026367,
+        20868.127822875977,
+        20758.975982666016,
+        20760.576248168945,
+        20613.855361938477
+      ],
+      "candidate_samples": [
+        19327.360153198242,
+        20294.879913330078,
+        20769.023895263672,
+        20869.760513305664,
+        20842.208862304688,
+        20763.391494750977,
+        20912.639617919922,
+        20899.520874023438
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 18853.727340698242,
+      "candidate_us": 18995.296478271484,
+      "baseline_samples": [
+        17957.855224609375,
+        18815.744400024414,
+        19145.824432373047,
+        19181.407928466797,
+        19110.464096069336,
+        18844.09523010254,
+        18843.135833740234,
+        18863.359451293945
+      ],
+      "candidate_samples": [
+        17951.648712158203,
+        17975.1033782959,
+        19300.735473632812,
+        19356.9278717041,
+        19115.20004272461,
+        19024.864196777344,
+        18877.63214111328,
+        18965.728759765625
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 21938.464164733887,
+      "candidate_us": 21906.67152404785,
+      "baseline_samples": [
+        21245.344161987305,
+        21590.911865234375,
+        21973.695755004883,
+        21905.183792114258,
+        22165.119171142578,
+        22066.43295288086,
+        21971.744537353516,
+        21638.62419128418
+      ],
+      "candidate_samples": [
+        20934.431076049805,
+        21140.031814575195,
+        21974.943161010742,
+        21885.02311706543,
+        22308.639526367188,
+        22082.687377929688,
+        21928.319931030273,
+        21826.080322265625
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 26687.16812133789,
+      "candidate_us": 26678.07960510254,
+      "baseline_samples": [
+        25438.14468383789,
+        26581.632614135742,
+        27026.399612426758,
+        26844.512939453125,
+        26723.10447692871,
+        26484.384536743164,
+        26772.960662841797,
+        26651.23176574707
+      ],
+      "candidate_samples": [
+        25286.0164642334,
+        25383.77571105957,
+        26796.35238647461,
+        26876.15966796875,
+        26853.055953979492,
+        26706.84814453125,
+        26649.311065673828,
+        26324.67269897461
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"batch\": 1, \"ctx\": 0, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 300, \"seed\": 2100}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 3000, \"dist\": \"normal\", \"layer\": \"full\", \"page\": 1, \"q_len\": 753, \"seed\": 2101}": {
+      "local_start": 160
+    },
+    "{\"batch\": 2, \"ctx\": 2500, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 753, \"seed\": 2102}": {
+      "local_start": 160
+    },
+    "{\"batch\": 3, \"ctx\": 5000, \"dist\": \"outliers\", \"layer\": \"full\", \"page\": 1, \"q_len\": 200, \"seed\": 2103}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 4096, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 4096, \"seed\": 2104}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"turn 1\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1001, \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"turn 1\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1002, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"turn 4\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1003, \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"turn 4\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1004, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 0, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1006, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 32768, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1007, \"weight\": 138}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 32768, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1008, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 65536, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1010, \"weight\": 16}": {
+      "local_start": 160
+    }
+  },
+  "calibration_us": 3.3599999733269215,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "control",
+    "case": {
+      "batch": 1,
+      "ctx": 32768,
+      "layer": "sliding",
+      "q_len": 16384,
+      "page": 1,
+      "dist": "soft",
+      "load": "first turn",
+      "weight": 138,
+      "repeats": 6,
+      "seed": 1007
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us      48.394ms        65.95%      48.394ms       6.049ms             8  \n         nvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      10.154ms        13.84%      10.154ms     846.188us            12  \n         nvjet_sm90_tst_320x128_64x3_1x2_h_bz_coopB_TNT         0.00%       0.000us         0.00%       0.000us       0.000us       5.960ms         8.12%       5.960ms       1.490ms             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.632ms         2.22%       1.632ms     407.918us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.620ms         2.21%       1.620ms     404.886us             4  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.230ms         1.68%       1.230ms     307.567us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us       1.212ms         1.65%       1.212ms     303.063us             4  \n         nvjet_sm90_tss_128x256_64x4_2x1_v_bz_coopA_NNN         0.00%       0.000us         0.00%       0.000us       0.000us       1.160ms         1.58%       1.160ms     144.948us             8  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     516.412us         0.70%     516.412us     129.103us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us     334.208us         0.46%     334.208us      83.552us             4  \nvoid at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us     321.951us         0.44%     321.951us      80.488us             4  \n                                _qk_rms_norm_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     173.118us         0.24%     173.118us      43.279us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     166.784us         0.23%     166.784us      41.696us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us     109.120us         0.15%     109.120us      27.280us             4  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us     100.096us         0.14%     100.096us      25.024us             4  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 74.236ms\nSelf CUDA time total: 73.382ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us      49.405ms        66.34%      49.405ms       6.176ms             8  \n         nvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      10.193ms        13.69%      10.193ms     849.375us            12  \n         nvjet_sm90_tst_320x128_64x3_1x2_h_bz_coopB_TNT         0.00%       0.000us         0.00%       0.000us       0.000us       5.958ms         8.00%       5.958ms       1.490ms             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.633ms         2.19%       1.633ms     408.128us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.602ms         2.15%       1.602ms     400.503us             4  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.263ms         1.70%       1.263ms     315.768us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us       1.218ms         1.64%       1.218ms     304.512us             4  \n         nvjet_sm90_tss_128x256_64x4_2x1_v_bz_coopA_NNN         0.00%       0.000us         0.00%       0.000us       0.000us       1.168ms         1.57%       1.168ms     145.992us             8  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     519.679us         0.70%     519.679us     129.920us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us     334.368us         0.45%     334.368us      83.592us             4  \nvoid at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us     325.664us         0.44%     325.664us      81.416us             4  \n                                _qk_rms_norm_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     174.272us         0.23%     174.272us      43.568us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     166.720us         0.22%     166.720us      41.680us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us     110.752us         0.15%     110.752us      27.688us             4  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us     100.031us         0.13%     100.031us      25.008us             4  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 75.478ms\nSelf CUDA time total: 74.474ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "grouped_fp32_min0",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "grouped_fp32_min0",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "grouped_fp32_min0",
+      "function": "_segments",
+      "registers": 20,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "grouped_fp32_min0",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "grouped_fp32_min0",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "grouped_fp32_min4096",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "grouped_fp32_min4096",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "grouped_fp32_min4096",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "grouped_fp32_min4096",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "grouped_fp32_min4096",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    }
+  ],
+  "elapsed_s": 38.009005458,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_prefill_layer",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/4989732e775b756a7799e9d5fff7537ab2de28218d6f8435d07d4149956d2baa.py",
+      "sha256": "4989732e775b756a7799e9d5fff7537ab2de28218d6f8435d07d4149956d2baa"
+    },
+    "grouped_fp32_min0": {
+      "path": "experiments/sources/424e7254772f2e04d0444732299ee195b6f3551053e390c28fec83404542aa1e.py",
+      "sha256": "424e7254772f2e04d0444732299ee195b6f3551053e390c28fec83404542aa1e"
+    },
+    "grouped_fp32_min4096": {
+      "path": "experiments/sources/875c1f1d9562ce09ccc8bd2bad2913ce3fe942a27b8b1ed61d209dbe86335089.py",
+      "sha256": "875c1f1d9562ce09ccc8bd2bad2913ce3fe942a27b8b1ed61d209dbe86335089"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

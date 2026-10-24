@@ -1,0 +1,1403 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "b1024_n128",
+      "case": {
+        "seed": 1700,
+        "batch": 1,
+        "ctx": 10,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.318e-02 (worst row 5.318e-02) [bound 0.115: 2.5 x the reference's 0.040 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "b1024_n64",
+      "case": {
+        "seed": 1700,
+        "batch": 1,
+        "ctx": 10,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.318e-02 (worst row 5.318e-02) [bound 0.115: 2.5 x the reference's 0.040 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "b2048_n128",
+      "case": {
+        "seed": 1700,
+        "batch": 1,
+        "ctx": 10,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.318e-02 (worst row 5.318e-02) [bound 0.115: 2.5 x the reference's 0.040 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "b512_n128",
+      "case": {
+        "seed": 1700,
+        "batch": 1,
+        "ctx": 10,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.318e-02 (worst row 5.318e-02) [bound 0.115: 2.5 x the reference's 0.040 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "b512_n64",
+      "case": {
+        "seed": 1700,
+        "batch": 1,
+        "ctx": 10,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.318e-02 (worst row 5.318e-02) [bound 0.115: 2.5 x the reference's 0.040 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1700,
+        "batch": 1,
+        "ctx": 10,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.319e-02 (worst row 5.319e-02) [bound 0.115: 2.5 x the reference's 0.040 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "b1024_n128",
+      "case": {
+        "seed": 1701,
+        "batch": 3,
+        "ctx": 2047,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.273e-02 (worst row 8.210e-02) [bound 0.150: 2.5 x the reference's 0.078 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "b1024_n64",
+      "case": {
+        "seed": 1701,
+        "batch": 3,
+        "ctx": 2047,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.276e-02 (worst row 8.216e-02) [bound 0.150: 2.5 x the reference's 0.078 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "b2048_n128",
+      "case": {
+        "seed": 1701,
+        "batch": 3,
+        "ctx": 2047,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.273e-02 (worst row 8.210e-02) [bound 0.150: 2.5 x the reference's 0.078 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "b512_n128",
+      "case": {
+        "seed": 1701,
+        "batch": 3,
+        "ctx": 2047,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.273e-02 (worst row 8.210e-02) [bound 0.150: 2.5 x the reference's 0.078 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "b512_n64",
+      "case": {
+        "seed": 1701,
+        "batch": 3,
+        "ctx": 2047,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.276e-02 (worst row 8.216e-02) [bound 0.150: 2.5 x the reference's 0.078 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1701,
+        "batch": 3,
+        "ctx": 2047,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.276e-02 (worst row 8.216e-02) [bound 0.150: 2.5 x the reference's 0.078 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "b1024_n128",
+      "case": {
+        "seed": 1702,
+        "batch": 5,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1
+      },
+      "ok": false,
+      "message": "b1024_n128: CompilationError: at 52:4:\n        score=tl.dot(q,k)*SCALE*ks*1.4426950408889634\n        score=tl.where(mask,score,-1.0e6)\n        next_peak=tl.maximum(peak,tl.max(score,1))\n        alpha=tl.exp2(peak-next_peak)\n        prob=tl.where(mask,tl.exp2(score-next_peak[:,None]),0.0)\n        acc=acc*alpha[:,None]\n        acc=tl.dot(prob.to(tl.bfloat16),v,acc)\n        denom=denom*alpha+tl.sum(prob,1)\n        peak=next_peak\n    # New keys are read directly from this call's projections. Only the final\n    # split writes their cache rows, so no block reads a concurrent cache write.\n    if s==SPLITS-1:\n    ^\nAssertionError('initial value for `position` is of type fp32[constexpr[64]], but the then block redefines it as fp32[constexpr[16]]')"
+    },
+    {
+      "candidate": "b1024_n64",
+      "case": {
+        "seed": 1702,
+        "batch": 5,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1
+      },
+      "ok": false,
+      "message": "b1024_n64: CompilationError: at 52:4:\n        score=tl.dot(q,k)*SCALE*ks*1.4426950408889634\n        score=tl.where(mask,score,-1.0e6)\n        next_peak=tl.maximum(peak,tl.max(score,1))\n        alpha=tl.exp2(peak-next_peak)\n        prob=tl.where(mask,tl.exp2(score-next_peak[:,None]),0.0)\n        acc=acc*alpha[:,None]\n        acc=tl.dot(prob.to(tl.bfloat16),v,acc)\n        denom=denom*alpha+tl.sum(prob,1)\n        peak=next_peak\n    # New keys are read directly from this call's projections. Only the final\n    # split writes their cache rows, so no block reads a concurrent cache write.\n    if s==SPLITS-1:\n    ^\nAssertionError('initial value for `position` is of type fp32[constexpr[64]], but the then block redefines it as fp32[constexpr[16]]')"
+    },
+    {
+      "candidate": "b2048_n128",
+      "case": {
+        "seed": 1702,
+        "batch": 5,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1
+      },
+      "ok": false,
+      "message": "b2048_n128: CompilationError: at 52:4:\n        score=tl.dot(q,k)*SCALE*ks*1.4426950408889634\n        score=tl.where(mask,score,-1.0e6)\n        next_peak=tl.maximum(peak,tl.max(score,1))\n        alpha=tl.exp2(peak-next_peak)\n        prob=tl.where(mask,tl.exp2(score-next_peak[:,None]),0.0)\n        acc=acc*alpha[:,None]\n        acc=tl.dot(prob.to(tl.bfloat16),v,acc)\n        denom=denom*alpha+tl.sum(prob,1)\n        peak=next_peak\n    # New keys are read directly from this call's projections. Only the final\n    # split writes their cache rows, so no block reads a concurrent cache write.\n    if s==SPLITS-1:\n    ^\nAssertionError('initial value for `position` is of type fp32[constexpr[64]], but the then block redefines it as fp32[constexpr[16]]')"
+    },
+    {
+      "candidate": "b512_n128",
+      "case": {
+        "seed": 1702,
+        "batch": 5,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1
+      },
+      "ok": false,
+      "message": "b512_n128: CompilationError: at 52:4:\n        score=tl.dot(q,k)*SCALE*ks*1.4426950408889634\n        score=tl.where(mask,score,-1.0e6)\n        next_peak=tl.maximum(peak,tl.max(score,1))\n        alpha=tl.exp2(peak-next_peak)\n        prob=tl.where(mask,tl.exp2(score-next_peak[:,None]),0.0)\n        acc=acc*alpha[:,None]\n        acc=tl.dot(prob.to(tl.bfloat16),v,acc)\n        denom=denom*alpha+tl.sum(prob,1)\n        peak=next_peak\n    # New keys are read directly from this call's projections. Only the final\n    # split writes their cache rows, so no block reads a concurrent cache write.\n    if s==SPLITS-1:\n    ^\nAssertionError('initial value for `position` is of type fp32[constexpr[64]], but the then block redefines it as fp32[constexpr[16]]')"
+    },
+    {
+      "candidate": "b512_n64",
+      "case": {
+        "seed": 1702,
+        "batch": 5,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1
+      },
+      "ok": false,
+      "message": "b512_n64: CompilationError: at 52:4:\n        score=tl.dot(q,k)*SCALE*ks*1.4426950408889634\n        score=tl.where(mask,score,-1.0e6)\n        next_peak=tl.maximum(peak,tl.max(score,1))\n        alpha=tl.exp2(peak-next_peak)\n        prob=tl.where(mask,tl.exp2(score-next_peak[:,None]),0.0)\n        acc=acc*alpha[:,None]\n        acc=tl.dot(prob.to(tl.bfloat16),v,acc)\n        denom=denom*alpha+tl.sum(prob,1)\n        peak=next_peak\n    # New keys are read directly from this call's projections. Only the final\n    # split writes their cache rows, so no block reads a concurrent cache write.\n    if s==SPLITS-1:\n    ^\nAssertionError('initial value for `position` is of type fp32[constexpr[64]], but the then block redefines it as fp32[constexpr[16]]')"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1702,
+        "batch": 5,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.201e-02 (worst row 1.526e-01) [bound 0.150: 2.5 x the reference's 0.082 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.709e-02 (worst row 9.066e-02) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.422e-02 (worst row 8.895e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.789e-02 (worst row 1.211e-01) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1706,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "dist": "edges",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 5.827e-02 (worst row 7.397e-02) [bound 0.150: 2.5 x the reference's 0.059 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.296e-02 (worst row 1.199e-01) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 9.396e-02 (worst row 1.243e-01) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1709,
+        "batch": 3,
+        "ctx": 4000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "page": 1,
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.423e-02 (worst row 1.032e-01) [bound 0.150: 2.5 x the reference's 0.084 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.637e-02 (worst row 1.068e-01) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.760e-02 (worst row 7.862e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1712,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "dist": "soft",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 6.769e-02 (worst row 9.091e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.974e-02 (worst row 7.854e-02) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.506e-02 (worst row 5.625e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.791e-02 (worst row 4.354e-02) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "seed": 601
+      },
+      "ok": true,
+      "message": "relative L2 error 7.319e-02 (worst row 7.319e-02) [bound 0.150: 2.5 x the reference's 0.072 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.226e-02 (worst row 4.226e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 603
+      },
+      "ok": true,
+      "message": "relative L2 error 6.511e-02 (worst row 7.555e-02) [bound 0.150: 2.5 x the reference's 0.065 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.075e-02 (worst row 5.436e-02) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 605
+      },
+      "ok": true,
+      "message": "relative L2 error 7.313e-02 (worst row 9.583e-02) [bound 0.150: 2.5 x the reference's 0.074 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.695e-02 (worst row 6.440e-02) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 607
+      },
+      "ok": true,
+      "message": "relative L2 error 6.227e-02 (worst row 7.917e-02) [bound 0.150: 2.5 x the reference's 0.058 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 2.737e-02 (worst row 4.052e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 609
+      },
+      "ok": true,
+      "message": "relative L2 error 6.298e-02 (worst row 1.013e-01) [bound 0.150: 2.5 x the reference's 0.063 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.219e-02 (worst row 6.115e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 611
+      },
+      "ok": true,
+      "message": "relative L2 error 6.772e-02 (worst row 1.091e-01) [bound 0.150: 2.5 x the reference's 0.067 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.456e-02 (worst row 6.988e-02) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "seed": 601
+      },
+      "baseline_us": 25.407999753952026,
+      "candidate_us": 12.992000207304955,
+      "baseline_samples": [
+        27.583999559283257,
+        25.407999753952026,
+        24.927999824285507,
+        25.50400048494339,
+        25.02400055527687,
+        25.407999753952026,
+        26.048000901937485,
+        24.927999824285507,
+        25.151999667286873,
+        26.27200074493885,
+        25.151999667286873,
+        25.407999753952026,
+        25.82399919629097,
+        25.407999753952026,
+        25.151999667286873,
+        25.728000327944756,
+        25.631999596953392,
+        24.89599958062172,
+        26.048000901937485,
+        25.18399991095066
+      ],
+      "candidate_samples": [
+        13.791999779641628,
+        13.21600005030632,
+        13.824000023305416,
+        12.768000364303589,
+        12.992000207304955,
+        12.736000120639801,
+        12.768000364303589,
+        12.992000207304955,
+        12.768000364303589,
+        12.992000207304955,
+        12.992000207304955,
+        12.799999676644802,
+        13.21600005030632,
+        13.439999893307686,
+        13.439999893307686,
+        12.768000364303589,
+        13.663999736309052,
+        13.21600005030632,
+        12.992000207304955,
+        13.183999806642532
+      ]
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 35.77600046992302,
+      "candidate_us": 24.54400062561035,
+      "baseline_samples": [
+        37.151999771595,
+        35.999998450279236,
+        35.2960005402565,
+        35.87200120091438,
+        35.48799827694893,
+        36.38400137424469,
+        35.90400144457817,
+        35.711999982595444,
+        35.58399900794029,
+        35.77600046992302,
+        35.26400029659271,
+        36.57599911093712,
+        35.61599925160408,
+        35.19999980926514,
+        36.12799942493439,
+        35.51999852061272,
+        35.77600046992302,
+        36.54399886727333,
+        36.159999668598175,
+        35.77600046992302
+      ],
+      "candidate_samples": [
+        25.34399926662445,
+        24.288000538945198,
+        24.89599958062172,
+        24.159999564290047,
+        24.639999493956566,
+        24.447999894618988,
+        24.351999163627625,
+        24.351999163627625,
+        25.696000084280968,
+        24.54400062561035,
+        24.159999564290047,
+        24.320000782608986,
+        24.607999250292778,
+        24.639999493956566,
+        25.82399919629097,
+        24.54400062561035,
+        24.191999807953835,
+        25.696000084280968,
+        24.86399933695793,
+        24.512000381946564
+      ]
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 603
+      },
+      "baseline_us": 31.26399964094162,
+      "candidate_us": 16.656000167131424,
+      "baseline_samples": [
+        34.272000193595886,
+        32.09599852561951,
+        31.168000772595406,
+        31.808000057935715,
+        31.840000301599503,
+        30.94400092959404,
+        32.22399950027466,
+        30.751999467611313,
+        32.22399950027466,
+        31.520001590251923,
+        30.94400092959404,
+        31.615998595952988,
+        30.46399913728237,
+        31.360000371932983,
+        31.199999153614044,
+        30.97599931061268,
+        30.719999223947525,
+        30.912000685930252,
+        31.10400028526783,
+        31.328000128269196
+      ],
+      "candidate_samples": [
+        17.503999173641205,
+        16.575999557971954,
+        16.767999157309532,
+        16.607999801635742,
+        16.64000004529953,
+        16.416000202298164,
+        16.831999644637108,
+        16.831999644637108,
+        16.672000288963318,
+        16.672000288963318,
+        16.64000004529953,
+        16.704000532627106,
+        18.559999763965607,
+        16.448000445961952,
+        16.51199907064438,
+        16.448000445961952,
+        16.607999801635742,
+        16.767999157309532,
+        16.767999157309532,
+        16.3199994713068
+      ]
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 206.84800297021866,
+      "candidate_us": 147.13599532842636,
+      "baseline_samples": [
+        208.92800390720367,
+        206.27200603485107,
+        208.00000429153442,
+        207.13600516319275,
+        205.34400641918182,
+        208.19200575351715,
+        205.9520035982132,
+        206.94400370121002,
+        207.519993185997,
+        205.72799444198608,
+        206.40000700950623,
+        206.496000289917,
+        207.23199844360352,
+        206.9759964942932,
+        206.7520022392273,
+        207.42399990558624,
+        207.20000565052032,
+        205.1839977502823,
+        206.36799931526184,
+        205.9520035982132
+      ],
+      "candidate_samples": [
+        148.8640010356903,
+        146.7200070619583,
+        146.88000082969666,
+        146.97599411010742,
+        148.3519971370697,
+        147.5519984960556,
+        147.10399508476257,
+        147.74399995803833,
+        147.10399508476257,
+        146.2399959564209,
+        146.08000218868256,
+        147.42399752140045,
+        147.77599275112152,
+        148.92800152301788,
+        147.5519984960556,
+        147.16799557209015,
+        147.039994597435,
+        146.68799936771393,
+        147.20000326633453,
+        146.7200070619583
+      ]
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 605
+      },
+      "baseline_us": 35.85600107908249,
+      "candidate_us": 21.21600043028593,
+      "baseline_samples": [
+        38.24000060558319,
+        35.93600168824196,
+        35.19999980926514,
+        36.41600161790848,
+        36.607999354600906,
+        35.13599932193756,
+        34.97600182890892,
+        35.64799949526787,
+        35.48799827694893,
+        36.479998379945755,
+        35.51999852061272,
+        35.232000052928925,
+        36.3520011305809,
+        35.77600046992302,
+        36.159999668598175,
+        35.16799956560135,
+        34.84800085425377,
+        36.12799942493439,
+        36.159999668598175,
+        35.93600168824196
+      ],
+      "candidate_samples": [
+        22.943999618291855,
+        20.99199965596199,
+        20.640000700950623,
+        20.70399932563305,
+        21.344000473618507,
+        21.056000143289566,
+        22.143999114632607,
+        20.959999412298203,
+        21.344000473618507,
+        22.304000332951546,
+        21.056000143289566,
+        21.536000072956085,
+        21.023999899625778,
+        21.536000072956085,
+        21.407999098300934,
+        21.91999927163124,
+        21.376000717282295,
+        21.056000143289566,
+        20.896000787615776,
+        21.088000386953354
+      ]
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 389.7919952869415,
+      "candidate_us": 282.25599229335785,
+      "baseline_samples": [
+        392.67200231552124,
+        391.1040127277374,
+        388.19199800491333,
+        389.95200395584106,
+        389.98401165008545,
+        390.1120126247406,
+        387.1679902076721,
+        386.3680064678192,
+        388.8640105724335,
+        390.1439905166626,
+        390.52799344062805,
+        391.36001467704773,
+        387.10400462150574,
+        389.055997133255,
+        392.35201478004456,
+        389.18399810791016,
+        390.175998210907,
+        389.631986618042,
+        388.19199800491333,
+        389.47200775146484
+      ],
+      "candidate_samples": [
+        282.49600529670715,
+        282.6560139656067,
+        282.46399760246277,
+        280.09599447250366,
+        280.41601181030273,
+        282.81599283218384,
+        282.55999088287354,
+        281.5360128879547,
+        279.83999252319336,
+        280.4799973964691,
+        282.9760015010834,
+        283.3920121192932,
+        281.5040051937103,
+        281.792014837265,
+        281.823992729187,
+        278.01600098609924,
+        283.7440073490143,
+        282.943993806839,
+        286.3360047340393,
+        282.04798698425293
+      ]
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 607
+      },
+      "baseline_us": 27.264000847935677,
+      "candidate_us": 14.14399966597557,
+      "baseline_samples": [
+        29.920000582933426,
+        27.03999914228916,
+        27.51999907195568,
+        27.264000847935677,
+        27.264000847935677,
+        27.264000847935677,
+        27.07199938595295,
+        27.264000847935677,
+        27.264000847935677,
+        27.68000029027462,
+        27.264000847935677,
+        27.07199938595295,
+        27.68000029027462,
+        27.712000533938408,
+        27.07199938595295,
+        27.03999914228916,
+        27.264000847935677,
+        27.03999914228916,
+        27.488000690937042,
+        26.815999299287796
+      ],
+      "candidate_samples": [
+        14.944000169634819,
+        14.368000440299511,
+        14.14399966597557,
+        14.560000039637089,
+        14.112000353634357,
+        14.112000353634357,
+        14.14399966597557,
+        13.919999822974205,
+        14.112000353634357,
+        14.14399966597557,
+        14.14399966597557,
+        14.368000440299511,
+        14.816000126302242,
+        13.887999579310417,
+        14.368000440299511,
+        14.14399966597557,
+        14.14399966597557,
+        14.14399966597557,
+        14.336000196635723,
+        13.919999822974205
+      ]
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 40.62400013208389,
+      "candidate_us": 32.07999840378761,
+      "baseline_samples": [
+        42.81599819660187,
+        40.64000025391579,
+        40.511999279260635,
+        41.919998824596405,
+        42.24000126123428,
+        40.12800008058548,
+        40.991999208927155,
+        40.16000032424927,
+        41.53599962592125,
+        40.09599983692169,
+        40.54399952292442,
+        40.511999279260635,
+        40.41599854826927,
+        41.79200157523155,
+        41.919998824596405,
+        39.99999910593033,
+        40.608000010252,
+        41.24800115823746,
+        40.70400074124336,
+        40.44799879193306
+      ],
+      "candidate_samples": [
+        32.67199918627739,
+        32.09599852561951,
+        31.808000057935715,
+        31.87200054526329,
+        32.06399828195572,
+        32.03200176358223,
+        32.44800120592117,
+        31.936001032590866,
+        33.215999603271484,
+        31.968001276254654,
+        32.22399950027466,
+        32.15999901294708,
+        32.06399828195572,
+        32.896000891923904,
+        32.48000144958496,
+        32.00000151991844,
+        32.127998769283295,
+        32.00000151991844,
+        34.17599946260452,
+        31.74399957060814
+      ]
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 609
+      },
+      "baseline_us": 33.7119996547699,
+      "candidate_us": 24.064000695943832,
+      "baseline_samples": [
+        37.31200098991394,
+        34.07999873161316,
+        33.24799984693527,
+        34.81600061058998,
+        33.1839993596077,
+        33.08799862861633,
+        33.63199904561043,
+        33.88800099492073,
+        33.24799984693527,
+        34.432001411914825,
+        33.92000123858452,
+        33.663999289274216,
+        33.055998384952545,
+        34.11199897527695,
+        34.01599824428558,
+        34.304000437259674,
+        33.47200155258179,
+        33.28000009059906,
+        33.440001308918,
+        33.76000002026558
+      ],
+      "candidate_samples": [
+        25.312000885605812,
+        24.064000695943832,
+        24.09599907696247,
+        25.34399926662445,
+        23.903999477624893,
+        23.48800003528595,
+        24.064000695943832,
+        23.903999477624893,
+        23.96799996495247,
+        24.032000452280045,
+        23.903999477624893,
+        24.064000695943832,
+        24.447999894618988,
+        24.159999564290047,
+        24.12799932062626,
+        23.744000121951103,
+        23.840000852942467,
+        23.77600036561489,
+        24.831999093294144,
+        24.191999807953835
+      ]
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 206.00000023841858,
+      "candidate_us": 199.40800219774246,
+      "baseline_samples": [
+        208.0959975719452,
+        206.4639925956726,
+        205.63200116157532,
+        205.72799444198608,
+        205.6960016489029,
+        205.37599921226501,
+        206.7839950323105,
+        206.496000289917,
+        206.01600408554077,
+        205.72799444198608,
+        205.28000593185425,
+        205.9199959039688,
+        205.53599298000336,
+        207.0080041885376,
+        206.84799551963806,
+        205.53599298000336,
+        205.9839963912964,
+        206.4639925956726,
+        206.1759978532791,
+        206.08000457286835
+      ],
+      "candidate_samples": [
+        200.8959949016571,
+        198.94400238990784,
+        198.55999946594238,
+        199.3280053138733,
+        201.63199305534363,
+        198.55999946594238,
+        198.2080042362213,
+        199.71199333667755,
+        199.90399479866028,
+        198.7839937210083,
+        199.23199713230133,
+        199.48799908161163,
+        200.1280039548874,
+        198.65599274635315,
+        198.08000326156616,
+        200.00000298023224,
+        199.77599382400513,
+        200.28799772262573,
+        200.57600736618042,
+        198.30399751663208
+      ]
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 611
+      },
+      "baseline_us": 39.35999982059002,
+      "candidate_us": 33.47200155258179,
+      "baseline_samples": [
+        42.7200011909008,
+        40.383998304605484,
+        38.975998759269714,
+        39.423998445272446,
+        39.103999733924866,
+        39.712000638246536,
+        38.784001022577286,
+        40.32000154256821,
+        39.99999910593033,
+        38.91199827194214,
+        38.52799907326698,
+        39.45599868893623,
+        39.03999924659729,
+        40.352001786231995,
+        39.39199820160866,
+        39.32800143957138,
+        39.07199949026108,
+        38.84800150990486,
+        40.383998304605484,
+        38.656000047922134
+      ],
+      "candidate_samples": [
+        34.55999866127968,
+        33.40800106525421,
+        33.376000821590424,
+        33.08799862861633,
+        33.47200155258179,
+        33.055998384952545,
+        33.535998314619064,
+        33.40800106525421,
+        33.504001796245575,
+        33.440001308918,
+        33.47200155258179,
+        33.85600075125694,
+        32.6399989426136,
+        33.63199904561043,
+        32.92800113558769,
+        33.11999887228012,
+        33.56799855828285,
+        33.92000123858452,
+        33.59999880194664,
+        33.76000002026558
+      ]
+    },
+    {
+      "candidate": "hybrid_control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 395.58398723602295,
+      "candidate_us": 388.19199800491333,
+      "baseline_samples": [
+        397.0879912376404,
+        394.5600092411041,
+        396.2559998035431,
+        395.80801129341125,
+        394.49599385261536,
+        395.2319920063019,
+        394.5919871330261,
+        396.7039883136749,
+        394.01599764823914,
+        395.00799775123596,
+        395.32798528671265,
+        395.55200934410095,
+        396.9919979572296,
+        395.58398723602295,
+        395.58398723602295,
+        397.7920114994049,
+        396.64000272750854,
+        395.2319920063019,
+        396.2239921092987,
+        398.24000000953674
+      ],
+      "candidate_samples": [
+        387.7440094947815,
+        388.38401436805725,
+        387.4239921569824,
+        387.64798641204834,
+        388.19199800491333,
+        386.78398728370667,
+        387.9680037498474,
+        386.84800267219543,
+        389.21600580215454,
+        387.1679902076721,
+        388.19199800491333,
+        388.9920115470886,
+        387.9680037498474,
+        388.480007648468,
+        389.75998759269714,
+        388.7999951839447,
+        388.480007648468,
+        388.5439932346344,
+        389.1200125217438,
+        386.55999302864075
+      ]
+    }
+  ],
+  "calibration_us": 3.1679999083280563,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_last_case": {
+    "candidate": "hybrid_control",
+    "table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.508ms        88.13%       1.508ms     377.092us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     149.473us         8.73%     149.473us      37.368us             4  \nvoid flash::prepare_varlen_num_blocks_kernel<2, true...         0.00%       0.000us         0.00%       0.000us       0.000us      15.490us         0.91%      15.490us       3.872us             4  \nvoid cutlass::device_kernel<flash::FlashAttnFwdCombi...         0.00%       0.000us         0.00%       0.000us       0.000us      14.656us         0.86%      14.656us       3.664us             4  \n                                         _prepare_heads         0.00%       0.000us         0.00%       0.000us       0.000us      10.751us         0.63%      10.751us       2.688us             4  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us       9.280us         0.54%       9.280us       2.320us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.552us         0.21%       3.552us       0.888us             4  \n                                        cudaGraphLaunch         3.17%     130.902us        60.79%       2.512ms     628.079us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        57.63%       2.381ms        57.63%       2.381ms       2.381ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        39.21%       1.620ms        39.21%       1.620ms     810.096us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 4.133ms\nSelf CUDA time total: 1.712ms\n"
+  },
+  "elapsed_s": 66.877982682,
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_attention_decode",
+  "source_files": {
+    "b1024_n128": {
+      "path": "experiments/sources/4b162ff05e0f5f40df396c3d8db585181a61ff127b2586bfd2dfe1eb3d016d72.py",
+      "sha256": "4b162ff05e0f5f40df396c3d8db585181a61ff127b2586bfd2dfe1eb3d016d72"
+    },
+    "b1024_n64": {
+      "path": "experiments/sources/7db257817d55007e36fb36ded2c4a00290e6ce8a3204412167babc057c21b6cf.py",
+      "sha256": "7db257817d55007e36fb36ded2c4a00290e6ce8a3204412167babc057c21b6cf"
+    },
+    "b2048_n128": {
+      "path": "experiments/sources/7373935c5f8c9e5b3c40215617f4957406b205dff58c87411c4ee0b5dca1c332.py",
+      "sha256": "7373935c5f8c9e5b3c40215617f4957406b205dff58c87411c4ee0b5dca1c332"
+    },
+    "b512_n128": {
+      "path": "experiments/sources/7bd1a6c409f242364e5877389d555c6c923e3515b3477b46ed1b7595554681b4.py",
+      "sha256": "7bd1a6c409f242364e5877389d555c6c923e3515b3477b46ed1b7595554681b4"
+    },
+    "b512_n64": {
+      "path": "experiments/sources/816d7694f9b592fea9cd0f0aaa0e46cae21fe74d60f02bebcb5b36c01a8ebf57.py",
+      "sha256": "816d7694f9b592fea9cd0f0aaa0e46cae21fe74d60f02bebcb5b36c01a8ebf57"
+    },
+    "hybrid_control": {
+      "path": "experiments/sources/dc58ccc282578206b18086ceec13d08ffeccc8f9050aec711021184209fc3ac0.py",
+      "sha256": "dc58ccc282578206b18086ceec13d08ffeccc8f9050aec711021184209fc3ac0"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

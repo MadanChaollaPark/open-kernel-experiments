@@ -1,0 +1,10 @@
+{
+  "source": "outputs/decode_compact_dispatch.py",
+  "sha256": "edbf532547c48b5c0b97e262e6da499fee38948d658cc7e350c7cf2360fe09d8",
+  "validation": "outputs/decode-compact-dispatch.json",
+  "candidate_checks": 25,
+  "total_comparison_checks": 50,
+  "local_score": 1.2506,
+  "control": 1.2414,
+  "note": "Small local gain consistent with repeated standaloneMoE effect; fulldecoder official check required."
+}

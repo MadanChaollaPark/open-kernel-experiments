@@ -1,0 +1,10 @@
+{
+  "id": "61162596970a4253",
+  "board": "muse_moe_w4a16",
+  "mode": "check",
+  "status": "queued",
+  "created_at": 1792805121.9392803,
+  "content_hash": "e21e3bb42a63df904107f8766c6eb4acbffee6c493b996d78f911c129cce994e",
+  "duplicate_of": null,
+  "archive_note": "Selected fields from official CLI JSON; logs and host paths omitted."
+}

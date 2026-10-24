@@ -1,0 +1,47 @@
+{
+  "id": "5eaf609ac8df4852",
+  "board": "muse_moe_w4a16",
+  "mode": "check",
+  "status": "done",
+  "created_at": 1792802389.6966052,
+  "started_at": 1792806711.810229,
+  "finished_at": 1792806770.4100122,
+  "content_hash": "bc611cab99ee717914025cb3d461eeb8e0a3bbd214cbfcb0943c7178755c96f8",
+  "duplicate_of": null,
+  "result": {
+    "passed": true,
+    "status": "ok",
+    "speedup": 1.1550410964011397,
+    "speedup_ci": [
+      1.1377154799551226,
+      1.1723667128471567
+    ],
+    "score_us": 11643.308659668164,
+    "baseline_us": 13448.5,
+    "flags": [],
+    "checks": {
+      "flagged": [],
+      "ok": true,
+      "rejected": []
+    },
+    "error": null,
+    "gpu": "H200",
+    "evaluator": {
+      "code_sha256": "afcead6a6ff090aa50fe9bc907f0fa8f4ba73d95fa92af93ec260b5e8ff00f00",
+      "files": {
+        "challenge/checks.py": "9a046c3c38db28b325dcd1557baecdf6bc9ef941d2175f9a900ba4c230bb8055",
+        "challenge/nvfp4.py": "cfdf37c7bc14b10f7353aba7d4632f4767401b92b4b073941a8030d9a961aaaf",
+        "configs/muse-spark-open.yaml": "98f07230e4e64fe91b7c76d9a3ce04948053c043d494d5f1fae56cfe2de033af",
+        "harness/eval.py": "0051a1bfac67a9f1fad06086b306653c6643b2bb253e15a794aa672312f070a9",
+        "harness/runner.py": "c905e5c80264c6d27620b6fc7d55b162dccdb8ed7282f8a513a4d2e6f2f226f2",
+        "harness/static_checks.py": "c5588b69e9e86229459a525c61b30096f6f13ff2add6cadf98f272c4ac8ca0c2",
+        "harness/worker.py": "950437610f57ddffbc1176b65d9c2ae909c47bf67b1e3fe0716a81946986f568",
+        "problems/muse_moe_w4a16/baseline.py": "4fc48bd9cdfd749863c93a2dbf4e556e0c38fb04acc4fa48a53ef34cbf6c92a1",
+        "problems/muse_moe_w4a16/reference.py": "a7e0b4fa86aa477a4e7bb5745b2b258954d72636b6da153bd239a717927cba44",
+        "problems/muse_moe_w4a16/task.yml": "cc6870087c1a115e69f40093478553e0a03c1b3e92f527c2e55c4115e2db42ad"
+      },
+      "image": "localhost:30500/kc/judge@sha256:9a7f287b80d772c6f636bbcb57422c619fe326e2aabc53803b85007bca93f68e"
+    }
+  },
+  "archive_note": "Selected fields from official CLI JSON; logs and host paths omitted."
+}

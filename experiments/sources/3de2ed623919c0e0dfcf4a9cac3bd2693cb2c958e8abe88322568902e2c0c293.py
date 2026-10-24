@@ -1,0 +1,201 @@
+# okc: problem=muse_moe_w4a16
+"""SGLang's NVFP4 expert path for Muse Spark Open on H200 (Marlin MoE runner), at SGLang commit
+a55ab7d5ae1bba59ac351e55026fe7f7644ecc5f: MuseSpark1xFp4Experts._forward_marlin, starting after the pre-expert norm.
+
+prepare() repacks the experts into Marlin's layout with prepare_moe_nvfp4_layer_for_marlin,
+as SGLang does at load. kernel_fn runs moe_align_block_size, two moe_wna16_marlin_gemm
+(W4A16, FP32 reduce), silu_and_mul and the Triton post-expert-norm weighted sum.
+
+Differs from SGLang: the expert all-reduce is not run."""
+
+from typing import TypedDict
+
+import types
+
+import torch
+from sgl_kernel.scalar_type import scalar_types
+
+from sglang.kernels.ops.activation.activation import silu_and_mul
+from sglang.kernels.ops.moe.moe_wna16_marlin import moe_wna16_marlin_gemm
+from sglang.kernels.ops.muse_spark_v12.fused_post_expert_norm_weighted_sum_triton import (
+    fused_post_expert_norm_weighted_sum,
+)
+from sglang.srt.layers.moe.fused_moe_triton import moe_align_block_size
+from sglang.srt.layers.quantization.marlin_utils import marlin_make_workspace
+from sglang.srt.layers.quantization.marlin_utils_fp4 import prepare_moe_nvfp4_layer_for_marlin
+
+
+class Weights(TypedDict):
+    w13: torch.Tensor          # uint8 [256, 2I, H/2], gate rows [0, I) then up rows [I, 2I), packed E2M1
+    w13_sf: torch.Tensor       # float8_e4m3fn [256, 2I, H/16]
+    w13_gs: torch.Tensor       # float32 [256]
+    w2: torch.Tensor           # uint8 [256, H, I/2]
+    w2_sf: torch.Tensor        # float8_e4m3fn [256, H, I/16]
+    w2_gs: torch.Tensor        # float32 [256]
+    post_norm_w: torch.Tensor  # bfloat16 [H], the post-expert RMSNorm's weight (applied as 1 + w)
+
+
+class Config(TypedDict):
+    bs: int           # tokens, M
+    d_hidden: int     # H = 4096, the width the MoE block runs its experts at
+    d_expert: int     # I = 4096
+    n_experts: int    # 256 experts in the model
+    local_start: int  # this GPU computes experts [local_start, local_start + local_count)
+    local_count: int  # 32: one GPU under 8-way expert parallelism
+    top_k: int        # 8
+    sharding: str     # "ep8"
+
+
+class Inputs(TypedDict):
+    hidden_states: torch.Tensor  # bfloat16 [M, H]
+    topk_ids: torch.Tensor       # int32 [M, 8], global expert ids (0-255)
+    topk_weights: torch.Tensor   # float32 [M, 8]
+    config: Config
+
+
+N_EXPERTS = 256
+TOP_K = 8
+# MuseSpark1xFp4Experts' candidates, smallest first.
+BLOCK_SIZE_M_CANDIDATES = (8, 16, 32, 48, 64)
+POST_NORM_EPS = 1e-8
+
+
+def _marlin_layer(weights, start, count):
+    """The parameters prepare_moe_nvfp4_layer_for_marlin reads, for experts [start, start+count)."""
+    sl = slice(start, start + count)
+    layer = types.SimpleNamespace(
+        quant_config=types.SimpleNamespace(group_size=16),
+        moe_runner_config=types.SimpleNamespace(is_gated=True),
+        intermediate_size_per_partition=weights["w13"].shape[1] // 2,
+        params_dtype=torch.bfloat16,
+        w13_weight=weights["w13"][sl].contiguous(),
+        w2_weight=weights["w2"][sl].contiguous(),
+        w13_weight_scale=weights["w13_sf"][sl].contiguous(),
+        w2_weight_scale=weights["w2_sf"][sl].contiguous(),
+        # One global scale per expert for gate and up, as in SGLang's Marlin path.
+        w13_weight_scale_2=weights["w13_gs"][sl].contiguous(),
+        w2_weight_scale_2=weights["w2_gs"][sl].contiguous(),
+    )
+    prepare_moe_nvfp4_layer_for_marlin(layer)
+    return layer
+
+
+def _base_prepare(weights):
+    device = weights["w13"].device
+    # One repacked bank: this GPU's 32 experts under EP8.
+    banks = {}
+    for start, count in ((0, 32),):
+        layer = _marlin_layer(weights, start, count)
+        expert_map = None
+        if count != N_EXPERTS:
+            expert_map = torch.full((N_EXPERTS,), -1, dtype=torch.int32, device=device)
+            expert_map[start:start + count] = torch.arange(count, dtype=torch.int32, device=device)
+        banks[(start, count)] = {
+            "w13": layer.w13_weight.data, "w13_s": layer.w13_weight_scale.data, "w13_gs": layer.w13_weight_scale_2.data,
+            "w2": layer.w2_weight.data, "w2_s": layer.w2_weight_scale.data, "w2_gs": layer.w2_weight_scale_2.data,
+            "expert_map": expert_map, "count": count, "size_n": layer.intermediate_size_per_partition,
+        }
+    torch.cuda.synchronize()
+    return {
+        "banks": banks,
+        "workspace": marlin_make_workspace(device, max_blocks_per_sm=4),
+        # MuseSpark1xFp4Experts binds the effective (1 + w) weight of the post-expert norm.
+        "norm_w": (weights["post_norm_w"].float() + 1.0).to(torch.bfloat16),
+    }
+
+
+def _best_moe(data,state):
+    cfg = data["config"]
+    bank = state["banks"][(cfg["local_start"], cfg["local_count"])]
+    x = data["hidden_states"].contiguous()
+    num_tokens, size_k = x.shape
+    size_n = bank["size_n"]
+    gemm1_n = 2 * size_n
+    expert_map = bank["expert_map"]
+
+    local_ids = data["topk_ids"].to(torch.int32)
+    if expert_map is not None:
+        local_ids = expert_map[local_ids]
+    local_ids = local_ids.contiguous()
+    topk_weights = data["topk_weights"].to(torch.float32).contiguous()
+
+    if num_tokens >= 128:
+        block_size_m = 16
+    else:
+        for block_size_m in BLOCK_SIZE_M_CANDIDATES:
+            if num_tokens * TOP_K / bank["count"] / block_size_m < 0.9:
+                break
+    if num_tokens == 1 and expert_map is None:
+        from sglang.kernels.ops.moe.moe_align_single_token import moe_align_single_token
+
+        sorted_ids, block_experts, n_padded = moe_align_single_token(local_ids, block_size_m)
+    else:
+        sorted_ids, block_experts, n_padded = moe_align_block_size(
+            local_ids, block_size_m, bank["count"])
+
+    cache2 = torch.empty((num_tokens * TOP_K, size_n), device=x.device, dtype=x.dtype)
+    cache13 = torch.empty((num_tokens * TOP_K * max(gemm1_n, size_k),), device=x.device, dtype=x.dtype)
+    cache1 = cache13[: num_tokens * TOP_K * gemm1_n].view(-1, gemm1_n)
+    cache3 = cache13[: num_tokens * TOP_K * size_k].view(-1, size_k)
+    common = dict(moe_block_size=block_size_m, mul_topk_weights=False, is_ep=expert_map is not None,
+                  b_q_type=scalar_types.float4_e2m1f, is_k_full=True, use_atomic_add=False,
+                  use_fp32_reduce=True, is_zp_float=False)
+    ws = state["workspace"]
+    cache1 = moe_wna16_marlin_gemm(
+        x, cache1, bank["w13"], None, bank["w13_s"], bank["w13_gs"], None, None, None, ws,
+        sorted_ids, block_experts, n_padded, topk_weights, top_k=TOP_K,
+        size_m=num_tokens, size_n=gemm1_n, size_k=size_k, **common)
+    silu_and_mul(cache1.view(-1, gemm1_n), cache2, expert_ids=local_ids.view(-1), expert_step=1)
+    y = moe_wna16_marlin_gemm(
+        cache2, cache3, bank["w2"], None, bank["w2_s"], bank["w2_gs"], None, None, None, ws,
+        sorted_ids, block_experts, n_padded, topk_weights, top_k=1,
+        size_m=num_tokens * TOP_K, size_n=size_k, size_k=size_n, **common).view(num_tokens, TOP_K, size_k)
+    return fused_post_expert_norm_weighted_sum(
+        y, topk_weights, norm_weight=state["norm_w"], eps=POST_NORM_EPS, weight_first=True,
+        slot_expert_ids=local_ids)
+
+from functools import cache
+_WARP_SRC='#include <cuda_bf16.h>\n#include <cuda_fp8.h>\n#include <cute/tensor.hpp>\n#include <cute/atom/mma_traits_sm90_gmma.hpp>\n#include <flashinfer/utils.cuh>\n#include "tvm_ffi_utils.h"\nusing namespace flashinfer;\nusing namespace cute;\n\n__device__ __forceinline__ float fp4_value(unsigned code) {\n unsigned mag=code&7;\n unsigned bits=(mag<2?mag*0x3f00u:0x3f00u+(mag<<6))|((code&8)<<12);\n return __uint_as_float(bits<<16);\n}\n__device__ __forceinline__ float fp8_value(unsigned char bits) {\n __nv_fp8_e4m3 f;f.__x=bits;return static_cast<float>(f);\n}\n__device__ __forceinline__ uint32_t dequant_pair(unsigned char bits,float scale) {\n __nv_bfloat162 v=__floats2bfloat162_rn(fp4_value(bits&15)*scale,fp4_value(bits>>4)*scale);\n return *reinterpret_cast<uint32_t*>(&v);\n}\ntemplate<bool GATED,int STAGES>\n__global__ void moe_wgmma(const __nv_bfloat16* __restrict__ X,const int* __restrict__ SORT,const int* __restrict__ EXP,const int* __restrict__ PAD,\n const unsigned char* __restrict__ W,const unsigned char* __restrict__ SF,const float* __restrict__ GS,__nv_bfloat16* __restrict__ Y,int N,int slots,int topk) {\n constexpr int K=4096;\n int block=blockIdx.y;\n if(block*8>=PAD[0])return;\n int expert=EXP[block];\n if(expert<0)return;\n extern __shared__ __align__(128) unsigned char storage[];\n auto* smem=reinterpret_cast<cute::bfloat16_t*>(storage);\n auto layout=tile_to_shape(GMMA::Layout_K_INTER_Atom<cute::bfloat16_t>{},Shape<_8,Int<K>>{});\n auto tensor=make_tensor(make_smem_ptr(smem),layout);\n for(int j=threadIdx.x;j<8*K;j+=128) {\n  int t=j/K,k=j%K,slot=SORT[block*8+t];\n  __nv_bfloat16 value=__float2bfloat16(0.f);\n  if(slot<slots)value=X[(slot/topk)*K+k];\n  smem[layout(t,k)]=*reinterpret_cast<cute::bfloat16_t*>(&value);\n }\n __syncthreads();\n asm volatile("fence.proxy.async.shared::cta;" ::: "memory");\n int rows=GATED?2*N:N;\n int feature=blockIdx.x*64,m0=(threadIdx.x/32)*16+(threadIdx.x%32)/4;\n int kk=(threadIdx.x%4)*2;\n const unsigned char* wt=W+((int64_t)expert*(rows/64)+blockIdx.x)*(K/16)*512;\n const unsigned char* st=SF+((int64_t)expert*(rows/64)+blockIdx.x)*(K/16)*64;\n float c0=0.f,c1=0.f,c2=0.f,c3=0.f,u0=0.f,u1=0.f,u2=0.f,u3=0.f;\n using Mma=SM90_64x8x16_F32BF16BF16_RS<GMMA::Major::K,GMMA::Major::K>;\n\n for(int base_k=0;base_k<K;base_k+=16*STAGES) {\n  uint32_t av[STAGES][4],bv[STAGES][4];\n  uint64_t descriptors[STAGES];\n  #pragma unroll\n  for(int stage=0;stage<STAGES;stage++) {\n   int k=base_k+stage*16;\n   const unsigned char* w=wt+(k/16)*512;\n   const unsigned char* s=st+(k/16)*64;\n   float sf0=fp8_value(s[m0]),sf1=fp8_value(s[m0+8]);\n   av[stage][0]=dequant_pair(w[m0*8+kk/2],sf0);\n   av[stage][1]=dequant_pair(w[(m0+8)*8+kk/2],sf1);\n   av[stage][2]=dequant_pair(w[m0*8+kk/2+4],sf0);\n   av[stage][3]=dequant_pair(w[(m0+8)*8+kk/2+4],sf1);\n   auto tile=local_tile(tensor,Shape<_8,_16>{},make_coord(0,k/16));\n   descriptors[stage]=GMMA::make_gmma_desc<GMMA::Major::K>(tile);\n   if constexpr(GATED) {\n    w+=(int64_t)(N/64)*(K/16)*512;s+=(int64_t)(N/64)*(K/16)*64;\n    sf0=fp8_value(s[m0]);sf1=fp8_value(s[m0+8]);\n    bv[stage][0]=dequant_pair(w[m0*8+kk/2],sf0);\n    bv[stage][1]=dequant_pair(w[(m0+8)*8+kk/2],sf1);\n    bv[stage][2]=dequant_pair(w[m0*8+kk/2+4],sf0);\n    bv[stage][3]=dequant_pair(w[(m0+8)*8+kk/2+4],sf1);\n   }\n  }\n  warpgroup_fence_operand(c0);warpgroup_fence_operand(c1);warpgroup_fence_operand(c2);warpgroup_fence_operand(c3);\n  if constexpr(GATED){warpgroup_fence_operand(u0);warpgroup_fence_operand(u1);warpgroup_fence_operand(u2);warpgroup_fence_operand(u3);}\n  warpgroup_arrive();\n  #pragma unroll\n  for(int stage=0;stage<STAGES;stage++) {\n   Mma::fma(av[stage][0],av[stage][1],av[stage][2],av[stage][3],descriptors[stage],c0,c1,c2,c3);\n   if constexpr(GATED)Mma::fma(bv[stage][0],bv[stage][1],bv[stage][2],bv[stage][3],descriptors[stage],u0,u1,u2,u3);\n  }\n  warpgroup_commit_batch();warpgroup_wait<0>();\n  // Keep every asynchronous register operand live through completion.\n  #pragma unroll\n  for(int stage=0;stage<STAGES;stage++) {\n   #pragma unroll\n   for(int j=0;j<4;j++){warpgroup_fence_operand(av[stage][j]);if constexpr(GATED)warpgroup_fence_operand(bv[stage][j]);}\n  }\n  warpgroup_fence_operand(c0);warpgroup_fence_operand(c1);warpgroup_fence_operand(c2);warpgroup_fence_operand(c3);\n  if constexpr(GATED){warpgroup_fence_operand(u0);warpgroup_fence_operand(u1);warpgroup_fence_operand(u2);warpgroup_fence_operand(u3);}\n }\n float cv[4]={c0,c1,c2,c3},uv[4]={u0,u1,u2,u3},gs=GS[expert];\n #pragma unroll\n for(int j=0;j<4;j++) {\n  int t=(threadIdx.x%4)*2+(j%2),slot=SORT[block*8+t];\n  float value=cv[j]*gs;\n  if constexpr(GATED) {\n   float g=__bfloat162float(__float2bfloat16_rn(value));\n   float u=__bfloat162float(__float2bfloat16_rn(uv[j]*gs));\n   value=g/(1.f+expf(-g))*u;\n  }\n  if(slot<slots)Y[slot*N+feature+m0+(j/2)*8]=__float2bfloat16_rn(value);\n }\n}\nvoid moe_wgmma_run(TensorView x,TensorView sorted,TensorView experts,TensorView padded,TensorView w,TensorView sf,TensorView gs,TensorView y,int64_t topk,bool gated,int64_t stages) {\n ffi::CUDADeviceGuard guard(x.device().device_id);\n TVM_FFI_ICHECK(x.size(1)==4096 && y.size(1)%64==0);\n auto X=static_cast<const __nv_bfloat16*>(x.data_ptr());auto SORT=static_cast<const int*>(sorted.data_ptr());auto EXP=static_cast<const int*>(experts.data_ptr());auto PAD=static_cast<const int*>(padded.data_ptr());\n auto W=static_cast<const unsigned char*>(w.data_ptr());auto SF=static_cast<const unsigned char*>(sf.data_ptr());auto GS=static_cast<const float*>(gs.data_ptr());auto Y=static_cast<__nv_bfloat16*>(y.data_ptr());\n int N=y.size(1),slots=y.size(0);auto stream=get_stream(x.device());\n dim3 grid(N/64,experts.numel());\n\n #define LAUNCH(G,S) {TVM_FFI_ICHECK(cudaFuncSetAttribute(moe_wgmma<G,S>,cudaFuncAttributeMaxDynamicSharedMemorySize,65536)==cudaSuccess);moe_wgmma<G,S><<<grid,128,65536,stream>>>(X,SORT,EXP,PAD,W,SF,GS,Y,N,slots,topk);}\n if(gated){if(stages==4){LAUNCH(true,4);}else{LAUNCH(true,8);}}\n else{if(stages==4){LAUNCH(false,4);}else{LAUNCH(false,8);}}\n TVM_FFI_ICHECK(cudaGetLastError()==cudaSuccess);\n}\nTVM_FFI_DLL_EXPORT_TYPED_FUNC(moe_wgmma_run,moe_wgmma_run);\n'
+
+@cache
+def _warp_module():
+ import pathlib,importlib.util
+ from tvm_ffi.cpp import load_inline
+ root=pathlib.Path(next(iter(importlib.util.find_spec('flashinfer').submodule_search_locations)))/'data'
+ return load_inline('okc_moe_wgmma_pipeline_v1',cuda_sources=_WARP_SRC,backend='cuda',extra_cuda_cflags=['-std=c++17','-O3','--expt-relaxed-constexpr','--expt-extended-lambda','-gencode=arch=compute_90a,code=sm_90a'],extra_include_paths=[str(root/'include'),str(root/'csrc'),str(root/'cutlass/include'),str(root/'cutlass/tools/util/include')])
+
+
+def prepare(weights):
+ state=_base_prepare(weights)
+ state['wg']={}
+ for (start,count) in state['banks']:
+  bank={}
+  for name in ('w13','w2'):
+   w=weights[name][start:start+count];n=w.shape[1];k=w.shape[2]*2
+   bank[name]=w.reshape(count,n//64,64,k//16,8).permute(0,1,3,2,4).contiguous()
+   bank[name+'_sf']=weights[name+'_sf'][start:start+count].view(torch.uint8).reshape(count,n//64,64,k//16).permute(0,1,3,2).contiguous()
+   bank[name+'_gs']=weights[name+'_gs'][start:start+count].contiguous()
+  state['wg'][(start,count)]=bank
+ return state
+
+def kernel_fn(data,state):
+ cfg=data['config'];m=cfg['bs'];h=cfg['d_hidden'];i=cfg['d_expert'];topk=cfg['top_k']
+ bank=state['banks'][(cfg['local_start'],cfg['local_count'])]
+ wg=state['wg'][(cfg['local_start'],cfg['local_count'])]
+ local=bank['expert_map'][data['topk_ids']].contiguous()
+ sorted_ids,block_experts,n_padded=moe_align_block_size(local,8,bank['count'])
+ x=data['hidden_states'];activated=torch.empty((m*topk,i),device=x.device,dtype=torch.bfloat16)
+ y=torch.empty((m*topk,h),device=x.device,dtype=torch.bfloat16)
+ mod=_warp_module()
+ common=dict(moe_block_size=8,mul_topk_weights=False,is_ep=True,b_q_type=scalar_types.float4_e2m1f,is_k_full=True,use_atomic_add=False,use_fp32_reduce=True,is_zp_float=False)
+ if True:
+  mod.moe_wgmma_run(x,sorted_ids,block_experts,n_padded,wg['w13'],wg['w13_sf'],wg['w13_gs'],activated,topk,True,8)
+ else:
+  cache1=torch.empty((m*topk,2*i),device=x.device,dtype=torch.bfloat16)
+  cache1=moe_wna16_marlin_gemm(x,cache1,bank['w13'],None,bank['w13_s'],bank['w13_gs'],None,None,None,state['workspace'],sorted_ids,block_experts,n_padded,data['topk_weights'],top_k=topk,size_m=m,size_n=2*i,size_k=h,**common)
+  silu_and_mul(cache1,activated,expert_ids=local.view(-1),expert_step=1)
+ if True:
+  mod.moe_wgmma_run(activated,sorted_ids,block_experts,n_padded,wg['w2'],wg['w2_sf'],wg['w2_gs'],y,1,False,8)
+ else:
+  y=moe_wna16_marlin_gemm(activated,y,bank['w2'],None,bank['w2_s'],bank['w2_gs'],None,None,None,state['workspace'],sorted_ids,block_experts,n_padded,data['topk_weights'],top_k=1,size_m=m*topk,size_n=h,size_k=i,**common)
+ return fused_post_expert_norm_weighted_sum(y.view(m,topk,h),data['topk_weights'],norm_weight=state['norm_w'],eps=POST_NORM_EPS,weight_first=True,slot_expert_ids=local)

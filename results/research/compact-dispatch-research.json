@@ -1,0 +1,57 @@
+{
+  "status": "Repeat passed, exact MoE official check queued; full decoder integration active",
+  "mechanism": "Native marlin_template.h kIsEP affects only invalid expert block scan and skip indexing. Existing compact routing emits only valid local experts before PAD, so native non-EP specialization can consume it without scan. Preserve original EP behavior for uncompacted batches above1024.",
+  "sources": [
+    "work/marlin_headers/marlin_template.h:385",
+    "work/marlin_headers/marlin_template.h:515",
+    "work/moe_sources.json"
+  ],
+  "builder": "work/build_moe_compact_dispatch.py",
+  "runner": "work/run_moe_compact_dispatch.py",
+  "variants": [
+    "compact_all",
+    "compact_large"
+  ],
+  "control": "outputs/moe_cuda_align.py",
+  "guard": "Only compacted metadata enables non-EP specialization; local IDs and bank mapping unchanged. Reference and neighboring batches1024/1025 tested before any promotion.",
+  "initial_result": "outputs/moe-compact-dispatch.json",
+  "initial_scores": {
+    "compact_all": 1.1715,
+    "compact_large": 1.1668,
+    "control": 1.1595
+  },
+  "initial_batch256_us": {
+    "compact_all": 384.96,
+    "control": 391.1
+  },
+  "repeat_runner": "work/run_moe_compact_dispatch_repeat_v2.py",
+  "extra_routing_cases": "work/moe_compact_dispatch_edge_cases.json",
+  "cancelled_run": {
+    "app": "ap-r6guUWX70jn4KFjEr6DN2E",
+    "reason": "Official checker explicitly declines empty-local routing; stopped before results, then added strict exact-zero assertion only for that additional edge case. No official checker source altered."
+  },
+  "repeat_result": "outputs/moe-compact-dispatch-repeat-v2.json",
+  "repeat_checks": {
+    "total": 38,
+    "passed": 38,
+    "empty_route_strict_checks": 8
+  },
+  "repeat_local_scores": {
+    "compact_all": 1.1696,
+    "control": 1.1598
+  },
+  "official_check": "61162596970a4253",
+  "exact_source": "outputs/moe_compact_dispatch.py",
+  "decoder_integration": "work/run_decode_compact_dispatch.py",
+  "decoder_result": "outputs/decode-compact-dispatch.json",
+  "decoder_checks": {
+    "total": 50,
+    "passed": 50
+  },
+  "decoder_local_scores": {
+    "compact_dispatch": 1.2506,
+    "control": 1.2414
+  },
+  "decoder_official_check": "e6ea46c0c5cb48de",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

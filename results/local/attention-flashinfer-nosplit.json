@@ -1,0 +1,2851 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1700,
+        "batch": 1,
+        "ctx": 10,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.319e-02 (worst row 5.319e-02) [bound 0.115: 2.5 x the reference's 0.040 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1700,
+        "batch": 1,
+        "ctx": 10,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.348e-03 (worst row 3.348e-03) [bound 0.115: 2.5 x the reference's 0.040 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1701,
+        "batch": 3,
+        "ctx": 2047,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.276e-02 (worst row 8.216e-02) [bound 0.150: 2.5 x the reference's 0.078 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1701,
+        "batch": 3,
+        "ctx": 2047,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.532e-03 (worst row 1.046e-02) [bound 0.150: 2.5 x the reference's 0.078 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1702,
+        "batch": 5,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.201e-02 (worst row 1.526e-01) [bound 0.150: 2.5 x the reference's 0.082 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1702,
+        "batch": 5,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 7.689e-03 (worst row 1.062e-02) [bound 0.150: 2.5 x the reference's 0.082 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.709e-02 (worst row 9.066e-02) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.130e-03 (worst row 8.960e-03) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.422e-02 (worst row 8.895e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.896e-03 (worst row 8.689e-03) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.789e-02 (worst row 1.211e-01) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.985e-03 (worst row 1.183e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1706,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "dist": "edges",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 5.827e-02 (worst row 7.397e-02) [bound 0.150: 2.5 x the reference's 0.059 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1706,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "dist": "edges",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 6.312e-03 (worst row 7.246e-03) [bound 0.150: 2.5 x the reference's 0.059 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.296e-02 (worst row 1.199e-01) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.021e-03 (worst row 1.007e-02) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 9.396e-02 (worst row 1.243e-01) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 8.772e-03 (worst row 1.057e-02) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1709,
+        "batch": 3,
+        "ctx": 4000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "page": 1,
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.423e-02 (worst row 1.032e-01) [bound 0.150: 2.5 x the reference's 0.084 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1709,
+        "batch": 3,
+        "ctx": 4000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "page": 1,
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.361e-03 (worst row 1.360e-02) [bound 0.150: 2.5 x the reference's 0.084 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.637e-02 (worst row 1.068e-01) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.117e-03 (worst row 9.746e-03) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.760e-02 (worst row 7.862e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.409e-03 (worst row 6.631e-03) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1712,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "dist": "soft",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 6.769e-02 (worst row 9.091e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1712,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "q_len": 8,
+        "dist": "soft",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 6.498e-03 (worst row 8.842e-03) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.974e-02 (worst row 7.854e-02) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.912e-03 (worst row 7.759e-03) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.506e-02 (worst row 5.625e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.680e-03 (worst row 5.961e-03) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.791e-02 (worst row 4.354e-02) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.373e-03 (worst row 4.743e-03) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "seed": 601
+      },
+      "ok": true,
+      "message": "relative L2 error 7.319e-02 (worst row 7.319e-02) [bound 0.150: 2.5 x the reference's 0.072 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "seed": 601
+      },
+      "ok": true,
+      "message": "relative L2 error 5.933e-03 (worst row 5.933e-03) [bound 0.150: 2.5 x the reference's 0.072 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.226e-02 (worst row 4.226e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.016e-03 (worst row 4.016e-03) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 603
+      },
+      "ok": true,
+      "message": "relative L2 error 6.511e-02 (worst row 7.555e-02) [bound 0.150: 2.5 x the reference's 0.065 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 603
+      },
+      "ok": true,
+      "message": "relative L2 error 6.835e-03 (worst row 8.069e-03) [bound 0.150: 2.5 x the reference's 0.065 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.075e-02 (worst row 5.436e-02) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.722e-03 (worst row 6.873e-03) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 605
+      },
+      "ok": true,
+      "message": "relative L2 error 7.313e-02 (worst row 9.583e-02) [bound 0.150: 2.5 x the reference's 0.074 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 605
+      },
+      "ok": true,
+      "message": "relative L2 error 7.390e-03 (worst row 1.040e-02) [bound 0.150: 2.5 x the reference's 0.074 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.695e-02 (worst row 6.440e-02) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.743e-03 (worst row 5.974e-03) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 607
+      },
+      "ok": true,
+      "message": "relative L2 error 6.227e-02 (worst row 7.917e-02) [bound 0.150: 2.5 x the reference's 0.058 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 607
+      },
+      "ok": true,
+      "message": "relative L2 error 6.480e-03 (worst row 8.041e-03) [bound 0.150: 2.5 x the reference's 0.058 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 2.737e-02 (worst row 4.052e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 3.629e-03 (worst row 4.218e-03) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 609
+      },
+      "ok": true,
+      "message": "relative L2 error 6.298e-02 (worst row 1.013e-01) [bound 0.150: 2.5 x the reference's 0.063 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 609
+      },
+      "ok": true,
+      "message": "relative L2 error 6.796e-03 (worst row 9.191e-03) [bound 0.150: 2.5 x the reference's 0.063 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.219e-02 (worst row 6.115e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.736e-03 (worst row 5.709e-03) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 611
+      },
+      "ok": true,
+      "message": "relative L2 error 6.772e-02 (worst row 1.091e-01) [bound 0.150: 2.5 x the reference's 0.067 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 611
+      },
+      "ok": true,
+      "message": "relative L2 error 6.971e-03 (worst row 1.143e-02) [bound 0.150: 2.5 x the reference's 0.067 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.456e-02 (worst row 6.988e-02) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.589e-03 (worst row 6.034e-03) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "seed": 601
+      },
+      "baseline_us": 24.73600022494793,
+      "candidate_us": 12.815999798476696,
+      "baseline_samples": [
+        27.83999964594841,
+        24.671999737620354,
+        24.927999824285507,
+        25.087999179959297,
+        24.54400062561035,
+        25.05600079894066,
+        24.800000712275505,
+        24.800000712275505,
+        24.191999807953835,
+        24.800000712275505,
+        24.4159996509552,
+        24.831999093294144,
+        25.248000398278236,
+        24.86399933695793,
+        24.639999493956566,
+        24.639999493956566,
+        24.639999493956566,
+        24.4159996509552,
+        24.4159996509552,
+        24.4159996509552
+      ],
+      "candidate_samples": [
+        13.504000380635262,
+        12.736000120639801,
+        12.864000163972378,
+        13.279999606311321,
+        12.83199992030859,
+        13.024000450968742,
+        12.575999833643436,
+        12.83199992030859,
+        12.575999833643436,
+        12.512000277638435,
+        12.896000407636166,
+        12.799999676644802,
+        12.768000364303589,
+        12.799999676644802,
+        12.575999833643436,
+        13.472000136971474,
+        12.83199992030859,
+        13.663999736309052,
+        12.799999676644802,
+        12.608000077307224
+      ]
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "seed": 601
+      },
+      "baseline_us": 24.65599961578846,
+      "candidate_us": 41.96799919009209,
+      "baseline_samples": [
+        24.639999493956566,
+        24.607999250292778,
+        25.567999109625816,
+        24.671999737620354,
+        24.768000468611717,
+        25.66399984061718,
+        24.639999493956566,
+        24.383999407291412,
+        24.4159996509552,
+        25.312000885605812,
+        25.05600079894066,
+        24.800000712275505,
+        25.472000241279602,
+        24.383999407291412,
+        24.191999807953835,
+        24.4159996509552,
+        24.607999250292778,
+        24.607999250292778,
+        25.248000398278236,
+        25.05600079894066
+      ],
+      "candidate_samples": [
+        42.59200021624565,
+        42.01599955558777,
+        42.33599826693535,
+        41.919998824596405,
+        42.27200150489807,
+        42.62400045990944,
+        41.439998894929886,
+        41.600000113248825,
+        42.047999799251556,
+        41.34399816393852,
+        41.600000113248825,
+        42.01599955558777,
+        41.85599833726883,
+        41.600000113248825,
+        42.688000947237015,
+        41.79200157523155,
+        42.4639992415905,
+        41.85599833726883,
+        41.56799986958504,
+        42.33599826693535
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 35.48800013959408,
+      "candidate_us": 24.320000782608986,
+      "baseline_samples": [
+        37.31200098991394,
+        35.74400022625923,
+        35.360001027584076,
+        35.90400144457817,
+        37.05599904060364,
+        35.32800078392029,
+        34.94400158524513,
+        34.84800085425377,
+        35.392001271247864,
+        35.93600168824196,
+        35.19999980926514,
+        36.12799942493439,
+        35.26400029659271,
+        35.96799820661545,
+        36.159999668598175,
+        35.26400029659271,
+        35.51999852061272,
+        35.45600175857544,
+        35.16799956560135,
+        35.999998450279236
+      ],
+      "candidate_samples": [
+        24.671999737620354,
+        25.407999753952026,
+        24.512000381946564,
+        23.840000852942467,
+        24.607999250292778,
+        24.320000782608986,
+        25.21600015461445,
+        24.288000538945198,
+        24.064000695943832,
+        25.34399926662445,
+        24.064000695943832,
+        24.12799932062626,
+        24.320000782608986,
+        24.032000452280045,
+        24.320000782608986,
+        24.480000138282776,
+        24.09599907696247,
+        24.512000381946564,
+        24.000000208616257,
+        24.159999564290047
+      ]
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 35.64799949526787,
+      "candidate_us": 994.9280023574829,
+      "baseline_samples": [
+        35.64799949526787,
+        35.45600175857544,
+        35.2960005402565,
+        36.0959991812706,
+        35.10399907827377,
+        36.19199991226196,
+        35.48799827694893,
+        35.51999852061272,
+        35.64799949526787,
+        35.679999738931656,
+        35.10399907827377,
+        36.06399893760681,
+        36.320000886917114,
+        35.61599925160408,
+        35.840000957250595,
+        36.031998693943024,
+        34.68799963593483,
+        36.479998379945755,
+        36.25600039958954,
+        35.51999852061272
+      ],
+      "candidate_samples": [
+        995.0399994850159,
+        993.5680031776428,
+        994.81600522995,
+        993.8880205154419,
+        996.9599843025208,
+        995.0720071792603,
+        994.6879744529724,
+        993.2479858398438,
+        994.7519898414612,
+        1000.9599924087524,
+        998.0800151824951,
+        994.0159916877747,
+        993.503987789154,
+        995.199978351593,
+        995.199978351593,
+        995.4879879951477,
+        995.5840110778809,
+        992.9280281066895,
+        995.5199956893921,
+        993.7599897384644
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 603
+      },
+      "baseline_us": 31.312000937759876,
+      "candidate_us": 16.720000654459,
+      "baseline_samples": [
+        33.824000507593155,
+        31.74399957060814,
+        32.00000151991844,
+        31.007999554276466,
+        31.775999814271927,
+        31.136000528931618,
+        31.840000301599503,
+        31.808000057935715,
+        31.488001346588135,
+        30.719999223947525,
+        31.679999083280563,
+        30.112000182271004,
+        31.71199932694435,
+        30.7839997112751,
+        31.90400078892708,
+        30.97599931061268,
+        31.007999554276466,
+        30.97599931061268,
+        30.81599995493889,
+        31.007999554276466
+      ],
+      "candidate_samples": [
+        17.44000054895878,
+        17.216000705957413,
+        16.607999801635742,
+        16.543999314308167,
+        16.863999888300896,
+        16.383999958634377,
+        16.51199907064438,
+        16.35199971497059,
+        16.704000532627106,
+        16.51199907064438,
+        16.79999940097332,
+        16.79999940097332,
+        16.51199907064438,
+        16.448000445961952,
+        16.992000862956047,
+        16.448000445961952,
+        16.736000776290894,
+        16.79999940097332,
+        17.023999243974686,
+        16.79999940097332
+      ]
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 603
+      },
+      "baseline_us": 31.34400025010109,
+      "candidate_us": 45.68000137805939,
+      "baseline_samples": [
+        31.007999554276466,
+        30.719999223947525,
+        31.072000041604042,
+        31.840000301599503,
+        32.127998769283295,
+        30.912000685930252,
+        31.328000128269196,
+        31.775999814271927,
+        31.360000371932983,
+        32.00000151991844,
+        31.775999814271927,
+        31.136000528931618,
+        30.81599995493889,
+        31.615998595952988,
+        31.55200183391571,
+        32.48000144958496,
+        30.94400092959404,
+        31.199999153614044,
+        30.6560005992651,
+        31.808000057935715
+      ],
+      "candidate_samples": [
+        46.14400118589401,
+        45.504000037908554,
+        46.78399860858917,
+        46.39999940991402,
+        45.75999826192856,
+        45.66400125622749,
+        45.3759990632534,
+        45.05600035190582,
+        46.14400118589401,
+        46.592000871896744,
+        46.36799916625023,
+        45.024000108242035,
+        45.53600028157234,
+        45.024000108242035,
+        45.56800052523613,
+        45.24800181388855,
+        46.20800167322159,
+        45.98399996757507,
+        44.64000090956688,
+        45.69600149989128
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 207.0240005850792,
+      "candidate_us": 148.0640023946762,
+      "baseline_samples": [
+        209.4399929046631,
+        206.65599405765533,
+        207.42399990558624,
+        207.2640061378479,
+        206.1759978532791,
+        207.68000185489655,
+        208.22399854660034,
+        207.39200711250305,
+        207.2640061378479,
+        206.40000700950623,
+        207.64799416065216,
+        208.28799903392792,
+        206.11199736595154,
+        207.64799416065216,
+        205.59999346733093,
+        206.62400126457214,
+        205.9839963912964,
+        206.52799308300018,
+        206.7839950323105,
+        206.2399983406067
+      ],
+      "candidate_samples": [
+        148.41599762439728,
+        147.23199605941772,
+        149.31200444698334,
+        147.93600142002106,
+        148.3200043439865,
+        148.6400067806244,
+        148.28799664974213,
+        147.5840061903,
+        148.3840048313141,
+        146.7200070619583,
+        147.07200229167938,
+        147.13600277900696,
+        148.3200043439865,
+        146.36799693107605,
+        146.7839926481247,
+        148.19200336933136,
+        148.95999431610107,
+        147.42399752140045,
+        148.22399616241455,
+        147.07200229167938
+      ]
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 207.0080041885376,
+      "candidate_us": 1145.5039978027344,
+      "baseline_samples": [
+        207.42399990558624,
+        207.0080041885376,
+        206.7520022392273,
+        206.7839950323105,
+        204.6079933643341,
+        207.13600516319275,
+        205.9839963912964,
+        207.90399610996246,
+        207.16799795627594,
+        206.68800175189972,
+        206.4639925956726,
+        207.0080041885376,
+        205.9839963912964,
+        208.28799903392792,
+        207.10399746894836,
+        207.0080041885376,
+        208.3519995212555,
+        207.45599269866943,
+        207.64799416065216,
+        206.91199600696564
+      ],
+      "candidate_samples": [
+        1145.5039978027344,
+        1176.416039466858,
+        1138.5279893875122,
+        1144.1600322723389,
+        1145.8879709243774,
+        1144.8639631271362,
+        1143.9039707183838,
+        1145.5039978027344,
+        1150.4000425338745,
+        1143.0399417877197,
+        1141.4719820022583,
+        1144.3519592285156,
+        1140.28799533844,
+        1175.104022026062,
+        1147.5199460983276,
+        1143.2960033416748,
+        1178.015947341919,
+        1147.7760076522827,
+        1146.0800170898438,
+        1147.871971130371
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 605
+      },
+      "baseline_us": 35.74400022625923,
+      "candidate_us": 21.328000351786613,
+      "baseline_samples": [
+        38.14399987459183,
+        35.90400144457817,
+        35.32800078392029,
+        35.26400029659271,
+        34.84800085425377,
+        36.12799942493439,
+        35.679999738931656,
+        34.623999148607254,
+        34.55999866127968,
+        35.90400144457817,
+        35.32800078392029,
+        36.41600161790848,
+        35.87200120091438,
+        35.80800071358681,
+        35.96799820661545,
+        36.12799942493439,
+        35.90400144457817,
+        35.48799827694893,
+        34.143999218940735,
+        35.48799827694893
+      ],
+      "candidate_samples": [
+        22.112000733613968,
+        21.27999998629093,
+        21.31200022995472,
+        21.215999498963356,
+        21.31200022995472,
+        21.31200022995472,
+        21.95199951529503,
+        21.344000473618507,
+        21.727999672293663,
+        22.143999114632607,
+        21.344000473618507,
+        21.056000143289566,
+        20.8320003002882,
+        21.376000717282295,
+        21.47199958562851,
+        21.43999934196472,
+        20.576000213623047,
+        21.023999899625778,
+        20.800000056624413,
+        22.495999932289124
+      ]
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 605
+      },
+      "baseline_us": 35.24800017476082,
+      "candidate_us": 54.368000477552414,
+      "baseline_samples": [
+        36.031998693943024,
+        36.86400130391121,
+        36.12799942493439,
+        35.13599932193756,
+        35.19999980926514,
+        35.711999982595444,
+        35.2960005402565,
+        34.78400036692619,
+        35.071998834609985,
+        35.13599932193756,
+        34.912001341581345,
+        35.45600175857544,
+        36.3520011305809,
+        35.071998834609985,
+        34.97600182890892,
+        35.00799834728241,
+        34.84800085425377,
+        35.74400022625923,
+        35.360001027584076,
+        35.93600168824196
+      ],
+      "candidate_samples": [
+        55.32800033688545,
+        54.62399870157242,
+        54.687999188899994,
+        54.1439987719059,
+        54.1439987719059,
+        54.1439987719059,
+        54.11199852824211,
+        54.816000163555145,
+        54.46400120854378,
+        54.9440011382103,
+        54.59199845790863,
+        53.98400127887726,
+        53.92000079154968,
+        53.63199859857559,
+        54.655998945236206,
+        54.048001766204834,
+        53.53600159287453,
+        54.30399999022484,
+        54.43200096487999,
+        54.46400120854378
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 390.9759968519211,
+      "candidate_us": 283.61599147319794,
+      "baseline_samples": [
+        394.9759900569916,
+        388.2879912853241,
+        390.1120126247406,
+        390.75198769569397,
+        393.21601390838623,
+        387.32799887657166,
+        390.81600308418274,
+        391.1679983139038,
+        392.5440013408661,
+        388.0319893360138,
+        392.2879993915558,
+        391.1359906196594,
+        390.30399918556213,
+        392.63999462127686,
+        390.52799344062805,
+        391.29599928855896,
+        391.32800698280334,
+        393.8559889793396,
+        390.24001359939575,
+        390.56000113487244
+      ],
+      "candidate_samples": [
+        286.5920066833496,
+        283.90398621559143,
+        283.3600044250488,
+        283.4559977054596,
+        283.3920121192932,
+        286.52799129486084,
+        282.8800082206726,
+        285.5679988861084,
+        282.6240062713623,
+        282.01600909233093,
+        283.55199098587036,
+        283.6799919605255,
+        288.57600688934326,
+        286.3360047340393,
+        283.2320034503937,
+        286.01598739624023,
+        283.7759852409363,
+        281.40801191329956,
+        284.2560112476349,
+        281.21599555015564
+      ]
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 390.4479891061783,
+      "candidate_us": 1218.400001525879,
+      "baseline_samples": [
+        389.7919952869415,
+        390.5920088291168,
+        388.480007648468,
+        388.51198554039,
+        390.27199149131775,
+        392.0319974422455,
+        391.0079896450043,
+        389.69600200653076,
+        391.64799451828003,
+        391.64799451828003,
+        392.41600036621094,
+        390.3999924659729,
+        389.0880048274994,
+        391.9680118560791,
+        390.49598574638367,
+        389.60000872612,
+        389.7919952869415,
+        393.72798800468445,
+        392.192006111145,
+        388.35200667381287
+      ],
+      "candidate_samples": [
+        1218.0800437927246,
+        1198.591947555542,
+        1212.8000259399414,
+        1227.8720140457153,
+        1218.7199592590332,
+        1222.7519750595093,
+        1235.4880571365356,
+        1235.967993736267,
+        1298.3360290527344,
+        1300.22394657135,
+        1190.3680562973022,
+        1191.7439699172974,
+        1215.2639627456665,
+        1224.6079444885254,
+        1208.7680101394653,
+        1208.799958229065,
+        1223.647952079773,
+        1214.4320011138916,
+        1232.9280376434326,
+        1191.872000694275
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 607
+      },
+      "baseline_us": 27.648000046610832,
+      "candidate_us": 14.303999952971935,
+      "baseline_samples": [
+        29.311999678611755,
+        27.807999402284622,
+        27.168000116944313,
+        27.51999907195568,
+        28.031999245285988,
+        27.744000777602196,
+        27.51999907195568,
+        27.424000203609467,
+        27.775999158620834,
+        27.295999228954315,
+        28.60799990594387,
+        28.351999819278717,
+        27.51999907195568,
+        28.60799990594387,
+        27.327999472618103,
+        27.488000690937042,
+        27.55199931561947,
+        27.936000376939774,
+        27.775999158620834,
+        27.51999907195568
+      ],
+      "candidate_samples": [
+        15.456000342965126,
+        14.655999839305878,
+        14.399999752640724,
+        14.14399966597557,
+        14.14399966597557,
+        14.08000010997057,
+        14.303999952971935,
+        14.303999952971935,
+        14.751999638974667,
+        14.112000353634357,
+        14.303999952971935,
+        14.751999638974667,
+        14.112000353634357,
+        14.112000353634357,
+        14.336000196635723,
+        13.856000266969204,
+        14.336000196635723,
+        15.200000256299973,
+        14.560000039637089,
+        13.856000266969204
+      ]
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 607
+      },
+      "baseline_us": 27.759999968111515,
+      "candidate_us": 100.11200234293938,
+      "baseline_samples": [
+        27.744000777602196,
+        28.00000086426735,
+        27.55199931561947,
+        28.192000463604927,
+        27.55199931561947,
+        27.583999559283257,
+        27.55199931561947,
+        27.96800062060356,
+        27.135999873280525,
+        27.807999402284622,
+        27.35999971628189,
+        28.76799926161766,
+        27.775999158620834,
+        27.775999158620834,
+        27.327999472618103,
+        28.384000062942505,
+        27.744000777602196,
+        27.83999964594841,
+        27.68000029027462,
+        28.192000463604927
+      ],
+      "candidate_samples": [
+        101.27999633550644,
+        99.74399954080582,
+        100.63999891281128,
+        99.61599856615067,
+        101.72799974679947,
+        99.84000027179718,
+        100.19200295209885,
+        99.67999905347824,
+        100.47999769449234,
+        99.96800124645233,
+        99.80800002813339,
+        99.7759997844696,
+        100.16000270843506,
+        100.0640019774437,
+        100.41599720716476,
+        100.51199793815613,
+        99.64799880981445,
+        100.16000270843506,
+        100.70399940013885,
+        99.71199929714203
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 41.08799993991852,
+      "candidate_us": 32.52799995243549,
+      "baseline_samples": [
+        43.20000112056732,
+        41.02399945259094,
+        40.70400074124336,
+        41.85599833726883,
+        41.471999138593674,
+        40.511999279260635,
+        40.73600098490715,
+        41.69600084424019,
+        41.21600091457367,
+        40.511999279260635,
+        40.991999208927155,
+        40.608000010252,
+        41.152000427246094,
+        41.6640006005764,
+        40.89599847793579,
+        41.18400067090988,
+        40.64000025391579,
+        41.6640006005764,
+        40.608000010252,
+        41.18400067090988
+      ],
+      "candidate_samples": [
+        33.055998384952545,
+        32.6399989426136,
+        32.19199925661087,
+        32.76799991726875,
+        32.86400064826012,
+        32.19199925661087,
+        32.48000144958496,
+        31.87200054526329,
+        32.575998455286026,
+        32.127998769283295,
+        32.44800120592117,
+        31.87200054526329,
+        33.63199904561043,
+        31.775999814271927,
+        32.127998769283295,
+        32.70399942994118,
+        32.83200040459633,
+        34.01599824428558,
+        32.99200162291527,
+        32.03200176358223
+      ]
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 40.832001715898514,
+      "candidate_us": 3117.4240112304688,
+      "baseline_samples": [
+        40.76800122857094,
+        41.02399945259094,
+        40.95999896526337,
+        41.24800115823746,
+        40.832001715898514,
+        41.05599969625473,
+        40.28800129890442,
+        41.6640006005764,
+        42.01599955558777,
+        40.73600098490715,
+        40.832001715898514,
+        40.672000497579575,
+        40.672000497579575,
+        40.32000154256821,
+        40.70400074124336,
+        41.760001331567764,
+        41.02399945259094,
+        40.76800122857094,
+        42.047999799251556,
+        40.352001786231995
+      ],
+      "candidate_samples": [
+        3117.7279949188232,
+        3116.1599159240723,
+        3112.99204826355,
+        3114.4320964813232,
+        3114.5920753479004,
+        3112.7679347991943,
+        3116.6720390319824,
+        3112.9279136657715,
+        3123.9359378814697,
+        3114.367961883545,
+        3117.311954498291,
+        3118.8158988952637,
+        3117.5360679626465,
+        3118.4639930725098,
+        3118.0479526519775,
+        3117.1200275421143,
+        3119.744062423706,
+        3118.1440353393555,
+        3118.2079315185547,
+        3118.4000968933105
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 609
+      },
+      "baseline_us": 33.7119996547699,
+      "candidate_us": 23.77600036561489,
+      "baseline_samples": [
+        36.639999598264694,
+        33.663999289274216,
+        33.63199904561043,
+        33.72799977660179,
+        34.2399999499321,
+        33.72799977660179,
+        34.11199897527695,
+        33.47200155258179,
+        33.79200026392937,
+        33.663999289274216,
+        33.535998314619064,
+        34.46400165557861,
+        33.76000002026558,
+        33.08799862861633,
+        35.13599932193756,
+        33.695999532938,
+        33.695999532938,
+        33.02399814128876,
+        33.72799977660179,
+        33.535998314619064
+      ],
+      "candidate_samples": [
+        25.34399926662445,
+        23.520000278949738,
+        23.64799939095974,
+        24.224000051617622,
+        23.96799996495247,
+        23.871999233961105,
+        23.520000278949738,
+        23.615999147295952,
+        24.671999737620354,
+        23.552000522613525,
+        23.96799996495247,
+        23.19999970495701,
+        23.584000766277313,
+        23.77600036561489,
+        23.80800060927868,
+        23.96799996495247,
+        23.77600036561489,
+        24.383999407291412,
+        23.48800003528595,
+        23.520000278949738
+      ]
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 609
+      },
+      "baseline_us": 33.55200029909611,
+      "candidate_us": 104.06400263309479,
+      "baseline_samples": [
+        33.24799984693527,
+        33.984001725912094,
+        33.952001482248306,
+        33.47200155258179,
+        33.47200155258179,
+        33.824000507593155,
+        35.071998834609985,
+        34.46400165557861,
+        33.59999880194664,
+        35.10399907827377,
+        33.47200155258179,
+        33.79200026392937,
+        33.504001796245575,
+        34.20799970626831,
+        33.28000009059906,
+        33.63199904561043,
+        33.215999603271484,
+        33.215999603271484,
+        33.47200155258179,
+        33.344000577926636
+      ],
+      "candidate_samples": [
+        105.82400113344193,
+        103.71199995279312,
+        104.54399883747101,
+        103.93600165843964,
+        104.22399640083313,
+        103.80800068378448,
+        103.93600165843964,
+        104.09600287675858,
+        104.70400005578995,
+        104.2879968881607,
+        103.84000092744827,
+        103.80800068378448,
+        104.16000336408615,
+        103.7760004401207,
+        104.06400263309479,
+        105.15200346708298,
+        103.96800190210342,
+        104.06400263309479,
+        104.3199971318245,
+        103.64799946546555
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 206.03200048208237,
+      "candidate_us": 199.26400482654572,
+      "baseline_samples": [
+        209.24800634384155,
+        206.43199980258942,
+        205.9839963912964,
+        205.31199872493744,
+        207.2640061378479,
+        206.88000321388245,
+        205.82400262355804,
+        206.91199600696564,
+        205.85599541664124,
+        205.85599541664124,
+        206.9759964942932,
+        207.07200467586517,
+        205.6960016489029,
+        205.24799823760986,
+        206.43199980258942,
+        205.37599921226501,
+        206.4639925956726,
+        205.4399996995926,
+        204.28800582885742,
+        206.08000457286835
+      ],
+      "candidate_samples": [
+        198.94400238990784,
+        199.13600385189056,
+        198.68800044059753,
+        200.6720006465912,
+        198.88000190258026,
+        199.16799664497375,
+        198.7839937210083,
+        197.53600656986237,
+        199.35999810695648,
+        199.8399943113327,
+        199.26400482654572,
+        200.57600736618042,
+        198.11199605464935,
+        200.8640021085739,
+        199.3280053138733,
+        199.26400482654572,
+        199.26400482654572,
+        198.5280066728592,
+        199.68000054359436,
+        199.26400482654572
+      ]
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 206.38400316238403,
+      "candidate_us": 3201.0879516601562,
+      "baseline_samples": [
+        206.84799551963806,
+        205.59999346733093,
+        205.9839963912964,
+        207.58399367332458,
+        206.14400506019592,
+        206.40000700950623,
+        206.14400506019592,
+        206.36799931526184,
+        206.68800175189972,
+        207.23199844360352,
+        205.47200739383698,
+        206.4639925956726,
+        205.72799444198608,
+        207.5520008802414,
+        206.1759978532791,
+        205.47200739383698,
+        206.65599405765533,
+        205.08800446987152,
+        207.7759951353073,
+        207.42399990558624
+      ],
+      "candidate_samples": [
+        3140.4800415039062,
+        3218.208074569702,
+        3171.42391204834,
+        3190.623998641968,
+        3189.663887023926,
+        3209.6641063690186,
+        3219.8400497436523,
+        3211.9040489196777,
+        3222.5279808044434,
+        3199.1360187530518,
+        3187.6800060272217,
+        3215.3921127319336,
+        3201.2479305267334,
+        3194.080114364624,
+        3169.5680618286133,
+        3213.599920272827,
+        3170.2721118927,
+        3213.536024093628,
+        3201.0560035705566,
+        3201.119899749756
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 611
+      },
+      "baseline_us": 39.07199949026108,
+      "candidate_us": 33.52000005543232,
+      "baseline_samples": [
+        41.53599962592125,
+        39.0079990029335,
+        38.784001022577286,
+        39.77600112557411,
+        38.84800150990486,
+        38.68800029158592,
+        38.52799907326698,
+        40.32000154256821,
+        39.20000046491623,
+        38.88000175356865,
+        38.816001266241074,
+        39.872001856565475,
+        39.84000161290169,
+        38.975998759269714,
+        39.64800015091896,
+        39.32800143957138,
+        38.68800029158592,
+        39.32800143957138,
+        39.135999977588654,
+        38.88000175356865
+      ],
+      "candidate_samples": [
+        34.304000437259674,
+        33.31200033426285,
+        34.432001411914825,
+        33.56799855828285,
+        33.24799984693527,
+        33.215999603271484,
+        33.76000002026558,
+        33.24799984693527,
+        33.984001725912094,
+        33.376000821590424,
+        33.88800099492073,
+        33.24799984693527,
+        33.28000009059906,
+        33.376000821590424,
+        33.88800099492073,
+        33.63199904561043,
+        34.01599824428558,
+        33.76000002026558,
+        33.47200155258179,
+        33.15199911594391
+      ]
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 611
+      },
+      "baseline_us": 39.20000046491623,
+      "candidate_us": 108.39999839663506,
+      "baseline_samples": [
+        40.031999349594116,
+        38.784001022577286,
+        38.336001336574554,
+        39.20000046491623,
+        39.20000046491623,
+        39.0079990029335,
+        38.784001022577286,
+        39.23200070858002,
+        39.20000046491623,
+        40.22400081157684,
+        38.59199956059456,
+        39.84000161290169,
+        38.84800150990486,
+        40.47999903559685,
+        39.16800022125244,
+        40.32000154256821,
+        40.28800129890442,
+        40.09599983692169,
+        40.54399952292442,
+        38.40000182390213
+      ],
+      "candidate_samples": [
+        110.88000237941742,
+        108.35199803113937,
+        108.89600217342377,
+        109.02400314807892,
+        109.43999886512756,
+        108.70400071144104,
+        108.31999778747559,
+        109.0560033917427,
+        108.5439994931221,
+        108.2879975438118,
+        107.744000852108,
+        108.41599851846695,
+        108.19199681282043,
+        107.93600231409073,
+        109.27999764680862,
+        108.25599730014801,
+        108.38399827480316,
+        107.71200060844421,
+        109.6000000834465,
+        107.80800133943558
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 396.38400077819824,
+      "candidate_us": 388.35200667381287,
+      "baseline_samples": [
+        400.2240002155304,
+        395.4559862613678,
+        397.5679874420166,
+        397.2800076007843,
+        396.12799882888794,
+        396.60799503326416,
+        396.2559998035431,
+        395.6800103187561,
+        397.18401432037354,
+        395.4559862613678,
+        396.86399698257446,
+        397.21599221229553,
+        395.6800103187561,
+        396.5120017528534,
+        395.3920006752014,
+        395.6800103187561,
+        396.2239921092987,
+        395.2319920063019,
+        396.92801237106323,
+        396.8000113964081
+      ],
+      "candidate_samples": [
+        388.89598846435547,
+        389.4079923629761,
+        388.9920115470886,
+        388.96000385284424,
+        388.38401436805725,
+        387.4559998512268,
+        388.3199989795685,
+        390.01598954200745,
+        386.59200072288513,
+        388.2560133934021,
+        387.5199854373932,
+        388.12801241874695,
+        389.50398564338684,
+        386.84800267219543,
+        388.7999951839447,
+        388.0319893360138,
+        387.6799941062927,
+        388.63998651504517,
+        385.15201210975647,
+        389.0239894390106
+      ]
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 396.35199308395386,
+      "candidate_us": 3291.5360927581787,
+      "baseline_samples": [
+        394.8479890823364,
+        394.9759900569916,
+        395.10399103164673,
+        396.9919979572296,
+        396.7039883136749,
+        394.81601119041443,
+        396.92801237106323,
+        396.2239921092987,
+        397.21599221229553,
+        396.92801237106323,
+        396.479994058609,
+        395.9360122680664,
+        394.463986158371,
+        397.2800076007843,
+        393.66400241851807,
+        398.71999621391296,
+        396.89600467681885,
+        394.9440121650696,
+        396.86399698257446,
+        395.7119882106781
+      ],
+      "candidate_samples": [
+        3293.7920093536377,
+        3280.384063720703,
+        3270.4319953918457,
+        3293.7281131744385,
+        3295.9680557250977,
+        3303.2960891723633,
+        3274.656057357788,
+        3291.5520668029785,
+        3278.239965438843,
+        3285.1200103759766,
+        3268.6400413513184,
+        3290.015935897827,
+        3293.3120727539062,
+        3287.584066390991,
+        3283.7440967559814,
+        3302.464008331299,
+        3297.0879077911377,
+        3291.520118713379,
+        3294.9440479278564,
+        3302.623987197876
+      ]
+    }
+  ],
+  "calibration_us": 3.263999940827489,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_last_case": {
+    "candidate": "control",
+    "table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.508ms        88.22%       1.508ms     377.008us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     148.743us         8.70%     148.743us      37.186us             4  \nvoid cutlass::device_kernel<flash::FlashAttnFwdCombi...         0.00%       0.000us         0.00%       0.000us       0.000us      15.521us         0.91%      15.521us       3.880us             4  \nvoid flash::prepare_varlen_num_blocks_kernel<2, true...         0.00%       0.000us         0.00%       0.000us       0.000us      14.816us         0.87%      14.816us       3.704us             4  \n                                         _prepare_heads         0.00%       0.000us         0.00%       0.000us       0.000us       9.471us         0.55%       9.471us       2.368us             4  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us       9.408us         0.55%       9.408us       2.352us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.457us         0.20%       3.457us       0.864us             4  \n                                        cudaGraphLaunch         4.92%     151.167us        48.67%       1.495ms     373.732us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        43.75%       1.344ms        43.75%       1.344ms       1.344ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        51.33%       1.577ms        51.33%       1.577ms     788.430us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 3.072ms\nSelf CUDA time total: 1.709ms\n"
+  },
+  "compiler_diagnostics": [
+    {
+      "candidate": "control",
+      "function": "_prepare",
+      "registers": 24,
+      "spills": 8,
+      "shared": 8
+    },
+    {
+      "candidate": "control",
+      "function": "_prepare",
+      "registers": 16,
+      "spills": 0,
+      "shared": 8
+    },
+    {
+      "candidate": "control",
+      "function": "_prepare",
+      "registers": 16,
+      "spills": 0,
+      "shared": 8
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 56,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 56,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 84,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 80,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 126,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 187,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 56,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 95,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 181,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 84,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 80,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 126,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 84,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 181,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 56,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 74,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 84,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 187,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 95,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "control",
+      "function": "_attention",
+      "registers": 161,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish",
+      "registers": 25,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish",
+      "registers": 72,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish",
+      "registers": 37,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish",
+      "registers": 28,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_prepare_heads",
+      "registers": 31,
+      "spills": 8,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_prepare_heads",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_finish_heads",
+      "registers": 96,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish_heads",
+      "registers": 127,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish_heads",
+      "registers": 64,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_prepare_heads",
+      "registers": 31,
+      "spills": 8,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_prepare_heads",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_prepare_heads",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 21,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 20,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 18,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 20,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 20,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 20,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 18,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 20,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 22,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 20,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "tensorcores_nosplit",
+      "function": "_metadata",
+      "registers": 22,
+      "spills": 0,
+      "shared": 1024
+    }
+  ],
+  "elapsed_s": 137.740500196,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_attention_decode",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/dc58ccc282578206b18086ceec13d08ffeccc8f9050aec711021184209fc3ac0.py",
+      "sha256": "dc58ccc282578206b18086ceec13d08ffeccc8f9050aec711021184209fc3ac0"
+    },
+    "tensorcores_nosplit": {
+      "path": "experiments/sources/1b316a1ebc94a5050431d954f00f2a677d12dba42de5aa50aa094808d44a73b8.py",
+      "sha256": "1b316a1ebc94a5050431d954f00f2a677d12dba42de5aa50aa094808d44a73b8"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

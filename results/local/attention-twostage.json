@@ -1,0 +1,4301 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.709e-02 (worst row 9.066e-02) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.709e-02 (worst row 9.066e-02) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.709e-02 (worst row 9.066e-02) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.709e-02 (worst row 9.066e-02) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.709e-02 (worst row 9.066e-02) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.423e-02 (worst row 8.899e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.423e-02 (worst row 8.899e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.423e-02 (worst row 8.900e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.422e-02 (worst row 8.897e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.422e-02 (worst row 8.897e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.789e-02 (worst row 1.211e-01) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.789e-02 (worst row 1.211e-01) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.789e-02 (worst row 1.211e-01) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.789e-02 (worst row 1.211e-01) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.789e-02 (worst row 1.211e-01) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.296e-02 (worst row 1.199e-01) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.296e-02 (worst row 1.199e-01) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.296e-02 (worst row 1.199e-01) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.296e-02 (worst row 1.199e-01) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.296e-02 (worst row 1.199e-01) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 9.396e-02 (worst row 1.243e-01) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 9.396e-02 (worst row 1.243e-01) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 9.396e-02 (worst row 1.243e-01) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 9.396e-02 (worst row 1.243e-01) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 9.396e-02 (worst row 1.243e-01) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.637e-02 (worst row 1.068e-01) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.637e-02 (worst row 1.068e-01) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.637e-02 (worst row 1.068e-01) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.637e-02 (worst row 1.068e-01) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.637e-02 (worst row 1.068e-01) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.760e-02 (worst row 7.862e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.760e-02 (worst row 7.862e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.760e-02 (worst row 7.862e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.760e-02 (worst row 7.862e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.760e-02 (worst row 7.862e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.974e-02 (worst row 7.854e-02) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.974e-02 (worst row 7.854e-02) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.974e-02 (worst row 7.854e-02) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.974e-02 (worst row 7.854e-02) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.974e-02 (worst row 7.854e-02) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.506e-02 (worst row 5.625e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.506e-02 (worst row 5.625e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.506e-02 (worst row 5.625e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.506e-02 (worst row 5.625e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.506e-02 (worst row 5.625e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.791e-02 (worst row 4.354e-02) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.791e-02 (worst row 4.354e-02) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.791e-02 (worst row 4.354e-02) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.791e-02 (worst row 4.354e-02) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.791e-02 (worst row 4.354e-02) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 64,
+        "kv_scale": 0.015625,
+        "dist": "soft",
+        "spread": "mixed",
+        "seed": 1888
+      },
+      "ok": true,
+      "message": "relative L2 error 6.497e-02 (worst row 8.876e-02) [bound 0.150: 2.5 x the reference's 0.064 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 64,
+        "kv_scale": 0.015625,
+        "dist": "soft",
+        "spread": "mixed",
+        "seed": 1888
+      },
+      "ok": true,
+      "message": "relative L2 error 6.497e-02 (worst row 8.876e-02) [bound 0.150: 2.5 x the reference's 0.064 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 64,
+        "kv_scale": 0.015625,
+        "dist": "soft",
+        "spread": "mixed",
+        "seed": 1888
+      },
+      "ok": true,
+      "message": "relative L2 error 6.497e-02 (worst row 8.876e-02) [bound 0.150: 2.5 x the reference's 0.064 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 64,
+        "kv_scale": 0.015625,
+        "dist": "soft",
+        "spread": "mixed",
+        "seed": 1888
+      },
+      "ok": true,
+      "message": "relative L2 error 6.497e-02 (worst row 8.876e-02) [bound 0.150: 2.5 x the reference's 0.064 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 64,
+        "kv_scale": 0.015625,
+        "dist": "soft",
+        "spread": "mixed",
+        "seed": 1888
+      },
+      "ok": true,
+      "message": "relative L2 error 6.497e-02 (worst row 8.876e-02) [bound 0.150: 2.5 x the reference's 0.064 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 12,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 1,
+        "page": 1,
+        "dist": "coherent",
+        "spread": "mixed",
+        "seed": 1889
+      },
+      "ok": true,
+      "message": "relative L2 error 6.597e-02 (worst row 8.249e-02) [bound 0.150: 2.5 x the reference's 0.066 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 12,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 1,
+        "page": 1,
+        "dist": "coherent",
+        "spread": "mixed",
+        "seed": 1889
+      },
+      "ok": true,
+      "message": "relative L2 error 6.599e-02 (worst row 8.239e-02) [bound 0.150: 2.5 x the reference's 0.066 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 12,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 1,
+        "page": 1,
+        "dist": "coherent",
+        "spread": "mixed",
+        "seed": 1889
+      },
+      "ok": true,
+      "message": "relative L2 error 6.600e-02 (worst row 8.243e-02) [bound 0.150: 2.5 x the reference's 0.066 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 12,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 1,
+        "page": 1,
+        "dist": "coherent",
+        "spread": "mixed",
+        "seed": 1889
+      },
+      "ok": true,
+      "message": "relative L2 error 6.600e-02 (worst row 8.247e-02) [bound 0.150: 2.5 x the reference's 0.066 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 12,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 1,
+        "page": 1,
+        "dist": "coherent",
+        "spread": "mixed",
+        "seed": 1889
+      },
+      "ok": true,
+      "message": "relative L2 error 6.600e-02 (worst row 8.247e-02) [bound 0.150: 2.5 x the reference's 0.066 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.226e-02 (worst row 4.226e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.226e-02 (worst row 4.226e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.226e-02 (worst row 4.226e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.226e-02 (worst row 4.226e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.226e-02 (worst row 4.226e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.075e-02 (worst row 5.435e-02) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.075e-02 (worst row 5.433e-02) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.076e-02 (worst row 5.435e-02) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.076e-02 (worst row 5.436e-02) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.076e-02 (worst row 5.436e-02) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.694e-02 (worst row 6.440e-02) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.695e-02 (worst row 6.443e-02) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.695e-02 (worst row 6.451e-02) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.695e-02 (worst row 6.447e-02) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.695e-02 (worst row 6.447e-02) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 2.737e-02 (worst row 4.052e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 2.737e-02 (worst row 4.052e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 2.737e-02 (worst row 4.052e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 2.737e-02 (worst row 4.052e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 2.737e-02 (worst row 4.052e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.219e-02 (worst row 6.115e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.219e-02 (worst row 6.115e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.219e-02 (worst row 6.115e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.219e-02 (worst row 6.115e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.219e-02 (worst row 6.115e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.456e-02 (worst row 6.988e-02) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.456e-02 (worst row 6.988e-02) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.456e-02 (worst row 6.988e-02) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.456e-02 (worst row 6.988e-02) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.456e-02 (worst row 6.988e-02) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 34.752000123262405,
+      "candidate_us": 22.815999574959278,
+      "baseline_samples": [
+        36.448001861572266,
+        34.752000123262405,
+        34.65599939227104,
+        34.46400165557861,
+        34.11199897527695,
+        34.81600061058998,
+        34.65599939227104,
+        35.00799834728241,
+        35.13599932193756,
+        34.71999987959862,
+        34.623999148607254,
+        34.752000123262405,
+        34.4959981739521,
+        34.752000123262405,
+        34.78400036692619,
+        35.071998834609985,
+        35.45600175857544,
+        34.52799841761589,
+        35.00799834728241,
+        34.94400158524513
+      ],
+      "candidate_samples": [
+        22.592000663280487,
+        22.592000663280487,
+        23.296000435948372,
+        22.36800082027912,
+        23.19999970495701,
+        23.391999304294586,
+        22.87999913096428,
+        22.463999688625336,
+        22.71999977529049,
+        22.39999920129776,
+        23.64799939095974,
+        22.495999932289124,
+        22.943999618291855,
+        23.360000923275948,
+        23.16799946129322,
+        22.6879995316267,
+        23.135999217629433,
+        22.752000018954277,
+        23.360000923275948,
+        22.624000906944275
+      ]
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 35.00800020992756,
+      "candidate_us": 22.911999374628067,
+      "baseline_samples": [
+        35.13599932193756,
+        35.32800078392029,
+        34.84800085425377,
+        35.19999980926514,
+        34.88000109791756,
+        34.97600182890892,
+        35.51999852061272,
+        34.81600061058998,
+        35.2960005402565,
+        35.0399985909462,
+        34.81600061058998,
+        35.32800078392029,
+        34.40000116825104,
+        34.55999866127968,
+        35.711999982595444,
+        34.623999148607254,
+        34.4959981739521,
+        35.45600175857544,
+        35.10399907827377,
+        34.88000109791756
+      ],
+      "candidate_samples": [
+        24.064000695943832,
+        23.296000435948372,
+        23.04000034928322,
+        22.71999977529049,
+        23.04000034928322,
+        22.752000018954277,
+        24.383999407291412,
+        22.624000906944275,
+        22.752000018954277,
+        23.16799946129322,
+        23.264000192284584,
+        22.463999688625336,
+        22.84800074994564,
+        22.752000018954277,
+        22.943999618291855,
+        22.784000262618065,
+        22.87999913096428,
+        22.6879995316267,
+        22.943999618291855,
+        23.520000278949738
+      ]
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 34.86400097608566,
+      "candidate_us": 22.943999618291855,
+      "baseline_samples": [
+        35.13599932193756,
+        35.45600175857544,
+        35.00799834728241,
+        34.36800092458725,
+        35.74400022625923,
+        34.88000109791756,
+        34.84800085425377,
+        34.46400165557861,
+        34.55999866127968,
+        34.78400036692619,
+        35.58399900794029,
+        35.32800078392029,
+        35.999998450279236,
+        34.52799841761589,
+        34.55999866127968,
+        34.78400036692619,
+        34.55999866127968,
+        35.51999852061272,
+        34.65599939227104,
+        35.2960005402565
+      ],
+      "candidate_samples": [
+        24.320000782608986,
+        22.784000262618065,
+        22.943999618291855,
+        22.71999977529049,
+        23.072000592947006,
+        22.592000663280487,
+        23.16799946129322,
+        22.911999374628067,
+        23.231999948620796,
+        23.48800003528595,
+        22.752000018954277,
+        22.52800017595291,
+        22.943999618291855,
+        22.71999977529049,
+        23.19999970495701,
+        22.495999932289124,
+        23.231999948620796,
+        23.16799946129322,
+        22.975999861955643,
+        22.624000906944275
+      ]
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 35.19999980926514,
+      "candidate_us": 22.76800014078617,
+      "baseline_samples": [
+        34.94400158524513,
+        35.58399900794029,
+        34.84800085425377,
+        35.58399900794029,
+        35.26400029659271,
+        35.32800078392029,
+        34.97600182890892,
+        35.64799949526787,
+        35.2960005402565,
+        34.752000123262405,
+        35.071998834609985,
+        36.06399893760681,
+        34.65599939227104,
+        34.97600182890892,
+        35.071998834609985,
+        35.16799956560135,
+        35.232000052928925,
+        34.81600061058998,
+        35.58399900794029,
+        35.87200120091438
+      ],
+      "candidate_samples": [
+        22.975999861955643,
+        22.592000663280487,
+        23.00800010561943,
+        22.784000262618065,
+        22.655999287962914,
+        22.87999913096428,
+        23.552000522613525,
+        22.495999932289124,
+        22.975999861955643,
+        23.19999970495701,
+        22.816000506281853,
+        22.5600004196167,
+        22.784000262618065,
+        22.5600004196167,
+        22.752000018954277,
+        22.943999618291855,
+        22.752000018954277,
+        22.272000089287758,
+        22.71999977529049,
+        22.624000906944275
+      ]
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 35.023998469114304,
+      "candidate_us": 22.76800014078617,
+      "baseline_samples": [
+        35.10399907827377,
+        34.623999148607254,
+        34.88000109791756,
+        34.81600061058998,
+        34.65599939227104,
+        34.65599939227104,
+        34.88000109791756,
+        35.74400022625923,
+        35.87200120091438,
+        34.52799841761589,
+        34.71999987959862,
+        35.00799834728241,
+        35.0399985909462,
+        35.232000052928925,
+        34.84800085425377,
+        36.12799942493439,
+        35.551998764276505,
+        35.392001271247864,
+        35.2960005402565,
+        35.16799956560135
+      ],
+      "candidate_samples": [
+        22.624000906944275,
+        22.52800017595291,
+        23.48800003528595,
+        22.495999932289124,
+        22.84800074994564,
+        23.423999547958374,
+        23.072000592947006,
+        22.5600004196167,
+        22.592000663280487,
+        22.431999444961548,
+        23.77600036561489,
+        22.624000906944275,
+        23.04000034928322,
+        23.455999791622162,
+        22.87999913096428,
+        22.52800017595291,
+        23.072000592947006,
+        22.6879995316267,
+        23.423999547958374,
+        22.463999688625336
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 205.4399996995926,
+      "candidate_us": 145.31200379133224,
+      "baseline_samples": [
+        207.74400234222412,
+        205.4080069065094,
+        204.57600057125092,
+        204.6400010585785,
+        206.04799687862396,
+        204.70400154590607,
+        205.56800067424774,
+        205.88800311088562,
+        206.2080055475235,
+        205.76000213623047,
+        205.59999346733093,
+        205.31199872493744,
+        204.0639966726303,
+        206.36799931526184,
+        204.44799959659576,
+        207.32800662517548,
+        205.37599921226501,
+        205.24799823760986,
+        205.4399996995926,
+        205.4399996995926
+      ],
+      "candidate_samples": [
+        147.20000326633453,
+        147.71200716495514,
+        145.1520025730133,
+        143.16800236701965,
+        144.83200013637543,
+        143.90400052070618,
+        145.85599303245544,
+        144.9279934167862,
+        145.47200500965118,
+        145.11999487876892,
+        144.83200013637543,
+        144.896000623703,
+        145.9520012140274,
+        145.91999351978302,
+        145.79200744628906,
+        144.48000490665436,
+        145.1520025730133,
+        145.9520012140274,
+        147.20000326633453,
+        145.6959992647171
+      ]
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 205.10400086641312,
+      "candidate_us": 263.7439966201782,
+      "baseline_samples": [
+        206.2080055475235,
+        205.31199872493744,
+        205.05599677562714,
+        204.73599433898926,
+        204.41600680351257,
+        206.36799931526184,
+        206.27200603485107,
+        203.45599949359894,
+        205.6639939546585,
+        205.88800311088562,
+        203.93599569797516,
+        205.9520035982132,
+        204.70400154590607,
+        204.41600680351257,
+        204.44799959659576,
+        206.27200603485107,
+        205.1199972629547,
+        205.21600544452667,
+        204.6079933643341,
+        205.08800446987152
+      ],
+      "candidate_samples": [
+        264.47999477386475,
+        261.9200050830841,
+        263.8719975948334,
+        263.93601298332214,
+        262.719988822937,
+        262.59198784828186,
+        263.9999985694885,
+        263.90400528907776,
+        262.9440128803253,
+        262.62399554252625,
+        264.0959918498993,
+        263.7439966201782,
+        263.5520100593567,
+        262.81601190567017,
+        264.6079957485199,
+        263.71198892593384,
+        263.35999369621277,
+        263.8719975948334,
+        264.8319900035858,
+        263.7439966201782
+      ]
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 205.424003303051,
+      "candidate_us": 293.7600016593933,
+      "baseline_samples": [
+        207.2640061378479,
+        206.11199736595154,
+        205.37599921226501,
+        205.05599677562714,
+        204.25599813461304,
+        205.72799444198608,
+        206.94400370121002,
+        205.9520035982132,
+        205.47200739383698,
+        204.16000485420227,
+        204.67199385166168,
+        204.79999482631683,
+        205.31199872493744,
+        206.4639925956726,
+        204.67199385166168,
+        205.34400641918182,
+        206.30399882793427,
+        207.07200467586517,
+        205.56800067424774,
+        204.54399287700653
+      ],
+      "candidate_samples": [
+        293.8559949398041,
+        294.8479950428009,
+        291.9679880142212,
+        293.7279939651489,
+        292.28800535202026,
+        293.8559949398041,
+        293.40800642967224,
+        293.7920093536377,
+        293.5999929904938,
+        294.048011302948,
+        293.7920093536377,
+        293.2159900665283,
+        293.69598627090454,
+        292.60799288749695,
+        293.2800054550171,
+        292.38399863243103,
+        294.3040132522583,
+        293.8239872455597,
+        294.20799016952515,
+        294.5280075073242
+      ]
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 205.6639939546585,
+      "candidate_us": 257.1199983358383,
+      "baseline_samples": [
+        207.58399367332458,
+        208.28799903392792,
+        207.10399746894836,
+        204.57600057125092,
+        205.02400398254395,
+        204.79999482631683,
+        206.43199980258942,
+        206.08000457286835,
+        205.56800067424774,
+        205.59999346733093,
+        205.9199959039688,
+        205.85599541664124,
+        204.96000349521637,
+        204.19199764728546,
+        205.72799444198608,
+        205.79199492931366,
+        205.59999346733093,
+        204.3199986219406,
+        206.2080055475235,
+        205.28000593185425
+      ],
+      "candidate_samples": [
+        258.2080066204071,
+        257.56800174713135,
+        258.14399123191833,
+        257.3759853839874,
+        256.48000836372375,
+        255.67999482154846,
+        257.1839988231659,
+        258.0159902572632,
+        256.51198625564575,
+        257.1519911289215,
+        257.02399015426636,
+        257.1519911289215,
+        257.05599784851074,
+        256.9600045681,
+        257.0880055427551,
+        255.93599677085876,
+        257.4720084667206,
+        258.7200105190277,
+        256.8320035934448,
+        257.02399015426636
+      ]
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 205.424003303051,
+      "candidate_us": 355.0720065832138,
+      "baseline_samples": [
+        205.9520035982132,
+        204.8639953136444,
+        204.19199764728546,
+        204.96000349521637,
+        205.34400641918182,
+        204.0960043668747,
+        206.2399983406067,
+        206.4639925956726,
+        205.50400018692017,
+        205.1839977502823,
+        205.9199959039688,
+        205.59999346733093,
+        205.34400641918182,
+        204.57600057125092,
+        206.62400126457214,
+        205.1520049571991,
+        205.59999346733093,
+        204.6400010585785,
+        206.496000289917,
+        206.56000077724457
+      ],
+      "candidate_samples": [
+        356.7039966583252,
+        355.26400804519653,
+        354.94399070739746,
+        354.94399070739746,
+        354.4960021972656,
+        355.19999265670776,
+        354.7520041465759,
+        355.6160032749176,
+        355.8399975299835,
+        355.0400137901306,
+        354.0160059928894,
+        354.20799255371094,
+        355.00800609588623,
+        355.19999265670776,
+        355.103999376297,
+        354.52800989151,
+        355.19999265670776,
+        354.52800989151,
+        355.45599460601807,
+        355.3600013256073
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 387.1680051088333,
+      "candidate_us": 274.06398952007294,
+      "baseline_samples": [
+        389.18399810791016,
+        383.7119936943054,
+        387.64798641204834,
+        382.56001472473145,
+        387.4239921569824,
+        384.4799995422363,
+        387.1999979019165,
+        383.4240138530731,
+        388.19199800491333,
+        382.84799456596375,
+        389.2480134963989,
+        384.223997592926,
+        387.6799941062927,
+        383.4559917449951,
+        388.09600472450256,
+        388.60800862312317,
+        387.36000657081604,
+        383.5200071334839,
+        386.46399974823,
+        387.1360123157501
+      ],
+      "candidate_samples": [
+        276.0320007801056,
+        273.3440101146698,
+        276.67200565338135,
+        277.3120105266571,
+        273.75999093055725,
+        272.67199754714966,
+        272.7360129356384,
+        273.6000120639801,
+        274.4640111923218,
+        271.07200026512146,
+        269.6000039577484,
+        275.55200457572937,
+        277.75999903678894,
+        271.42399549484253,
+        277.2800028324127,
+        274.78399872779846,
+        272.352010011673,
+        270.52798867225647,
+        278.59199047088623,
+        274.3679881095886
+      ]
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 385.9200030565262,
+      "candidate_us": 513.9200091362,
+      "baseline_samples": [
+        387.3920142650604,
+        384.799987077713,
+        388.7360095977783,
+        383.93598794937134,
+        385.98400354385376,
+        387.1360123157501,
+        384.44799184799194,
+        381.82398676872253,
+        387.3920142650604,
+        384.2880129814148,
+        388.2240056991577,
+        384.38400626182556,
+        388.9920115470886,
+        385.8560025691986,
+        386.0799968242645,
+        385.0879967212677,
+        385.3119909763336,
+        386.84800267219543,
+        387.935996055603,
+        383.35999846458435
+      ],
+      "candidate_samples": [
+        514.6239995956421,
+        515.392005443573,
+        514.4960284233093,
+        513.3439898490906,
+        514.6880149841309,
+        514.1119956970215,
+        513.4400129318237,
+        512.9920244216919,
+        515.2000188827515,
+        514.2080187797546,
+        513.4080052375793,
+        513.696014881134,
+        513.5040283203125,
+        516.0319805145264,
+        513.5359764099121,
+        513.7280225753784,
+        512.8960013389587,
+        512.4160051345825,
+        514.2719745635986,
+        514.240026473999
+      ]
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 386.3999992609024,
+      "candidate_us": 566.32000207901,
+      "baseline_samples": [
+        387.7759873867035,
+        381.3439905643463,
+        387.7759873867035,
+        381.47199153900146,
+        389.47200775146484,
+        387.90398836135864,
+        382.56001472473145,
+        389.9199962615967,
+        382.176011800766,
+        383.32799077033997,
+        387.5199854373932,
+        381.8880021572113,
+        388.09600472450256,
+        384.5439851284027,
+        385.98400354385376,
+        386.81599497795105,
+        384.12800431251526,
+        384.0000033378601,
+        388.5439932346344,
+        387.5199854373932
+      ],
+      "candidate_samples": [
+        565.5360221862793,
+        565.3120279312134,
+        564.8639798164368,
+        563.9039874076843,
+        564.2880201339722,
+        565.9520030021667,
+        566.0160183906555,
+        566.4960145950317,
+        566.1439895629883,
+        566.815972328186,
+        568.3519840240479,
+        567.0080184936523,
+        565.7600164413452,
+        566.0160183906555,
+        566.5599703788757,
+        566.6239857673645,
+        566.815972328186,
+        567.0080184936523,
+        567.8399801254272,
+        566.7200088500977
+      ]
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 385.9359920024872,
+      "candidate_us": 497.75999784469604,
+      "baseline_samples": [
+        385.72800159454346,
+        385.0559890270233,
+        390.0800049304962,
+        387.29599118232727,
+        383.93598794937134,
+        382.6240003108978,
+        386.9760036468506,
+        385.8239948749542,
+        387.58400082588196,
+        383.93598794937134,
+        386.78398728370667,
+        385.0559890270233,
+        387.1679902076721,
+        382.07998871803284,
+        386.0799968242645,
+        385.79198718070984,
+        386.6559863090515,
+        386.52798533439636,
+        386.04798913002014,
+        383.87200236320496
+      ],
+      "candidate_samples": [
+        498.56001138687134,
+        497.69601225852966,
+        498.2079863548279,
+        496.22398614883423,
+        497.95201420783997,
+        497.0879852771759,
+        497.72799015045166,
+        498.1119930744171,
+        497.2800016403198,
+        497.0560073852539,
+        497.79200553894043,
+        497.3120093345642,
+        497.8240132331848,
+        497.0879852771759,
+        498.4639883041382,
+        497.9200065135956,
+        498.3679950237274,
+        497.95201420783997,
+        497.50399589538574,
+        496.47998809814453
+      ]
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 387.1999979019165,
+      "candidate_us": 696.1599886417389,
+      "baseline_samples": [
+        383.87200236320496,
+        387.6799941062927,
+        385.6639862060547,
+        387.84000277519226,
+        387.64798641204834,
+        383.7440013885498,
+        386.78398728370667,
+        384.19198989868164,
+        388.70400190353394,
+        385.343998670578,
+        388.35200667381287,
+        388.35200667381287,
+        386.84800267219543,
+        388.41599225997925,
+        382.59199261665344,
+        387.5519931316376,
+        389.3760144710541,
+        384.38400626182556,
+        388.15999031066895,
+        386.30399107933044
+      ],
+      "candidate_samples": [
+        696.3199973106384,
+        694.7519779205322,
+        696.287989616394,
+        695.1680183410645,
+        697.6320147514343,
+        695.4879760742188,
+        698.2399821281433,
+        696.3199973106384,
+        697.5039839744568,
+        699.072003364563,
+        699.1680264472961,
+        694.3680047988892,
+        696.0960030555725,
+        697.8560090065002,
+        694.3359971046448,
+        694.4640278816223,
+        695.4240202903748,
+        695.0079798698425,
+        696.2239742279053,
+        694.2399740219116
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 40.16000032424927,
+      "candidate_us": 30.880000442266464,
+      "baseline_samples": [
+        42.33599826693535,
+        40.991999208927155,
+        40.09599983692169,
+        39.84000161290169,
+        40.47999903559685,
+        41.120000183582306,
+        41.280001401901245,
+        40.352001786231995,
+        40.32000154256821,
+        40.672000497579575,
+        40.16000032424927,
+        40.28800129890442,
+        40.031999349594116,
+        39.84000161290169,
+        40.12800008058548,
+        39.96799886226654,
+        39.8080013692379,
+        39.8080013692379,
+        40.16000032424927,
+        40.031999349594116
+      ],
+      "candidate_samples": [
+        31.775999814271927,
+        30.94400092959404,
+        31.007999554276466,
+        30.880000442266464,
+        30.751999467611313,
+        30.30399978160858,
+        31.136000528931618,
+        30.751999467611313,
+        30.848000198602676,
+        30.880000442266464,
+        31.231999397277832,
+        30.751999467611313,
+        30.81599995493889,
+        30.688000842928886,
+        31.26399964094162,
+        30.97599931061268,
+        31.136000528931618,
+        30.688000842928886,
+        31.968001276254654,
+        30.592000111937523
+      ]
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 39.95199874043465,
+      "candidate_us": 31.039999797940254,
+      "baseline_samples": [
+        41.152000427246094,
+        40.352001786231995,
+        40.192000567913055,
+        40.09599983692169,
+        41.600000113248825,
+        39.872001856565475,
+        40.12800008058548,
+        39.93599861860275,
+        39.96799886226654,
+        39.8080013692379,
+        39.872001856565475,
+        39.51999917626381,
+        40.64000025391579,
+        40.352001786231995,
+        39.99999910593033,
+        39.64800015091896,
+        39.64800015091896,
+        39.583999663591385,
+        39.68000039458275,
+        39.903998374938965
+      ],
+      "candidate_samples": [
+        32.44800120592117,
+        30.880000442266464,
+        31.199999153614044,
+        30.688000842928886,
+        31.039999797940254,
+        30.751999467611313,
+        31.5839983522892,
+        31.072000041604042,
+        31.90400078892708,
+        31.231999397277832,
+        30.912000685930252,
+        31.39200061559677,
+        31.295999884605408,
+        30.719999223947525,
+        31.039999797940254,
+        30.751999467611313,
+        30.94400092959404,
+        30.94400092959404,
+        31.26399964094162,
+        30.912000685930252
+      ]
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 40.16000032424927,
+      "candidate_us": 31.02399967610836,
+      "baseline_samples": [
+        40.832001715898514,
+        39.8080013692379,
+        40.32000154256821,
+        39.93599861860275,
+        40.54399952292442,
+        39.8080013692379,
+        40.063999593257904,
+        39.48799893260002,
+        39.51999917626381,
+        40.09599983692169,
+        40.25600105524063,
+        40.12800008058548,
+        40.28800129890442,
+        39.99999910593033,
+        40.44799879193306,
+        40.192000567913055,
+        39.712000638246536,
+        41.79200157523155,
+        41.280001401901245,
+        40.192000567913055
+      ],
+      "candidate_samples": [
+        30.97599931061268,
+        30.94400092959404,
+        31.10400028526783,
+        31.072000041604042,
+        31.55200183391571,
+        30.432000756263733,
+        31.10400028526783,
+        31.231999397277832,
+        31.10400028526783,
+        30.46399913728237,
+        31.072000041604042,
+        30.49599938094616,
+        31.168000772595406,
+        30.33600002527237,
+        30.719999223947525,
+        30.97599931061268,
+        30.751999467611313,
+        31.168000772595406,
+        30.912000685930252,
+        31.10400028526783
+      ]
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 40.25600105524063,
+      "candidate_us": 31.007999554276466,
+      "baseline_samples": [
+        40.672000497579575,
+        40.352001786231995,
+        39.872001856565475,
+        40.32000154256821,
+        41.34399816393852,
+        40.25600105524063,
+        40.76800122857094,
+        39.872001856565475,
+        39.5519994199276,
+        40.352001786231995,
+        39.93599861860275,
+        40.47999903559685,
+        40.063999593257904,
+        40.063999593257904,
+        40.12800008058548,
+        39.903998374938965,
+        40.192000567913055,
+        40.25600105524063,
+        40.352001786231995,
+        40.70400074124336
+      ],
+      "candidate_samples": [
+        31.456001102924347,
+        30.7839997112751,
+        31.10400028526783,
+        30.527999624609947,
+        31.520001590251923,
+        30.432000756263733,
+        31.168000772595406,
+        30.97599931061268,
+        31.968001276254654,
+        30.94400092959404,
+        30.6560005992651,
+        30.527999624609947,
+        31.039999797940254,
+        31.936001032590866,
+        30.848000198602676,
+        31.072000041604042,
+        31.039999797940254,
+        30.400000512599945,
+        31.5839983522892,
+        30.719999223947525
+      ]
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 39.99999910593033,
+      "candidate_us": 30.848000198602676,
+      "baseline_samples": [
+        39.93599861860275,
+        40.76800122857094,
+        40.28800129890442,
+        39.77600112557411,
+        39.51999917626381,
+        40.32000154256821,
+        40.800001472234726,
+        39.872001856565475,
+        40.031999349594116,
+        39.64800015091896,
+        39.872001856565475,
+        39.712000638246536,
+        40.22400081157684,
+        40.383998304605484,
+        39.64800015091896,
+        40.511999279260635,
+        41.120000183582306,
+        39.99999910593033,
+        39.99999910593033,
+        39.29600119590759
+      ],
+      "candidate_samples": [
+        31.74399957060814,
+        30.400000512599945,
+        31.520001590251923,
+        30.6560005992651,
+        30.97599931061268,
+        30.527999624609947,
+        31.231999397277832,
+        30.6560005992651,
+        30.880000442266464,
+        30.112000182271004,
+        31.5839983522892,
+        31.007999554276466,
+        31.007999554276466,
+        30.6560005992651,
+        31.10400028526783,
+        30.46399913728237,
+        31.199999153614044,
+        30.62400035560131,
+        30.81599995493889,
+        30.30399978160858
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 203.12000066041946,
+      "candidate_us": 195.26399672031403,
+      "baseline_samples": [
+        204.03200387954712,
+        201.47199928760529,
+        202.2400051355362,
+        202.33599841594696,
+        203.13599705696106,
+        203.07199656963348,
+        203.10400426387787,
+        203.23200523853302,
+        203.2960057258606,
+        202.62399315834045,
+        203.13599705696106,
+        203.3279985189438,
+        201.9840031862259,
+        201.6959935426712,
+        202.07999646663666,
+        204.0639966726303,
+        203.96800339221954,
+        202.01599597930908,
+        203.36000621318817,
+        203.48800718784332
+      ],
+      "candidate_samples": [
+        195.48800587654114,
+        195.51999866962433,
+        194.5279985666275,
+        195.13599574565887,
+        194.240003824234,
+        194.68800723552704,
+        196.70400023460388,
+        196.383997797966,
+        195.13599574565887,
+        196.60800695419312,
+        194.97600197792053,
+        194.72000002861023,
+        196.31999731063843,
+        193.95199418067932,
+        195.68000733852386,
+        195.93599438667297,
+        195.39199769496918,
+        194.68800723552704,
+        194.240003824234,
+        196.60800695419312
+      ]
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 202.70399749279022,
+      "candidate_us": 195.44000178575516,
+      "baseline_samples": [
+        205.08800446987152,
+        201.75999402999878,
+        203.96800339221954,
+        202.27199792861938,
+        203.5519927740097,
+        202.01599597930908,
+        203.16800475120544,
+        203.80799472332,
+        201.79200172424316,
+        203.96800339221954,
+        202.87999510765076,
+        203.2960057258606,
+        202.33599841594696,
+        202.5279998779297,
+        201.31200551986694,
+        203.36000621318817,
+        201.85600221157074,
+        201.27999782562256,
+        202.97600328922272,
+        202.30400562286377
+      ],
+      "candidate_samples": [
+        196.79999351501465,
+        195.99999487400055,
+        195.64799964427948,
+        194.240003824234,
+        194.2719966173172,
+        194.68800723552704,
+        196.03200256824493,
+        195.23200392723083,
+        195.74399292469025,
+        193.24800372123718,
+        195.68000733852386,
+        195.5520063638687,
+        195.71200013160706,
+        193.66399943828583,
+        195.3279972076416,
+        193.79200041294098,
+        196.19199633598328,
+        193.95199418067932,
+        196.03200256824493,
+        194.68800723552704
+      ]
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 202.7520015835762,
+      "candidate_us": 195.50400227308273,
+      "baseline_samples": [
+        201.9840031862259,
+        202.4639993906021,
+        203.16800475120544,
+        203.16800475120544,
+        203.42400670051575,
+        200.99200308322906,
+        202.59200036525726,
+        202.68799364566803,
+        202.81599462032318,
+        201.88799500465393,
+        203.10400426387787,
+        203.23200523853302,
+        202.78400182724,
+        203.74399423599243,
+        201.79200172424316,
+        203.5840004682541,
+        201.27999782562256,
+        202.43200659751892,
+        202.72000133991241,
+        204.28800582885742
+      ],
+      "candidate_samples": [
+        197.02400267124176,
+        193.50400567054749,
+        195.45599818229675,
+        195.80799341201782,
+        194.4960057735443,
+        195.8719938993454,
+        194.2719966173172,
+        195.93599438667297,
+        195.360004901886,
+        194.43200528621674,
+        195.0719952583313,
+        196.22400403022766,
+        196.22400403022766,
+        195.5520063638687,
+        194.87999379634857,
+        194.46399807929993,
+        196.70400023460388,
+        195.93599438667297,
+        195.16800343990326,
+        195.8719938993454
+      ]
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 202.63999700546265,
+      "candidate_us": 195.24800032377243,
+      "baseline_samples": [
+        203.48800718784332,
+        201.56799256801605,
+        202.43200659751892,
+        203.2639980316162,
+        203.07199656963348,
+        202.65600085258484,
+        202.65600085258484,
+        202.87999510765076,
+        204.16000485420227,
+        201.88799500465393,
+        202.5279998779297,
+        201.21599733829498,
+        202.84800231456757,
+        202.07999646663666,
+        202.62399315834045,
+        203.10400426387787,
+        203.13599705696106,
+        201.7280012369156,
+        201.9840031862259,
+        201.7280012369156
+      ],
+      "candidate_samples": [
+        199.13600385189056,
+        195.3279972076416,
+        194.4960057735443,
+        194.815993309021,
+        195.48800587654114,
+        195.90400159358978,
+        194.84800100326538,
+        194.59199905395508,
+        194.84800100326538,
+        196.96000218391418,
+        194.36800479888916,
+        195.48800587654114,
+        195.360004901886,
+        194.14399564266205,
+        195.16800343990326,
+        194.5279985666275,
+        194.97600197792053,
+        195.5839991569519,
+        195.93599438667297,
+        196.06399536132812
+      ]
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 202.4639993906021,
+      "candidate_us": 195.3440010547638,
+      "baseline_samples": [
+        202.17600464820862,
+        202.2079974412918,
+        202.04800367355347,
+        202.68799364566803,
+        202.4639993906021,
+        203.61599326133728,
+        202.11200416088104,
+        203.2639980316162,
+        202.43200659751892,
+        203.5840004682541,
+        201.7280012369156,
+        202.27199792861938,
+        204.19199764728546,
+        202.30400562286377,
+        204.3839991092682,
+        202.94399559497833,
+        203.0400037765503,
+        201.53599977493286,
+        203.2639980316162,
+        202.4639993906021
+      ],
+      "candidate_samples": [
+        196.383997797966,
+        196.28800451755524,
+        195.19999623298645,
+        195.51999866962433,
+        194.20799612998962,
+        195.2960044145584,
+        195.39199769496918,
+        194.5600062608719,
+        194.94399428367615,
+        193.08799505233765,
+        195.45599818229675,
+        194.94399428367615,
+        196.6720074415207,
+        195.99999487400055,
+        194.46399807929993,
+        196.6399997472763,
+        194.2719966173172,
+        195.48800587654114,
+        194.815993309021,
+        195.90400159358978
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 391.4400041103363,
+      "candidate_us": 384.2400014400482,
+      "baseline_samples": [
+        394.49599385261536,
+        391.1679983139038,
+        389.3440067768097,
+        391.1040127277374,
+        391.9999897480011,
+        389.44000005722046,
+        393.5999870300293,
+        390.6880021095276,
+        389.8560106754303,
+        392.5440013408661,
+        391.84001088142395,
+        391.64799451828003,
+        391.84001088142395,
+        391.9360041618347,
+        390.5920088291168,
+        390.81600308418274,
+        391.07200503349304,
+        391.2320137023926,
+        391.84001088142395,
+        392.767995595932
+      ],
+      "candidate_samples": [
+        385.0240111351013,
+        384.5759928226471,
+        384.67198610305786,
+        384.6080005168915,
+        384.2560052871704,
+        382.27200508117676,
+        384.5439851284027,
+        384.223997592926,
+        384.0959966182709,
+        382.78400897979736,
+        383.2640051841736,
+        382.9439878463745,
+        383.04001092910767,
+        385.0240111351013,
+        383.1999897956848,
+        384.38400626182556,
+        383.35999846458435,
+        382.84799456596375,
+        384.5120072364807,
+        384.5120072364807
+      ]
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 391.9679969549179,
+      "candidate_us": 384.44800674915314,
+      "baseline_samples": [
+        391.80800318717957,
+        393.15199851989746,
+        391.2000060081482,
+        392.5440013408661,
+        392.192006111145,
+        390.1439905166626,
+        392.8000032901764,
+        391.2000060081482,
+        391.7759954929352,
+        392.12799072265625,
+        390.46400785446167,
+        392.7359879016876,
+        393.5999870300293,
+        391.7120099067688,
+        392.8000032901764,
+        391.55200123786926,
+        391.64799451828003,
+        393.0560052394867,
+        392.2240138053894,
+        391.3919925689697
+      ],
+      "candidate_samples": [
+        386.33599877357483,
+        384.8640024662018,
+        384.12800431251526,
+        384.8319947719574,
+        384.38400626182556,
+        383.4240138530731,
+        383.8079869747162,
+        384.5120072364807,
+        386.81599497795105,
+        383.67998600006104,
+        384.8319947719574,
+        384.8319947719574,
+        383.4559917449951,
+        384.5120072364807,
+        383.39200615882874,
+        384.223997592926,
+        384.0639889240265,
+        385.79198718070984,
+        382.81598687171936,
+        384.6080005168915
+      ]
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 391.82400703430176,
+      "candidate_us": 384.0160071849823,
+      "baseline_samples": [
+        389.4079923629761,
+        392.2559916973114,
+        394.463986158371,
+        392.5760090351105,
+        390.3360068798065,
+        391.80800318717957,
+        391.07200503349304,
+        393.2479918003082,
+        392.15999841690063,
+        391.84001088142395,
+        390.01598954200745,
+        392.38399267196655,
+        390.8799886703491,
+        391.1679983139038,
+        392.5119936466217,
+        392.2240138053894,
+        391.2320137023926,
+        390.0800049304962,
+        392.4480080604553,
+        390.8799886703491
+      ],
+      "candidate_samples": [
+        383.7760090827942,
+        384.0320110321045,
+        384.16001200675964,
+        383.9679956436157,
+        384.8640024662018,
+        383.1999897956848,
+        382.752001285553,
+        385.3760063648224,
+        382.88000226020813,
+        384.89601016044617,
+        383.32799077033997,
+        383.93598794937134,
+        382.33599066734314,
+        383.4879994392395,
+        384.89601016044617,
+        384.0000033378601,
+        385.6639862060547,
+        384.4799995422363,
+        385.0240111351013,
+        384.5759928226471
+      ]
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 391.55200123786926,
+      "candidate_us": 383.775994181633,
+      "baseline_samples": [
+        392.63999462127686,
+        393.5360014438629,
+        392.12799072265625,
+        390.9760117530823,
+        391.2000060081482,
+        391.58400893211365,
+        391.36001467704773,
+        392.5760090351105,
+        390.3360068798065,
+        390.81600308418274,
+        392.67200231552124,
+        391.2639915943146,
+        391.32800698280334,
+        393.21601390838623,
+        390.30399918556213,
+        391.84001088142395,
+        392.89599657058716,
+        392.5119936466217,
+        391.5199935436249,
+        390.5920088291168
+      ],
+      "candidate_samples": [
+        385.21599769592285,
+        383.87200236320496,
+        383.29601287841797,
+        382.9439878463745,
+        382.6879858970642,
+        384.3519985675812,
+        384.5439851284027,
+        384.16001200675964,
+        385.919988155365,
+        384.12800431251526,
+        380.19201159477234,
+        383.1999897956848,
+        383.87200236320496,
+        383.2640051841736,
+        384.73600149154663,
+        383.04001092910767,
+        384.44799184799194,
+        383.67998600006104,
+        383.4559917449951,
+        383.5200071334839
+      ]
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 391.7760103940964,
+      "candidate_us": 384.41599905490875,
+      "baseline_samples": [
+        391.61598682403564,
+        391.9360041618347,
+        392.192006111145,
+        390.8799886703491,
+        391.7120099067688,
+        391.5199935436249,
+        390.46400785446167,
+        390.46400785446167,
+        391.84001088142395,
+        389.72800970077515,
+        391.9360041618347,
+        391.03999733924866,
+        390.9760117530823,
+        392.12799072265625,
+        393.3759927749634,
+        390.46400785446167,
+        391.9360041618347,
+        394.432008266449,
+        392.8320109844208,
+        392.38399267196655
+      ],
+      "candidate_samples": [
+        385.18399000167847,
+        385.98400354385376,
+        384.768009185791,
+        382.2399973869324,
+        383.7760090827942,
+        382.9439878463745,
+        384.2880129814148,
+        384.768009185791,
+        384.64000821113586,
+        384.2560052871704,
+        384.5439851284027,
+        384.0000033378601,
+        385.76000928878784,
+        384.5439851284027,
+        384.95999574661255,
+        382.78400897979736,
+        383.29601287841797,
+        383.35999846458435,
+        385.8560025691986,
+        383.2640051841736
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"batch\": 4, \"ctx\": 3000, \"heads\": \"tp8\", \"layer\": \"full\", \"seed\": 1703}": {},
+    "{\"batch\": 8, \"ctx\": 8192, \"heads\": \"dp\", \"layer\": \"full\", \"seed\": 1704, \"spread\": \"mixed\"}": {},
+    "{\"batch\": 2, \"ctx\": 100000, \"heads\": \"tp8\", \"layer\": \"full\", \"page\": 1, \"q_len\": 8, \"seed\": 1705}": {},
+    "{\"batch\": 4, \"ctx\": 6000, \"dist\": \"edges\", \"heads\": \"tp8\", \"layer\": \"full\", \"q_len\": 8, \"seed\": 1707}": {},
+    "{\"batch\": 1, \"ctx\": 1048576, \"heads\": \"tp8\", \"layer\": \"full\", \"q_len\": 8, \"seed\": 1708}": {},
+    "{\"batch\": 2, \"ctx\": 9000, \"heads\": \"tp8\", \"kv_scale\": 0.015625, \"layer\": \"full\", \"seed\": 1710}": {},
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"soft\", \"heads\": \"tp8\", \"layer\": \"full\", \"seed\": 1711, \"spread\": \"mixed\"}": {},
+    "{\"batch\": 2, \"ctx\": 20000, \"dist\": \"soft\", \"heads\": \"dp\", \"layer\": \"full\", \"q_len\": 8, \"seed\": 1713}": {},
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"page\": 1, \"seed\": 1714, \"spread\": \"mixed\"}": {},
+    "{\"batch\": 2, \"ctx\": 20000, \"dist\": \"coherent\", \"heads\": \"dp\", \"layer\": \"full\", \"q_len\": 8, \"seed\": 1715}": {},
+    "{\"batch\": 9, \"ctx\": 5000, \"dist\": \"soft\", \"heads\": \"tp8\", \"kv_scale\": 0.015625, \"layer\": \"full\", \"page\": 64, \"q_len\": 8, \"seed\": 1888, \"spread\": \"mixed\"}": {},
+    "{\"batch\": 12, \"ctx\": 9000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"page\": 1, \"q_len\": 1, \"seed\": 1889, \"spread\": \"mixed\"}": {},
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"load\": \"decode 1\", \"page\": 1, \"seed\": 602, \"weight\": 16}": {},
+    "{\"batch\": 16, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"load\": \"decode 16\", \"page\": 1, \"seed\": 604, \"spread\": \"agentic\", \"weight\": 16}": {},
+    "{\"batch\": 32, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"load\": \"decode 32\", \"page\": 1, \"seed\": 606, \"spread\": \"agentic\", \"weight\": 16}": {},
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"load\": \"verify 1\", \"page\": 1, \"q_len\": 8, \"seed\": 608, \"weight\": 16}": {},
+    "{\"batch\": 16, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"load\": \"verify 16\", \"page\": 1, \"q_len\": 8, \"seed\": 610, \"spread\": \"agentic\", \"weight\": 16}": {},
+    "{\"batch\": 32, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"load\": \"verify 32\", \"page\": 1, \"q_len\": 8, \"seed\": 612, \"spread\": \"agentic\", \"weight\": 16}": {}
+  },
+  "calibration_us": 3.2319999299943447,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "k256_v512_w4",
+    "case": {
+      "batch": 32,
+      "ctx": 80000,
+      "heads": "tp8",
+      "layer": "full",
+      "page": 1,
+      "q_len": 8,
+      "spread": "agentic",
+      "dist": "coherent",
+      "load": "verify 32",
+      "weight": 16,
+      "seed": 612
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.451ms        87.91%       1.451ms     362.826us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     147.585us         8.94%     147.585us      36.896us             4  \nvoid flash::prepare_varlen_num_blocks_kernel<2, true...         0.00%       0.000us         0.00%       0.000us       0.000us      14.989us         0.91%      14.989us       3.747us             4  \nvoid cutlass::device_kernel<flash::FlashAttnFwdCombi...         0.00%       0.000us         0.00%       0.000us       0.000us      14.802us         0.90%      14.802us       3.700us             4  \n                                         _prepare_heads         0.00%       0.000us         0.00%       0.000us       0.000us      10.035us         0.61%      10.035us       2.509us             4  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us       9.006us         0.55%       9.006us       2.251us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.147us         0.19%       3.147us       0.787us             4  \n                                        cudaGraphLaunch         4.29%     137.867us        50.30%       1.617ms     404.333us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        46.01%       1.479ms        46.01%       1.479ms       1.479ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        49.70%       1.598ms        49.70%       1.598ms     798.947us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 3.215ms\nSelf CUDA time total: 1.651ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.490ms        86.69%       1.490ms     372.407us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     150.441us         8.76%     150.441us      37.610us             4  \nvoid cutlass::device_kernel<flash::FlashAttnFwdCombi...         0.00%       0.000us         0.00%       0.000us       0.000us      15.134us         0.88%      15.134us       3.783us             4  \nvoid flash::prepare_varlen_num_blocks_kernel<2, true...         0.00%       0.000us         0.00%       0.000us       0.000us      14.878us         0.87%      14.878us       3.719us             4  \nvoid at::native::elementwise_kernel<128, 4, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us      12.222us         0.71%      12.222us       3.055us             4  \nvoid at::native::vectorized_elementwise_kernel<8, at...         0.00%       0.000us         0.00%       0.000us       0.000us       9.532us         0.55%       9.532us       1.192us             8  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us       9.310us         0.54%       9.310us       2.327us             4  \n                                _qk_rms_norm_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       7.903us         0.46%       7.903us       1.976us             4  \nvoid sglang::store_kvcache_kernel<128l, 128l, 32u, t...         0.00%       0.000us         0.00%       0.000us       0.000us       5.695us         0.33%       5.695us       1.424us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.520us         0.20%       3.520us       0.880us             4  \n                                        cudaGraphLaunch         3.87%     124.885us        49.60%       1.600ms     400.058us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        45.73%       1.475ms        45.73%       1.475ms       1.475ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        50.40%       1.626ms        50.40%       1.626ms     812.950us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 3.226ms\nSelf CUDA time total: 1.718ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "control",
+      "function": "_prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 72,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 37,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish_heads",
+      "registers": 127,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__prepare",
+      "registers": 16,
+      "spills": 0,
+      "shared": 8
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__prepare",
+      "registers": 16,
+      "spills": 0,
+      "shared": 8
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__finish",
+      "registers": 25,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__finish",
+      "registers": 39,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_finish",
+      "registers": 102,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_prepare_heads",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__attention_inline",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__finish",
+      "registers": 72,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__finish",
+      "registers": 37,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "inline__finish_heads",
+      "registers": 127,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_score_tiles",
+      "registers": 48,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_score_tiles",
+      "registers": 46,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_score_tiles",
+      "registers": 46,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_value_tiles",
+      "registers": 131,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_value_tiles",
+      "registers": 134,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_value_tiles",
+      "registers": 134,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_finish",
+      "registers": 31,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_finish",
+      "registers": 31,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_prepare_heads",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__finish",
+      "registers": 72,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__finish",
+      "registers": 37,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "inline__finish_heads",
+      "registers": 127,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_score_tiles",
+      "registers": 64,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_score_tiles",
+      "registers": 80,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_score_tiles",
+      "registers": 80,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_value_tiles",
+      "registers": 255,
+      "spills": 0,
+      "shared": 65536
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_value_tiles",
+      "registers": 255,
+      "spills": 2,
+      "shared": 65536
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_value_tiles",
+      "registers": 255,
+      "spills": 2,
+      "shared": 65536
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_finish",
+      "registers": 58,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_prepare_heads",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__attention_inline",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__finish",
+      "registers": 72,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__finish",
+      "registers": 37,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "inline__finish_heads",
+      "registers": 127,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_score_tiles",
+      "registers": 64,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_score_tiles",
+      "registers": 80,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_score_tiles",
+      "registers": 80,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_value_tiles",
+      "registers": 255,
+      "spills": 4,
+      "shared": 32768
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_value_tiles",
+      "registers": 255,
+      "spills": 2,
+      "shared": 32768
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_value_tiles",
+      "registers": 255,
+      "spills": 2,
+      "shared": 32768
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_finish",
+      "registers": 58,
+      "spills": 0,
+      "shared": 2048
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_prepare_heads",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__attention_inline",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__finish",
+      "registers": 72,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__finish",
+      "registers": 37,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "inline__finish_heads",
+      "registers": 127,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_score_tiles",
+      "registers": 64,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_score_tiles",
+      "registers": 80,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_score_tiles",
+      "registers": 80,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_value_tiles",
+      "registers": 128,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_value_tiles",
+      "registers": 131,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_value_tiles",
+      "registers": 131,
+      "spills": 0,
+      "shared": 32768
+    }
+  ],
+  "elapsed_s": 53.1305361,
+  "case_scope": "layer=full",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_attention_decode",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/a4c2ab31edd4cdf088df05e6035a13274a86171bf65a266af0ce1141a1802d69.py",
+      "sha256": "a4c2ab31edd4cdf088df05e6035a13274a86171bf65a266af0ce1141a1802d69"
+    },
+    "k128_v256_w4": {
+      "path": "experiments/sources/2ebca9f9c4018f1b8ed8fd990091a293d3e687d44ae5b54303c6ee9084123159.py",
+      "sha256": "2ebca9f9c4018f1b8ed8fd990091a293d3e687d44ae5b54303c6ee9084123159"
+    },
+    "k256_v1024_w8": {
+      "path": "experiments/sources/440a12d69c7f11d08d0cd3b30ce5e529766b0bfbec80c4b1d5e725e384d730a6.py",
+      "sha256": "440a12d69c7f11d08d0cd3b30ce5e529766b0bfbec80c4b1d5e725e384d730a6"
+    },
+    "k256_v512_w4": {
+      "path": "experiments/sources/2970201d0c901050a3cff995fc61a3044f66a5764e58acdd47a358bf92157682.py",
+      "sha256": "2970201d0c901050a3cff995fc61a3044f66a5764e58acdd47a358bf92157682"
+    },
+    "k256_v512_w8": {
+      "path": "experiments/sources/62e26fb28c715998b067b319aaa68d83d86d2a0b72736581da0c563bc5d813d4.py",
+      "sha256": "62e26fb28c715998b067b319aaa68d83d86d2a0b72736581da0c563bc5d813d4"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

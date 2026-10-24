@@ -1,0 +1,93 @@
+{
+  "updated_at": "2026-10-24T09:24:46.064539+09:00",
+  "status": "all four rounds correct but slower; rejected, no source promoted",
+  "hypothesis": "Synchronous warp-level m16n8k16 BF16 MMA avoids 64KiB activation shared storage and warp-group fences. Split K1/4/8 computes FP32 partial sums, then applies global scale and BF16 boundaries.",
+  "sources": [
+    "work/moe_warp_mma.cu",
+    "work/moe_warp_mma_lookup.cu"
+  ],
+  "lookup_exactness": "outputs/fp4-fp8-product-exactness.json",
+  "initial_cpu_compile": "outputs/moe-warp-mma-precompile.json",
+  "initial_gpu_result": "outputs/moe-warp-mma.json",
+  "followup_cpu_compile": "outputs/moe-warp-mma-lookup-precompile.json",
+  "followup_gpu_result": "outputs/moe-warp-mma-lookup.json",
+  "promoted": false,
+  "results": {
+    "initial": {
+      "checks": [
+        44,
+        44
+      ],
+      "scores": {
+        "control": 1.0861,
+        "s1": 0.2071,
+        "s4": 0.3538,
+        "s8": 0.3872
+      }
+    },
+    "lookup": {
+      "checks": [
+        44,
+        44
+      ],
+      "scores": {
+        "control": 1.0893,
+        "s1": 0.3798,
+        "s4": 0.4875,
+        "s8": 0.5145
+      }
+    },
+    "single": {
+      "checks": [
+        55,
+        55
+      ],
+      "scores": {
+        "control": 1.085,
+        "s8": 0.9952,
+        "s16": 1.022,
+        "s32": 1.0264,
+        "s64": 1.0015
+      },
+      "m1_us": {
+        "control": 87.5,
+        "s8": 145.46,
+        "s16": 124.69,
+        "s32": 120.51,
+        "s64": 140.3
+      }
+    },
+    "vector": {
+      "checks": [
+        55,
+        55
+      ],
+      "scores": {
+        "control": 1.0892,
+        "s8": 0.9921,
+        "s16": 1.0255,
+        "s32": 1.028,
+        "s64": 1.0117
+      },
+      "m1_us": {
+        "control": 87.78,
+        "s8": 149.41,
+        "s16": 122.82,
+        "s32": 120.9,
+        "s64": 134.1
+      }
+    }
+  },
+  "codegen": {
+    "evidence": "outputs/moe-warp-mma-single.json:cuda_resource_usage",
+    "registers": {
+      "warp_kernels": "32-40",
+      "single_token_kernels": 32
+    },
+    "local_bytes": 0,
+    "stack_bytes": 0,
+    "shared_bytes": 0
+  },
+  "next_hypothesis": "No further repetition justified without a new bottleneck. Exact vector loading did not improve best M1 performance.",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

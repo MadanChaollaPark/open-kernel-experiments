@@ -1,0 +1,1893 @@
+[
+  {
+    "record": "results/local/aligned-stripes-research.json",
+    "problem": null,
+    "candidates": [],
+    "validation_passed": 0,
+    "validation_total": 0,
+    "timing_rows": 4,
+    "has_source_snapshots": false
+  },
+  {
+    "record": "results/local/attention-balanced-hybrid.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "balanced_all",
+      "control",
+      "hybrid"
+    ],
+    "validation_passed": 90,
+    "validation_total": 90,
+    "timing_rows": 36,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-bounded.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "balanced",
+      "bounded",
+      "control"
+    ],
+    "validation_passed": 90,
+    "validation_total": 90,
+    "timing_rows": 36,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-fa3-packed.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "all",
+      "control",
+      "large"
+    ],
+    "validation_passed": 90,
+    "validation_total": 90,
+    "timing_rows": 36,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-fa3-past.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "c1024",
+      "c256",
+      "c512",
+      "control"
+    ],
+    "validation_passed": 120,
+    "validation_total": 120,
+    "timing_rows": 48,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-fa3-split.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "c1024",
+      "c256",
+      "c512",
+      "control"
+    ],
+    "validation_passed": 120,
+    "validation_total": 120,
+    "timing_rows": 48,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-fa3-sweep.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "split0_pack0",
+      "split0_pack1",
+      "split128_pack0",
+      "split128_pack1",
+      "split16_pack0",
+      "split16_pack1",
+      "split1_pack0",
+      "split1_pack1",
+      "split32_pack1",
+      "split4_pack0",
+      "split4_pack1",
+      "split64_pack0",
+      "split64_pack1",
+      "split8_pack1"
+    ],
+    "validation_passed": 392,
+    "validation_total": 392,
+    "timing_rows": 168,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-fi-fa3-cached.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "control",
+      "fa3_large_verify"
+    ],
+    "validation_passed": 46,
+    "validation_total": 47,
+    "timing_rows": 12,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-fi-fa3-v2.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "control",
+      "full",
+      "verify"
+    ],
+    "validation_passed": 90,
+    "validation_total": 90,
+    "timing_rows": 36,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-flashinfer-nosplit.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "control",
+      "tensorcores_nosplit"
+    ],
+    "validation_passed": 56,
+    "validation_total": 56,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-flashinfer.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "control",
+      "cuda_decode",
+      "tensorcores"
+    ],
+    "validation_passed": 32,
+    "validation_total": 34,
+    "timing_rows": 12,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-fused-hybrid.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "control",
+      "fused_hybrid"
+    ],
+    "validation_passed": 56,
+    "validation_total": 56,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-fused-local-v3.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "attention-fused-local-v3"
+    ],
+    "validation_passed": 28,
+    "validation_total": 28,
+    "timing_rows": 12,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-head-pairs.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "control",
+      "n128_b1024_w4",
+      "n128_b512_w4",
+      "n256_b1024_w8",
+      "n256_b2048_w8"
+    ],
+    "validation_passed": 90,
+    "validation_total": 90,
+    "timing_rows": 30,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-inline-rope.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "b1024_n64",
+      "b2048_n128",
+      "b512_n64",
+      "hybrid_control"
+    ],
+    "validation_passed": 112,
+    "validation_total": 112,
+    "timing_rows": 48,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-inline-v2.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "b1024_n128",
+      "b1024_n64",
+      "b2048_n128",
+      "b512_n128",
+      "b512_n64",
+      "hybrid_control"
+    ],
+    "validation_passed": 168,
+    "validation_total": 168,
+    "timing_rows": 72,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-inline.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "b1024_n128",
+      "b1024_n64",
+      "b2048_n128",
+      "b512_n128",
+      "b512_n64",
+      "hybrid_control"
+    ],
+    "validation_passed": 38,
+    "validation_total": 43,
+    "timing_rows": 12,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-pair.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "b1024_n128_w4",
+      "b1024_n128_w8",
+      "b1024_n64_w4",
+      "b2048_n128_w4",
+      "b512_n128_w4",
+      "b512_n64_w4",
+      "hybrid_control"
+    ],
+    "validation_passed": 196,
+    "validation_total": 196,
+    "timing_rows": 84,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-pair2d.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "control",
+      "n128_b1024_w4_s2",
+      "n128_b1024_w8_s2",
+      "n128_b2048_w4_s2",
+      "n128_b2048_w8_s3",
+      "n128_b512_w4_s2",
+      "n256_b1024_w8_s2",
+      "n256_b2048_w8_s2",
+      "n64_b1024_w4_s2"
+    ],
+    "validation_passed": 270,
+    "validation_total": 270,
+    "timing_rows": 108,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-qtiles.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "hybrid_control",
+      "q16_b1024_n128",
+      "q16_b1024_n64",
+      "q16_b2048_n128",
+      "q16_b512_n128",
+      "q32_b1024_n128",
+      "q32_b2048_n128"
+    ],
+    "validation_passed": 196,
+    "validation_total": 196,
+    "timing_rows": 84,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-simt.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "control",
+      "r1_n32_w4",
+      "r2_n32_w4",
+      "r2_n64_w8",
+      "r4_n32_w8"
+    ],
+    "validation_passed": 140,
+    "validation_total": 140,
+    "timing_rows": 60,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-single-chunk.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "control",
+      "q16_n1024_w8",
+      "q16_n256_w4",
+      "q16_n512_w4",
+      "q16_n512_w8",
+      "q32_n1024_w16",
+      "q32_n1024_w8",
+      "q32_n256_w4",
+      "q32_n512_w8",
+      "q64_n256_w8",
+      "q64_n512_w8"
+    ],
+    "validation_passed": 330,
+    "validation_total": 330,
+    "timing_rows": 132,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-single-window.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "control",
+      "n128_w4_s2_c1",
+      "n128_w4_s2_c2",
+      "n128_w4_s2_c4",
+      "n128_w8_s2_c1",
+      "n256_w8_s2_c1",
+      "n256_w8_s2_c4",
+      "n64_w4_s2_c1",
+      "n64_w4_s2_c2"
+    ],
+    "validation_passed": 140,
+    "validation_total": 144,
+    "timing_rows": 60,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-split-v1.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "attention-split-v1"
+    ],
+    "validation_passed": 0,
+    "validation_total": 1,
+    "timing_rows": 0,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-sweep1.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "blocks1024_tile128",
+      "blocks1024_tile64",
+      "blocks256_tile128",
+      "blocks256_tile64",
+      "blocks512_tile128",
+      "blocks512_tile64"
+    ],
+    "validation_passed": 168,
+    "validation_total": 168,
+    "timing_rows": 72,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-sweep2.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "b1024_n128_w4_s2",
+      "b1024_n256_w4_s1",
+      "b1024_n256_w8_s1",
+      "b1024_n512_w8_s1",
+      "b1024_n64_w4_s2",
+      "b2048_n128_w4_s2",
+      "b2048_n256_w4_s1",
+      "b512_n128_w4_s2"
+    ],
+    "validation_passed": 224,
+    "validation_total": 224,
+    "timing_rows": 96,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-sweep3.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "b1024_n128_w4_o0",
+      "b1024_n128_w4_o1",
+      "b1024_n128_w8_o1",
+      "b1024_n256_w4_o0",
+      "b1024_n64_w4_o0",
+      "b2048_n128_w4_o0",
+      "b2048_n128_w4_o1",
+      "b512_n128_w4_o0",
+      "b512_n128_w4_o1"
+    ],
+    "validation_passed": 252,
+    "validation_total": 252,
+    "timing_rows": 108,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-twostage.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "control",
+      "k128_v256_w4",
+      "k256_v1024_w8",
+      "k256_v512_w4",
+      "k256_v512_w8"
+    ],
+    "validation_passed": 90,
+    "validation_total": 90,
+    "timing_rows": 30,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/attention-wide-balanced.json",
+    "problem": "muse_attention_decode",
+    "candidates": [
+      "control",
+      "n1024_b1024_s1",
+      "n256_b1024_s1",
+      "n512_b1024_s1",
+      "n512_b1024_s2",
+      "n512_b2048_s1"
+    ],
+    "validation_passed": 108,
+    "validation_total": 108,
+    "timing_rows": 36,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/decode-align-fused.json",
+    "problem": "muse_decode_layer",
+    "candidates": [
+      "compact32",
+      "control",
+      "fused32",
+      "hybrid32"
+    ],
+    "validation_passed": 100,
+    "validation_total": 100,
+    "timing_rows": 48,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/decode-compact-align.json",
+    "problem": "muse_decode_layer",
+    "candidates": [
+      "compact32",
+      "compact8",
+      "control",
+      "single"
+    ],
+    "validation_passed": 100,
+    "validation_total": 100,
+    "timing_rows": 48,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/decode-compact-dispatch.json",
+    "problem": "muse_decode_layer",
+    "candidates": [
+      "compact_dispatch",
+      "control"
+    ],
+    "validation_passed": 50,
+    "validation_total": 50,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/decode-cuda-align.json",
+    "problem": "muse_decode_layer",
+    "candidates": [
+      "control",
+      "cuda",
+      "cuda_b32",
+      "cuda_b8"
+    ],
+    "validation_passed": 100,
+    "validation_total": 100,
+    "timing_rows": 48,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/decode-cuda-repeat.json",
+    "problem": "muse_decode_layer",
+    "candidates": [
+      "control",
+      "cuda",
+      "cuda_balanced"
+    ],
+    "validation_passed": 75,
+    "validation_total": 75,
+    "timing_rows": 36,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/decode-fullvec.json",
+    "problem": "muse_decode_layer",
+    "candidates": [
+      "control",
+      "hybrid"
+    ],
+    "validation_passed": 50,
+    "validation_total": 50,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/decode-fused-boundaries.json",
+    "problem": "muse_decode_layer",
+    "candidates": [
+      "control",
+      "normmap",
+      "normmap_router",
+      "normmap_router_pad"
+    ],
+    "validation_passed": 100,
+    "validation_total": 100,
+    "timing_rows": 48,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/decode-hybrid.json",
+    "problem": "muse_decode_layer",
+    "candidates": [
+      "control",
+      "hybrid"
+    ],
+    "validation_passed": 50,
+    "validation_total": 50,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/decode-refined.json",
+    "problem": "muse_decode_layer",
+    "candidates": [
+      "hybrid_control",
+      "refined"
+    ],
+    "validation_passed": 50,
+    "validation_total": 50,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-compressed-vec.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "n1_w4",
+      "n1_w8",
+      "n2_w4",
+      "n2_w8",
+      "n4_w8"
+    ],
+    "validation_passed": 234,
+    "validation_total": 234,
+    "timing_rows": 180,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-compression-branch.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "row_n32_k32_s4_w4",
+      "row_n64_k32_s4_w4",
+      "trans_n32_k32_s4_w4",
+      "trans_n64_k32_s4_w4"
+    ],
+    "validation_passed": 195,
+    "validation_total": 195,
+    "timing_rows": 150,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-compression-small.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "row_n32_k32_s4_w4",
+      "row_n32_k64_s8_w8",
+      "row_n64_k32_s4_w4",
+      "row_n64_k64_s4_w8",
+      "trans_n32_k32_s4_w4",
+      "trans_n32_k64_s8_w8",
+      "trans_n64_k32_s4_w4",
+      "trans_n64_k64_s4_w8"
+    ],
+    "validation_passed": 351,
+    "validation_total": 351,
+    "timing_rows": 270,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-compression.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "n128_k128_s4",
+      "n32_k128_s4",
+      "n64_k128_s4",
+      "n64_k128_s8",
+      "n64_k256_s8",
+      "n64_k64_s8",
+      "trans_n128_k128_s8",
+      "trans_n32_k128_s4",
+      "trans_n64_k128_s8",
+      "trans_n64_k64_s8"
+    ],
+    "validation_passed": 429,
+    "validation_total": 429,
+    "timing_rows": 330,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-cublas-16.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "tactic16",
+      "tactic17",
+      "tactic18",
+      "tactic19",
+      "tactic20",
+      "tactic21",
+      "tactic22",
+      "tactic23",
+      "tactic24",
+      "tactic25",
+      "tactic26",
+      "tactic27",
+      "tactic28",
+      "tactic29",
+      "tactic30",
+      "tactic31",
+      "tactic32",
+      "tactic33",
+      "tactic34",
+      "tactic35",
+      "tactic36",
+      "tactic37",
+      "tactic38",
+      "tactic39",
+      "tactic40",
+      "tactic41",
+      "tactic42",
+      "tactic43",
+      "tactic44",
+      "tactic45",
+      "tactic46",
+      "tactic47"
+    ],
+    "validation_passed": 1287,
+    "validation_total": 1287,
+    "timing_rows": 990,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-cublas-48.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "tactic48",
+      "tactic49",
+      "tactic50",
+      "tactic51",
+      "tactic52",
+      "tactic53",
+      "tactic54",
+      "tactic55",
+      "tactic56",
+      "tactic57",
+      "tactic58",
+      "tactic59",
+      "tactic60",
+      "tactic61",
+      "tactic62",
+      "tactic63",
+      "tactic64",
+      "tactic65",
+      "tactic66",
+      "tactic67",
+      "tactic68",
+      "tactic69",
+      "tactic70",
+      "tactic71",
+      "tactic72",
+      "tactic73",
+      "tactic74",
+      "tactic75",
+      "tactic76",
+      "tactic77",
+      "tactic78",
+      "tactic79"
+    ],
+    "validation_passed": 1287,
+    "validation_total": 1287,
+    "timing_rows": 990,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-cublas.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "tactic00",
+      "tactic01",
+      "tactic02",
+      "tactic03",
+      "tactic04",
+      "tactic05",
+      "tactic06",
+      "tactic07",
+      "tactic08",
+      "tactic09",
+      "tactic10",
+      "tactic11",
+      "tactic12",
+      "tactic13",
+      "tactic14",
+      "tactic15"
+    ],
+    "validation_passed": 663,
+    "validation_total": 663,
+    "timing_rows": 510,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-cutile.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "m16_n64_k128_s4_o1",
+      "m16_n64_k128_s8_o2",
+      "m32_n128_k64_s8_o2",
+      "m32_n64_k128_s4_o1",
+      "m32_n64_k128_s8_o2",
+      "m64_n128_k64_s8_o1",
+      "m64_n64_k128_s4_o1",
+      "m64_n64_k128_s8_o2"
+    ],
+    "validation_passed": 39,
+    "validation_total": 47,
+    "timing_rows": 30,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-fine-v2.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "t0_n16_k128_s1",
+      "t0_n16_k128_s2",
+      "t0_n16_k128_s4",
+      "t0_n16_k256_s4",
+      "t0_n32_k128_s16",
+      "t0_n32_k256_s8",
+      "t1_n16_k128_s1",
+      "t1_n16_k128_s2",
+      "t1_n16_k128_s4",
+      "t1_n16_k256_s4",
+      "t1_n32_k128_s16",
+      "t1_n32_k256_s8"
+    ],
+    "validation_passed": 507,
+    "validation_total": 507,
+    "timing_rows": 390,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-fine.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "t0_n16_k128_s1",
+      "t0_n16_k128_s2",
+      "t0_n16_k128_s4",
+      "t0_n16_k256_s4",
+      "t0_n32_k128_s16",
+      "t0_n32_k256_s8",
+      "t1_n16_k128_s1",
+      "t1_n16_k128_s2",
+      "t1_n16_k128_s4",
+      "t1_n16_k256_s4",
+      "t1_n32_k128_s16",
+      "t1_n32_k256_s8"
+    ],
+    "validation_passed": 39,
+    "validation_total": 51,
+    "timing_rows": 30,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-fullvec-hybrid.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "hybrid"
+    ],
+    "validation_passed": 78,
+    "validation_total": 78,
+    "timing_rows": 60,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-fullvec-tune.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "n1_w2_c1_ca",
+      "n1_w4_c1_cg",
+      "n1_w4_c2_ca",
+      "n1_w4_c4_ca",
+      "n1_w8_c1_cg",
+      "n2_w4_c1_cg",
+      "n2_w4_c2_ca",
+      "n2_w8_c1_cg",
+      "n2_w8_c2_ca",
+      "n4_w4_c4_ca",
+      "n4_w8_c1_cg",
+      "n4_w8_c2_ca"
+    ],
+    "validation_passed": 429,
+    "validation_total": 431,
+    "timing_rows": 330,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-fullvec.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "n1_s1_w4",
+      "n1_s1_w8",
+      "n1_s2_w4",
+      "n2_s1_w8",
+      "n2_s2_w8",
+      "n4_s1_w16",
+      "n4_s2_w8"
+    ],
+    "validation_passed": 312,
+    "validation_total": 312,
+    "timing_rows": 240,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-large.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "m128_n64_k128_s2_w8_t0",
+      "m128_n64_k64_s1_w8_t0",
+      "m32_n64_k128_s1_w4_t0",
+      "m32_n64_k128_s2_w4_t0",
+      "m64_n128_k128_s2_w8_t0",
+      "m64_n128_k128_s2_w8_t1",
+      "m64_n128_k64_s1_w8_t0",
+      "m64_n64_k128_s1_w4_t0",
+      "m64_n64_k128_s2_w4_t0",
+      "m64_n64_k128_s2_w4_t1"
+    ],
+    "validation_passed": 429,
+    "validation_total": 429,
+    "timing_rows": 330,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-pair-compression.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "t0_n16_k64_s4",
+      "t0_n32_k128_s8",
+      "t0_n32_k64_s4",
+      "t1_n16_k64_s4",
+      "t1_n32_k128_s8",
+      "t1_n32_k64_s4"
+    ],
+    "validation_passed": 273,
+    "validation_total": 273,
+    "timing_rows": 210,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-simt.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "n16_k128_s4_w8",
+      "n16_k256_s4_w8",
+      "n16_k512_s2_w8",
+      "n32_k128_s4_w8",
+      "n4_k256_s4_w4",
+      "n8_k256_s1_w8",
+      "n8_k256_s4_w8",
+      "n8_k512_s2_w8"
+    ],
+    "validation_passed": 351,
+    "validation_total": 351,
+    "timing_rows": 270,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-tma-wide.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "t0_n128_k128_g256_w4_s3",
+      "t0_n128_k256_g128_w4_s2",
+      "t0_n128_k256_g256_w8_s2",
+      "t0_n128_k256_g512_w4_s2",
+      "t0_n128_k512_g256_w8_s1",
+      "t0_n256_k128_g128_w4_s2",
+      "t0_n256_k128_g256_w8_s2",
+      "t0_n256_k256_g256_w8_s1",
+      "t0_n256_k64_g256_w4_s3",
+      "t0_n512_k64_g256_w8_s2",
+      "t0_n64_k256_g256_w4_s2",
+      "t0_n64_k256_g512_w4_s3",
+      "t1_n128_k128_g256_w4_s3",
+      "t1_n128_k256_g128_w4_s2",
+      "t1_n128_k256_g256_w8_s2",
+      "t1_n128_k256_g512_w4_s2",
+      "t1_n128_k512_g256_w8_s1",
+      "t1_n256_k128_g128_w4_s2",
+      "t1_n256_k128_g256_w8_s2",
+      "t1_n256_k256_g256_w8_s1",
+      "t1_n256_k64_g256_w4_s3",
+      "t1_n512_k64_g256_w8_s2",
+      "t1_n64_k256_g256_w4_s2",
+      "t1_n64_k256_g512_w4_s3"
+    ],
+    "validation_passed": 975,
+    "validation_total": 975,
+    "timing_rows": 750,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-tma.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "m128_n128_k64_s4_1",
+      "m128_n64_k128_s8_2",
+      "m128_n64_k64_s8_2",
+      "m64_n128_k128_s4_4",
+      "m64_n128_k64_s4_2",
+      "m64_n64_k128_s8_4",
+      "m64_n64_k64_s8_2"
+    ],
+    "validation_passed": 312,
+    "validation_total": 312,
+    "timing_rows": 240,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-torch.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "bmm",
+      "control",
+      "hopper",
+      "mv",
+      "reverse",
+      "reverse_packed"
+    ],
+    "validation_passed": 234,
+    "validation_total": 234,
+    "timing_rows": 180,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-warp-hybrid.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "r16p16_m1",
+      "r16p16_m32",
+      "r16p16_m8",
+      "r8p8_m8"
+    ],
+    "validation_passed": 195,
+    "validation_total": 195,
+    "timing_rows": 150,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-warp-wide.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "w16_p16",
+      "w16_p8",
+      "w8_p8"
+    ],
+    "validation_passed": 156,
+    "validation_total": 156,
+    "timing_rows": 120,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-warp.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "w16_p4",
+      "w4_p1",
+      "w8_p1",
+      "w8_p2",
+      "w8_p4"
+    ],
+    "validation_passed": 234,
+    "validation_total": 234,
+    "timing_rows": 180,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-wmma-shared.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "w16",
+      "w4",
+      "w8"
+    ],
+    "validation_passed": 156,
+    "validation_total": 156,
+    "timing_rows": 120,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/dense-wmma.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "w16",
+      "w4",
+      "w8"
+    ],
+    "validation_passed": 156,
+    "validation_total": 156,
+    "timing_rows": 120,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-adaptive-tiles.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "m16_32_c32",
+      "m8_16_c8",
+      "m8_32_c16"
+    ],
+    "validation_passed": 88,
+    "validation_total": 88,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-aligned-stripes.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "q0",
+      "q2",
+      "q4"
+    ],
+    "validation_passed": 76,
+    "validation_total": 76,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-atomic-sparse.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "fused_act_b1",
+      "fused_act_b2",
+      "sparse_b1",
+      "sparse_b2"
+    ],
+    "validation_passed": 55,
+    "validation_total": 55,
+    "timing_rows": 30,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-atomic.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "b1",
+      "b2",
+      "b4",
+      "control"
+    ],
+    "validation_passed": 33,
+    "validation_total": 34,
+    "timing_rows": 18,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-blocks.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "block16",
+      "block32",
+      "block8",
+      "block8_single",
+      "control"
+    ],
+    "validation_passed": 55,
+    "validation_total": 55,
+    "timing_rows": 30,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-compact-align-wide.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "compact128",
+      "compact256",
+      "compact32",
+      "control"
+    ],
+    "validation_passed": 80,
+    "validation_total": 80,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-compact-align.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "compact32",
+      "compact8",
+      "control",
+      "single"
+    ],
+    "validation_passed": 44,
+    "validation_total": 44,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-compact-dispatch-repeat-v2.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "compact_all",
+      "control"
+    ],
+    "validation_passed": 38,
+    "validation_total": 38,
+    "timing_rows": 12,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-compact-dispatch.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "compact_all",
+      "compact_large",
+      "control"
+    ],
+    "validation_passed": 69,
+    "validation_total": 69,
+    "timing_rows": 18,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-compact-v2.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "n16_k128_w8_g528",
+      "n4_k128_w4_g528",
+      "n4_k256_w4_g528",
+      "n8_k128_w4_g132",
+      "n8_k128_w4_g528",
+      "n8_k256_w8_g528"
+    ],
+    "validation_passed": 77,
+    "validation_total": 77,
+    "timing_rows": 42,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-compact.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "n16_k128_w8_g528",
+      "n4_k128_w4_g528",
+      "n4_k256_w4_g528",
+      "n8_k128_w4_g132",
+      "n8_k128_w4_g528",
+      "n8_k256_w8_g528"
+    ],
+    "validation_passed": 11,
+    "validation_total": 17,
+    "timing_rows": 6,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-cuda-align-repeat.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "hybrid256",
+      "official"
+    ],
+    "validation_passed": 69,
+    "validation_total": 69,
+    "timing_rows": 18,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-cuda-align.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "cuda128",
+      "cuda256",
+      "hybrid256"
+    ],
+    "validation_passed": 80,
+    "validation_total": 80,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-fullk.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "k128_b1",
+      "k128_b2",
+      "k64_b1",
+      "k64_b2"
+    ],
+    "validation_passed": 55,
+    "validation_total": 55,
+    "timing_rows": 30,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-fullvec.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "n1_w4_m1",
+      "n1_w8_m8",
+      "n2_w4_m8",
+      "n2_w8_m8",
+      "n4_w16_m8",
+      "n4_w8_m8"
+    ],
+    "validation_passed": 77,
+    "validation_total": 77,
+    "timing_rows": 42,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-gemv.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "block8_single",
+      "control",
+      "n16_k128_m8",
+      "n16_k256_m8",
+      "n4_k256_m1",
+      "n8_k128_m1",
+      "n8_k256_m8"
+    ],
+    "validation_passed": 77,
+    "validation_total": 77,
+    "timing_rows": 42,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-group-scale.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "n1_w4",
+      "n1_w8",
+      "n2_w4",
+      "n2_w8",
+      "n4_w8"
+    ],
+    "validation_passed": 66,
+    "validation_total": 66,
+    "timing_rows": 36,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-hybrid.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "hybrid"
+    ],
+    "validation_passed": 22,
+    "validation_total": 22,
+    "timing_rows": 12,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-launch-tune.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "m16_k128_n128_b1",
+      "m16_k128_n128_b2",
+      "m16_k128_n128_b4",
+      "m16_k64_n128_b1",
+      "m16_k64_n128_b2",
+      "m16_k64_n128_b4",
+      "m8_k128_n128_b1",
+      "m8_k128_n128_b2",
+      "m8_k128_n128_b4",
+      "m8_k64_n128_b1",
+      "m8_k64_n128_b2",
+      "m8_k64_n128_b4"
+    ],
+    "validation_passed": 11,
+    "validation_total": 23,
+    "timing_rows": 6,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-launch-v2.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "m16_k128_n128_b1",
+      "m16_k128_n128_b2",
+      "m16_k128_n128_b4",
+      "m16_k64_n128_b1",
+      "m16_k64_n128_b2",
+      "m16_k64_n128_b4",
+      "m8_k128_n128_b1",
+      "m8_k128_n128_b2",
+      "m8_k128_n128_b4",
+      "m8_k64_n128_b1",
+      "m8_k64_n128_b2",
+      "m8_k64_n128_b4"
+    ],
+    "validation_passed": 121,
+    "validation_total": 123,
+    "timing_rows": 66,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-launch-v3.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "m16_k128_n64_b1",
+      "m16_k128_n64_b2",
+      "m16_k128_n64_b4",
+      "m16_k64_n256_b1",
+      "m16_k64_n256_b2",
+      "m16_k64_n256_b4",
+      "m8_k128_n64_b1",
+      "m8_k128_n64_b2",
+      "m8_k128_n64_b4",
+      "m8_k64_n256_b1",
+      "m8_k64_n256_b2",
+      "m8_k64_n256_b4"
+    ],
+    "validation_passed": 143,
+    "validation_total": 143,
+    "timing_rows": 78,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-prmt-gemv.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "lookup_w4",
+      "prmt_w4",
+      "prmt_w8"
+    ],
+    "validation_passed": 76,
+    "validation_total": 76,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-scaled-bits.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "async_packed_s16",
+      "async_packed_s8",
+      "control",
+      "global_bits_s8",
+      "global_packed_s16",
+      "global_packed_s8"
+    ],
+    "validation_passed": 66,
+    "validation_total": 66,
+    "timing_rows": 36,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-scaled-gemv.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "group_w16",
+      "group_w4",
+      "group_w8",
+      "scaled_w16",
+      "scaled_w4",
+      "scaled_w8"
+    ],
+    "validation_passed": 77,
+    "validation_total": 77,
+    "timing_rows": 42,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-triton-small.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "n16_k128_w4",
+      "n16_k256_w4",
+      "n16_k64_w4",
+      "n32_k128_w4",
+      "n32_k128_w8",
+      "n32_k64_w4",
+      "n64_k128_w8",
+      "n64_k64_w8"
+    ],
+    "validation_passed": 99,
+    "validation_total": 99,
+    "timing_rows": 54,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-triton.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "m16_n128_k128",
+      "m16_n128_k64",
+      "m16_n64_k128",
+      "m16_n64_k64",
+      "m32_n128_k64",
+      "m32_n64_k128"
+    ],
+    "validation_passed": 77,
+    "validation_total": 77,
+    "timing_rows": 42,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-warp-gemv.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "w16",
+      "w4",
+      "w8"
+    ],
+    "validation_passed": 44,
+    "validation_total": 44,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-warp-group.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "w16",
+      "w4",
+      "w8"
+    ],
+    "validation_passed": 44,
+    "validation_total": 44,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-warp-lookup.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "w16",
+      "w4",
+      "w8"
+    ],
+    "validation_passed": 44,
+    "validation_total": 44,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-warp-mma-async.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "p2_s8",
+      "p4_s16",
+      "p4_s32",
+      "p4_s8",
+      "p8_s8"
+    ],
+    "validation_passed": 66,
+    "validation_total": 66,
+    "timing_rows": 36,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-warp-mma-lookup.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "s1",
+      "s4",
+      "s8"
+    ],
+    "validation_passed": 44,
+    "validation_total": 44,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-warp-mma-single.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "s16",
+      "s32",
+      "s64",
+      "s8"
+    ],
+    "validation_passed": 55,
+    "validation_total": 55,
+    "timing_rows": 30,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-warp-mma-vector.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "s16",
+      "s32",
+      "s64",
+      "s8"
+    ],
+    "validation_passed": 55,
+    "validation_total": 55,
+    "timing_rows": 30,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-warp-mma.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "s1",
+      "s4",
+      "s8"
+    ],
+    "validation_passed": 44,
+    "validation_total": 44,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-warp-persistent.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "w16",
+      "w4",
+      "w8"
+    ],
+    "validation_passed": 44,
+    "validation_total": 44,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-wgmma-pipeline.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "control",
+      "s4",
+      "s8"
+    ],
+    "validation_passed": 33,
+    "validation_total": 33,
+    "timing_rows": 18,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/moe-wgmma.json",
+    "problem": "muse_moe_w4a16",
+    "candidates": [
+      "both",
+      "control",
+      "first",
+      "second"
+    ],
+    "validation_passed": 44,
+    "validation_total": 44,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/prefill-experts.json",
+    "problem": "muse_prefill_layer",
+    "candidates": [
+      "control",
+      "marlin_m16",
+      "marlin_m32",
+      "triton_m128_n64_k64",
+      "triton_m32_n64_k64",
+      "triton_m64_n128_k64",
+      "triton_m64_n64_k64"
+    ],
+    "validation_passed": 91,
+    "validation_total": 91,
+    "timing_rows": 56,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/prefill-grouped-bf16.json",
+    "problem": "muse_prefill_layer",
+    "candidates": [
+      "control",
+      "grouped_bf16_min0",
+      "grouped_bf16_min4096"
+    ],
+    "validation_passed": 39,
+    "validation_total": 39,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/prefill-grouped-pingpong.json",
+    "problem": "muse_prefill_layer",
+    "candidates": [
+      "control",
+      "pingpong_128_128_128_1_1",
+      "pingpong_128_256_64_1_1",
+      "pingpong_64_128_128_1_1",
+      "pingpong_64_256_128_1_1",
+      "pingpong_64_256_128_2_1",
+      "pingpong_64_256_64_1_1"
+    ],
+    "validation_passed": 91,
+    "validation_total": 91,
+    "timing_rows": 56,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/prefill-grouped-sm80-v2.json",
+    "problem": "muse_prefill_layer",
+    "candidates": [
+      "control",
+      "sm80_all",
+      "sm80_large"
+    ],
+    "validation_passed": 39,
+    "validation_total": 39,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/prefill-grouped-sm80.json",
+    "problem": "muse_prefill_layer",
+    "candidates": [
+      "control",
+      "sm80_all",
+      "sm80_large"
+    ],
+    "validation_passed": 17,
+    "validation_total": 19,
+    "timing_rows": 8,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/prefill-grouped-threshold.json",
+    "problem": "muse_prefill_layer",
+    "candidates": [
+      "control",
+      "min1024",
+      "min2048",
+      "min512"
+    ],
+    "validation_passed": 52,
+    "validation_total": 52,
+    "timing_rows": 32,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/prefill-grouped-tiles-v7.json",
+    "problem": "muse_prefill_layer",
+    "candidates": [
+      "control",
+      "tile_128_128_128_1_1",
+      "tile_128_256_64_1_1",
+      "tile_128_256_64_2_1",
+      "tile_256_128_64_1_1"
+    ],
+    "validation_passed": 65,
+    "validation_total": 65,
+    "timing_rows": 40,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/prefill-grouped-tiles-v8.json",
+    "problem": "muse_prefill_layer",
+    "candidates": [
+      "control",
+      "tile_128_128_128_2_1",
+      "tile_128_256_128_1_1",
+      "tile_128_256_128_2_1",
+      "tile_128_256_64_2_2",
+      "tile_256_128_128_1_1",
+      "tile_256_128_128_2_1"
+    ],
+    "validation_passed": 91,
+    "validation_total": 91,
+    "timing_rows": 56,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/prefill-grouped-tiles.json",
+    "problem": "muse_prefill_layer",
+    "candidates": [
+      "control",
+      "tile_128_128_128_1_1",
+      "tile_128_256_64_1_1",
+      "tile_128_256_64_2_1",
+      "tile_256_128_64_1_1"
+    ],
+    "validation_passed": 29,
+    "validation_total": 33,
+    "timing_rows": 8,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/prefill-grouped-v2.json",
+    "problem": "muse_prefill_layer",
+    "candidates": [
+      "control",
+      "grouped_fp32_min0",
+      "grouped_fp32_min4096"
+    ],
+    "validation_passed": 17,
+    "validation_total": 19,
+    "timing_rows": 8,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/prefill-grouped-v3.json",
+    "problem": "muse_prefill_layer",
+    "candidates": [
+      "control",
+      "row4096_min0",
+      "row4096_min4096"
+    ],
+    "validation_passed": 39,
+    "validation_total": 39,
+    "timing_rows": 24,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/prefill-grouped.json",
+    "problem": "muse_prefill_layer",
+    "candidates": [
+      "control",
+      "grouped_fp32_min0",
+      "grouped_fp32_min4096"
+    ],
+    "validation_passed": 17,
+    "validation_total": 19,
+    "timing_rows": 8,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/router-focus.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "n16_k128_s16_t0",
+      "n16_k128_s16_t1",
+      "n16_k128_s32_t0",
+      "n16_k128_s32_t1",
+      "n16_k64_s32_t0",
+      "n16_k64_s32_t1",
+      "n16_k64_s64_t0",
+      "n16_k64_s64_t1",
+      "n32_k128_s16_t0",
+      "n32_k128_s16_t1",
+      "n32_k64_s32_t0",
+      "n32_k64_s32_t1",
+      "n64_k64_s32_t0",
+      "n64_k64_s32_t1"
+    ],
+    "validation_passed": 120,
+    "validation_total": 120,
+    "timing_rows": 90,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/sweep1.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "dot_m1",
+      "n128_k64_s4",
+      "n32_k128_s8",
+      "n32_k64_s4",
+      "n64_k128_s4",
+      "n64_k128_s8",
+      "n64_k64_s16",
+      "n64_k64_s4",
+      "n64_k64_s8"
+    ],
+    "validation_passed": 390,
+    "validation_total": 390,
+    "timing_rows": 300,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/sweep2-v2.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "packed_n32_k128_s4",
+      "packed_n32_k128_s8",
+      "packed_n64_k128_s4",
+      "packed_n64_k128_s8",
+      "packed_n64_k256_s4",
+      "router_pair",
+      "row_n128_k128_s4",
+      "row_n32_k128_s4",
+      "row_n32_k128_s8",
+      "row_n64_k128_s4",
+      "row_n64_k128_s8",
+      "row_n64_k256_s4",
+      "torch_packed"
+    ],
+    "validation_passed": 540,
+    "validation_total": 541,
+    "timing_rows": 390,
+    "has_source_snapshots": true
+  },
+  {
+    "record": "results/local/sweep3.json",
+    "problem": "muse_bf16_proj",
+    "candidates": [
+      "control",
+      "fi_cublaslt_100000",
+      "fi_cudnn_100000",
+      "fi_cutlass_100000",
+      "fi_tinygemm_32",
+      "fi_tinygemm_8",
+      "gemv_n128_k32_s16",
+      "gemv_n128_k64_s16",
+      "gemv_n32_k32_s32",
+      "gemv_n64_k32_s16",
+      "gemv_n64_k32_s32",
+      "gemv_n64_k64_s16"
+    ],
+    "validation_passed": 429,
+    "validation_total": 430,
+    "timing_rows": 330,
+    "has_source_snapshots": true
+  }
+]

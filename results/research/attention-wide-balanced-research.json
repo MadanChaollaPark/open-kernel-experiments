@@ -1,0 +1,30 @@
+{
+  "status": "rejected: all wider tile variants slower",
+  "checks": {
+    "passed": 108,
+    "total": 108
+  },
+  "scope": "layer=full",
+  "evidence": "outputs/attention-wide-balanced.json",
+  "scores": {
+    "control": 1.2955,
+    "n256_b1024_s1": 1.1377,
+    "n512_b1024_s2": 1.134,
+    "n1024_b1024_s1": 1.0893,
+    "n512_b2048_s1": 1.0734,
+    "n512_b1024_s1": 1.0612
+  },
+  "diagnostics": {
+    "control_max_registers": 128,
+    "n1024_max_registers": 255,
+    "n1024_max_spills": 2,
+    "n512_s1_max_registers": 149,
+    "n512_s2_max_registers": 181
+  },
+  "prior_related_trials": [
+    "outputs/attention-sweep2.json",
+    "outputs/attention-sweep3.json"
+  ],
+  "decision": "Do not repeat wider-tile sweeps without distinct new evidence; they also lost in prior non-balanced layouts.",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

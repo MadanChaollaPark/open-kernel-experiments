@@ -1,0 +1,33 @@
+{
+  "updated_at": "2026-10-24T01:37:47.237914+00:00",
+  "status": "source inspection completed; no GPU experiment launched",
+  "pinned_image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "findings": [
+    {
+      "backend": "Hopper CUTLASS mixed FP4/BF16",
+      "result": "Not directly compatible with NVFP4 group16. DefaultWeightScaleGroupSize<float_e2m1_t> is32; collective can_implement requires chunk_size==ScalingGroupSize. Own adapted kernel would need consistent group16 scale layout, loading and MMA application; changing only an API argument is insufficient.",
+      "evidence": [
+        "work/flashinfer_moe_sources/data/csrc/nv_internal/tensorrt_llm/cutlass_extensions/include/cutlass_extensions/detail/collective/mixed_input_utils.hpp:36",
+        "work/flashinfer_moe_sources/data/csrc/nv_internal/tensorrt_llm/cutlass_extensions/include/cutlass_extensions/gemm/collective/sm90_mma_array_tma_gmma_rs_warpspecialized_mixed_input_.hpp:628",
+        "work/flashinfer_moe_sources/data/csrc/nv_internal/tensorrt_llm/cutlass_extensions/include/cutlass_extensions/gemm/collective/sm90_mma_array_tma_gmma_rs_warpspecialized_mixed_input_.hpp:1009"
+      ]
+    },
+    {
+      "backend": "SM12x direct micro W4A16",
+      "result": "Not accepted as a drop-in candidate. Even w4a16_mode packs input activations to FP16 and uses FP16 dot helpers; task requires BF16 wherever baseline retains BF16. H200 portability remains unproven. No architecture gates bypassed.",
+      "evidence": [
+        "work/flashinfer_moe_sources/fused_moe/cute_dsl/blackwell_sm12x/moe_direct_micro_kernel.py:2137",
+        "work/flashinfer_moe_sources/fused_moe/cute_dsl/blackwell_sm12x/moe_direct_micro_kernel.py:218",
+        "work/kernels/muse_moe_w4a16/TASK.md"
+      ]
+    }
+  ],
+  "sources": [
+    "work/flashinfer-mixed-moe-sources.json",
+    "work/flashinfer-mixed-moe-headers.json"
+  ],
+  "next_requirement": "Any Hopper mixed-input adaptation must preserve group16 E4M3 scales and BF16 activations, compile as our own source, and pass independent exact conversion plus full correctness before timing. Do not alter installed modules or pass MXFP4 scales as NVFP4.",
+  "official_status": "Dense warp scored8eb008273d6c4ec6 running; seven other pending jobs queued at refresh. No new submissions.",
+  "goal_achieved": false,
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

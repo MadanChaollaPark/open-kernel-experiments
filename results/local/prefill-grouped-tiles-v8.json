@@ -1,0 +1,4116 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.950e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.950e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.951e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.950e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.949e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.950e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.949e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1087.2799754142761,
+      "candidate_us": 1085.599958896637,
+      "baseline_samples": [
+        1112.0320558547974,
+        1087.2639417648315,
+        1088.479995727539,
+        1087.2960090637207,
+        1082.2080373764038,
+        1091.1040306091309,
+        1083.616018295288,
+        1086.176037788391
+      ],
+      "candidate_samples": [
+        1091.9359922409058,
+        1087.5200033187866,
+        1090.0160074234009,
+        1085.3439569473267,
+        1085.6319665908813,
+        1085.5679512023926,
+        1083.616018295288,
+        1083.840012550354
+      ]
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1078.7200331687927,
+      "candidate_us": 1080.0960063934326,
+      "baseline_samples": [
+        1083.0399990081787,
+        1080.8639526367188,
+        1076.9920349121094,
+        1079.584002494812,
+        1079.1360139846802,
+        1078.0479907989502,
+        1078.3040523529053,
+        1075.0720500946045
+      ],
+      "candidate_samples": [
+        1083.456039428711,
+        1079.7760486602783,
+        1080.672025680542,
+        1079.0719985961914,
+        1080.415964126587,
+        1078.8160562515259,
+        1078.5599946975708,
+        1083.9040279388428
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1078.6239504814148,
+      "candidate_us": 1077.951967716217,
+      "baseline_samples": [
+        1084.5439434051514,
+        1080.6080102920532,
+        1078.879952430725,
+        1077.3119926452637,
+        1078.3679485321045,
+        1077.50403881073,
+        1081.503987312317,
+        1077.6959657669067
+      ],
+      "candidate_samples": [
+        1082.4320316314697,
+        1078.5599946975708,
+        1081.0240507125854,
+        1075.2320289611816,
+        1078.6240100860596,
+        1077.3439407348633,
+        1074.4320154190063,
+        1074.5279788970947
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1079.5679688453674,
+      "candidate_us": 1076.7679810523987,
+      "baseline_samples": [
+        1076.2239694595337,
+        1076.640009880066,
+        1086.5600109100342,
+        1080.191969871521,
+        1078.9439678192139,
+        1080.7360410690308,
+        1080.3200006484985,
+        1076.7040252685547
+      ],
+      "candidate_samples": [
+        1077.5680541992188,
+        1076.9280195236206,
+        1077.1520137786865,
+        1075.4239559173584,
+        1076.2879848480225,
+        1076.6079425811768,
+        1076.416015625,
+        1078.976035118103
+      ]
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1077.7440071105957,
+      "candidate_us": 1078.9440274238586,
+      "baseline_samples": [
+        1081.3119411468506,
+        1077.3439407348633,
+        1077.50403881073,
+        1077.9839754104614,
+        1080.064058303833,
+        1075.9040117263794,
+        1076.3520002365112,
+        1080.3840160369873
+      ],
+      "candidate_samples": [
+        1084.0959548950195,
+        1078.8480043411255,
+        1078.1439542770386,
+        1079.1360139846802,
+        1076.4800310134888,
+        1079.0400505065918,
+        1081.0879468917847,
+        1078.4000158309937
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1078.432023525238,
+      "candidate_us": 1077.247977256775,
+      "baseline_samples": [
+        1080.0000429153442,
+        1076.416015625,
+        1077.9839754104614,
+        1076.5119791030884,
+        1078.6240100860596,
+        1081.3759565353394,
+        1078.2400369644165,
+        1081.1840295791626
+      ],
+      "candidate_samples": [
+        1084.3839645385742,
+        1080.0000429153442,
+        1077.407956123352,
+        1077.0879983901978,
+        1076.3200521469116,
+        1077.0879983901978,
+        1079.584002494812,
+        1076.6079425811768
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1078.8959860801697,
+      "candidate_us": 1079.4879794120789,
+      "baseline_samples": [
+        1081.2159776687622,
+        1078.752040863037,
+        1078.8480043411255,
+        1077.9839754104614,
+        1079.1679620742798,
+        1078.9439678192139,
+        1074.336051940918,
+        1082.2080373764038
+      ],
+      "candidate_samples": [
+        1087.3279571533203,
+        1079.4559717178345,
+        1078.0479907989502,
+        1080.064058303833,
+        1079.7439813613892,
+        1078.6559581756592,
+        1078.3040523529053,
+        1079.5199871063232
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1419.8880195617676,
+      "candidate_us": 1418.3040261268616,
+      "baseline_samples": [
+        1427.5519847869873,
+        1423.1359958648682,
+        1417.8240299224854,
+        1423.840045928955,
+        1419.9680089950562,
+        1415.2640104293823,
+        1419.808030128479,
+        1415.2319431304932
+      ],
+      "candidate_samples": [
+        1425.4720211029053,
+        1417.2799587249756,
+        1417.3760414123535,
+        1423.7760305404663,
+        1420.5440282821655,
+        1416.8319702148438,
+        1419.2320108413696,
+        1415.9679412841797
+      ]
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1419.7120070457458,
+      "candidate_us": 1419.2320108413696,
+      "baseline_samples": [
+        1417.6000356674194,
+        1419.2960262298584,
+        1419.808030128479,
+        1421.1519956588745,
+        1419.6159839630127,
+        1419.9680089950562,
+        1420.5759763717651,
+        1414.9119853973389
+      ],
+      "candidate_samples": [
+        1422.976016998291,
+        1413.3119583129883,
+        1419.4560050964355,
+        1419.9039936065674,
+        1419.0080165863037,
+        1416.767954826355,
+        1421.7920303344727,
+        1418.11203956604
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1422.0800399780273,
+      "candidate_us": 1419.2000031471252,
+      "baseline_samples": [
+        1422.144055366516,
+        1422.752022743225,
+        1420.0639724731445,
+        1424.3520498275757,
+        1416.416049003601,
+        1417.5360202789307,
+        1422.2400188446045,
+        1422.0160245895386
+      ],
+      "candidate_samples": [
+        1424.4799613952637,
+        1420.9280014038086,
+        1418.944001197815,
+        1414.687991142273,
+        1418.5919761657715,
+        1416.5760278701782,
+        1419.4560050964355,
+        1420.5119609832764
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1419.8399782180786,
+      "candidate_us": 1420.6880331039429,
+      "baseline_samples": [
+        1420.9280014038086,
+        1414.7839546203613,
+        1416.4799451828003,
+        1421.9839572906494,
+        1418.4000492095947,
+        1425.279974937439,
+        1420.3519821166992,
+        1419.327974319458
+      ],
+      "candidate_samples": [
+        1428.1599521636963,
+        1417.7600145339966,
+        1422.8479862213135,
+        1420.0639724731445,
+        1420.3200340270996,
+        1420.1600551605225,
+        1425.376057624817,
+        1421.0560321807861
+      ]
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1421.5680360794067,
+      "candidate_us": 1422.3520159721375,
+      "baseline_samples": [
+        1427.6479482650757,
+        1423.1040477752686,
+        1421.4080572128296,
+        1421.120047569275,
+        1419.935941696167,
+        1422.719955444336,
+        1421.728014945984,
+        1420.6080436706543
+      ],
+      "candidate_samples": [
+        1426.9440174102783,
+        1422.3359823226929,
+        1423.807978630066,
+        1420.7680225372314,
+        1420.032024383545,
+        1424.448013305664,
+        1422.368049621582,
+        1417.3120260238647
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1420.8479523658752,
+      "candidate_us": 1422.3040342330933,
+      "baseline_samples": [
+        1425.887942314148,
+        1422.0160245895386,
+        1420.7359552383423,
+        1421.5359687805176,
+        1420.9599494934082,
+        1419.0399646759033,
+        1420.1279878616333,
+        1420.672059059143
+      ],
+      "candidate_samples": [
+        1426.6879558563232,
+        1422.0800399780273,
+        1418.3679819107056,
+        1421.9520092010498,
+        1425.887942314148,
+        1424.0319728851318,
+        1422.5280284881592,
+        1421.8560457229614
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1425.8400201797485,
+      "candidate_us": 1426.5599846839905,
+      "baseline_samples": [
+        1428.7999868392944,
+        1423.0400323867798,
+        1427.8080463409424,
+        1425.920009613037,
+        1425.6319999694824,
+        1426.6560077667236,
+        1425.76003074646,
+        1424.415946006775
+      ],
+      "candidate_samples": [
+        1429.0879964828491,
+        1428.447961807251,
+        1426.0480403900146,
+        1423.1040477752686,
+        1429.3760061264038,
+        1426.975965499878,
+        1421.9199419021606,
+        1426.144003868103
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3448.1120109558105,
+      "candidate_us": 3474.527955055237,
+      "baseline_samples": [
+        3445.6961154937744,
+        3426.5921115875244,
+        3424.4799613952637,
+        3424.2560863494873,
+        3450.5279064178467,
+        3512.7999782562256,
+        3503.040075302124,
+        3654.144048690796
+      ],
+      "candidate_samples": [
+        3440.671920776367,
+        3427.3600578308105,
+        3427.7119636535645,
+        3430.7520389556885,
+        3508.3839893341064,
+        3514.431953430176,
+        3513.983964920044,
+        3647.9039192199707
+      ]
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3660.207986831665,
+      "candidate_us": 3643.8400745391846,
+      "baseline_samples": [
+        3671.3919639587402,
+        3658.6880683898926,
+        3664.28804397583,
+        3655.5519104003906,
+        3661.7279052734375,
+        3522.6240158081055,
+        3526.4639854431152,
+        3702.303886413574
+      ],
+      "candidate_samples": [
+        3674.783945083618,
+        3663.072109222412,
+        3670.0479984283447,
+        3668.287992477417,
+        3624.608039855957,
+        3542.815923690796,
+        3527.5518894195557,
+        3531.7440032958984
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3529.8080444335938,
+      "candidate_us": 3533.071994781494,
+      "baseline_samples": [
+        3608.8640689849854,
+        3584.7039222717285,
+        3522.39990234375,
+        3525.08807182312,
+        3521.8560695648193,
+        3520.8959579467773,
+        3534.5280170440674,
+        3674.5920181274414
+      ],
+      "candidate_samples": [
+        3606.9118976593018,
+        3609.8880767822266,
+        3524.6078968048096,
+        3531.424045562744,
+        3527.2960662841797,
+        3524.928092956543,
+        3534.719944000244,
+        3536.479949951172
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3575.2480030059814,
+      "candidate_us": 3580.9919834136963,
+      "baseline_samples": [
+        3663.5520458221436,
+        3573.791980743408,
+        3542.3359870910645,
+        3543.488025665283,
+        3538.7840270996094,
+        3587.4240398406982,
+        3578.4640312194824,
+        3576.7040252685547
+      ],
+      "candidate_samples": [
+        3666.7840480804443,
+        3656.8961143493652,
+        3544.5759296417236,
+        3541.4719581604004,
+        3580.8639526367188,
+        3579.263925552368,
+        3582.655906677246,
+        3581.120014190674
+      ]
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3458.1120014190674,
+      "candidate_us": 3471.4239835739136,
+      "baseline_samples": [
+        3480.89599609375,
+        3470.400094985962,
+        3465.9199714660645,
+        3449.2480754852295,
+        3446.9120502471924,
+        3444.511890411377,
+        3450.3040313720703,
+        3537.5359058380127
+      ],
+      "candidate_samples": [
+        3476.6719341278076,
+        3472.7039337158203,
+        3470.144033432007,
+        3457.632064819336,
+        3448.863983154297,
+        3445.8560943603516,
+        3544.991970062256,
+        3539.9041175842285
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3525.424003601074,
+      "candidate_us": 3552.224040031433,
+      "baseline_samples": [
+        3547.9679107666016,
+        3502.880096435547,
+        3493.216037750244,
+        3464.9600982666016,
+        3463.808059692383,
+        3578.144073486328,
+        3574.9120712280273,
+        3575.615882873535
+      ],
+      "candidate_samples": [
+        3562.335968017578,
+        3542.112112045288,
+        3465.6639099121094,
+        3463.0401134490967,
+        3486.4320755004883,
+        3579.3280601501465,
+        3578.4640312194824,
+        3579.6799659729004
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3566.704034805298,
+      "candidate_us": 3566.1439895629883,
+      "baseline_samples": [
+        3590.847969055176,
+        3567.4240589141846,
+        3565.984010696411,
+        3578.07993888855,
+        3536.0960960388184,
+        3483.0400943756104,
+        3478.7840843200684,
+        3589.024066925049
+      ],
+      "candidate_samples": [
+        3589.1520977020264,
+        3578.07993888855,
+        3580.415964126587,
+        3568.063974380493,
+        3490.4000759124756,
+        3488.1598949432373,
+        3519.6800231933594,
+        3564.2240047454834
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4992.560148239136,
+      "candidate_us": 4944.767951965332,
+      "baseline_samples": [
+        4902.048110961914,
+        4895.071983337402,
+        4899.58381652832,
+        4994.336128234863,
+        5000.095844268799,
+        4998.3038902282715,
+        4990.784168243408,
+        4996.223926544189
+      ],
+      "candidate_samples": [
+        4894.559860229492,
+        4891.808032989502,
+        4895.199775695801,
+        4894.015789031982,
+        4995.039939880371,
+        4997.0879554748535,
+        4994.336128234863,
+        4995.13578414917
+      ]
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4988.831996917725,
+      "candidate_us": 5002.14409828186,
+      "baseline_samples": [
+        5037.312030792236,
+        4932.064056396484,
+        4940.351963043213,
+        4898.719787597656,
+        4903.615951538086,
+        5047.840118408203,
+        5047.2002029418945,
+        5084.256172180176
+      ],
+      "candidate_samples": [
+        4993.4401512146,
+        4944.511890411377,
+        4914.144039154053,
+        4895.040035247803,
+        5010.848045349121,
+        5046.4959144592285,
+        5041.088104248047,
+        5048.096179962158
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4990.335941314697,
+      "candidate_us": 4989.264011383057,
+      "baseline_samples": [
+        5038.815975189209,
+        4996.064186096191,
+        4957.632064819336,
+        4934.49592590332,
+        4958.144187927246,
+        4992.991924285889,
+        4987.679958343506,
+        5033.535957336426
+      ],
+      "candidate_samples": [
+        4998.079776763916,
+        4990.687847137451,
+        4930.1438331604,
+        4930.528163909912,
+        4987.840175628662,
+        4993.855953216553,
+        4987.328052520752,
+        5021.503925323486
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 5000.448226928711,
+      "candidate_us": 5005.9521198272705,
+      "baseline_samples": [
+        5091.968059539795,
+        5046.239852905273,
+        5002.208232879639,
+        4998.688220977783,
+        4994.815826416016,
+        4996.4799880981445,
+        4997.983932495117,
+        5052.480220794678
+      ],
+      "candidate_samples": [
+        5087.264060974121,
+        5084.60807800293,
+        4999.167919158936,
+        5003.424167633057,
+        4992.576122283936,
+        4996.16003036499,
+        5008.480072021484,
+        5042.143821716309
+      ]
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4993.935823440552,
+      "candidate_us": 4993.232011795044,
+      "baseline_samples": [
+        5074.751853942871,
+        4993.951797485352,
+        4993.919849395752,
+        4938.752174377441,
+        4938.752174377441,
+        4985.631942749023,
+        5060.895919799805,
+        5047.071933746338
+      ],
+      "candidate_samples": [
+        5061.728000640869,
+        5003.744125366211,
+        4982.719898223877,
+        4936.927795410156,
+        4936.511993408203,
+        4933.951854705811,
+        5050.271987915039,
+        5050.303936004639
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4945.215940475464,
+      "candidate_us": 4939.552068710327,
+      "baseline_samples": [
+        4959.167957305908,
+        4931.2639236450195,
+        4902.719974517822,
+        4898.496150970459,
+        4894.239902496338,
+        5042.623996734619,
+        5049.759864807129,
+        5055.679798126221
+      ],
+      "candidate_samples": [
+        4940.959930419922,
+        4938.144207000732,
+        4892.000198364258,
+        4903.903961181641,
+        4909.023761749268,
+        5044.4159507751465,
+        5035.679817199707,
+        5040.863990783691
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 5038.480043411255,
+      "candidate_us": 5041.103839874268,
+      "baseline_samples": [
+        5138.879776000977,
+        5036.831855773926,
+        5037.951946258545,
+        5035.808086395264,
+        5032.063961029053,
+        5039.103984832764,
+        5039.008140563965,
+        5060.160160064697
+      ],
+      "candidate_samples": [
+        5137.472152709961,
+        5125.152111053467,
+        5036.896228790283,
+        5033.696174621582,
+        5040.99178314209,
+        5039.135932922363,
+        5041.215896606445,
+        5047.935962677002
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 21364.704132080078,
+      "candidate_us": 13909.34419631958,
+      "baseline_samples": [
+        20049.375534057617,
+        21574.079513549805,
+        22064.735412597656,
+        21335.1993560791,
+        21372.831344604492,
+        21356.576919555664,
+        21295.7763671875,
+        22051.647186279297
+      ],
+      "candidate_samples": [
+        13228.704452514648,
+        13320.256233215332,
+        14364.255905151367,
+        14321.503639221191,
+        13906.432151794434,
+        13912.256240844727,
+        13689.920425415039,
+        14102.17571258545
+      ]
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 20894.256591796875,
+      "candidate_us": 15574.160099029541,
+      "baseline_samples": [
+        19401.05628967285,
+        20671.58317565918,
+        21237.31231689453,
+        20893.024444580078,
+        20895.488739013672,
+        20820.67108154297,
+        20921.31233215332,
+        21486.431121826172
+      ],
+      "candidate_samples": [
+        14931.136131286621,
+        15070.783615112305,
+        15764.703750610352,
+        15603.584289550781,
+        15544.7359085083,
+        15530.048370361328,
+        15638.143539428711,
+        15699.199676513672
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 19789.551734924316,
+      "candidate_us": 18284.8482131958,
+      "baseline_samples": [
+        19243.263244628906,
+        19518.272399902344,
+        20002.04849243164,
+        19826.847076416016,
+        20104.511260986328,
+        19644.895553588867,
+        20275.711059570312,
+        19752.256393432617
+      ],
+      "candidate_samples": [
+        17485.023498535156,
+        17785.7608795166,
+        18330.976486206055,
+        18238.719940185547,
+        18608.1600189209,
+        18334.20753479004,
+        18364.511489868164,
+        17976.736068725586
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 19989.792823791504,
+      "candidate_us": 17472.73540496826,
+      "baseline_samples": [
+        19799.488067626953,
+        19689.56756591797,
+        19668.73550415039,
+        20157.05680847168,
+        20610.20851135254,
+        19822.528839111328,
+        20363.07144165039,
+        20241.792678833008
+      ],
+      "candidate_samples": [
+        16887.264251708984,
+        16907.712936401367,
+        17030.14373779297,
+        17604.543685913086,
+        17710.432052612305,
+        17574.495315551758,
+        17728.79981994629,
+        17370.975494384766
+      ]
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 20773.42414855957,
+      "candidate_us": 14596.368312835693,
+      "baseline_samples": [
+        19307.392120361328,
+        20316.864013671875,
+        20805.984497070312,
+        20879.871368408203,
+        20880.191802978516,
+        20727.680206298828,
+        20740.863800048828,
+        20911.52000427246
+      ],
+      "candidate_samples": [
+        13570.528030395508,
+        13968.095779418945,
+        14597.472190856934,
+        14668.255805969238,
+        14595.264434814453,
+        14532.928466796875,
+        14639.167785644531,
+        14729.280471801758
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 19911.855697631836,
+      "candidate_us": 18163.83934020996,
+      "baseline_samples": [
+        19136.159896850586,
+        19389.15252685547,
+        20009.98306274414,
+        20101.152420043945,
+        20018.592834472656,
+        19561.567306518555,
+        20318.39942932129,
+        19813.72833251953
+      ],
+      "candidate_samples": [
+        17637.02392578125,
+        17720.447540283203,
+        18123.615264892578,
+        18060.640335083008,
+        18313.215255737305,
+        18295.391082763672,
+        18582.048416137695,
+        18204.063415527344
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 19837.727546691895,
+      "candidate_us": 18667.02365875244,
+      "baseline_samples": [
+        19028.928756713867,
+        19106.367111206055,
+        20439.16893005371,
+        19672.41668701172,
+        19761.375427246094,
+        19914.079666137695,
+        20481.5673828125,
+        20052.86407470703
+      ],
+      "candidate_samples": [
+        17705.91926574707,
+        17822.62420654297,
+        18956.31980895996,
+        18650.20751953125,
+        18683.839797973633,
+        18634.30404663086,
+        18716.352462768555,
+        18704.608917236328
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 20024.352073669434,
+      "candidate_us": 12871.615886688232,
+      "baseline_samples": [
+        18089.887619018555,
+        18069.568634033203,
+        18008.928298950195,
+        20531.103134155273,
+        20209.951400756836,
+        20292.6082611084,
+        20029.695510864258,
+        20019.00863647461
+      ],
+      "candidate_samples": [
+        12430.303573608398,
+        12444.095611572266,
+        12953.15170288086,
+        12955.648422241211,
+        12807.744026184082,
+        13051.96762084961,
+        12904.895782470703,
+        12838.335990905762
+      ]
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 19398.17523956299,
+      "candidate_us": 14742.41590499878,
+      "baseline_samples": [
+        18239.744186401367,
+        19358.56056213379,
+        19401.9832611084,
+        19308.03108215332,
+        19566.783905029297,
+        19523.487091064453,
+        19394.367218017578,
+        19872.447967529297
+      ],
+      "candidate_samples": [
+        14268.287658691406,
+        14256.735801696777,
+        14748.703956604004,
+        14735.23235321045,
+        14778.36799621582,
+        14794.303894042969,
+        14736.127853393555,
+        14830.207824707031
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 18518.096923828125,
+      "candidate_us": 17053.343772888184,
+      "baseline_samples": [
+        17960.86311340332,
+        17874.24087524414,
+        18539.71290588379,
+        18913.888931274414,
+        18851.808547973633,
+        18568.864822387695,
+        18496.48094177246,
+        18377.40707397461
+      ],
+      "candidate_samples": [
+        16583.520889282227,
+        16532.28759765625,
+        16982.94448852539,
+        17286.43226623535,
+        17239.04037475586,
+        17123.743057250977,
+        17152.83203125,
+        16903.423309326172
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 18657.695770263672,
+      "candidate_us": 16586.94362640381,
+      "baseline_samples": [
+        18108.224868774414,
+        18243.392944335938,
+        18544.511795043945,
+        18808.60710144043,
+        18684.288024902344,
+        18779.52003479004,
+        18796.54312133789,
+        18631.103515625
+      ],
+      "candidate_samples": [
+        16033.088684082031,
+        16070.175170898438,
+        16669.66438293457,
+        16625.408172607422,
+        16590.71922302246,
+        16506.7195892334,
+        16619.264602661133,
+        16583.168029785156
+      ]
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 19213.407516479492,
+      "candidate_us": 13640.704154968262,
+      "baseline_samples": [
+        18071.104049682617,
+        17979.232788085938,
+        19296.863555908203,
+        19129.95147705078,
+        19122.304916381836,
+        19644.86312866211,
+        19600.63934326172,
+        19710.336685180664
+      ],
+      "candidate_samples": [
+        12941.184043884277,
+        12929.50439453125,
+        13634.336471557617,
+        13647.071838378906,
+        13549.728393554688,
+        13655.584335327148,
+        13701.760292053223,
+        13705.216407775879
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 18379.984855651855,
+      "candidate_us": 17346.111297607422,
+      "baseline_samples": [
+        17903.423309326172,
+        18147.48764038086,
+        18421.791076660156,
+        18373.088836669922,
+        18386.88087463379,
+        18302.81639099121,
+        18767.55142211914,
+        18726.112365722656
+      ],
+      "candidate_samples": [
+        16799.680709838867,
+        16824.064254760742,
+        17525.760650634766,
+        17365.631103515625,
+        17326.59149169922,
+        17155.00831604004,
+        17663.040161132812,
+        17526.04866027832
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 18626.495361328125,
+      "candidate_us": 17688.015937805176,
+      "baseline_samples": [
+        17842.75245666504,
+        17862.40005493164,
+        18622.623443603516,
+        18903.711318969727,
+        18828.06396484375,
+        18814.048767089844,
+        18630.367279052734,
+        18350.271224975586
+      ],
+      "candidate_samples": [
+        17168.319702148438,
+        17205.055236816406,
+        17674.07989501953,
+        17772.92823791504,
+        17919.93522644043,
+        17840.959548950195,
+        17701.95198059082,
+        17525.888442993164
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 22139.103889465332,
+      "candidate_us": 16571.792602539062,
+      "baseline_samples": [
+        21002.687454223633,
+        22089.02359008789,
+        22092.832565307617,
+        22091.039657592773,
+        22524.864196777344,
+        22185.375213623047,
+        22374.94468688965,
+        22447.00813293457
+      ],
+      "candidate_samples": [
+        15978.560447692871,
+        16075.071334838867,
+        16607.040405273438,
+        16536.544799804688,
+        16762.55989074707,
+        16656.095504760742,
+        16655.424118041992,
+        16526.975631713867
+      ]
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 22133.872032165527,
+      "candidate_us": 18508.655548095703,
+      "baseline_samples": [
+        21387.4568939209,
+        21674.11231994629,
+        22009.536743164062,
+        22264.863967895508,
+        22098.432540893555,
+        22484.447479248047,
+        22407.64808654785,
+        22169.3115234375
+      ],
+      "candidate_samples": [
+        17861.343383789062,
+        17991.519927978516,
+        18498.367309570312,
+        18646.432876586914,
+        18554.49676513672,
+        18618.207931518555,
+        18497.9190826416,
+        18518.943786621094
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 21195.792198181152,
+      "candidate_us": 20186.287879943848,
+      "baseline_samples": [
+        20768.415451049805,
+        20556.224822998047,
+        20970.495223999023,
+        21224.576950073242,
+        21226.112365722656,
+        21608.352661132812,
+        21366.17660522461,
+        21167.007446289062
+      ],
+      "candidate_samples": [
+        19469.88868713379,
+        19416.288375854492,
+        20780.5118560791,
+        20502.912521362305,
+        20258.399963378906,
+        20430.143356323242,
+        20064.640045166016,
+        20114.17579650879
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 21315.50407409668,
+      "candidate_us": 19907.072067260742,
+      "baseline_samples": [
+        20533.76007080078,
+        20651.456832885742,
+        21188.159942626953,
+        21352.096557617188,
+        21346.62437438965,
+        21750.112533569336,
+        21432.640075683594,
+        21284.38377380371
+      ],
+      "candidate_samples": [
+        19067.392349243164,
+        19062.816619873047,
+        20179.424285888672,
+        19998.239517211914,
+        20020.416259765625,
+        20201.343536376953,
+        19776.384353637695,
+        19815.90461730957
+      ]
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 22153.151512145996,
+      "candidate_us": 17410.703659057617,
+      "baseline_samples": [
+        21078.815460205078,
+        21433.727264404297,
+        21946.495056152344,
+        22233.02459716797,
+        22325.183868408203,
+        22376.447677612305,
+        22203.07159423828,
+        22103.23143005371
+      ],
+      "candidate_samples": [
+        16561.983108520508,
+        16866.14418029785,
+        17342.239379882812,
+        17332.576751708984,
+        17479.167938232422,
+        17552.41584777832,
+        17493.568420410156,
+        17485.88752746582
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 21406.736373901367,
+      "candidate_us": 20862.40005493164,
+      "baseline_samples": [
+        20573.759078979492,
+        20917.888641357422,
+        21790.752410888672,
+        21181.69593811035,
+        21509.567260742188,
+        21377.471923828125,
+        21436.00082397461,
+        21511.104583740234
+      ],
+      "candidate_samples": [
+        19940.41633605957,
+        20001.663208007812,
+        21263.263702392578,
+        21267.967224121094,
+        21241.98341369629,
+        20727.487564086914,
+        20940.0634765625,
+        20784.73663330078
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 21200.000762939453,
+      "candidate_us": 21355.408668518066,
+      "baseline_samples": [
+        20618.080139160156,
+        20599.775314331055,
+        21936.832427978516,
+        21573.56834411621,
+        21386.112213134766,
+        21052.19268798828,
+        20985.919952392578,
+        21347.808837890625
+      ],
+      "candidate_samples": [
+        20592.287063598633,
+        20557.21664428711,
+        21785.280227661133,
+        21642.879486083984,
+        21051.3916015625,
+        21127.296447753906,
+        21685.69564819336,
+        21583.520889282227
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 27322.928428649902,
+      "candidate_us": 20846.256256103516,
+      "baseline_samples": [
+        25975.008010864258,
+        26455.0724029541,
+        26855.424880981445,
+        27542.240142822266,
+        27103.61671447754,
+        28066.272735595703,
+        27690.303802490234,
+        27620.288848876953
+      ],
+      "candidate_samples": [
+        20020.383834838867,
+        20272.640228271484,
+        20931.32781982422,
+        20981.34422302246,
+        20761.184692382812,
+        21261.53564453125,
+        20741.472244262695,
+        20992.576599121094
+      ]
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 27095.00789642334,
+      "candidate_us": 22644.448280334473,
+      "baseline_samples": [
+        25354.78401184082,
+        26883.583068847656,
+        26896.928787231445,
+        27223.45542907715,
+        27077.791213989258,
+        27245.63217163086,
+        27112.224578857422,
+        27904.672622680664
+      ],
+      "candidate_samples": [
+        21852.928161621094,
+        22568.70460510254,
+        22607.23114013672,
+        23107.807159423828,
+        22650.239944458008,
+        22989.376068115234,
+        22638.656616210938,
+        23155.55191040039
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 25629.295349121094,
+      "candidate_us": 24604.528427124023,
+      "baseline_samples": [
+        25495.744705200195,
+        25166.49627685547,
+        25554.752349853516,
+        25677.343368530273,
+        26009.79232788086,
+        25683.231353759766,
+        25604.671478271484,
+        25653.919219970703
+      ],
+      "candidate_samples": [
+        23923.36082458496,
+        23856.544494628906,
+        24863.712310791016,
+        24547.584533691406,
+        24805.21583557129,
+        24661.47232055664,
+        24165.023803710938,
+        25106.496810913086
+      ]
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 26058.351516723633,
+      "candidate_us": 24324.23973083496,
+      "baseline_samples": [
+        25563.90380859375,
+        25621.503829956055,
+        25586.143493652344,
+        26120.479583740234,
+        26644.031524658203,
+        25996.22344970703,
+        26698.047637939453,
+        26379.167556762695
+      ],
+      "candidate_samples": [
+        23476.224899291992,
+        23643.648147583008,
+        24609.888076782227,
+        24301.504135131836,
+        24632.57598876953,
+        24189.56756591797,
+        24656.22329711914,
+        24346.975326538086
+      ]
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 26526.83162689209,
+      "candidate_us": 21480.30376434326,
+      "baseline_samples": [
+        25155.231475830078,
+        25990.400314331055,
+        26753.664016723633,
+        26926.08070373535,
+        26799.61585998535,
+        26513.023376464844,
+        26540.639877319336,
+        26116.09649658203
+      ],
+      "candidate_samples": [
+        20492.544174194336,
+        20483.455657958984,
+        21654.783248901367,
+        21522.815704345703,
+        21581.663131713867,
+        21437.79182434082,
+        21540.416717529297,
+        21312.416076660156
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 25878.89575958252,
+      "candidate_us": 25156.047821044922,
+      "baseline_samples": [
+        25282.943725585938,
+        25407.520294189453,
+        25822.49641418457,
+        25711.83967590332,
+        26158.687591552734,
+        26000.511169433594,
+        27297.119140625,
+        25935.29510498047
+      ],
+      "candidate_samples": [
+        24372.543334960938,
+        24454.04815673828,
+        25275.999069213867,
+        24963.61541748047,
+        25448.575973510742,
+        25036.096572875977,
+        26027.616500854492,
+        25279.264450073242
+      ]
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 25781.360626220703,
+      "candidate_us": 25834.52796936035,
+      "baseline_samples": [
+        25196.4168548584,
+        25422.975540161133,
+        25739.904403686523,
+        25430.65643310547,
+        25822.816848754883,
+        25912.927627563477,
+        26181.69593811035,
+        25827.392578125
+      ],
+      "candidate_samples": [
+        25019.00863647461,
+        25232.736587524414,
+        25830.91163635254,
+        25628.864288330078,
+        26208.576202392578,
+        25988.447189331055,
+        26443.84002685547,
+        25838.144302368164
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"batch\": 1, \"ctx\": 0, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 300, \"seed\": 2100}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 3000, \"dist\": \"normal\", \"layer\": \"full\", \"page\": 1, \"q_len\": 753, \"seed\": 2101}": {
+      "local_start": 160
+    },
+    "{\"batch\": 2, \"ctx\": 2500, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 753, \"seed\": 2102}": {
+      "local_start": 160
+    },
+    "{\"batch\": 3, \"ctx\": 5000, \"dist\": \"outliers\", \"layer\": \"full\", \"page\": 1, \"q_len\": 200, \"seed\": 2103}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 4096, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 4096, \"seed\": 2104}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"turn 1\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1001, \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"turn 1\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1002, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"turn 4\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1003, \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"turn 4\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1004, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 0, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1006, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 32768, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1007, \"weight\": 138}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 32768, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1008, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 65536, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1010, \"weight\": 16}": {
+      "local_start": 160
+    }
+  },
+  "calibration_us": 3.1999999191612005,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "control",
+    "case": {
+      "batch": 1,
+      "ctx": 32768,
+      "layer": "sliding",
+      "q_len": 16384,
+      "page": 1,
+      "dist": "soft",
+      "load": "first turn",
+      "weight": 138,
+      "repeats": 6,
+      "seed": 1007
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n_ZN7cutlass13device_kernelINS_4gemm6kernel13GemmUniv...         0.00%       0.000us         0.00%       0.000us       0.000us      19.478ms        38.31%      19.478ms       2.435ms             8  \n         nvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      10.249ms        20.16%      10.249ms     854.089us            12  \n         nvjet_sm90_tst_320x128_64x3_1x2_h_bz_coopB_TNT         0.00%       0.000us         0.00%       0.000us       0.000us       5.994ms        11.79%       5.994ms       1.499ms             4  \n                                       _dequant_runtime         0.00%       0.000us         0.00%       0.000us       0.000us       5.228ms        10.28%       5.228ms     653.463us             8  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.632ms         3.21%       1.632ms     408.109us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.608ms         3.16%       1.608ms     401.913us             4  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.240ms         2.44%       1.240ms     309.889us             4  \n         nvjet_sm90_tss_128x256_64x4_2x1_v_bz_coopA_NNN         0.00%       0.000us         0.00%       0.000us       0.000us       1.152ms         2.27%       1.152ms     143.981us             8  \n                                       _activate_scaled         0.00%       0.000us         0.00%       0.000us       0.000us     970.671us         1.91%     970.671us     242.668us             4  \n                                        _scatter_scaled         0.00%       0.000us         0.00%       0.000us       0.000us     776.129us         1.53%     776.129us     194.032us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     531.961us         1.05%     531.961us     132.990us             4  \n                                                  _pack         0.00%       0.000us         0.00%       0.000us       0.000us     446.937us         0.88%     446.937us     111.734us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us     335.187us         0.66%     335.187us      83.797us             4  \nvoid at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us     321.856us         0.63%     321.856us      80.464us             4  \n                                _qk_rms_norm_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     175.121us         0.34%     175.121us      43.780us             4  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 52.010ms\nSelf CUDA time total: 50.840ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us      50.031ms        66.47%      50.031ms       6.254ms             8  \n         nvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      10.271ms        13.65%      10.271ms     855.930us            12  \n         nvjet_sm90_tst_320x128_64x3_1x2_h_bz_coopB_TNT         0.00%       0.000us         0.00%       0.000us       0.000us       5.984ms         7.95%       5.984ms       1.496ms             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.639ms         2.18%       1.639ms     409.753us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.607ms         2.13%       1.607ms     401.665us             4  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.299ms         1.73%       1.299ms     324.664us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us       1.228ms         1.63%       1.228ms     306.913us             4  \n         nvjet_sm90_tss_128x256_64x4_2x1_v_bz_coopA_NNN         0.00%       0.000us         0.00%       0.000us       0.000us       1.160ms         1.54%       1.160ms     144.953us             8  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     522.912us         0.69%     522.912us     130.728us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us     335.202us         0.45%     335.202us      83.801us             4  \nvoid at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us     327.106us         0.43%     327.106us      81.777us             4  \n                                _qk_rms_norm_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     180.481us         0.24%     180.481us      45.120us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     165.888us         0.22%     165.888us      41.472us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us     111.168us         0.15%     111.168us      27.792us             4  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us      98.977us         0.13%      98.977us      24.744us             4  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 76.191ms\nSelf CUDA time total: 75.265ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "control",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "control",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "control",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_128_128_2_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_128_2_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_128_256_64_2_2",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_1_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "tile_256_128_128_2_1",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    }
+  ],
+  "elapsed_s": 64.13922163500001,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_prefill_layer",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/662c5f568800f1ab8a572e1f3f2d13e45dbb0d0668039796528ded1f78a6cf3c.py",
+      "sha256": "662c5f568800f1ab8a572e1f3f2d13e45dbb0d0668039796528ded1f78a6cf3c"
+    },
+    "tile_128_128_128_2_1": {
+      "path": "experiments/sources/aa7d1bae6f35ef55668f2e15fae4d758257af84261f40032dc56706e5a91316a.py",
+      "sha256": "aa7d1bae6f35ef55668f2e15fae4d758257af84261f40032dc56706e5a91316a"
+    },
+    "tile_128_256_128_1_1": {
+      "path": "experiments/sources/4e9f9b87c52582588ab2d08c0ee9183b9baa6a5bc9d99ccf9d0097da51ae474d.py",
+      "sha256": "4e9f9b87c52582588ab2d08c0ee9183b9baa6a5bc9d99ccf9d0097da51ae474d"
+    },
+    "tile_128_256_128_2_1": {
+      "path": "experiments/sources/b00accc857fbd6eaa396b8d154b6cea8c5cdbc979f97be468c1ddedfa0919e95.py",
+      "sha256": "b00accc857fbd6eaa396b8d154b6cea8c5cdbc979f97be468c1ddedfa0919e95"
+    },
+    "tile_128_256_64_2_2": {
+      "path": "experiments/sources/f8caacfc6aaa2b687090fc43293ea00a9d3ceb1cf861f19cc1c919953874bee2.py",
+      "sha256": "f8caacfc6aaa2b687090fc43293ea00a9d3ceb1cf861f19cc1c919953874bee2"
+    },
+    "tile_256_128_128_1_1": {
+      "path": "experiments/sources/dd8042d70c9244fd677ea261139a135e26f37426a8ace9684f1ef3d41b2fe43e.py",
+      "sha256": "dd8042d70c9244fd677ea261139a135e26f37426a8ace9684f1ef3d41b2fe43e"
+    },
+    "tile_256_128_128_2_1": {
+      "path": "experiments/sources/6fd5521aa31d9d5aa84f2476a4137fed7730c9a6a14e76b05abff8b405353a53.py",
+      "sha256": "6fd5521aa31d9d5aa84f2476a4137fed7730c9a6a14e76b05abff8b405353a53"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

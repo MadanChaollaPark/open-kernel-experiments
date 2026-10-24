@@ -1,0 +1,12 @@
+{
+  "snapshot_at": "2026-10-24T01:56:23.914836+00:00",
+  "cap_usd": 80,
+  "includes_credits": true,
+  "conservative_estimate_usd": 40.3,
+  "invoice_verified": false,
+  "basis": "Full GPU app lifetimes plus 10 seconds, rounded up at $0.002/s; retained setup/cache/CPU reserves. Conservative working ledger, not a provider invoice.",
+  "active_apps": 0,
+  "running_tasks": 0,
+  "stopped_apps_in_last_modal_listing": 50,
+  "persistent_compile_cache_retained": true
+}

@@ -1,0 +1,650 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "n16_k128_w8_g528",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": false,
+      "message": "n16_k128_w8_g528: CompilationError: at 14:20:\n    while work<end:\n        slot=tl.load(ACTIVE+work//blocks);expert=tl.load(IDS+slot)\n        n=(work%blocks)*BN+tl.arange(0,BN)\n        kk=tl.arange(0,BK)\n        acc=tl.full((BN,BK),0,tl.float32)\n        if GATED:upacc=tl.full((BN,BK),0,tl.float32)\n        for start in range(tl.cdiv(K//2,BK)):\n            k=start*BK+kk\n            x0=tl.load(X+(slot//TOPK)*K+2*k,2*k<K,0).to(tl.float32)\n            x1=tl.load(X+(slot//TOPK)*K+2*k+1,2*k+1<K,0).to(tl.float32)\n            if GATED:\n                a,b=_fp4_pair(W,SF,expert,n,k,2*N,K)\n                    ^"
+    },
+    {
+      "candidate": "n4_k128_w4_g528",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": false,
+      "message": "n4_k128_w4_g528: CompilationError: at 14:20:\n    while work<end:\n        slot=tl.load(ACTIVE+work//blocks);expert=tl.load(IDS+slot)\n        n=(work%blocks)*BN+tl.arange(0,BN)\n        kk=tl.arange(0,BK)\n        acc=tl.full((BN,BK),0,tl.float32)\n        if GATED:upacc=tl.full((BN,BK),0,tl.float32)\n        for start in range(tl.cdiv(K//2,BK)):\n            k=start*BK+kk\n            x0=tl.load(X+(slot//TOPK)*K+2*k,2*k<K,0).to(tl.float32)\n            x1=tl.load(X+(slot//TOPK)*K+2*k+1,2*k+1<K,0).to(tl.float32)\n            if GATED:\n                a,b=_fp4_pair(W,SF,expert,n,k,2*N,K)\n                    ^"
+    },
+    {
+      "candidate": "n4_k256_w4_g528",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": false,
+      "message": "n4_k256_w4_g528: CompilationError: at 14:20:\n    while work<end:\n        slot=tl.load(ACTIVE+work//blocks);expert=tl.load(IDS+slot)\n        n=(work%blocks)*BN+tl.arange(0,BN)\n        kk=tl.arange(0,BK)\n        acc=tl.full((BN,BK),0,tl.float32)\n        if GATED:upacc=tl.full((BN,BK),0,tl.float32)\n        for start in range(tl.cdiv(K//2,BK)):\n            k=start*BK+kk\n            x0=tl.load(X+(slot//TOPK)*K+2*k,2*k<K,0).to(tl.float32)\n            x1=tl.load(X+(slot//TOPK)*K+2*k+1,2*k+1<K,0).to(tl.float32)\n            if GATED:\n                a,b=_fp4_pair(W,SF,expert,n,k,2*N,K)\n                    ^"
+    },
+    {
+      "candidate": "n8_k128_w4_g132",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": false,
+      "message": "n8_k128_w4_g132: CompilationError: at 14:20:\n    while work<end:\n        slot=tl.load(ACTIVE+work//blocks);expert=tl.load(IDS+slot)\n        n=(work%blocks)*BN+tl.arange(0,BN)\n        kk=tl.arange(0,BK)\n        acc=tl.full((BN,BK),0,tl.float32)\n        if GATED:upacc=tl.full((BN,BK),0,tl.float32)\n        for start in range(tl.cdiv(K//2,BK)):\n            k=start*BK+kk\n            x0=tl.load(X+(slot//TOPK)*K+2*k,2*k<K,0).to(tl.float32)\n            x1=tl.load(X+(slot//TOPK)*K+2*k+1,2*k+1<K,0).to(tl.float32)\n            if GATED:\n                a,b=_fp4_pair(W,SF,expert,n,k,2*N,K)\n                    ^"
+    },
+    {
+      "candidate": "n8_k128_w4_g528",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": false,
+      "message": "n8_k128_w4_g528: CompilationError: at 14:20:\n    while work<end:\n        slot=tl.load(ACTIVE+work//blocks);expert=tl.load(IDS+slot)\n        n=(work%blocks)*BN+tl.arange(0,BN)\n        kk=tl.arange(0,BK)\n        acc=tl.full((BN,BK),0,tl.float32)\n        if GATED:upacc=tl.full((BN,BK),0,tl.float32)\n        for start in range(tl.cdiv(K//2,BK)):\n            k=start*BK+kk\n            x0=tl.load(X+(slot//TOPK)*K+2*k,2*k<K,0).to(tl.float32)\n            x1=tl.load(X+(slot//TOPK)*K+2*k+1,2*k+1<K,0).to(tl.float32)\n            if GATED:\n                a,b=_fp4_pair(W,SF,expert,n,k,2*N,K)\n                    ^"
+    },
+    {
+      "candidate": "n8_k256_w8_g528",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": false,
+      "message": "n8_k256_w8_g528: CompilationError: at 14:20:\n    while work<end:\n        slot=tl.load(ACTIVE+work//blocks);expert=tl.load(IDS+slot)\n        n=(work%blocks)*BN+tl.arange(0,BN)\n        kk=tl.arange(0,BK)\n        acc=tl.full((BN,BK),0,tl.float32)\n        if GATED:upacc=tl.full((BN,BK),0,tl.float32)\n        for start in range(tl.cdiv(K//2,BK)):\n            k=start*BK+kk\n            x0=tl.load(X+(slot//TOPK)*K+2*k,2*k<K,0).to(tl.float32)\n            x1=tl.load(X+(slot//TOPK)*K+2*k+1,2*k+1<K,0).to(tl.float32)\n            if GATED:\n                a,b=_fp4_pair(W,SF,expert,n,k,2*N,K)\n                    ^"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.530e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.568e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.30400118231773,
+      "candidate_us": 87.567999958992,
+      "baseline_samples": [
+        89.59999680519104,
+        84.51200276613235,
+        83.5840031504631,
+        84.35200154781342,
+        84.32000130414963,
+        84.35200154781342,
+        84.51200276613235,
+        84.25600081682205,
+        83.77599716186523,
+        84.22400057315826,
+        84.28800106048584,
+        83.26400071382523,
+        84.63999629020691,
+        83.36000144481659,
+        84.3840017914772,
+        84.32000130414963,
+        83.8719978928566,
+        84.35200154781342,
+        83.93599838018417,
+        84.09599959850311
+      ],
+      "candidate_samples": [
+        91.39200299978256,
+        86.75199747085571,
+        88.128000497818,
+        86.75199747085571,
+        87.07199990749359,
+        87.39200234413147,
+        87.74399757385254,
+        87.48800307512283,
+        87.74399757385254,
+        87.96799927949905,
+        88.48000317811966,
+        87.61599659919739,
+        87.52000331878662,
+        87.48800307512283,
+        87.48800307512283,
+        87.8399983048439,
+        87.80799806118011,
+        86.97599917650223,
+        87.26400136947632,
+        87.77599781751633
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.08800733089447,
+      "candidate_us": 179.05599623918533,
+      "baseline_samples": [
+        184.67199802398682,
+        177.95200645923615,
+        176.15999281406403,
+        176.79999768733978,
+        177.72799730300903,
+        176.38400197029114,
+        177.3120015859604,
+        176.9919991493225,
+        177.7919977903366,
+        177.44000256061554,
+        177.824005484581,
+        176.67199671268463,
+        176.86399817466736,
+        176.86399817466736,
+        177.08800733089447,
+        176.7680048942566,
+        177.18400061130524,
+        178.6240041255951,
+        177.08800733089447,
+        176.92799866199493
+      ],
+      "candidate_samples": [
+        181.98400735855103,
+        178.3680021762848,
+        178.27199399471283,
+        179.6800047159195,
+        178.24000120162964,
+        178.71999740600586,
+        179.32799458503723,
+        179.45599555969238,
+        179.19999361038208,
+        179.36000227928162,
+        178.78399789333344,
+        178.9119988679886,
+        179.58399653434753,
+        179.61600422859192,
+        178.6240041255951,
+        179.6479970216751,
+        178.65599691867828,
+        178.39999496936798,
+        178.5919964313507,
+        179.45599555969238
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.0240091085434,
+      "candidate_us": 261.4720016717911,
+      "baseline_samples": [
+        265.28000831604004,
+        258.87998938560486,
+        258.976012468338,
+        259.0720057487488,
+        260.25599241256714,
+        258.4959864616394,
+        260.1599991321564,
+        257.7599883079529,
+        259.3599855899811,
+        259.42400097846985,
+        259.74398851394653,
+        258.36798548698425,
+        258.33600759506226,
+        257.88798928260803,
+        260.0640058517456,
+        258.59200954437256,
+        259.16799902915955,
+        258.2080066204071,
+        258.7839961051941,
+        259.16799902915955
+      ],
+      "candidate_samples": [
+        262.4320089817047,
+        260.25599241256714,
+        261.02399826049805,
+        260.76799631118774,
+        261.02399826049805,
+        261.6319954395294,
+        262.30400800704956,
+        260.3519856929779,
+        261.8879973888397,
+        261.4400088787079,
+        262.91200518608093,
+        262.1760070323944,
+        260.70401072502136,
+        261.6960108280182,
+        261.50399446487427,
+        261.31200790405273,
+        260.44800877571106,
+        260.5440020561218,
+        263.07201385498047,
+        261.85598969459534
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 152.3519977927208,
+      "candidate_us": 154.1759967803955,
+      "baseline_samples": [
+        159.61599349975586,
+        152.0960032939911,
+        152.22400426864624,
+        153.05599570274353,
+        152.54400670528412,
+        152.22400426864624,
+        151.87199413776398,
+        154.36799824237823,
+        152.38399803638458,
+        151.7760008573532,
+        152.8320014476776,
+        152.8960019350052,
+        152.319997549057,
+        152.22400426864624,
+        152.0639955997467,
+        153.56799960136414,
+        153.31199765205383,
+        152.63999998569489,
+        151.74399316310883,
+        152.0639955997467
+      ],
+      "candidate_samples": [
+        158.59200060367584,
+        154.4640064239502,
+        153.9199948310852,
+        153.47200632095337,
+        154.08000349998474,
+        155.13600409030914,
+        155.32800555229187,
+        153.6639928817749,
+        154.88000214099884,
+        154.08000349998474,
+        154.40000593662262,
+        155.32800555229187,
+        154.23999726772308,
+        155.74400126934052,
+        154.04799580574036,
+        154.1759967803955,
+        154.1759967803955,
+        153.85599434375763,
+        154.01600301265717,
+        153.888002038002
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 408.52800011634827,
+      "candidate_us": 324.9119967222214,
+      "baseline_samples": [
+        413.4719967842102,
+        408.4799885749817,
+        408.5119962692261,
+        406.75199031829834,
+        407.77599811553955,
+        407.45601058006287,
+        407.6479971408844,
+        409.63199734687805,
+        411.19998693466187,
+        407.4240028858185,
+        407.3599874973297,
+        409.59998965263367,
+        408.54400396347046,
+        409.280002117157,
+        409.88799929618835,
+        409.31200981140137,
+        409.0240001678467,
+        407.74399042129517,
+        408.4799885749817,
+        408.7679982185364
+      ],
+      "candidate_samples": [
+        326.81599259376526,
+        324.8960077762604,
+        323.2960104942322,
+        324.67201352119446,
+        324.6400058269501,
+        324.95999336242676,
+        324.5759904384613,
+        325.82399249076843,
+        324.9279856681824,
+        325.0559866428375,
+        325.53601264953613,
+        323.8080143928528,
+        324.22399520874023,
+        325.1200020313263,
+        325.3119885921478,
+        324.6400058269501,
+        324.19198751449585,
+        324.6079981327057,
+        325.1839876174927,
+        326.24000310897827
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 592.3679769039154,
+      "candidate_us": 421.34399712085724,
+      "baseline_samples": [
+        598.7520217895508,
+        591.8400287628174,
+        593.504011631012,
+        592.3839807510376,
+        589.631974697113,
+        592.3519730567932,
+        591.871976852417,
+        589.8879766464233,
+        591.2320017814636,
+        590.6879901885986,
+        593.34397315979,
+        593.0240154266357,
+        591.5840268135071,
+        592.960000038147,
+        593.2480096817017,
+        591.8400287628174,
+        593.9840078353882,
+        592.415988445282,
+        592.9920077323914,
+        589.3759727478027
+      ],
+      "candidate_samples": [
+        422.65599966049194,
+        420.6080138683319,
+        421.7279851436615,
+        420.51199078559875,
+        420.6399917602539,
+        421.31200432777405,
+        420.8639860153198,
+        422.2080111503601,
+        421.37598991394043,
+        420.991986989975,
+        422.36799001693726,
+        421.31200432777405,
+        420.7040071487427,
+        421.5039908885956,
+        422.39999771118164,
+        421.27999663352966,
+        421.4079976081848,
+        421.02399468421936,
+        421.63199186325073,
+        421.6960072517395
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"bs\": 4, \"dist\": \"normal\", \"seed\": 1800, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"seed\": 1801, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 257, \"dist\": \"normal\", \"seed\": 1802, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 128, \"dist\": \"skewed\", \"seed\": 1803, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"seed\": 1804, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"load\": \"decode 1\", \"seed\": 401, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 16, \"load\": \"decode 16\", \"seed\": 402, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 32, \"load\": \"decode 32\", \"seed\": 403, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 8, \"load\": \"verify 1\", \"seed\": 404, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 128, \"load\": \"verify 16\", \"seed\": 405, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 256, \"load\": \"verify 32\", \"seed\": 406, \"sharding\": \"ep8\", \"weight\": 60}": {}
+  },
+  "calibration_us": 3.135999897494912,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "control",
+    "case": {
+      "bs": 256,
+      "sharding": "ep8",
+      "load": "verify 32",
+      "weight": 60,
+      "seed": 406
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       1.580ms        86.54%       1.580ms     197.490us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     149.629us         8.20%     149.629us      37.407us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      22.910us         1.25%      22.910us       5.727us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      22.592us         1.24%      22.592us       5.648us             4  \nvoid at::native::index_elementwise_kernel<128, 4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      12.768us         0.70%      12.768us       3.192us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us      11.456us         0.63%      11.456us       2.864us             4  \nvoid at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      11.455us         0.63%      11.455us       2.864us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us      10.464us         0.57%      10.464us       2.616us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       4.384us         0.24%       4.384us       1.096us             4  \n                                        cudaGraphLaunch         3.48%     119.940us        48.85%       1.684ms     420.991us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        45.37%       1.564ms        45.37%       1.564ms       1.564ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        51.15%       1.763ms        51.15%       1.763ms     881.712us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 3.447ms\nSelf CUDA time total: 1.826ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       2.149ms        90.25%       2.149ms     268.683us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     142.726us         5.99%     142.726us      35.681us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      21.364us         0.90%      21.364us       5.341us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      19.964us         0.84%      19.964us       4.991us             4  \nvoid at::native::index_elementwise_kernel<128, 4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      12.832us         0.54%      12.832us       3.208us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us      11.399us         0.48%      11.399us       2.850us             4  \nvoid at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      11.214us         0.47%      11.214us       2.803us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us       9.631us         0.40%       9.631us       2.408us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.200us         0.13%       3.200us       0.800us             4  \n                                        cudaGraphLaunch         2.28%     100.812us        44.65%       1.976ms     493.883us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        42.37%       1.875ms        42.37%       1.875ms       1.875ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        55.35%       2.449ms        55.35%       2.449ms       1.225ms       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 4.425ms\nSelf CUDA time total: 2.382ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "n16_k128_w8_g528",
+      "function": "_compact_slots",
+      "registers": 13,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n4_k128_w4_g528",
+      "function": "_compact_slots",
+      "registers": 13,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n4_k256_w4_g528",
+      "function": "_compact_slots",
+      "registers": 13,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n8_k128_w4_g132",
+      "function": "_compact_slots",
+      "registers": 13,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n8_k128_w4_g528",
+      "function": "_compact_slots",
+      "registers": 13,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n8_k256_w8_g528",
+      "function": "_compact_slots",
+      "registers": 13,
+      "spills": 0,
+      "shared": 0
+    }
+  ],
+  "elapsed_s": 18.187577465,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_moe_w4a16",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/0e5bd38fb3ece1ff0805cde3511ce2f573a65a65b99d5b62825d5a7208bbfedc.py",
+      "sha256": "0e5bd38fb3ece1ff0805cde3511ce2f573a65a65b99d5b62825d5a7208bbfedc"
+    },
+    "n16_k128_w8_g528": {
+      "path": "experiments/sources/07d27efda4f7a8f851854ae9cdd9aac71f3a2a957e79539f1688b6efb777c8d9.py",
+      "sha256": "07d27efda4f7a8f851854ae9cdd9aac71f3a2a957e79539f1688b6efb777c8d9"
+    },
+    "n4_k128_w4_g528": {
+      "path": "experiments/sources/fad735c07f9bff03c3a2f9670dc463d818c90a703768b6ad184a81954c2deb98.py",
+      "sha256": "fad735c07f9bff03c3a2f9670dc463d818c90a703768b6ad184a81954c2deb98"
+    },
+    "n4_k256_w4_g528": {
+      "path": "experiments/sources/2a6e52fb2bb95af97446023ad97e78f9589b64b8ca822c7ac1f9c49192b28967.py",
+      "sha256": "2a6e52fb2bb95af97446023ad97e78f9589b64b8ca822c7ac1f9c49192b28967"
+    },
+    "n8_k128_w4_g132": {
+      "path": "experiments/sources/823f946f97d7e1ff011dc7420b01e56f6cb1f05b6406e2ebb25e446065206bb5.py",
+      "sha256": "823f946f97d7e1ff011dc7420b01e56f6cb1f05b6406e2ebb25e446065206bb5"
+    },
+    "n8_k128_w4_g528": {
+      "path": "experiments/sources/f2a28ced3932a337201dc48461c11bdd653b0c23c47e6b13fe6536c9368e3d2c.py",
+      "sha256": "f2a28ced3932a337201dc48461c11bdd653b0c23c47e6b13fe6536c9368e3d2c"
+    },
+    "n8_k256_w8_g528": {
+      "path": "experiments/sources/98567ca936bfceff6c27c50f0ddb657b2a33b7b021a3c32096293b9a692d27fd.py",
+      "sha256": "98567ca936bfceff6c27c50f0ddb657b2a33b7b021a3c32096293b9a692d27fd"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

@@ -1,0 +1,33 @@
+{
+  "status": "Rejected:88/88checks passed but none improved overall paired local score",
+  "builder": "work/build_moe_adaptive_tiles.py",
+  "cuda": "work/moe_adaptive_align.cu",
+  "runner": "work/run_moe_adaptive_tiles.py",
+  "precompile": "outputs/moe-adaptive-tiles-precompile.json",
+  "method": "Count fresh routes and assign each expert to one of two compact metadata groups. Use8/16,8/32,16/32row tiles according to routecount cutoff8,16,32. Two disjoint nativeGEMMs for each projection, oneSiLU, onepostnorm. BF16/NVFP4storage and FP32accumulationunchanged.",
+  "scope": "Custom only128<=M<=1024; bestuniformdispatchfallbackelse. Everylocalroutecomputedonce; groupoutputsdisjoint byexpert. Native no-invalidscan used because both groups compactvalidexpertIDs.",
+  "validation": "Standardcases plus empty/localrouteedges and127/129boundarycases; expected88comparisons for4candidates. Emptylocalcase usesstrictzeroassertion because officialcheckerdeclinesit.",
+  "guard": "Launch after CPUcompile success and allpreviousGPUtasks stopped. No promotion before referencechecks and timing.",
+  "updated_at": "2026-10-24T10:33:03.672443+09:00",
+  "result": "outputs/moe-adaptive-tiles.json",
+  "local_scores": {
+    "control": 1.1671,
+    "m16_32_c32": 1.1641,
+    "m8_16_c8": 1.158,
+    "m8_32_c16": 1.1469
+  },
+  "batch128_us": {
+    "control": 298.21,
+    "m16_32_c32": 297.73,
+    "m8_16_c8": 306.37,
+    "m8_32_c16": 297.84
+  },
+  "batch256_us": {
+    "control": 385.9,
+    "m16_32_c32": 394.37,
+    "m8_16_c8": 393.49,
+    "m8_32_c16": 426.26
+  },
+  "finding": "Adaptive split expert groups preserve correctness but extra launches/work decomposition do not improve this implementation; M128 tiny differences are noise, M256 consistently loses. Retain uniform compact dispatch.",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

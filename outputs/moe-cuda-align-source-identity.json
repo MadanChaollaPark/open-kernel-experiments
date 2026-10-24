@@ -1,0 +1,22 @@
+{
+  "source": "outputs/moe_cuda_align.py",
+  "sha256": "757047f55753e2d4c48702a02d3302f39ab4673cfe4959d4dd66ad131b32c72f",
+  "validation": [
+    "outputs/moe-cuda-align.json",
+    "outputs/moe-cuda-align-repeat.json"
+  ],
+  "candidate_checks": {
+    "passed": 43,
+    "total": 43
+  },
+  "local_speedups": [
+    1.161,
+    1.1562
+  ],
+  "compact32_controls": [
+    1.1364,
+    1.1355
+  ],
+  "official_source_control_in_repeat": 1.0876,
+  "scope": "Triton compaction through32 tokens; CUDA histogram/prefix/scatter through1024; native fallback beyond. Boundary512/1024/1025 checked. Native NVFP4/BF16 math preserved."
+}

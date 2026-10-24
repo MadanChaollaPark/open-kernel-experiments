@@ -1,0 +1,108 @@
+{
+  "updated_at": "2026-10-24T09:40:10.137869+09:00",
+  "method": "Per-call expert-ID mapping, padded block grouping and route-position generation in one CTA. Native NVFP4/BF16 matrix kernels unchanged. No input-derived state cache.",
+  "runs": [
+    {
+      "evidence": "moe-compact-align.json",
+      "checks": 44,
+      "passed": 44,
+      "best_local_speedup": 1.1359,
+      "control_local_speedup": 1.0851
+    },
+    {
+      "evidence": "moe-compact-align-wide.json",
+      "checks": 80,
+      "passed": 80,
+      "best_local_speedup": 1.1351,
+      "control_local_speedup": 1.0894
+    },
+    {
+      "evidence": "decode-compact-align.json",
+      "checks": 100,
+      "passed": 100,
+      "best_local_speedup": 1.2279,
+      "control_local_speedup": 1.2103
+    },
+    {
+      "evidence": "decode-align-fused.json",
+      "checks": 100,
+      "passed": 100,
+      "local_speedups": {
+        "fused32": 1.2304,
+        "hybrid32": 1.2294,
+        "compact32": 1.2287,
+        "control": 1.208
+      }
+    },
+    {
+      "evidence": "moe-cuda-align.json",
+      "checks": 80,
+      "passed": 80,
+      "local_speedups": {
+        "hybrid256": 1.161,
+        "cuda256": 1.1605,
+        "cuda128": 1.1566,
+        "control_compact32": 1.1364
+      },
+      "candidate_m128_us": 303.42,
+      "control_m128_us": 322.58,
+      "candidate_m256_us": 391.25,
+      "control_m256_us": 416.98
+    },
+    {
+      "evidence": "moe-cuda-align-repeat.json",
+      "checks": 69,
+      "passed": 69,
+      "local_speedups": {
+        "hybrid256": 1.1562,
+        "control_compact32": 1.1355,
+        "existing_official_source": 1.0876
+      }
+    },
+    {
+      "evidence": "decode-cuda-align.json",
+      "checks": 100,
+      "passed": 100,
+      "local_speedups": {
+        "cuda": 1.2398,
+        "cuda_b32": 1.2315,
+        "control_compact32": 1.2299,
+        "cuda_b8": 1.2254
+      },
+      "selection": "CUDA grouping with unchanged decoder tile sizes. Larger tile32 regressesM128; smaller tile8 regressesM32. Repeat before officialcheck."
+    },
+    {
+      "evidence": "decode-cuda-repeat.json",
+      "checks": 75,
+      "passed": 75,
+      "scores": {
+        "cuda_balanced": 1.2465,
+        "cuda": 1.2401,
+        "control_compact32": 1.233
+      }
+    }
+  ],
+  "official_check": "7bb485824a7d4770",
+  "source": "outputs/moe_compact_align.py",
+  "larger_batch_rejection": "Triton match matrix spills and slows at M128/256; keep limit32.",
+  "decoder_status": "Exact compact32 source repeated across50/50 candidate checks (200/200 total comparisons across variants); local1.2279/1.2287 vs1.2103/1.2080. Exact source officialchecka859d804c166468cqueued. Fused/constant variants add less than0.2percent; retain simpler compact32.",
+  "cuda_followup": {
+    "source": "outputs/moe_cuda_align.py",
+    "prepared_runner": "work/run_moe_cuda_align.py",
+    "compile_evidence": "outputs/moe-cuda-align-precompile.json",
+    "compile_passed": true,
+    "method": "One CUDA CTA: fresh local ID mapping, shared atomic histogram, warp prefix of padded expert counts, per-call route scatter. No matrix precision change. Compare128/256threads and small-Triton/large-CUDA hybrid.",
+    "initial_passed": true,
+    "repeat": "work/run_moe_cuda_align_repeat.py",
+    "repeat_passed": true,
+    "official_check": "5eaf609ac8df4852",
+    "candidate_checks": "43/43 across two independent runs;149/149 total comparisons including controls"
+  },
+  "decoder_official_check": "a859d804c166468c",
+  "decoder_source": "outputs/decode_compact_align.py",
+  "prepared_next": "work/run_decode_cuda_align.py; reuse correct CUDA grouping forM>32 and compare decoder tile sizes; not launched.",
+  "active_gpu": null,
+  "combined_decoder_check": "554107a13e414cdc",
+  "combined_decoder_source": "outputs/decode_cuda_balanced.py",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

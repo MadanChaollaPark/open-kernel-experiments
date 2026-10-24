@@ -1,0 +1,2450 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.530e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.530e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.568e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.697e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.364e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.364e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 2,
+        "sharding": "ep8",
+        "seed": 6200,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.571e-03 (worst row 5.636e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 2,
+        "sharding": "ep8",
+        "seed": 6200,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.571e-03 (worst row 5.636e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 2,
+        "sharding": "ep8",
+        "seed": 6200,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.571e-03 (worst row 5.636e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 2,
+        "sharding": "ep8",
+        "seed": 6200,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.571e-03 (worst row 5.636e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 7,
+        "sharding": "ep8",
+        "seed": 6201,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.493e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 7,
+        "sharding": "ep8",
+        "seed": 6201,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.493e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 7,
+        "sharding": "ep8",
+        "seed": 6201,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.493e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 7,
+        "sharding": "ep8",
+        "seed": 6201,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.493e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 17,
+        "sharding": "ep8",
+        "seed": 6202,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.521e-03 (worst row 5.653e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 17,
+        "sharding": "ep8",
+        "seed": 6202,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.521e-03 (worst row 5.653e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 17,
+        "sharding": "ep8",
+        "seed": 6202,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.521e-03 (worst row 5.653e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 17,
+        "sharding": "ep8",
+        "seed": 6202,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.521e-03 (worst row 5.653e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 31,
+        "sharding": "ep8",
+        "seed": 6203,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.607e-03 (worst row 6.075e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 31,
+        "sharding": "ep8",
+        "seed": 6203,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.607e-03 (worst row 6.075e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 31,
+        "sharding": "ep8",
+        "seed": 6203,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.607e-03 (worst row 6.075e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 31,
+        "sharding": "ep8",
+        "seed": 6203,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.607e-03 (worst row 6.075e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 63,
+        "sharding": "ep8",
+        "seed": 6204,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.551e-03 (worst row 5.928e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 63,
+        "sharding": "ep8",
+        "seed": 6204,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.552e-03 (worst row 5.928e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 63,
+        "sharding": "ep8",
+        "seed": 6204,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.552e-03 (worst row 5.928e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 63,
+        "sharding": "ep8",
+        "seed": 6204,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.552e-03 (worst row 5.928e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 64,
+        "sharding": "ep8",
+        "seed": 6205,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.584e-03 (worst row 5.798e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 64,
+        "sharding": "ep8",
+        "seed": 6205,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.584e-03 (worst row 5.798e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 64,
+        "sharding": "ep8",
+        "seed": 6205,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.584e-03 (worst row 5.798e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 64,
+        "sharding": "ep8",
+        "seed": 6205,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.584e-03 (worst row 5.798e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 65,
+        "sharding": "ep8",
+        "seed": 6206,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 6.050e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 65,
+        "sharding": "ep8",
+        "seed": 6206,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 6.050e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 65,
+        "sharding": "ep8",
+        "seed": 6206,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 6.050e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 65,
+        "sharding": "ep8",
+        "seed": 6206,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 6.050e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 127,
+        "sharding": "ep8",
+        "seed": 6207,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.557e-03 (worst row 5.919e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 127,
+        "sharding": "ep8",
+        "seed": 6207,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.557e-03 (worst row 5.919e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 127,
+        "sharding": "ep8",
+        "seed": 6207,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.557e-03 (worst row 5.919e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 127,
+        "sharding": "ep8",
+        "seed": 6207,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.557e-03 (worst row 5.919e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 129,
+        "sharding": "ep8",
+        "seed": 6208,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 5.966e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 129,
+        "sharding": "ep8",
+        "seed": 6208,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 5.964e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 129,
+        "sharding": "ep8",
+        "seed": 6208,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 5.964e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 129,
+        "sharding": "ep8",
+        "seed": 6208,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.536e-03 (worst row 5.964e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.46400240063667,
+      "candidate_us": 81.05599880218506,
+      "baseline_samples": [
+        92.47999638319016,
+        84.51200276613235,
+        84.95999872684479,
+        84.25600081682205,
+        84.6719965338707,
+        84.44800227880478,
+        84.44800227880478,
+        84.32000130414963,
+        84.51200276613235,
+        83.64800363779068,
+        84.1279998421669,
+        84.06399935483932,
+        84.48000252246857,
+        84.70399677753448,
+        85.08799970149994,
+        84.44800227880478,
+        84.35200154781342,
+        84.16000008583069,
+        84.86399799585342,
+        84.927998483181
+      ],
+      "candidate_samples": [
+        86.81599795818329,
+        80.79999685287476,
+        81.216000020504,
+        80.79999685287476,
+        81.216000020504,
+        80.06399869918823,
+        81.18399977684021,
+        80.89599758386612,
+        80.12799918651581,
+        80.86399734020233,
+        80.6720033288002,
+        80.35200089216232,
+        81.50400221347809,
+        80.60800284147263,
+        81.08799904584885,
+        81.18399977684021,
+        81.02399855852127,
+        81.31200075149536,
+        81.69600367546082,
+        81.40800148248672
+      ]
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.6559964120388,
+      "candidate_us": 81.79199695587158,
+      "baseline_samples": [
+        84.63999629020691,
+        83.96799862384796,
+        83.99999886751175,
+        84.73599702119827,
+        84.16000008583069,
+        83.90399813652039,
+        84.95999872684479,
+        84.99199897050858,
+        84.35200154781342,
+        84.25600081682205,
+        84.6719965338707,
+        85.11999994516373,
+        84.73599702119827,
+        84.83199775218964,
+        83.80799740552902,
+        84.76799726486206,
+        84.76799726486206,
+        84.89599823951721,
+        84.09599959850311,
+        84.54400300979614
+      ],
+      "candidate_samples": [
+        87.74399757385254,
+        81.88799768686295,
+        81.31200075149536,
+        81.50400221347809,
+        81.727996468544,
+        80.92799782752991,
+        81.85599744319916,
+        81.63200318813324,
+        81.727996468544,
+        81.69600367546082,
+        81.91999793052673,
+        82.46400207281113,
+        80.99199831485748,
+        82.30400085449219,
+        81.95199817419052,
+        82.07999914884567,
+        82.2720006108284,
+        81.60000294446945,
+        82.11199939250946,
+        81.66400343179703
+      ]
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.51200276613235,
+      "candidate_us": 81.88799768686295,
+      "baseline_samples": [
+        85.50400286912918,
+        84.48000252246857,
+        84.28800106048584,
+        84.76799726486206,
+        84.63999629020691,
+        84.3840017914772,
+        84.70399677753448,
+        84.6719965338707,
+        84.19200032949448,
+        84.28800106048584,
+        84.6719965338707,
+        84.79999750852585,
+        85.95199882984161,
+        84.35200154781342,
+        84.57600325345993,
+        84.54400300979614,
+        84.32000130414963,
+        84.19200032949448,
+        83.52000266313553,
+        84.48000252246857
+      ],
+      "candidate_samples": [
+        87.26400136947632,
+        81.88799768686295,
+        81.15199953317642,
+        81.02399855852127,
+        81.88799768686295,
+        81.53600245714188,
+        81.56800270080566,
+        82.20800012350082,
+        81.15199953317642,
+        82.04799890518188,
+        81.88799768686295,
+        82.07999914884567,
+        82.17599987983704,
+        82.07999914884567,
+        82.59200304746628,
+        82.49600231647491,
+        82.24000036716461,
+        81.69600367546082,
+        81.7599967122078,
+        81.44000172615051
+      ]
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.6719965338707,
+      "candidate_us": 81.02399855852127,
+      "baseline_samples": [
+        84.28800106048584,
+        85.34400165081024,
+        84.86399799585342,
+        84.6719965338707,
+        84.70399677753448,
+        84.57600325345993,
+        84.19200032949448,
+        84.54400300979614,
+        83.93599838018417,
+        84.76799726486206,
+        84.54400300979614,
+        84.6719965338707,
+        84.83199775218964,
+        85.28000116348267,
+        84.22400057315826,
+        84.89599823951721,
+        84.927998483181,
+        85.21600067615509,
+        84.63999629020691,
+        84.60800349712372
+      ],
+      "candidate_samples": [
+        87.20000088214874,
+        81.31200075149536,
+        81.11999928951263,
+        80.76799660921097,
+        82.0159986615181,
+        81.95199817419052,
+        82.0159986615181,
+        81.05599880218506,
+        80.89599758386612,
+        80.32000064849854,
+        82.07999914884567,
+        80.44800162315369,
+        80.99199831485748,
+        80.64000308513641,
+        80.70400357246399,
+        80.89599758386612,
+        81.44000172615051,
+        80.54400235414505,
+        80.60800284147263,
+        81.50400221347809
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 176.7680048942566,
+      "candidate_us": 171.07200622558594,
+      "baseline_samples": [
+        182.75199830532074,
+        176.96000635623932,
+        175.77600479125977,
+        177.59999632835388,
+        177.5359958410263,
+        176.67199671268463,
+        176.35199427604675,
+        176.92799866199493,
+        176.86399817466736,
+        176.7680048942566,
+        176.2239933013916,
+        176.12800002098083,
+        177.12000012397766,
+        176.86399817466736,
+        177.34399437904358,
+        176.7680048942566,
+        176.15999281406403,
+        175.7120043039322,
+        176.256000995636,
+        176.09600722789764
+      ],
+      "candidate_samples": [
+        175.9359985589981,
+        169.66399550437927,
+        170.49600183963776,
+        171.07200622558594,
+        170.8800047636032,
+        171.36000096797943,
+        170.6559956073761,
+        169.98399794101715,
+        171.55200242996216,
+        171.74400389194489,
+        171.61600291728973,
+        170.01600563526154,
+        171.77599668502808,
+        169.98399794101715,
+        170.52799463272095,
+        169.37600076198578,
+        171.64799571037292,
+        172.8000044822693,
+        171.07200622558594,
+        171.1360067129135
+      ]
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 176.89599841833115,
+      "candidate_us": 170.04800587892532,
+      "baseline_samples": [
+        177.69600450992584,
+        176.70400440692902,
+        177.0240068435669,
+        177.12000012397766,
+        176.54399573802948,
+        176.54399573802948,
+        175.7120043039322,
+        175.64800381660461,
+        176.86399817466736,
+        177.44000256061554,
+        176.57600343227386,
+        176.54399573802948,
+        178.24000120162964,
+        175.9680062532425,
+        177.824005484581,
+        177.12000012397766,
+        176.92799866199493,
+        175.87199807167053,
+        177.2480010986328,
+        177.44000256061554
+      ],
+      "candidate_samples": [
+        175.48799514770508,
+        168.86399686336517,
+        171.00800573825836,
+        170.20800709724426,
+        169.0240055322647,
+        170.17599940299988,
+        169.98399794101715,
+        170.01600563526154,
+        170.33599317073822,
+        169.53599452972412,
+        169.40799355506897,
+        168.2880073785782,
+        170.3999936580658,
+        170.20800709724426,
+        169.40799355506897,
+        170.49600183963776,
+        169.91999745368958,
+        170.56000232696533,
+        169.76000368595123,
+        170.0800061225891
+      ]
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 176.36799812316895,
+      "candidate_us": 170.07999867200851,
+      "baseline_samples": [
+        176.54399573802948,
+        175.7120043039322,
+        177.08800733089447,
+        177.85599827766418,
+        177.08800733089447,
+        176.06399953365326,
+        176.32000148296356,
+        176.41599476337433,
+        175.61599612236023,
+        176.15999281406403,
+        176.4480024576187,
+        177.0240068435669,
+        176.57600343227386,
+        177.15199291706085,
+        176.12800002098083,
+        176.89600586891174,
+        175.29599368572235,
+        176.256000995636,
+        175.84000527858734,
+        176.03200674057007
+      ],
+      "candidate_samples": [
+        176.28799378871918,
+        169.79199647903442,
+        170.33599317073822,
+        169.3439930677414,
+        170.9440052509308,
+        170.04799842834473,
+        169.44000124931335,
+        169.88800466060638,
+        169.69600319862366,
+        171.87200486660004,
+        169.21600699424744,
+        171.424001455307,
+        171.29600048065186,
+        171.00800573825836,
+        169.79199647903442,
+        170.1119989156723,
+        169.88800466060638,
+        169.27999258041382,
+        171.58399522304535,
+        170.75200378894806
+      ]
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 176.55999958515167,
+      "candidate_us": 170.6559956073761,
+      "baseline_samples": [
+        177.47199535369873,
+        176.54399573802948,
+        176.5120029449463,
+        175.77600479125977,
+        177.85599827766418,
+        176.06399953365326,
+        176.89600586891174,
+        175.84000527858734,
+        176.12800002098083,
+        176.38400197029114,
+        176.79999768733978,
+        175.9359985589981,
+        177.3120015859604,
+        176.03200674057007,
+        176.67199671268463,
+        176.64000391960144,
+        176.79999768733978,
+        176.57600343227386,
+        176.06399953365326,
+        176.92799866199493
+      ],
+      "candidate_samples": [
+        175.29599368572235,
+        171.77599668502808,
+        169.95200514793396,
+        170.17599940299988,
+        169.53599452972412,
+        170.78399658203125,
+        170.9440052509308,
+        170.84799706935883,
+        169.0559983253479,
+        170.17599940299988,
+        170.71999609470367,
+        170.71999609470367,
+        171.00800573825836,
+        170.23999989032745,
+        171.1679995059967,
+        170.04799842834473,
+        171.03999853134155,
+        169.5680022239685,
+        170.59199512004852,
+        169.72799599170685
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.2480033636093,
+      "candidate_us": 239.44000154733658,
+      "baseline_samples": [
+        264.51200246810913,
+        259.20000672340393,
+        259.3599855899811,
+        258.9440047740936,
+        260.0640058517456,
+        258.4640085697174,
+        259.8719894886017,
+        257.88798928260803,
+        258.33600759506226,
+        259.13599133491516,
+        258.4959864616394,
+        259.5199942588806,
+        258.432000875473,
+        260.44800877571106,
+        259.10401344299316,
+        259.0720057487488,
+        259.2960000038147,
+        260.0319981575012,
+        260.09601354599,
+        259.5199942588806
+      ],
+      "candidate_samples": [
+        239.23200368881226,
+        238.68800699710846,
+        239.9359941482544,
+        238.43200504779816,
+        239.00799453258514,
+        240.35200476646423,
+        239.42400515079498,
+        239.04000222682953,
+        239.84000086784363,
+        238.36800456047058,
+        239.1040027141571,
+        239.87199366092682,
+        239.04000222682953,
+        238.71999979019165,
+        240.12799561023712,
+        240.1919960975647,
+        241.02400243282318,
+        239.58399891853333,
+        241.34400486946106,
+        239.45599794387817
+      ]
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.92800092697144,
+      "candidate_us": 237.19999939203262,
+      "baseline_samples": [
+        259.68000292778015,
+        259.2639923095703,
+        258.5600018501282,
+        259.64799523353577,
+        259.2960000038147,
+        259.2960000038147,
+        259.20000672340393,
+        257.9840123653412,
+        259.2320144176483,
+        256.76798820495605,
+        258.7200105190277,
+        258.8160037994385,
+        260.3839933872223,
+        257.9840123653412,
+        259.10401344299316,
+        257.60000944137573,
+        258.11201333999634,
+        258.4640085697174,
+        259.0399980545044,
+        257.53599405288696
+      ],
+      "candidate_samples": [
+        238.71999979019165,
+        236.57600581645966,
+        237.59999871253967,
+        237.92000114917755,
+        237.2480034828186,
+        237.18400299549103,
+        236.41599714756012,
+        237.21599578857422,
+        236.76800727844238,
+        236.9920015335083,
+        236.64000630378723,
+        237.47199773788452,
+        236.89599335193634,
+        238.52799832820892,
+        237.5359982252121,
+        236.4480048418045,
+        236.41599714756012,
+        237.85600066184998,
+        236.76800727844238,
+        237.34399676322937
+      ]
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.36798548698425,
+      "candidate_us": 236.175999045372,
+      "baseline_samples": [
+        260.73598861694336,
+        258.08000564575195,
+        258.36798548698425,
+        258.14399123191833,
+        258.91199707984924,
+        258.976012468338,
+        258.7839961051941,
+        258.5279941558838,
+        258.7200105190277,
+        258.6880028247833,
+        258.1759989261627,
+        257.6639950275421,
+        257.7599883079529,
+        258.91199707984924,
+        257.0880055427551,
+        258.36798548698425,
+        259.16799902915955,
+        257.79199600219727,
+        258.2719922065735,
+        257.9520046710968
+      ],
+      "candidate_samples": [
+        236.92800104618073,
+        236.735999584198,
+        235.6480062007904,
+        236.32000386714935,
+        235.77600717544556,
+        234.8800003528595,
+        236.54399812221527,
+        236.51200532913208,
+        235.23199558258057,
+        236.41599714756012,
+        237.21599578857422,
+        235.48799753189087,
+        236.2239956855774,
+        236.12800240516663,
+        236.64000630378723,
+        235.9679937362671,
+        236.7040067911148,
+        234.94400084018707,
+        235.167995095253,
+        234.72000658512115
+      ]
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 257.9520046710968,
+      "candidate_us": 238.67199569940567,
+      "baseline_samples": [
+        259.99999046325684,
+        258.84801149368286,
+        258.5279941558838,
+        257.4720084667206,
+        257.4400007724762,
+        257.85601139068604,
+        258.04799795150757,
+        257.4720084667206,
+        258.11201333999634,
+        257.24801421165466,
+        258.5279941558838,
+        258.4640085697174,
+        257.63198733329773,
+        256.99201226234436,
+        258.11201333999634,
+        256.9279968738556,
+        258.33600759506226,
+        257.56800174713135,
+        258.5279941558838,
+        257.7280104160309
+      ],
+      "candidate_samples": [
+        239.87199366092682,
+        238.52799832820892,
+        239.3600046634674,
+        238.3359968662262,
+        239.6479994058609,
+        237.69600689411163,
+        239.3600046634674,
+        238.49600553512573,
+        238.81599307060242,
+        239.07199501991272,
+        239.77600038051605,
+        238.94399404525757,
+        239.07199501991272,
+        239.84000086784363,
+        237.34399676322937,
+        237.95199394226074,
+        237.66399919986725,
+        237.88799345493317,
+        238.52799832820892,
+        238.3359968662262
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 152.44799852371216,
+      "candidate_us": 147.64800667762756,
+      "baseline_samples": [
+        159.96800363063812,
+        152.44799852371216,
+        152.38399803638458,
+        152.3520052433014,
+        151.67999267578125,
+        152.12799608707428,
+        152.0960032939911,
+        151.8400013446808,
+        153.28000485897064,
+        153.05599570274353,
+        152.76800096035004,
+        153.3759981393814,
+        152.22400426864624,
+        152.44799852371216,
+        153.53600680828094,
+        152.319997549057,
+        153.43999862670898,
+        153.02400290966034,
+        152.3520052433014,
+        153.28000485897064
+      ],
+      "candidate_samples": [
+        153.6320000886917,
+        147.87200093269348,
+        147.67999947071075,
+        147.07200229167938,
+        147.20000326633453,
+        147.13600277900696,
+        146.55999839305878,
+        148.22399616241455,
+        147.64800667762756,
+        147.64800667762756,
+        147.2959965467453,
+        147.5840061903,
+        147.71200716495514,
+        148.19200336933136,
+        148.51200580596924,
+        148.3519971370697,
+        147.2959965467453,
+        147.61599898338318,
+        147.32800424098969,
+        148.00000190734863
+      ]
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.21600437164307,
+      "candidate_us": 148.20799976587296,
+      "baseline_samples": [
+        153.43999862670898,
+        153.08800339698792,
+        153.34400534629822,
+        152.5759994983673,
+        152.8639942407608,
+        153.08800339698792,
+        153.47200632095337,
+        151.99999511241913,
+        153.47200632095337,
+        152.8320014476776,
+        154.27200496196747,
+        152.99199521541595,
+        153.6639928817749,
+        152.0320028066635,
+        153.60000729560852,
+        153.82400155067444,
+        153.72799336910248,
+        152.54400670528412,
+        152.6080071926117,
+        153.47200632095337
+      ],
+      "candidate_samples": [
+        154.08000349998474,
+        148.12800288200378,
+        147.20000326633453,
+        148.60799908638,
+        147.5519984960556,
+        147.87200093269348,
+        148.03199470043182,
+        147.61599898338318,
+        147.5200057029724,
+        149.1200029850006,
+        148.67199957370758,
+        148.70400726795197,
+        147.39200472831726,
+        148.12800288200378,
+        148.76799285411835,
+        146.7200070619583,
+        148.6400067806244,
+        148.41599762439728,
+        148.92800152301788,
+        148.28799664974213
+      ]
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.21600437164307,
+      "candidate_us": 148.09600263834,
+      "baseline_samples": [
+        153.9199948310852,
+        153.21600437164307,
+        154.4319987297058,
+        153.85599434375763,
+        153.76000106334686,
+        153.3759981393814,
+        153.02400290966034,
+        153.1520038843155,
+        153.21600437164307,
+        153.43999862670898,
+        153.08800339698792,
+        152.6080071926117,
+        153.02400290966034,
+        152.48000621795654,
+        153.1199961900711,
+        152.44799852371216,
+        153.76000106334686,
+        153.53600680828094,
+        152.99199521541595,
+        153.82400155067444
+      ],
+      "candidate_samples": [
+        153.82400155067444,
+        149.53599870204926,
+        148.41599762439728,
+        148.6400067806244,
+        148.12800288200378,
+        148.8640010356903,
+        147.90399372577667,
+        147.5519984960556,
+        147.5840061903,
+        147.93600142002106,
+        146.84799313545227,
+        147.45600521564484,
+        149.4079977273941,
+        148.41599762439728,
+        148.0640023946762,
+        147.71200716495514,
+        147.87200093269348,
+        148.76799285411835,
+        147.71200716495514,
+        149.53599870204926
+      ]
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.1680002808571,
+      "candidate_us": 147.19999581575394,
+      "baseline_samples": [
+        153.08800339698792,
+        153.888002038002,
+        152.99199521541595,
+        153.1199961900711,
+        153.6320000886917,
+        153.888002038002,
+        153.21600437164307,
+        155.4879993200302,
+        153.56799960136414,
+        152.8960019350052,
+        152.22400426864624,
+        154.01600301265717,
+        152.99199521541595,
+        153.47200632095337,
+        153.3759981393814,
+        153.53600680828094,
+        152.70400047302246,
+        152.41600573062897,
+        151.90400183200836,
+        152.96000242233276
+      ],
+      "candidate_samples": [
+        152.6080071926117,
+        146.97599411010742,
+        147.0080018043518,
+        147.23199605941772,
+        147.2640037536621,
+        146.91199362277985,
+        147.16799557209015,
+        147.35999703407288,
+        147.16799557209015,
+        147.0080018043518,
+        146.88000082969666,
+        147.64800667762756,
+        146.91199362277985,
+        147.77599275112152,
+        148.0640023946762,
+        147.5519984960556,
+        146.7200070619583,
+        146.88000082969666,
+        147.48799800872803,
+        147.45600521564484
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 408.52800011634827,
+      "candidate_us": 325.48800110816956,
+      "baseline_samples": [
+        413.2800102233887,
+        408.35198760032654,
+        407.0720076560974,
+        409.1840088367462,
+        408.4160029888153,
+        410.2720022201538,
+        409.2479944229126,
+        408.83201360702515,
+        407.61598944664,
+        409.63199734687805,
+        409.5039963722229,
+        408.1279933452606,
+        408.4480106830597,
+        408.25599431991577,
+        408.4799885749817,
+        408.25599431991577,
+        408.8959991931915,
+        408.57601165771484,
+        408.57601165771484,
+        407.29600191116333
+      ],
+      "candidate_samples": [
+        325.98400115966797,
+        326.59199833869934,
+        326.4960050582886,
+        324.95999336242676,
+        324.6400058269501,
+        324.5440125465393,
+        326.6240060329437,
+        324.99200105667114,
+        325.0240087509155,
+        325.3760039806366,
+        325.6640136241913,
+        326.1440098285675,
+        325.9519934654236,
+        324.67201352119446,
+        325.8560001850128,
+        324.41601157188416,
+        324.95999336242676,
+        326.07999444007874,
+        325.5999982357025,
+        324.38400387763977
+      ]
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 408.09600055217743,
+      "candidate_us": 309.7119927406311,
+      "baseline_samples": [
+        407.80800580978394,
+        408.9280068874359,
+        410.7840061187744,
+        408.160001039505,
+        408.06400775909424,
+        407.039999961853,
+        407.45601058006287,
+        407.9039990901947,
+        407.55200386047363,
+        408.3839952945709,
+        407.74399042129517,
+        407.61598944664,
+        407.51999616622925,
+        408.35198760032654,
+        408.1279933452606,
+        408.1279933452606,
+        407.29600191116333,
+        408.4480106830597,
+        409.11999344825745,
+        408.28800201416016
+      ],
+      "candidate_samples": [
+        311.7760121822357,
+        310.2079927921295,
+        310.4639947414398,
+        309.05601382255554,
+        309.4080090522766,
+        310.4960024356842,
+        310.8479976654053,
+        309.79201197624207,
+        309.6959888935089,
+        309.59999561309814,
+        309.1520071029663,
+        309.2159926891327,
+        309.4080090522766,
+        309.4080090522766,
+        309.7279965877533,
+        309.1840147972107,
+        310.62400341033936,
+        309.85599756240845,
+        310.3039860725403,
+        309.6640110015869
+      ]
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 408.52800011634827,
+      "candidate_us": 307.68001079559326,
+      "baseline_samples": [
+        409.85599160194397,
+        409.63199734687805,
+        408.57601165771484,
+        410.3359878063202,
+        407.80800580978394,
+        408.4799885749817,
+        408.4799885749817,
+        408.1279933452606,
+        409.0240001678467,
+        409.280002117157,
+        408.35198760032654,
+        410.8479917049408,
+        408.9600145816803,
+        408.83201360702515,
+        407.8400135040283,
+        409.5039963722229,
+        408.06400775909424,
+        407.00799226760864,
+        408.32000970840454,
+        408.4480106830597
+      ],
+      "candidate_samples": [
+        308.7039887905121,
+        306.0159981250763,
+        307.3920011520386,
+        309.7279965877533,
+        309.1199994087219,
+        308.03200602531433,
+        307.20001459121704,
+        308.1600069999695,
+        307.23199248313904,
+        307.45598673820496,
+        306.8479895591736,
+        306.0480058193207,
+        308.1279993057251,
+        306.97599053382874,
+        308.351993560791,
+        306.65600299835205,
+        308.19201469421387,
+        308.47999453544617,
+        307.5520098209381,
+        307.8080117702484
+      ]
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 406.70400857925415,
+      "candidate_us": 306.3360005617142,
+      "baseline_samples": [
+        408.735990524292,
+        404.9279987812042,
+        406.68800473213196,
+        406.8160057067871,
+        406.8480134010315,
+        406.6559970378876,
+        406.23998641967773,
+        405.66399693489075,
+        405.7280123233795,
+        406.43200278282166,
+        404.9279987812042,
+        407.1359932422638,
+        407.6479971408844,
+        406.75199031829834,
+        406.2719941139221,
+        407.8400135040283,
+        407.4240028858185,
+        406.9119989871979,
+        406.72001242637634,
+        405.08800745010376
+      ],
+      "candidate_samples": [
+        308.6720108985901,
+        306.0480058193207,
+        304.80000376701355,
+        306.43200874328613,
+        306.7519962787628,
+        306.08001351356506,
+        306.40000104904175,
+        305.56800961494446,
+        306.5919876098633,
+        306.87999725341797,
+        306.5600097179413,
+        305.82401156425476,
+        306.5919876098633,
+        306.7840039730072,
+        306.91200494766235,
+        305.9839904308319,
+        306.2720000743866,
+        305.4080009460449,
+        304.80000376701355,
+        306.2720000743866
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 590.8640027046204,
+      "candidate_us": 419.8879897594452,
+      "baseline_samples": [
+        594.976007938385,
+        589.6639823913574,
+        591.6159749031067,
+        590.4319882392883,
+        591.3280248641968,
+        591.4239883422852,
+        590.2720093727112,
+        590.8799767494202,
+        591.3919806480408,
+        592.2240018844604,
+        589.792013168335,
+        589.8240208625793,
+        590.4960036277771,
+        590.8480286598206,
+        591.5840268135071,
+        588.1919860839844,
+        592.5760269165039,
+        591.0400152206421,
+        589.6639823913574,
+        590.4960036277771
+      ],
+      "candidate_samples": [
+        420.8320081233978,
+        420.8320081233978,
+        419.9039936065674,
+        419.16799545288086,
+        418.43199729919434,
+        420.28799653053284,
+        419.8080003261566,
+        419.96800899505615,
+        419.3919897079468,
+        421.31200432777405,
+        420.54399847984314,
+        419.20000314712524,
+        420.54399847984314,
+        418.33600401878357,
+        419.77599263191223,
+        420.76799273490906,
+        418.65599155426025,
+        419.871985912323,
+        419.23201084136963,
+        419.93600130081177
+      ]
+    },
+    {
+      "candidate": "cuda128",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 590.7040238380432,
+      "candidate_us": 397.40799367427826,
+      "baseline_samples": [
+        590.4639959335327,
+        591.9359922409058,
+        591.5840268135071,
+        588.8320207595825,
+        590.8480286598206,
+        587.7119898796082,
+        593.34397315979,
+        591.7119979858398,
+        591.0400152206421,
+        590.4319882392883,
+        589.24800157547,
+        590.5600190162659,
+        591.5520191192627,
+        589.2159938812256,
+        593.5999751091003,
+        590.399980545044,
+        590.5600190162659,
+        591.7440056800842,
+        591.7760133743286,
+        590.4960036277771
+      ],
+      "candidate_samples": [
+        399.1360068321228,
+        398.3680009841919,
+        397.92001247406006,
+        397.024005651474,
+        396.4479863643646,
+        399.1680145263672,
+        397.37600088119507,
+        396.09599113464355,
+        396.3199853897095,
+        398.3039855957031,
+        397.8880047798157,
+        396.5440094470978,
+        395.7439959049225,
+        397.69598841667175,
+        397.024005651474,
+        398.49600195884705,
+        396.1600065231323,
+        397.7920114994049,
+        397.43998646736145,
+        395.1359987258911
+      ]
+    },
+    {
+      "candidate": "cuda256",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 590.7680094242096,
+      "candidate_us": 392.4959897994995,
+      "baseline_samples": [
+        592.9920077323914,
+        589.6959900856018,
+        590.9119844436646,
+        590.7840132713318,
+        590.8799767494202,
+        590.7840132713318,
+        589.9519920349121,
+        591.1359786987305,
+        589.4719958305359,
+        590.175986289978,
+        591.8400287628174,
+        589.8879766464233,
+        589.9199843406677,
+        589.8879766464233,
+        591.3280248641968,
+        591.4559960365295,
+        590.6559824943542,
+        590.7520055770874,
+        590.6559824943542,
+        592.3839807510376
+      ],
+      "candidate_samples": [
+        392.4799859523773,
+        393.69601011276245,
+        391.90399646759033,
+        392.5119936466217,
+        392.8000032901764,
+        392.06400513648987,
+        391.7439877986908,
+        393.69601011276245,
+        392.60798692703247,
+        392.38399267196655,
+        393.18400621414185,
+        392.9919898509979,
+        392.5119936466217,
+        392.0319974422455,
+        391.6800022125244,
+        392.12799072265625,
+        392.9600119590759,
+        393.7920033931732,
+        392.2559916973114,
+        391.9360041618347
+      ]
+    },
+    {
+      "candidate": "hybrid256",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 592.3040211200714,
+      "candidate_us": 394.1600024700165,
+      "baseline_samples": [
+        593.5680270195007,
+        590.8160209655762,
+        591.3280248641968,
+        590.2720093727112,
+        596.1599946022034,
+        593.4399962425232,
+        592.8320288658142,
+        591.3280248641968,
+        592.3200249671936,
+        592.4800038337708,
+        591.0080075263977,
+        592.1279788017273,
+        590.6239748001099,
+        591.9679999351501,
+        592.3839807510376,
+        593.4079885482788,
+        592.2880172729492,
+        592.2240018844604,
+        592.8639769554138,
+        592.736005783081
+      ],
+      "candidate_samples": [
+        394.23999190330505,
+        395.4559862613678,
+        393.47198605537415,
+        396.67201042175293,
+        393.5999870300293,
+        393.66400241851807,
+        396.1920142173767,
+        394.23999190330505,
+        395.00799775123596,
+        395.9360122680664,
+        392.06400513648987,
+        394.432008266449,
+        392.767995595932,
+        393.72798800468445,
+        395.32798528671265,
+        392.8000032901764,
+        394.20801401138306,
+        392.2559916973114,
+        394.0800130367279,
+        394.1119909286499
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"bs\": 4, \"dist\": \"normal\", \"seed\": 1800, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"seed\": 1801, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 257, \"dist\": \"normal\", \"seed\": 1802, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 128, \"dist\": \"skewed\", \"seed\": 1803, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"seed\": 1804, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 2, \"dist\": \"normal\", \"seed\": 6200, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 7, \"dist\": \"normal\", \"seed\": 6201, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 17, \"dist\": \"normal\", \"seed\": 6202, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 31, \"dist\": \"normal\", \"seed\": 6203, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 63, \"dist\": \"normal\", \"seed\": 6204, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 64, \"dist\": \"normal\", \"seed\": 6205, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 65, \"dist\": \"normal\", \"seed\": 6206, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 127, \"dist\": \"normal\", \"seed\": 6207, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 129, \"dist\": \"normal\", \"seed\": 6208, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"load\": \"decode 1\", \"seed\": 401, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 16, \"load\": \"decode 16\", \"seed\": 402, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 32, \"load\": \"decode 32\", \"seed\": 403, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 8, \"load\": \"verify 1\", \"seed\": 404, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 128, \"load\": \"verify 16\", \"seed\": 405, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 256, \"load\": \"verify 32\", \"seed\": 406, \"sharding\": \"ep8\", \"weight\": 60}": {}
+  },
+  "calibration_us": 2.9120000544935465,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "cuda256",
+    "case": {
+      "bs": 256,
+      "sharding": "ep8",
+      "load": "verify 32",
+      "weight": 60,
+      "seed": 406
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       1.507ms        87.18%       1.507ms     188.395us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     150.784us         8.72%     150.784us      37.696us             4  \nvoid group_routes<256>(int const*, int*, int*, int*,...         0.00%       0.000us         0.00%       0.000us       0.000us      22.751us         1.32%      22.751us       5.688us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      22.303us         1.29%      22.303us       5.576us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      21.984us         1.27%      21.984us       5.496us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.744us         0.22%       3.744us       0.936us             4  \n                                        cudaGraphLaunch         4.21%     112.730us        38.42%       1.030ms     257.456us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        34.22%     917.095us        34.22%     917.095us     917.095us       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        61.58%       1.651ms        61.58%       1.651ms     825.265us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 2.680ms\nSelf CUDA time total: 1.729ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       2.282ms        90.39%       2.282ms     285.274us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     147.973us         5.86%     147.973us      36.993us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      22.498us         0.89%      22.498us       5.624us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      21.056us         0.83%      21.056us       5.264us             4  \nvoid at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      12.833us         0.51%      12.833us       3.208us             4  \nvoid at::native::index_elementwise_kernel<128, 4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      12.800us         0.51%      12.800us       3.200us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us      11.873us         0.47%      11.873us       2.968us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us      10.304us         0.41%      10.304us       2.576us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.296us         0.13%       3.296us       0.824us             4  \n                                        cudaGraphLaunch         2.77%     116.760us        41.91%       1.767ms     441.775us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        39.14%       1.650ms        39.14%       1.650ms       1.650ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        58.09%       2.449ms        58.09%       2.449ms       1.225ms       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 4.216ms\nSelf CUDA time total: 2.525ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 24,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 100,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 100,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "hybrid256",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "hybrid256",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "hybrid256",
+      "function": "_compact_align",
+      "registers": 24,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "hybrid256",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "hybrid256",
+      "function": "_compact_align",
+      "registers": 100,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid256",
+      "function": "_compact_align",
+      "registers": 100,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid256",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "hybrid256",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid256",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    }
+  ],
+  "elapsed_s": 33.348183909999996,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_moe_w4a16",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/43381cdf3bc6bcf999308ca0feeace88e39c21575be9b3161c0ae7e141f942ff.py",
+      "sha256": "43381cdf3bc6bcf999308ca0feeace88e39c21575be9b3161c0ae7e141f942ff"
+    },
+    "cuda128": {
+      "path": "experiments/sources/014697e3bbde0974e9129c84f2018def2739cb54b6b8df679154add01c173cfd.py",
+      "sha256": "014697e3bbde0974e9129c84f2018def2739cb54b6b8df679154add01c173cfd"
+    },
+    "cuda256": {
+      "path": "experiments/sources/41ddfc51ca4454c94fdb1bfb516e5ca720da5dfba7b6c33b12886e5a245b99a8.py",
+      "sha256": "41ddfc51ca4454c94fdb1bfb516e5ca720da5dfba7b6c33b12886e5a245b99a8"
+    },
+    "hybrid256": {
+      "path": "experiments/sources/757047f55753e2d4c48702a02d3302f39ab4673cfe4959d4dd66ad131b32c72f.py",
+      "sha256": "757047f55753e2d4c48702a02d3302f39ab4673cfe4959d4dd66ad131b32c72f"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

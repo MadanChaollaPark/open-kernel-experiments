@@ -1,0 +1,132 @@
+{
+  "updated_at": "2026-10-24T01:47:50.422816+00:00",
+  "status": "rejected: exact and correct, but slower",
+  "basis": "Earlier scalar warp-shuffle FP4 lookup tied older native M1; scaled BF16 multiply conversion was slower. New register byte lookup converts exact FP4 quartets without warp shuffles or scaled multiply.",
+  "cpu_proof": "outputs/fp4-prmt-cpu-proof.json",
+  "gpu_proof": "outputs/fp4-prmt-probe.json",
+  "gpu_proof_values": 262144,
+  "gpu_bit_mismatches": 0,
+  "compile": "outputs/moe-prmt-gemv-precompile.json",
+  "source": "work/moe_prmt_gemv.cu",
+  "builder": "work/build_moe_prmt_gemv.py",
+  "result": "outputs/moe-prmt-gemv.json",
+  "comparison": [
+    "current native compact dispatch",
+    "old warp-shuffle lookup on same current fallback",
+    "register lookup with4warps",
+    "register lookup with8warps"
+  ],
+  "scope": "Custom scalar path forM<=8, native fallback otherwise. No weight precision or BF16 activation change. Fresh routing each call.",
+  "promotion": null,
+  "goal_achieved": false,
+  "validation_passed": 76,
+  "validation_total": 76,
+  "local_speedups": {
+    "control": 1.1683,
+    "lookup_w4": 1.045,
+    "prmt_w4": 0.9684,
+    "prmt_w8": 0.9672
+  },
+  "selected_timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "candidate_us": 81.91999793052673,
+      "baseline_us": 85.53600311279297
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "candidate_us": 87.79199793934822,
+      "baseline_us": 84.84799787402153
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "candidate_us": 109.0560033917427,
+      "baseline_us": 85.28000116348267
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "candidate_us": 108.99200290441513,
+      "baseline_us": 85.4720026254654
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "candidate_us": 147.50400185585022,
+      "baseline_us": 154.12800014019012
+    },
+    {
+      "candidate": "lookup_w4",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "candidate_us": 260.8320116996765,
+      "baseline_us": 154.7199934720993
+    },
+    {
+      "candidate": "prmt_w4",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "candidate_us": 329.8559933900833,
+      "baseline_us": 154.2080044746399
+    },
+    {
+      "candidate": "prmt_w8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "candidate_us": 334.3839943408966,
+      "baseline_us": 154.54400330781937
+    }
+  ],
+  "conservative_modal_usd": 40.18,
+  "interpretation": "Exact register permutation is slower than both old warp-shuffle lookup and native Marlin atM1/M8. Unchanged native fallback differences at largerM are noise; no promotion. No further byte-lookup or scalar warps-only sweep justified.",
+  "gpu_status": "All GPU apps stopped with zero tasks",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

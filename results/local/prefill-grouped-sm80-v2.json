@@ -1,0 +1,1917 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.542e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.076e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "sliding",
+        "q_len": 300,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2100
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.448e-02 (worst row 6.536e-02) [bound 0.065]; attention input relative L2 error 2.255e-02 (worst row 4.071e-02) [bound 0.042]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.810e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2101
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.948e-02 (worst row 1.201e-01) [bound 0.150]; attention input relative L2 error 4.552e-02 (worst row 8.809e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.482e-01) [bound 0.150]; attention input relative L2 error 4.443e-02 (worst row 1.102e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 2,
+        "ctx": 2500,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2102
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.818e-02 (worst row 1.483e-01) [bound 0.150]; attention input relative L2 error 4.444e-02 (worst row 1.104e-01) [bound 0.109]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.848e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 3,
+        "ctx": 5000,
+        "layer": "full",
+        "q_len": 200,
+        "page": 1,
+        "dist": "outliers",
+        "seed": 2103
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.730e-02 (worst row 1.216e-01) [bound 0.150]; attention input relative L2 error 3.498e-02 (worst row 7.844e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 4096,
+        "layer": "sliding",
+        "q_len": 4096,
+        "page": 1,
+        "dist": "normal",
+        "seed": 2104
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.914e-02 (worst row 1.178e-01) [bound 0.114]; attention input relative L2 error 3.220e-02 (worst row 8.238e-02) [bound 0.074]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.561e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.219e-02 (worst row 1.036e-01) [bound 0.120]; attention input relative L2 error 3.432e-02 (worst row 7.564e-02) [bound 0.078]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.951e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.951e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.244e-02 (worst row 1.140e-01) [bound 0.150]; attention input relative L2 error 4.113e-02 (worst row 8.949e-02) [bound 0.099]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.119e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.401e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.402e-02 (worst row 1.118e-01) [bound 0.125]; attention input relative L2 error 3.536e-02 (worst row 8.386e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.947e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.177e-02 (worst row 1.146e-01) [bound 0.148]; attention input relative L2 error 4.053e-02 (worst row 7.949e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "ok": true,
+      "message": "update relative L2 error 2.174e-02 (worst row 4.649e-02) [bound 0.044]; attention input relative L2 error 1.456e-02 (worst row 3.563e-02) [bound 0.030]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "ok": true,
+      "message": "update relative L2 error 3.396e-02 (worst row 1.021e-01) [bound 0.068]; attention input relative L2 error 2.240e-02 (worst row 8.067e-02) [bound 0.045]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.165e-02 (worst row 1.042e-01) [bound 0.123]; attention input relative L2 error 3.379e-02 (worst row 7.838e-02) [bound 0.080]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.738e-02 (worst row 1.153e-01) [bound 0.138]; attention input relative L2 error 3.726e-02 (worst row 8.027e-02) [bound 0.089]"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1090.0800228118896,
+      "candidate_us": 1088.6719822883606,
+      "baseline_samples": [
+        1097.823977470398,
+        1090.1440382003784,
+        1085.3760242462158,
+        1091.9040441513062,
+        1086.6559743881226,
+        1086.7199897766113,
+        1090.0160074234009,
+        1095.296025276184
+      ],
+      "candidate_samples": [
+        1089.4399881362915,
+        1089.2479419708252,
+        1085.536003112793,
+        1091.2959575653076,
+        1088.096022605896,
+        1085.1199626922607,
+        1092.4160480499268,
+        1087.615966796875
+      ]
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1087.328016757965,
+      "candidate_us": 24815.39249420166,
+      "baseline_samples": [
+        1095.2320098876953,
+        1087.3600244522095,
+        1088.6720418930054,
+        1089.8239612579346,
+        1087.2960090637207,
+        1087.2960090637207,
+        1085.9520435333252,
+        1084.0959548950195
+      ],
+      "candidate_samples": [
+        24836.16065979004,
+        24816.03240966797,
+        24807.680130004883,
+        24816.67137145996,
+        24806.175231933594,
+        24814.75257873535,
+        24817.60025024414,
+        24806.81610107422
+      ]
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1001
+      },
+      "baseline_us": 1085.8879685401917,
+      "candidate_us": 1085.200011730194,
+      "baseline_samples": [
+        1089.6320343017578,
+        1084.5119953155518,
+        1085.1839780807495,
+        1085.7919454574585,
+        1083.7119817733765,
+        1086.0480070114136,
+        1085.9839916229248,
+        1087.3279571533203
+      ],
+      "candidate_samples": [
+        1090.4959440231323,
+        1085.0239992141724,
+        1083.3920240402222,
+        1085.4079723358154,
+        1082.2720527648926,
+        1089.792013168335,
+        1085.3760242462158,
+        1084.223985671997
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1431.280016899109,
+      "candidate_us": 1429.3279647827148,
+      "baseline_samples": [
+        1435.520052909851,
+        1430.2719831466675,
+        1428.3839464187622,
+        1431.3280582427979,
+        1434.5279932022095,
+        1432.0319890975952,
+        1428.6400079727173,
+        1431.23197555542
+      ],
+      "candidate_samples": [
+        1430.4959774017334,
+        1429.4719696044922,
+        1425.4720211029053,
+        1429.535984992981,
+        1429.1839599609375,
+        1431.9360256195068,
+        1426.144003868103,
+        1426.3999462127686
+      ]
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1432.6239824295044,
+      "candidate_us": 23050.816535949707,
+      "baseline_samples": [
+        1440.0639533996582,
+        1431.9679737091064,
+        1435.7119798660278,
+        1431.9039583206177,
+        1430.624008178711,
+        1433.344006538391,
+        1433.2799911499023,
+        1429.4079542160034
+      ],
+      "candidate_samples": [
+        23059.040069580078,
+        23050.752639770508,
+        23050.880432128906,
+        23051.20086669922,
+        23050.559997558594,
+        23053.08723449707,
+        23048.992156982422,
+        23038.591384887695
+      ]
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 1",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1002
+      },
+      "baseline_us": 1429.3599724769592,
+      "candidate_us": 1428.608000278473,
+      "baseline_samples": [
+        1430.400013923645,
+        1428.096055984497,
+        1438.4959936141968,
+        1428.7999868392944,
+        1429.919958114624,
+        1427.135944366455,
+        1424.8000383377075,
+        1430.8160543441772
+      ],
+      "candidate_samples": [
+        1430.5599927902222,
+        1428.7680387496948,
+        1430.400013923645,
+        1428.4160137176514,
+        1425.5039691925049,
+        1426.9440174102783,
+        1428.447961807251,
+        1429.0560483932495
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3460.9920978546143,
+      "candidate_us": 3471.743941307068,
+      "baseline_samples": [
+        3468.480110168457,
+        3439.8720264434814,
+        3453.5040855407715,
+        3447.711944580078,
+        3451.3280391693115,
+        3583.456039428711,
+        3593.183994293213,
+        3590.656042098999
+      ],
+      "candidate_samples": [
+        3454.2078971862793,
+        3450.3040313720703,
+        3453.5999298095703,
+        3459.775924682617,
+        3483.7119579315186,
+        3597.248077392578,
+        3588.223934173584,
+        3588.5119438171387
+      ]
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3455.120086669922,
+      "candidate_us": 65964.84756469727,
+      "baseline_samples": [
+        3478.5919189453125,
+        3453.632116317749,
+        3457.2479724884033,
+        3456.6080570220947,
+        3451.5199661254883,
+        3444.4799423217773,
+        3442.8799152374268,
+        3464.8640155792236
+      ],
+      "candidate_samples": [
+        66306.97631835938,
+        65987.0376586914,
+        65977.60009765625,
+        65955.2993774414,
+        65958.94622802734,
+        65917.25158691406,
+        65970.74890136719,
+        65958.87756347656
+      ]
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "sliding",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 46,
+        "repeats": 6,
+        "seed": 1003
+      },
+      "baseline_us": 3460.0799083709717,
+      "candidate_us": 3455.456018447876,
+      "baseline_samples": [
+        3464.7679328918457,
+        3451.200008392334,
+        3451.359987258911,
+        3455.3918838500977,
+        3449.215888977051,
+        3569.7600841522217,
+        3635.9360218048096,
+        3627.903938293457
+      ],
+      "candidate_samples": [
+        3456.2880992889404,
+        3447.5839138031006,
+        3453.5040855407715,
+        3454.6239376068115,
+        3459.2320919036865,
+        3448.7040042877197,
+        3630.9759616851807,
+        3636.607885360718
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4953.711986541748,
+      "candidate_us": 4937.456130981445,
+      "baseline_samples": [
+        4966.879844665527,
+        4933.504104614258,
+        4940.544128417969,
+        4937.888145446777,
+        4920.127868652344,
+        5098.336219787598,
+        5091.648101806641,
+        5091.040134429932
+      ],
+      "candidate_samples": [
+        4953.792095184326,
+        4937.856197357178,
+        4937.056064605713,
+        4935.55212020874,
+        4917.407989501953,
+        4918.240070343018,
+        5095.039844512939,
+        5097.599983215332
+      ]
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4906.304121017456,
+      "candidate_us": 66282.94372558594,
+      "baseline_samples": [
+        4952.672004699707,
+        4899.104118347168,
+        4903.999805450439,
+        4906.496047973633,
+        4908.127784729004,
+        4906.112194061279,
+        4913.695812225342,
+        4904.99210357666
+      ],
+      "candidate_samples": [
+        66662.39929199219,
+        66492.67578125,
+        66255.99670410156,
+        66275.68054199219,
+        66255.77545166016,
+        66277.05383300781,
+        66289.95513916016,
+        66288.83361816406
+      ]
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 4,
+        "ctx": 80000,
+        "layer": "full",
+        "q_len": 753,
+        "page": 1,
+        "dist": "soft",
+        "load": "turn 4",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1004
+      },
+      "baseline_us": 4905.776023864746,
+      "candidate_us": 4905.519962310791,
+      "baseline_samples": [
+        4918.784141540527,
+        4905.53617477417,
+        4906.303882598877,
+        4900.928020477295,
+        4906.015872955322,
+        4901.919841766357,
+        4909.984111785889,
+        4897.92013168335
+      ],
+      "candidate_samples": [
+        4932.191848754883,
+        4910.431861877441,
+        4905.375957489014,
+        4900.896072387695,
+        4901.535987854004,
+        4905.280113220215,
+        4905.663967132568,
+        4908.415794372559
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 21715.904235839844,
+      "candidate_us": 15720.848083496094,
+      "baseline_samples": [
+        19428.03192138672,
+        19933.536529541016,
+        19917.184829711914,
+        22238.719940185547,
+        21985.471725463867,
+        21653.95164489746,
+        21777.856826782227,
+        21861.984252929688
+      ],
+      "candidate_samples": [
+        14767.775535583496,
+        15006.784439086914,
+        15055.647850036621,
+        15872.480392456055,
+        15759.743690490723,
+        15681.952476501465,
+        15775.13599395752,
+        15855.104446411133
+      ]
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 19179.03995513916,
+      "candidate_us": 320190.20080566406,
+      "baseline_samples": [
+        19185.504913330078,
+        19179.19921875,
+        19178.88069152832,
+        19160.991668701172,
+        19440.959930419922,
+        19161.151885986328,
+        19221.567153930664,
+        19176.223754882812
+      ],
+      "candidate_samples": [
+        319867.9504394531,
+        319879.8522949219,
+        322701.5380859375,
+        319997.37548828125,
+        325413.75732421875,
+        320339.0197753906,
+        325893.7683105469,
+        320041.3818359375
+      ]
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 0,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1006
+      },
+      "baseline_us": 19182.015419006348,
+      "candidate_us": 321527.83203125,
+      "baseline_samples": [
+        19155.359268188477,
+        19182.239532470703,
+        19235.04066467285,
+        19181.791305541992,
+        19206.592559814453,
+        19151.296615600586,
+        19203.392028808594,
+        19158.88023376465
+      ],
+      "candidate_samples": [
+        322681.5185546875,
+        320296.32568359375,
+        324853.8513183594,
+        320374.1455078125,
+        324326.47705078125,
+        320083.0993652344,
+        325331.9091796875,
+        320019.47021484375
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 20063.008308410645,
+      "candidate_us": 14879.31203842163,
+      "baseline_samples": [
+        18601.63116455078,
+        18843.39141845703,
+        18838.560104370117,
+        20299.392700195312,
+        20633.087158203125,
+        20135.648727416992,
+        19990.367889404297,
+        20248.25668334961
+      ],
+      "candidate_samples": [
+        14503.840446472168,
+        14355.423927307129,
+        14629.376411437988,
+        14994.303703308105,
+        15138.784408569336,
+        14834.59186553955,
+        14924.032211303711,
+        15054.944038391113
+      ]
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 17899.95288848877,
+      "candidate_us": 310143.4020996094,
+      "baseline_samples": [
+        17868.640899658203,
+        17931.264877319336,
+        18165.664672851562,
+        17850.112915039062,
+        18132.9288482666,
+        17854.528427124023,
+        18122.59292602539,
+        17854.656219482422
+      ],
+      "candidate_samples": [
+        310715.27099609375,
+        309266.0827636719,
+        314178.4973144531,
+        309460.6018066406,
+        313691.2841796875,
+        309571.533203125,
+        313978.5461425781,
+        309375.18310546875
+      ]
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "sliding",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 138,
+        "repeats": 6,
+        "seed": 1007
+      },
+      "baseline_us": 17843.40763092041,
+      "candidate_us": 309541.3818359375,
+      "baseline_samples": [
+        17853.31153869629,
+        17830.368041992188,
+        17833.50372314453,
+        17827.392578125,
+        17821.727752685547,
+        17858.144760131836,
+        17914.464950561523,
+        17855.968475341797
+      ],
+      "candidate_samples": [
+        309355.46875,
+        309134.9182128906,
+        314286.1022949219,
+        309353.515625,
+        313278.4423828125,
+        309514.8010253906,
+        311921.2341308594,
+        309567.9626464844
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 22034.832000732422,
+      "candidate_us": 18323.13632965088,
+      "baseline_samples": [
+        20728.67202758789,
+        20770.97511291504,
+        22083.0078125,
+        22226.591110229492,
+        22294.240951538086,
+        22133.440017700195,
+        21986.656188964844,
+        21962.976455688477
+      ],
+      "candidate_samples": [
+        17672.191619873047,
+        17695.327758789062,
+        18608.928680419922,
+        18587.007522583008,
+        18421.728134155273,
+        18405.63201904297,
+        18220.15953063965,
+        18240.64064025879
+      ]
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 20724.25651550293,
+      "candidate_us": 277750.01525878906,
+      "baseline_samples": [
+        20721.40884399414,
+        20712.095260620117,
+        20980.512619018555,
+        20727.10418701172,
+        20953.439712524414,
+        20708.415985107422,
+        20954.84733581543,
+        20706.72035217285
+      ],
+      "candidate_samples": [
+        278743.71337890625,
+        276690.61279296875,
+        280076.59912109375,
+        276756.3171386719,
+        280264.58740234375,
+        276708.06884765625,
+        279527.52685546875,
+        276443.1457519531
+      ]
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 32768,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1008
+      },
+      "baseline_us": 20727.952003479004,
+      "candidate_us": 276770.98083496094,
+      "baseline_samples": [
+        20730.016708374023,
+        20711.29608154297,
+        20725.887298583984,
+        20768.672943115234,
+        20875.871658325195,
+        20696.287155151367,
+        20797.056198120117,
+        20706.687927246094
+      ],
+      "candidate_samples": [
+        276268.1579589844,
+        276106.4758300781,
+        278780.8532714844,
+        276867.49267578125,
+        283455.0476074219,
+        276639.46533203125,
+        280674.9572753906,
+        276674.4689941406
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 26854.09641265869,
+      "candidate_us": 23097.712516784668,
+      "baseline_samples": [
+        25379.520416259766,
+        26669.919967651367,
+        26779.48760986328,
+        27428.768157958984,
+        26790.016174316406,
+        27569.055557250977,
+        26918.176651000977,
+        27323.74382019043
+      ],
+      "candidate_samples": [
+        21977.279663085938,
+        22347.007751464844,
+        23005.92041015625,
+        23235.29624938965,
+        23271.23260498047,
+        23387.039184570312,
+        23025.728225708008,
+        23169.696807861328
+      ]
+    },
+    {
+      "candidate": "sm80_all",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 25294.879913330078,
+      "candidate_us": 304878.2501220703,
+      "baseline_samples": [
+        25296.192169189453,
+        25282.81593322754,
+        25486.879348754883,
+        25279.84046936035,
+        25298.784255981445,
+        25293.567657470703,
+        25543.77555847168,
+        25292.064666748047
+      ],
+      "candidate_samples": [
+        305705.99365234375,
+        303601.6540527344,
+        307889.9230957031,
+        303897.4914550781,
+        307105.6213378906,
+        304050.5065917969,
+        313935.9130859375,
+        303774.0173339844
+      ]
+    },
+    {
+      "candidate": "sm80_large",
+      "case": {
+        "batch": 1,
+        "ctx": 65536,
+        "layer": "full",
+        "q_len": 16384,
+        "page": 1,
+        "dist": "soft",
+        "load": "first turn",
+        "weight": 16,
+        "repeats": 6,
+        "seed": 1010
+      },
+      "baseline_us": 25299.216270446777,
+      "candidate_us": 305030.029296875,
+      "baseline_samples": [
+        25281.375885009766,
+        25281.44073486328,
+        25792.896270751953,
+        25285.951614379883,
+        26018.848419189453,
+        25292.448043823242,
+        25866.464614868164,
+        25305.984497070312
+      ],
+      "candidate_samples": [
+        306335.8459472656,
+        303575.5310058594,
+        307980.1940917969,
+        303602.11181640625,
+        308378.0517578125,
+        303724.2126464844,
+        308516.9372558594,
+        303711.181640625
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"batch\": 1, \"ctx\": 0, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 300, \"seed\": 2100}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 3000, \"dist\": \"normal\", \"layer\": \"full\", \"page\": 1, \"q_len\": 753, \"seed\": 2101}": {
+      "local_start": 160
+    },
+    "{\"batch\": 2, \"ctx\": 2500, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 753, \"seed\": 2102}": {
+      "local_start": 160
+    },
+    "{\"batch\": 3, \"ctx\": 5000, \"dist\": \"outliers\", \"layer\": \"full\", \"page\": 1, \"q_len\": 200, \"seed\": 2103}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 4096, \"dist\": \"normal\", \"layer\": \"sliding\", \"page\": 1, \"q_len\": 4096, \"seed\": 2104}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"turn 1\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1001, \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"turn 1\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1002, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"turn 4\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1003, \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"turn 4\", \"page\": 1, \"q_len\": 753, \"repeats\": 6, \"seed\": 1004, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 0, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1006, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 32768, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1007, \"weight\": 138}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 32768, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1008, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 65536, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"first turn\", \"page\": 1, \"q_len\": 16384, \"repeats\": 6, \"seed\": 1010, \"weight\": 16}": {
+      "local_start": 160
+    }
+  },
+  "calibration_us": 3.456000005826354,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "control",
+    "case": {
+      "batch": 1,
+      "ctx": 32768,
+      "layer": "sliding",
+      "q_len": 16384,
+      "page": 1,
+      "dist": "soft",
+      "load": "first turn",
+      "weight": 138,
+      "repeats": 6,
+      "seed": 1007
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid cutlass::device_kernel<cutlass::gemm::kernel::G...         0.00%       0.000us         0.00%       0.000us       0.000us      27.625ms        46.81%      27.625ms       3.453ms             8  \n         nvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      10.255ms        17.38%      10.255ms     854.577us            12  \n         nvjet_sm90_tst_320x128_64x3_1x2_h_bz_coopB_TNT         0.00%       0.000us         0.00%       0.000us       0.000us       6.014ms        10.19%       6.014ms       1.504ms             4  \n                                       _dequant_runtime         0.00%       0.000us         0.00%       0.000us       0.000us       5.224ms         8.85%       5.224ms     652.989us             8  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.631ms         2.76%       1.631ms     407.811us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.604ms         2.72%       1.604ms     400.983us             4  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.243ms         2.11%       1.243ms     310.660us             4  \n         nvjet_sm90_tss_128x256_64x4_2x1_v_bz_coopA_NNN         0.00%       0.000us         0.00%       0.000us       0.000us       1.159ms         1.96%       1.159ms     144.890us             8  \n                                       _activate_scaled         0.00%       0.000us         0.00%       0.000us       0.000us     980.874us         1.66%     980.874us     245.219us             4  \n                                        _scatter_scaled         0.00%       0.000us         0.00%       0.000us       0.000us     772.930us         1.31%     772.930us     193.232us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     528.709us         0.90%     528.709us     132.177us             4  \n                                                  _pack         0.00%       0.000us         0.00%       0.000us       0.000us     446.798us         0.76%     446.798us     111.699us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us     337.989us         0.57%     337.989us      84.497us             4  \nvoid at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us     322.469us         0.55%     322.469us      80.617us             4  \n                                _qk_rms_norm_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     172.948us         0.29%     172.948us      43.237us             4  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 61.927ms\nSelf CUDA time total: 59.017ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us      50.031ms        66.56%      50.031ms       6.254ms             8  \n         nvjet_sm90_tst_192x192_64x4_2x1_v_bz_coopB_TNN         0.00%       0.000us         0.00%       0.000us       0.000us      10.219ms        13.60%      10.219ms     851.555us            12  \n         nvjet_sm90_tst_320x128_64x3_1x2_h_bz_coopB_TNT         0.00%       0.000us         0.00%       0.000us       0.000us       6.002ms         7.99%       6.002ms       1.501ms             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.635ms         2.18%       1.635ms     408.713us             4  \nvoid sglang::muse_spark_norm_residual_kernel<8192l, ...         0.00%       0.000us         0.00%       0.000us       0.000us       1.605ms         2.14%       1.605ms     401.345us             4  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.275ms         1.70%       1.275ms     318.737us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us       1.210ms         1.61%       1.210ms     302.545us             4  \n         nvjet_sm90_tss_128x256_64x4_2x1_v_bz_coopA_NNN         0.00%       0.000us         0.00%       0.000us       0.000us       1.162ms         1.55%       1.162ms     145.200us             8  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     514.208us         0.68%     514.208us     128.552us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us     337.793us         0.45%     337.793us      84.448us             4  \nvoid at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us     322.049us         0.43%     322.049us      80.512us             4  \n                                _qk_rms_norm_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us     174.241us         0.23%     174.241us      43.560us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     167.136us         0.22%     167.136us      41.784us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us     111.073us         0.15%     111.073us      27.768us             4  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us      97.537us         0.13%      97.537us      24.384us             4  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 78.416ms\nSelf CUDA time total: 75.164ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "control",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "control",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "control",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_segments",
+      "registers": 20,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_segments",
+      "registers": 20,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_segments",
+      "registers": 20,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_segments",
+      "registers": 20,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_segments",
+      "registers": 20,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_pack",
+      "registers": 59,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_all",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_large",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_large",
+      "function": "_dequant_runtime",
+      "registers": 33,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_large",
+      "function": "_segments",
+      "registers": 25,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "sm80_large",
+      "function": "_segments",
+      "registers": 48,
+      "spills": 0,
+      "shared": 32
+    },
+    {
+      "candidate": "sm80_large",
+      "function": "_prefix",
+      "registers": 16,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_large",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_large",
+      "function": "_pack",
+      "registers": 48,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_large",
+      "function": "_activate_scaled",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_large",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "sm80_large",
+      "function": "_scatter_scaled",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    }
+  ],
+  "elapsed_s": 130.486145248,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_prefill_layer",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/dc6fc4c515e79dd1ffdcbe013bbdaad2c54440c68c100c82f6c28fee111e094e.py",
+      "sha256": "dc6fc4c515e79dd1ffdcbe013bbdaad2c54440c68c100c82f6c28fee111e094e"
+    },
+    "sm80_all": {
+      "path": "experiments/sources/b9ebd5c3907e237ad3a32a1478eab5bb478cc4d84e843b88e31f6b4fa1e1939a.py",
+      "sha256": "b9ebd5c3907e237ad3a32a1478eab5bb478cc4d84e843b88e31f6b4fa1e1939a"
+    },
+    "sm80_large": {
+      "path": "experiments/sources/065bab19f4f1fa45c728bd5d737e3d169113fa639c1ab56e5f814cc09806f924.py",
+      "sha256": "065bab19f4f1fa45c728bd5d737e3d169113fa639c1ab56e5f814cc09806f924"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

@@ -1,0 +1,13 @@
+{
+  "source": "outputs/decode_cuda_balanced.py",
+  "sha256": "171e3a81aa2d0c6a0bf62f3d6f7a9a7dc1136c586534e461c17b661d8fd5927a",
+  "validation": "outputs/decode-cuda-repeat.json",
+  "checks": {
+    "passed": 25,
+    "total": 25
+  },
+  "local_speedup": 1.2465,
+  "compact32_control": 1.233,
+  "cuda_only": 1.2401,
+  "scope": "Same MoE tiles. Fresh CUDA grouping above32tokens; existing verified balanced attention integrated. Local1.1percent relativegain, not yet official decoderverified."
+}

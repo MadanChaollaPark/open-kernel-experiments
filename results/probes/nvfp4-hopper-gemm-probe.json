@@ -1,0 +1,117 @@
+{
+  "gpu": "NVIDIA H200",
+  "validation": [
+    {
+      "shape": [
+        1,
+        1,
+        64,
+        128
+      ],
+      "relative_l2": 0.0014412106247618794,
+      "finite": true,
+      "passed": true
+    },
+    {
+      "shape": [
+        1,
+        1,
+        64,
+        128
+      ],
+      "mode": "graph_fresh_input",
+      "relative_l2": 0.0016358742723241448,
+      "passed": true
+    },
+    {
+      "shape": [
+        1,
+        17,
+        128,
+        256
+      ],
+      "relative_l2": 0.0017208409262821078,
+      "finite": true,
+      "passed": true
+    },
+    {
+      "shape": [
+        1,
+        17,
+        128,
+        256
+      ],
+      "mode": "graph_fresh_input",
+      "relative_l2": 0.0015887614572420716,
+      "passed": true
+    },
+    {
+      "shape": [
+        2,
+        33,
+        256,
+        512
+      ],
+      "relative_l2": 0.00165938853751868,
+      "finite": true,
+      "passed": true
+    },
+    {
+      "shape": [
+        2,
+        33,
+        256,
+        512
+      ],
+      "mode": "graph_fresh_input",
+      "relative_l2": 0.001665889867581427,
+      "passed": true
+    },
+    {
+      "shape": [
+        4,
+        65,
+        128,
+        1024
+      ],
+      "relative_l2": 0.0016596809728071094,
+      "finite": true,
+      "passed": true
+    },
+    {
+      "shape": [
+        4,
+        65,
+        128,
+        1024
+      ],
+      "mode": "graph_fresh_input",
+      "relative_l2": 0.001658806810155511,
+      "passed": true
+    },
+    {
+      "shape": [
+        2,
+        16,
+        256,
+        4096
+      ],
+      "relative_l2": 0.0016584995901212096,
+      "finite": true,
+      "passed": true
+    },
+    {
+      "shape": [
+        2,
+        16,
+        256,
+        4096
+      ],
+      "mode": "graph_fresh_input",
+      "relative_l2": 0.0016537130577489734,
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "scope": "Independent grouped NVFP4/E4M3group16 times BF16 GEMM against FP32; not yet full MoE or official timing"
+}

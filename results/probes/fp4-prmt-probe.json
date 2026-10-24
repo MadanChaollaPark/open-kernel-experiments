@@ -1,0 +1,8 @@
+{
+  "gpu": "NVIDIA H200",
+  "patterns": 65536,
+  "values": 262144,
+  "bit_mismatches": 0,
+  "all_passed": true,
+  "scope": "Every FP4 quartet, including signed zero, bitwise comparison against independent lookup table"
+}

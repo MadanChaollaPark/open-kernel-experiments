@@ -1,0 +1,205 @@
+{
+  "status": "Rejected: 90/90 checks passed but all variants slower",
+  "builder": "work/build_attention_twostage.py",
+  "runner": "work/run_attention_twostage.py",
+  "scope": "Full attention q_len1 batch>=8; existing best fallback otherwise; scores cover full context without key skipping. Run filtered full-layer subset only, not full overall score.",
+  "mechanism": "Separate FP8 QK tensor dot into FP32 logits buffer. Independent PV tiles compute stable per-tile softmax in FP32, BF16 P/V matmul, and FP32 partial output/LSE; existing FP32 LSE-weighted merge and BF16 normalization/gate. Temporary traffic trades against online recurrence and register pressure.",
+  "variants": [
+    "k128_v256_w4",
+    "k256_v512_w4",
+    "k256_v512_w8",
+    "k256_v1024_w8"
+  ],
+  "control": "outputs/attention_balanced_hybrid.py",
+  "guard": "No promotion without all reference checks and repeatable timing improvement. No cached inputs; all score/partial buffers written within timed call.",
+  "updated_at": "2026-10-24T10:17:16.719835+09:00",
+  "result": "outputs/attention-twostage.json",
+  "full_layer_subset_scores": {
+    "control": 1.2886,
+    "k256_v512_w4": 1.061,
+    "k128_v256_w4": 1.0459,
+    "k256_v1024_w8": 1.0128,
+    "k256_v512_w8": 0.9494
+  },
+  "batch32_decode_us": {
+    "control": 270.83,
+    "best_new": 494.53
+  },
+  "batch16_decode_us": {
+    "control": 142.08,
+    "best_new": 253.89
+  },
+  "compiler_diagnostics": [
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_score_tiles",
+      "registers": 48,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_score_tiles",
+      "registers": 46,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_score_tiles",
+      "registers": 46,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_value_tiles",
+      "registers": 131,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_value_tiles",
+      "registers": 134,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k128_v256_w4",
+      "function": "_value_tiles",
+      "registers": 134,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_score_tiles",
+      "registers": 64,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_score_tiles",
+      "registers": 80,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_score_tiles",
+      "registers": 80,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_value_tiles",
+      "registers": 255,
+      "spills": 0,
+      "shared": 65536
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_value_tiles",
+      "registers": 255,
+      "spills": 2,
+      "shared": 65536
+    },
+    {
+      "candidate": "k256_v1024_w8",
+      "function": "_value_tiles",
+      "registers": 255,
+      "spills": 2,
+      "shared": 65536
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_score_tiles",
+      "registers": 64,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_score_tiles",
+      "registers": 80,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_score_tiles",
+      "registers": 80,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_value_tiles",
+      "registers": 255,
+      "spills": 4,
+      "shared": 32768
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_value_tiles",
+      "registers": 255,
+      "spills": 2,
+      "shared": 32768
+    },
+    {
+      "candidate": "k256_v512_w4",
+      "function": "_value_tiles",
+      "registers": 255,
+      "spills": 2,
+      "shared": 32768
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_score_tiles",
+      "registers": 64,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_score_tiles",
+      "registers": 80,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_score_tiles",
+      "registers": 80,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_value_tiles",
+      "registers": 128,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_value_tiles",
+      "registers": 131,
+      "spills": 0,
+      "shared": 32768
+    },
+    {
+      "candidate": "k256_v512_w8",
+      "function": "_value_tiles",
+      "registers": 131,
+      "spills": 0,
+      "shared": 32768
+    }
+  ],
+  "finding": "Separate score and value passes do not recover added memory/launch costs in this implementation. Value512warps4 and value1024warps8 reach255registers with2-4spills; even spill-free256tile loses substantially. Cannot attribute total slowdown to spills alone without a stage-specific profile.",
+  "next": "Do not promote or repeat this design without stage-level bottleneck evidence. Current best fused attention remains unchanged.",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

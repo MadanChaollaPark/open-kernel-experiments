@@ -1,0 +1,10 @@
+{
+  "source": "outputs/dense_warp_hybrid.py",
+  "local_sha256": "08580ff0ab7f9495ab68f096a8d472b49859ea1f1b9e8bbb64e74d4b49001cb1",
+  "validation": "outputs/dense-warp-hybrid.json",
+  "candidate": "r16p16_m1",
+  "local_speedup": 1.1943,
+  "control_speedup": 1.185,
+  "validation_scope": "39 selected-candidate checks;195 total across variants and control",
+  "decision": "Official off-board check; local M1 router improvement repeated in wide and hybrid runs, other batches retain control. Overall change small and needs official verification."
+}

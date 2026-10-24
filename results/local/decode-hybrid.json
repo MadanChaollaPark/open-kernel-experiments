@@ -1,0 +1,2733 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 10,
+        "layer": "sliding",
+        "seed": 1900
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.491e-02 (worst row 5.491e-02) [bound 0.106]; attention input relative L2 error 3.229e-02 (worst row 3.229e-02) [bound 0.062]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 1,
+        "ctx": 10,
+        "layer": "sliding",
+        "seed": 1900
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.198e-02 (worst row 5.198e-02) [bound 0.106]; attention input relative L2 error 3.060e-02 (worst row 3.060e-02) [bound 0.062]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "seed": 1901
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.954e-02 (worst row 7.954e-02) [bound 0.150]; attention input relative L2 error 5.677e-02 (worst row 5.677e-02) [bound 0.142]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 1,
+        "ctx": 3000,
+        "layer": "full",
+        "seed": 1901
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.885e-02 (worst row 7.885e-02) [bound 0.150]; attention input relative L2 error 5.622e-02 (worst row 5.622e-02) [bound 0.142]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 8,
+        "ctx": 2047,
+        "layer": "sliding",
+        "seed": 1902
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.152e-02 (worst row 1.000e-01) [bound 0.150]; attention input relative L2 error 4.799e-02 (worst row 7.067e-02) [bound 0.110]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 8,
+        "ctx": 2047,
+        "layer": "sliding",
+        "seed": 1902
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.895e-02 (worst row 1.009e-01) [bound 0.150]; attention input relative L2 error 4.629e-02 (worst row 7.117e-02) [bound 0.110]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "layer": "sliding",
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1903
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.166e-02 (worst row 9.113e-02) [bound 0.150]; attention input relative L2 error 4.711e-02 (worst row 7.033e-02) [bound 0.123]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "layer": "sliding",
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1903
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.323e-02 (worst row 9.440e-02) [bound 0.150]; attention input relative L2 error 4.825e-02 (worst row 7.280e-02) [bound 0.123]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 3,
+        "ctx": 6000,
+        "layer": "full",
+        "q_len": 8,
+        "dist": "outliers",
+        "seed": 1904
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.825e-02 (worst row 1.040e-01) [bound 0.150]; attention input relative L2 error 3.456e-02 (worst row 5.786e-02) [bound 0.086]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 3,
+        "ctx": 6000,
+        "layer": "full",
+        "q_len": 8,
+        "dist": "outliers",
+        "seed": 1904
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.831e-02 (worst row 1.045e-01) [bound 0.150]; attention input relative L2 error 3.460e-02 (worst row 5.814e-02) [bound 0.086]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 5,
+        "ctx": 5000,
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1905
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.831e-02 (worst row 1.025e-01) [bound 0.150]; attention input relative L2 error 4.478e-02 (worst row 7.088e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 5,
+        "ctx": 5000,
+        "layer": "sliding",
+        "q_len": 8,
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1905
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.796e-02 (worst row 9.891e-02) [bound 0.150]; attention input relative L2 error 4.459e-02 (worst row 7.116e-02) [bound 0.113]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 33,
+        "ctx": 20000,
+        "layer": "full",
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1906
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.454e-02 (worst row 1.016e-01) [bound 0.150]; attention input relative L2 error 4.906e-02 (worst row 7.240e-02) [bound 0.122]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 33,
+        "ctx": 20000,
+        "layer": "full",
+        "spread": "mixed",
+        "page": 1,
+        "seed": 1906
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.454e-02 (worst row 1.019e-01) [bound 0.150]; attention input relative L2 error 4.905e-02 (worst row 7.107e-02) [bound 0.122]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 2,
+        "ctx": 300000,
+        "layer": "sliding",
+        "q_len": 8,
+        "seed": 1907
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.478e-02 (worst row 9.844e-02) [bound 0.150]; attention input relative L2 error 5.092e-02 (worst row 6.811e-02) [bound 0.119]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 2,
+        "ctx": 300000,
+        "layer": "sliding",
+        "q_len": 8,
+        "seed": 1907
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.358e-02 (worst row 9.561e-02) [bound 0.150]; attention input relative L2 error 5.004e-02 (worst row 6.620e-02) [bound 0.119]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 1048576,
+        "layer": "full",
+        "q_len": 8,
+        "seed": 1908
+      },
+      "ok": true,
+      "message": "update relative L2 error 8.494e-02 (worst row 1.028e-01) [bound 0.150]; attention input relative L2 error 5.666e-02 (worst row 7.338e-02) [bound 0.140]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 1,
+        "ctx": 1048576,
+        "layer": "full",
+        "q_len": 8,
+        "seed": 1908
+      },
+      "ok": true,
+      "message": "update relative L2 error 8.478e-02 (worst row 1.024e-01) [bound 0.150]; attention input relative L2 error 5.656e-02 (worst row 7.308e-02) [bound 0.140]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 7000,
+        "layer": "sliding",
+        "q_len": 8,
+        "page": 1,
+        "kv_scale": 0.015625,
+        "seed": 1909
+      },
+      "ok": true,
+      "message": "update relative L2 error 7.020e-02 (worst row 1.022e-01) [bound 0.150]; attention input relative L2 error 4.571e-02 (worst row 6.818e-02) [bound 0.110]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 4,
+        "ctx": 7000,
+        "layer": "sliding",
+        "q_len": 8,
+        "page": 1,
+        "kv_scale": 0.015625,
+        "seed": 1909
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.813e-02 (worst row 1.028e-01) [bound 0.150]; attention input relative L2 error 4.438e-02 (worst row 7.140e-02) [bound 0.110]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "dist": "soft",
+        "page": 1,
+        "seed": 1910
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.678e-02 (worst row 4.678e-02) [bound 0.120]; attention input relative L2 error 2.715e-02 (worst row 2.715e-02) [bound 0.069]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "dist": "soft",
+        "page": 1,
+        "seed": 1910
+      },
+      "ok": true,
+      "message": "update relative L2 error 4.703e-02 (worst row 4.703e-02) [bound 0.120]; attention input relative L2 error 2.728e-02 (worst row 2.728e-02) [bound 0.069]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 4,
+        "ctx": 6000,
+        "layer": "sliding",
+        "q_len": 8,
+        "dist": "soft",
+        "seed": 1911
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.452e-02 (worst row 7.434e-02) [bound 0.127]; attention input relative L2 error 3.576e-02 (worst row 5.176e-02) [bound 0.083]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 4,
+        "ctx": 6000,
+        "layer": "sliding",
+        "q_len": 8,
+        "dist": "soft",
+        "seed": 1911
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.519e-02 (worst row 6.869e-02) [bound 0.127]; attention input relative L2 error 3.624e-02 (worst row 4.846e-02) [bound 0.084]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 20000,
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft",
+        "page": 1,
+        "seed": 1912
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.122e-02 (worst row 8.889e-02) [bound 0.150]; attention input relative L2 error 3.945e-02 (worst row 4.724e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 16,
+        "ctx": 20000,
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft",
+        "page": 1,
+        "seed": 1912
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.065e-02 (worst row 8.877e-02) [bound 0.150]; attention input relative L2 error 3.908e-02 (worst row 4.720e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "repeats": 60,
+        "seed": 801
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.795e-02 (worst row 5.795e-02) [bound 0.135]; attention input relative L2 error 4.371e-02 (worst row 4.371e-02) [bound 0.102]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "repeats": 60,
+        "seed": 801
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.113e-02 (worst row 6.113e-02) [bound 0.135]; attention input relative L2 error 4.612e-02 (worst row 4.612e-02) [bound 0.102]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 16,
+        "repeats": 60,
+        "seed": 802
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.956e-02 (worst row 6.956e-02) [bound 0.150]; attention input relative L2 error 4.862e-02 (worst row 4.862e-02) [bound 0.121]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 16,
+        "repeats": 60,
+        "seed": 802
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.967e-02 (worst row 6.967e-02) [bound 0.150]; attention input relative L2 error 4.878e-02 (worst row 4.878e-02) [bound 0.121]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 803
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.124e-02 (worst row 7.023e-02) [bound 0.126]; attention input relative L2 error 3.310e-02 (worst row 4.767e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 803
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.093e-02 (worst row 7.068e-02) [bound 0.126]; attention input relative L2 error 3.304e-02 (worst row 4.954e-02) [bound 0.082]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 804
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.275e-02 (worst row 8.079e-02) [bound 0.150]; attention input relative L2 error 4.221e-02 (worst row 5.922e-02) [bound 0.105]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 804
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.202e-02 (worst row 8.197e-02) [bound 0.150]; attention input relative L2 error 4.175e-02 (worst row 6.007e-02) [bound 0.105]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 805
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.463e-02 (worst row 7.730e-02) [bound 0.131]; attention input relative L2 error 3.600e-02 (worst row 5.268e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 805
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.347e-02 (worst row 7.356e-02) [bound 0.131]; attention input relative L2 error 3.523e-02 (worst row 5.115e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 806
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.391e-02 (worst row 8.005e-02) [bound 0.150]; attention input relative L2 error 3.943e-02 (worst row 5.435e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 806
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.343e-02 (worst row 7.951e-02) [bound 0.150]; attention input relative L2 error 3.912e-02 (worst row 5.399e-02) [bound 0.097]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 807
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.773e-02 (worst row 9.278e-02) [bound 0.150]; attention input relative L2 error 4.318e-02 (worst row 6.077e-02) [bound 0.103]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 807
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.763e-02 (worst row 8.454e-02) [bound 0.150]; attention input relative L2 error 4.304e-02 (worst row 5.560e-02) [bound 0.103]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 808
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.305e-02 (worst row 9.047e-02) [bound 0.150]; attention input relative L2 error 3.925e-02 (worst row 4.897e-02) [bound 0.098]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 808
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.303e-02 (worst row 9.108e-02) [bound 0.150]; attention input relative L2 error 3.923e-02 (worst row 4.908e-02) [bound 0.098]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 809
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.644e-02 (worst row 9.633e-02) [bound 0.131]; attention input relative L2 error 3.759e-02 (worst row 6.708e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 809
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.536e-02 (worst row 1.004e-01) [bound 0.131]; attention input relative L2 error 3.690e-02 (worst row 7.102e-02) [bound 0.087]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 810
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.562e-02 (worst row 9.487e-02) [bound 0.150]; attention input relative L2 error 4.377e-02 (worst row 5.775e-02) [bound 0.107]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 810
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.562e-02 (worst row 9.487e-02) [bound 0.150]; attention input relative L2 error 4.376e-02 (worst row 5.775e-02) [bound 0.107]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 811
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.966e-02 (worst row 9.236e-02) [bound 0.141]; attention input relative L2 error 3.942e-02 (worst row 6.470e-02) [bound 0.093]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 811
+      },
+      "ok": true,
+      "message": "update relative L2 error 5.897e-02 (worst row 9.533e-02) [bound 0.141]; attention input relative L2 error 3.896e-02 (worst row 6.582e-02) [bound 0.093]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 812
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.400e-02 (worst row 9.556e-02) [bound 0.150]; attention input relative L2 error 4.244e-02 (worst row 6.249e-02) [bound 0.103]"
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 812
+      },
+      "ok": true,
+      "message": "update relative L2 error 6.400e-02 (worst row 9.556e-02) [bound 0.150]; attention input relative L2 error 4.244e-02 (worst row 6.249e-02) [bound 0.103]"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "repeats": 60,
+        "seed": 801
+      },
+      "baseline_us": 187.18399852514267,
+      "candidate_us": 186.91200017929077,
+      "baseline_samples": [
+        226.9439995288849,
+        185.63200533390045,
+        187.71199882030487,
+        186.36800348758698,
+        187.391996383667,
+        186.0799938440323,
+        186.78399920463562,
+        187.48800456523895,
+        184.64000523090363,
+        186.14399433135986,
+        187.3600035905838,
+        187.55200505256653,
+        187.1359944343567,
+        188.54400515556335,
+        187.96800076961517,
+        186.8479996919632,
+        187.23200261592865,
+        187.77599930763245,
+        186.65599822998047,
+        186.5919977426529
+      ],
+      "candidate_samples": [
+        226.0800004005432,
+        187.6160055398941,
+        185.5040043592453,
+        187.04000115394592,
+        187.55200505256653,
+        186.62400543689728,
+        187.1359944343567,
+        186.81600689888,
+        186.46399676799774,
+        187.29600310325623,
+        186.78399920463562,
+        185.92000007629395,
+        185.95199286937714,
+        187.00799345970154,
+        185.95199286937714,
+        187.04000115394592,
+        186.46399676799774,
+        187.71199882030487,
+        187.1040016412735,
+        186.5919977426529
+      ]
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 46,
+        "repeats": 60,
+        "seed": 801
+      },
+      "baseline_us": 172.83200472593307,
+      "candidate_us": 162.4160036444664,
+      "baseline_samples": [
+        174.04800653457642,
+        172.5119948387146,
+        173.08799922466278,
+        171.03999853134155,
+        173.50399494171143,
+        172.35200107097626,
+        172.992005944252,
+        172.35200107097626,
+        171.1679995059967,
+        175.61599612236023,
+        174.27200078964233,
+        173.72800409793854,
+        173.69599640369415,
+        174.55999553203583,
+        171.4559942483902,
+        172.2240000963211,
+        173.63199591636658,
+        172.67200350761414,
+        172.31999337673187,
+        171.87200486660004
+      ],
+      "candidate_samples": [
+        181.2479943037033,
+        161.85599565505981,
+        163.7759953737259,
+        161.3759994506836,
+        163.39200735092163,
+        161.79199516773224,
+        162.432000041008,
+        160.76800227165222,
+        163.2000058889389,
+        163.2319986820221,
+        161.6320013999939,
+        162.1440052986145,
+        161.53599321842194,
+        162.4639928340912,
+        162.4639928340912,
+        162.01600432395935,
+        162.75200247764587,
+        162.27200627326965,
+        162.9759967327118,
+        162.4000072479248
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 16,
+        "repeats": 60,
+        "seed": 802
+      },
+      "baseline_us": 185.40799617767334,
+      "candidate_us": 183.4079995751381,
+      "baseline_samples": [
+        221.76000475883484,
+        184.60799753665924,
+        185.248002409935,
+        185.66399812698364,
+        184.9920004606247,
+        184.4159960746765,
+        184.9599927663803,
+        185.69600582122803,
+        183.96799266338348,
+        183.3599954843521,
+        183.1360012292862,
+        186.24000251293182,
+        185.5359971523285,
+        185.98400056362152,
+        185.2799952030182,
+        186.39999628067017,
+        185.18400192260742,
+        185.92000007629395,
+        185.82400679588318,
+        186.20799481868744
+      ],
+      "candidate_samples": [
+        216.8000042438507,
+        183.3920031785965,
+        184.2239946126938,
+        183.23199450969696,
+        182.72000551223755,
+        184.4480037689209,
+        183.29599499702454,
+        183.3599954843521,
+        184.12800133228302,
+        182.94399976730347,
+        182.0479929447174,
+        184.25600230693817,
+        183.55199694633484,
+        182.75199830532074,
+        183.4239959716797,
+        183.3599954843521,
+        183.74399840831757,
+        184.1599941253662,
+        182.0479929447174,
+        183.52000415325165
+      ]
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "dist": "soft",
+        "load": "decode 1",
+        "weight": 16,
+        "repeats": 60,
+        "seed": 802
+      },
+      "baseline_us": 184.92799997329712,
+      "candidate_us": 174.22399669885635,
+      "baseline_samples": [
+        186.27199530601501,
+        184.83200669288635,
+        184.32000279426575,
+        184.86399948596954,
+        185.2159947156906,
+        184.32000279426575,
+        183.67999792099,
+        183.61599743366241,
+        184.57600474357605,
+        185.2159947156906,
+        184.9920004606247,
+        185.82400679588318,
+        184.03199315071106,
+        185.5040043592453,
+        185.66399812698364,
+        185.34399569034576,
+        186.43200397491455,
+        183.55199694633484,
+        184.03199315071106,
+        185.85599958896637
+      ],
+      "candidate_samples": [
+        197.63199985027313,
+        173.8239973783493,
+        174.3360012769699,
+        174.01599884033203,
+        173.15199971199036,
+        171.9679981470108,
+        174.75199699401855,
+        174.40000176429749,
+        173.66400361061096,
+        174.14399981498718,
+        174.3679940700531,
+        174.3679940700531,
+        174.27200078964233,
+        174.55999553203583,
+        174.40000176429749,
+        174.17599260807037,
+        173.5360026359558,
+        173.66400361061096,
+        174.5920032262802,
+        173.8560050725937
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 803
+      },
+      "baseline_us": 260.71999967098236,
+      "candidate_us": 260.73600351810455,
+      "baseline_samples": [
+        305.1519989967346,
+        259.10401344299316,
+        261.24799251556396,
+        259.42400097846985,
+        260.25599241256714,
+        259.16799902915955,
+        261.59998774528503,
+        261.1519992351532,
+        260.76799631118774,
+        261.8879973888397,
+        261.02399826049805,
+        262.2080147266388,
+        259.64799523353577,
+        260.0319981575012,
+        260.672003030777,
+        258.1759989261627,
+        259.13599133491516,
+        259.10401344299316,
+        261.34398579597473,
+        261.28000020980835
+      ],
+      "candidate_samples": [
+        325.3119885921478,
+        260.2880001068115,
+        259.8080039024353,
+        259.3280076980591,
+        261.59998774528503,
+        260.96001267433167,
+        260.6399953365326,
+        259.93600487709045,
+        261.82401180267334,
+        260.8959972858429,
+        261.28000020980835,
+        260.5760097503662,
+        259.90399718284607,
+        260.4160010814667,
+        260.51199436187744,
+        260.8320116996765,
+        260.96001267433167,
+        259.00799036026,
+        262.2080147266388,
+        263.10399174690247
+      ]
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 46,
+        "seed": 803
+      },
+      "baseline_us": 260.70399582386017,
+      "candidate_us": 238.8639971613884,
+      "baseline_samples": [
+        260.22401452064514,
+        262.2080147266388,
+        260.8959972858429,
+        259.3280076980591,
+        260.99199056625366,
+        260.5440020561218,
+        261.53600215911865,
+        260.99199056625366,
+        259.5199942588806,
+        260.127991437912,
+        259.42400097846985,
+        259.3599855899811,
+        259.2320144176483,
+        259.96801257133484,
+        261.56800985336304,
+        262.30400800704956,
+        260.8639895915985,
+        260.8639895915985,
+        259.45600867271423,
+        261.1519992351532
+      ],
+      "candidate_samples": [
+        260.1599991321564,
+        238.68800699710846,
+        239.74399268627167,
+        241.05599522590637,
+        239.80799317359924,
+        238.81599307060242,
+        236.51200532913208,
+        239.1359955072403,
+        237.72799968719482,
+        237.98400163650513,
+        238.91200125217438,
+        239.00799453258514,
+        237.44000494480133,
+        239.80799317359924,
+        238.5919988155365,
+        238.5600060224533,
+        238.36800456047058,
+        237.95199394226074,
+        240.28800427913666,
+        239.29600417613983
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 804
+      },
+      "baseline_us": 412.32000291347504,
+      "candidate_us": 411.77599132061005,
+      "baseline_samples": [
+        455.4559886455536,
+        412.28801012039185,
+        411.3599956035614,
+        412.51200437545776,
+        413.34399580955505,
+        409.7599983215332,
+        410.97599267959595,
+        412.3519957065582,
+        412.51200437545776,
+        411.26400232315063,
+        411.77600622177124,
+        412.0959937572479,
+        410.75199842453003,
+        413.34399580955505,
+        411.6800129413605,
+        411.8399918079376,
+        413.34399580955505,
+        413.2480025291443,
+        413.85599970817566,
+        412.3519957065582
+      ],
+      "candidate_samples": [
+        477.5039851665497,
+        411.26400232315063,
+        412.28801012039185,
+        411.00800037384033,
+        411.8399918079376,
+        411.71199083328247,
+        411.26400232315063,
+        411.9360148906708,
+        409.92000699043274,
+        413.7600064277649,
+        412.25600242614746,
+        412.06398606300354,
+        410.2720022201538,
+        410.94401478767395,
+        410.0480079650879,
+        412.03200817108154,
+        412.80001401901245,
+        410.43201088905334,
+        411.45598888397217,
+        412.9599928855896
+      ]
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 804
+      },
+      "baseline_us": 411.96800768375397,
+      "candidate_us": 348.31999242305756,
+      "baseline_samples": [
+        412.7039909362793,
+        411.6159975528717,
+        412.3519957065582,
+        413.4719967842102,
+        409.63199734687805,
+        411.16800904273987,
+        410.94401478767395,
+        412.03200817108154,
+        411.6480052471161,
+        412.6400053501129,
+        413.1520092487335,
+        413.567990064621,
+        412.54401206970215,
+        411.16800904273987,
+        411.1360013484955,
+        411.8399918079376,
+        413.2800102233887,
+        412.447988986969,
+        409.824013710022,
+        411.9040071964264
+      ],
+      "candidate_samples": [
+        375.2320110797882,
+        346.49598598480225,
+        349.15199875831604,
+        347.4560081958771,
+        348.57600927352905,
+        349.5360016822815,
+        348.1599986553192,
+        348.86398911476135,
+        346.3680148124695,
+        348.28799962997437,
+        348.7040102481842,
+        346.49598598480225,
+        348.03199768066406,
+        347.23201394081116,
+        347.7439880371094,
+        349.95201230049133,
+        348.4160006046295,
+        348.35198521614075,
+        349.11999106407166,
+        347.4240005016327
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 805
+      },
+      "baseline_us": 243.9039945602417,
+      "candidate_us": 243.3920055627823,
+      "baseline_samples": [
+        271.5199887752533,
+        243.6479926109314,
+        243.23199689388275,
+        243.45600605010986,
+        243.68000030517578,
+        245.60000002384186,
+        244.57600712776184,
+        241.63199961185455,
+        245.56800723075867,
+        244.22399699687958,
+        245.66400051116943,
+        244.03199553489685,
+        242.75200068950653,
+        243.77599358558655,
+        244.76799368858337,
+        242.78399348258972,
+        244.54399943351746,
+        243.55199933052063,
+        244.28799748420715,
+        243.29599738121033
+      ],
+      "candidate_samples": [
+        258.5279941558838,
+        242.71999299526215,
+        242.46400594711304,
+        242.8479939699173,
+        243.3599978685379,
+        245.08799612522125,
+        244.1280037164688,
+        242.91199445724487,
+        243.55199933052063,
+        243.3920055627823,
+        244.32000517845154,
+        242.62399971485138,
+        241.85599386692047,
+        243.6479926109314,
+        244.25600469112396,
+        242.49599874019623,
+        245.15199661254883,
+        243.3920055627823,
+        243.96799504756927,
+        241.82400107383728
+      ]
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 46,
+        "seed": 805
+      },
+      "baseline_us": 233.50399732589722,
+      "candidate_us": 253.2159984111786,
+      "baseline_samples": [
+        231.9359928369522,
+        232.54400491714478,
+        232.2559952735901,
+        233.5679978132248,
+        235.83999276161194,
+        233.8239997625351,
+        233.2800030708313,
+        234.047994017601,
+        234.68799889087677,
+        233.95200073719025,
+        234.1119945049286,
+        233.63199830055237,
+        233.024001121521,
+        234.75199937820435,
+        232.41600394248962,
+        233.024001121521,
+        232.80000686645508,
+        232.12799429893494,
+        233.43999683856964,
+        235.00800132751465
+      ],
+      "candidate_samples": [
+        258.7519884109497,
+        252.28801369667053,
+        253.4720003604889,
+        253.91998887062073,
+        252.28801369667053,
+        252.9599964618683,
+        253.88801097869873,
+        253.4399926662445,
+        253.1839907169342,
+        253.85600328445435,
+        252.19199061393738,
+        253.24800610542297,
+        254.11200523376465,
+        253.91998887062073,
+        251.77600979804993,
+        252.9599964618683,
+        253.91998887062073,
+        252.3840069770813,
+        252.99200415611267,
+        252.44799256324768
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 806
+      },
+      "baseline_us": 631.775975227356,
+      "candidate_us": 632.0320069789886,
+      "baseline_samples": [
+        658.623993396759,
+        631.488025188446,
+        632.095992565155,
+        631.775975227356,
+        631.775975227356,
+        628.7680268287659,
+        632.319986820221,
+        631.7440271377563,
+        630.6560039520264,
+        633.8239908218384,
+        633.3439946174622,
+        632.9600214958191,
+        630.2080154418945,
+        631.488025188446,
+        631.5839886665344,
+        630.2400231361389,
+        635.1360082626343,
+        632.0639848709106,
+        631.1039924621582,
+        632.319986820221
+      ],
+      "candidate_samples": [
+        644.320011138916,
+        631.3920021057129,
+        634.4000101089478,
+        632.095992565155,
+        632.095992565155,
+        631.9680213928223,
+        630.2400231361389,
+        631.8079829216003,
+        633.1200003623962,
+        630.9120059013367,
+        632.64000415802,
+        631.4560174942017,
+        631.8079829216003,
+        633.5039734840393,
+        633.4080100059509,
+        632.9280138015747,
+        632.3519945144653,
+        631.6159963607788,
+        629.8239827156067,
+        631.712019443512
+      ]
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 806
+      },
+      "baseline_us": 621.5200126171112,
+      "candidate_us": 523.248016834259,
+      "baseline_samples": [
+        629.3119788169861,
+        622.5600242614746,
+        623.8080263137817,
+        618.9119815826416,
+        619.7440028190613,
+        627.0719766616821,
+        623.8080263137817,
+        621.504008769989,
+        622.0800280570984,
+        624.0959763526917,
+        619.0720200538635,
+        621.1839914321899,
+        621.8240261077881,
+        620.3839778900146,
+        621.5360164642334,
+        621.0560202598572,
+        621.6959953308105,
+        619.9679970741272,
+        620.352029800415,
+        620.2880144119263
+      ],
+      "candidate_samples": [
+        534.6559882164001,
+        525.3120064735413,
+        523.1040120124817,
+        522.4639773368835,
+        521.9519734382629,
+        523.967981338501,
+        526.0800123214722,
+        522.1120119094849,
+        523.8080024719238,
+        522.1760272979736,
+        522.4320292472839,
+        523.3920216560364,
+        522.2399830818176,
+        523.6480236053467,
+        522.1120119094849,
+        524.511992931366,
+        522.2079753875732,
+        526.1440277099609,
+        521.3760137557983,
+        523.4559774398804
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 807
+      },
+      "baseline_us": 286.3840013742447,
+      "candidate_us": 284.94399785995483,
+      "baseline_samples": [
+        349.66400265693665,
+        287.29599714279175,
+        286.3680124282837,
+        285.98400950431824,
+        286.5599989891052,
+        286.3999903202057,
+        285.0559949874878,
+        287.1040105819702,
+        284.9920094013214,
+        273.6319899559021,
+        285.95200181007385,
+        286.75198554992676,
+        285.47200560569763,
+        285.8879864215851,
+        287.26398944854736,
+        287.07200288772583,
+        285.72800755500793,
+        285.47200560569763,
+        286.4319980144501,
+        286.78399324417114
+      ],
+      "candidate_samples": [
+        315.71200489997864,
+        284.12801027297974,
+        286.3680124282837,
+        286.0479950904846,
+        284.64001417160034,
+        285.3119969367981,
+        284.35200452804565,
+        281.66401386260986,
+        285.6000065803528,
+        285.0559949874878,
+        284.92799401283264,
+        284.0319871902466,
+        284.4800055027008,
+        285.3440046310425,
+        285.72800755500793,
+        283.61600637435913,
+        284.41599011421204,
+        285.91999411582947,
+        283.90398621559143,
+        284.960001707077
+      ]
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 46,
+        "seed": 807
+      },
+      "baseline_us": 260.71999967098236,
+      "candidate_us": 262.9280090332031,
+      "baseline_samples": [
+        260.51199436187744,
+        262.4639868736267,
+        260.672003030777,
+        260.6079876422882,
+        261.4400088787079,
+        259.16799902915955,
+        261.9200050830841,
+        260.5760097503662,
+        260.1599991321564,
+        261.28000020980835,
+        260.76799631118774,
+        259.74398851394653,
+        259.45600867271423,
+        261.24799251556396,
+        259.99999046325684,
+        259.16799902915955,
+        260.9280049800873,
+        261.34398579597473,
+        261.05600595474243,
+        262.84798979759216
+      ],
+      "candidate_samples": [
+        304.28799986839294,
+        262.30400800704956,
+        264.76800441741943,
+        263.45598697662354,
+        263.07201385498047,
+        261.9200050830841,
+        262.84798979759216,
+        262.91200518608093,
+        263.64800333976746,
+        262.2399926185608,
+        262.9440128803253,
+        265.8880054950714,
+        262.7840042114258,
+        262.9440128803253,
+        262.5280022621155,
+        260.22401452064514,
+        263.68001103401184,
+        262.4639868736267,
+        261.82401180267334,
+        263.61599564552307
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 808
+      },
+      "baseline_us": 296.33599519729614,
+      "candidate_us": 299.47200417518616,
+      "baseline_samples": [
+        333.75999331474304,
+        296.31999135017395,
+        298.6559867858887,
+        300.6719946861267,
+        294.8479950428009,
+        296.1280047893524,
+        294.3679988384247,
+        297.791987657547,
+        298.43199253082275,
+        294.8479950428009,
+        297.1520125865936,
+        294.3359911441803,
+        296.7360019683838,
+        296.1600124835968,
+        296.28801345825195,
+        295.48799991607666,
+        299.3279993534088,
+        300.79999566078186,
+        296.25600576400757,
+        296.35199904441833
+      ],
+      "candidate_samples": [
+        336.64000034332275,
+        298.5920011997223,
+        299.55199360847473,
+        299.45600032806396,
+        285.47200560569763,
+        299.0719974040985,
+        299.3600070476532,
+        298.880010843277,
+        298.0799973011017,
+        287.26398944854736,
+        298.5279858112335,
+        301.05599761009216,
+        298.17599058151245,
+        299.48800802230835,
+        299.8400032520294,
+        299.6160089969635,
+        301.66399478912354,
+        300.25601387023926,
+        301.2799918651581,
+        300.3840148448944
+      ]
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "soft",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 808
+      },
+      "baseline_us": 273.6479938030243,
+      "candidate_us": 282.48000144958496,
+      "baseline_samples": [
+        274.399995803833,
+        272.7360129356384,
+        272.8320062160492,
+        271.84000611305237,
+        275.35998821258545,
+        274.4959890842438,
+        273.6319899559021,
+        272.96000719070435,
+        273.50398898124695,
+        274.81600642204285,
+        273.98398518562317,
+        272.2559869289398,
+        272.0319926738739,
+        273.0560004711151,
+        274.2080092430115,
+        273.79199862480164,
+        273.6639976501465,
+        273.72801303863525,
+        273.9520072937012,
+        272.7360129356384
+      ],
+      "candidate_samples": [
+        307.23199248313904,
+        283.1999957561493,
+        283.61600637435913,
+        281.5040051937103,
+        284.06399488449097,
+        282.368004322052,
+        282.1440100669861,
+        282.78398513793945,
+        281.8560004234314,
+        283.4239900112152,
+        281.8880081176758,
+        282.46399760246277,
+        281.18398785591125,
+        280.3199887275696,
+        282.49600529670715,
+        282.46399760246277,
+        281.18398785591125,
+        283.4559977054596,
+        284.0000092983246,
+        283.26401114463806
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 809
+      },
+      "baseline_us": 590.3200209140778,
+      "candidate_us": 589.2960131168365,
+      "baseline_samples": [
+        607.26398229599,
+        591.1679863929749,
+        589.568018913269,
+        589.9839997291565,
+        591.6159749031067,
+        589.1519784927368,
+        591.3919806480408,
+        589.1839861869812,
+        590.5920267105103,
+        591.4880037307739,
+        591.1039710044861,
+        588.5120034217834,
+        588.4159803390503,
+        589.3440246582031,
+        589.1839861869812,
+        593.7920212745667,
+        592.2240018844604,
+        590.719997882843,
+        589.4079804420471,
+        590.0480151176453
+      ],
+      "candidate_samples": [
+        603.2639741897583,
+        587.9359841346741,
+        587.7119898796082,
+        589.3440246582031,
+        588.3520245552063,
+        590.4319882392883,
+        591.1039710044861,
+        588.7359976768494,
+        589.3440246582031,
+        589.1519784927368,
+        588.9919996261597,
+        590.5920267105103,
+        589.568018913269,
+        588.2560014724731,
+        588.6399745941162,
+        589.24800157547,
+        590.2400016784668,
+        589.8240208625793,
+        587.007999420166,
+        590.3040170669556
+      ]
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 46,
+        "seed": 809
+      },
+      "baseline_us": 587.4879956245422,
+      "candidate_us": 470.2399969100952,
+      "baseline_samples": [
+        586.3040089607239,
+        590.2720093727112,
+        588.4799957275391,
+        588.4799957275391,
+        587.5200033187866,
+        587.4559879302979,
+        587.0400071144104,
+        586.7199897766113,
+        588.2880091667175,
+        588.9279842376709,
+        588.5760188102722,
+        585.7920050621033,
+        585.6959819793701,
+        589.1519784927368,
+        588.9279842376709,
+        587.3919725418091,
+        587.2960090637207,
+        588.6719822883606,
+        585.4399800300598,
+        587.1999859809875
+      ],
+      "candidate_samples": [
+        472.47999906539917,
+        468.60799193382263,
+        470.2720046043396,
+        470.68798542022705,
+        470.43201327323914,
+        470.0799882411957,
+        470.7840085029602,
+        469.8239862918854,
+        469.59999203681946,
+        471.19998931884766,
+        466.72001481056213,
+        471.2960124015808,
+        470.71999311447144,
+        470.20798921585083,
+        469.760000705719,
+        468.83198618888855,
+        471.6799855232239,
+        468.9599871635437,
+        469.56801414489746,
+        472.7360010147095
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 810
+      },
+      "baseline_us": 759.663999080658,
+      "candidate_us": 760.3999972343445,
+      "baseline_samples": [
+        785.0239872932434,
+        762.7840042114258,
+        758.3680152893066,
+        759.7119808197021,
+        759.6160173416138,
+        758.7199807167053,
+        758.9759826660156,
+        759.9999904632568,
+        760.8960270881653,
+        760.2559924125671,
+        759.1040134429932,
+        760.2239847183228,
+        762.0159983634949,
+        758.5920095443726,
+        759.7759962081909,
+        759.4559788703918,
+        759.0399980545044,
+        760.4479789733887,
+        758.2719922065735,
+        757.9519748687744
+      ],
+      "candidate_samples": [
+        773.6960053443909,
+        760.5760097503662,
+        762.175977230072,
+        759.8080039024353,
+        760.0640058517456,
+        761.0880136489868,
+        759.5840096473694,
+        761.9519829750061,
+        762.3680233955383,
+        763.2960081100464,
+        760.2239847183228,
+        759.3280076980591,
+        758.8800191879272,
+        759.3600153923035,
+        759.9040269851685,
+        762.112021446228,
+        760.703980922699,
+        759.9999904632568,
+        761.6639733314514,
+        759.9040269851685
+      ]
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 810
+      },
+      "baseline_us": 760.4320049285889,
+      "candidate_us": 645.6480026245117,
+      "baseline_samples": [
+        758.9120268821716,
+        759.2319846153259,
+        764.1919851303101,
+        760.8000040054321,
+        760.6719732284546,
+        760.9919905662537,
+        761.4079713821411,
+        762.719988822937,
+        759.0399980545044,
+        761.023998260498,
+        761.8560194969177,
+        758.7839961051941,
+        759.6799731254578,
+        760.6080174446106,
+        758.4959864616394,
+        761.8880271911621,
+        759.3600153923035,
+        757.2479844093323,
+        758.8160037994385,
+        760.2559924125671
+      ],
+      "candidate_samples": [
+        648.7680077552795,
+        645.8240151405334,
+        646.6879844665527,
+        644.864022731781,
+        644.5119976997375,
+        644.320011138916,
+        646.2399959564209,
+        645.3120112419128,
+        648.0000019073486,
+        646.9759941101074,
+        645.9839940071106,
+        644.9919939041138,
+        644.8320150375366,
+        648.4799981117249,
+        644.320011138916,
+        645.3120112419128,
+        645.47199010849,
+        643.775999546051,
+        646.2399959564209,
+        647.1359729766846
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 811
+      },
+      "baseline_us": 755.5679976940155,
+      "candidate_us": 754.5439898967743,
+      "baseline_samples": [
+        777.2480249404907,
+        753.9200186729431,
+        755.5199861526489,
+        756.384015083313,
+        755.6160092353821,
+        755.4240226745605,
+        755.9999823570251,
+        758.0159902572632,
+        756.9599747657776,
+        755.0719976425171,
+        757.6640248298645,
+        754.5279860496521,
+        755.9679746627808,
+        755.0719976425171,
+        759.5840096473694,
+        755.0399899482727,
+        754.8159956932068,
+        755.3920149803162,
+        757.2799921035767,
+        752.8319954872131
+      ],
+      "candidate_samples": [
+        766.975998878479,
+        752.0639896392822,
+        753.1200051307678,
+        753.2479763031006,
+        753.7279725074768,
+        751.0079741477966,
+        755.3920149803162,
+        754.7839879989624,
+        754.4959783554077,
+        753.3760070800781,
+        754.751980304718,
+        755.8720111846924,
+        754.368007183075,
+        754.5920014381409,
+        755.1360130310059,
+        756.767988204956,
+        754.7199726104736,
+        753.9520263671875,
+        754.688024520874,
+        754.3359994888306
+      ]
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "sliding",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 46,
+        "seed": 811
+      },
+      "baseline_us": 753.0080080032349,
+      "candidate_us": 630.3839981555939,
+      "baseline_samples": [
+        753.8880109786987,
+        752.0319819450378,
+        750.656008720398,
+        750.8159875869751,
+        754.368007183075,
+        754.688024520874,
+        754.3359994888306,
+        752.4160146713257,
+        752.3199915885925,
+        753.8880109786987,
+        752.8960108757019,
+        751.8720030784607,
+        756.991982460022,
+        757.2799921035767,
+        753.1200051307678,
+        756.3520073890686,
+        752.3519992828369,
+        752.6400089263916,
+        752.0959973335266,
+        754.8159956932068
+      ],
+      "candidate_samples": [
+        637.8560066223145,
+        627.4880170822144,
+        629.2160153388977,
+        628.4480094909668,
+        629.2799711227417,
+        631.7440271377563,
+        629.9200057983398,
+        632.1600079536438,
+        630.7200193405151,
+        630.944013595581,
+        630.3679943084717,
+        631.9040060043335,
+        632.1920156478882,
+        630.4000020027161,
+        630.5919885635376,
+        630.5599808692932,
+        628.063976764679,
+        630.1760077476501,
+        629.5679807662964,
+        629.4080018997192
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 812
+      },
+      "baseline_us": 1093.2639837265015,
+      "candidate_us": 1093.664050102234,
+      "baseline_samples": [
+        1115.5200004577637,
+        1090.5280113220215,
+        1092.2880172729492,
+        1093.5360193252563,
+        1095.9680080413818,
+        1089.951992034912,
+        1096.6720581054688,
+        1089.951992034912,
+        1096.127986907959,
+        1093.6319828033447,
+        1096.1920022964478,
+        1086.6880416870117,
+        1089.951992034912,
+        1092.9919481277466,
+        1093.567967414856,
+        1092.5439596176147,
+        1090.7200574874878,
+        1097.1519947052002,
+        1088.6399745941162,
+        1098.431944847107
+      ],
+      "candidate_samples": [
+        1108.9279651641846,
+        1093.664050102234,
+        1095.8080291748047,
+        1091.8400287628174,
+        1093.7919616699219,
+        1093.7919616699219,
+        1092.095971107483,
+        1097.6959466934204,
+        1091.040015220642,
+        1095.1679944992065,
+        1094.655990600586,
+        1090.7200574874878,
+        1090.783953666687,
+        1090.0800228118896,
+        1094.4000482559204,
+        1087.7439975738525,
+        1092.8319692611694,
+        1093.664050102234,
+        1092.8319692611694,
+        1095.039963722229
+      ]
+    },
+    {
+      "candidate": "hybrid",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "soft",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 812
+      },
+      "baseline_us": 1088.1919860839844,
+      "candidate_us": 951.4079988002777,
+      "baseline_samples": [
+        1095.2320098876953,
+        1089.2159938812256,
+        1088.320016860962,
+        1088.7680053710938,
+        1087.231993675232,
+        1090.2080535888672,
+        1088.7360572814941,
+        1087.5200033187866,
+        1089.1519784927368,
+        1089.7279977798462,
+        1086.6559743881226,
+        1086.400032043457,
+        1086.7520570755005,
+        1085.7280492782593,
+        1084.8640203475952,
+        1084.4160318374634,
+        1088.0639553070068,
+        1087.7759456634521,
+        1090.399980545044,
+        1091.3920402526855
+      ],
+      "candidate_samples": [
+        957.2799801826477,
+        952.0639777183533,
+        952.7360200881958,
+        950.2720236778259,
+        948.415994644165,
+        950.3359794616699,
+        948.7040042877197,
+        951.0080218315125,
+        949.5999813079834,
+        952.7680277824402,
+        951.2959718704224,
+        950.2400159835815,
+        953.0559778213501,
+        949.5360255241394,
+        952.5120258331299,
+        950.3999948501587,
+        951.520025730133,
+        952.7040123939514,
+        953.8559913635254,
+        951.9360065460205
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"batch\": 1, \"ctx\": 10, \"layer\": \"sliding\", \"seed\": 1900}": {
+      "local_start": 32
+    },
+    "{\"batch\": 1, \"ctx\": 3000, \"layer\": \"full\", \"seed\": 1901}": {
+      "local_start": 32
+    },
+    "{\"batch\": 8, \"ctx\": 2047, \"layer\": \"sliding\", \"seed\": 1902}": {
+      "local_start": 160
+    },
+    "{\"batch\": 9, \"ctx\": 5000, \"layer\": \"sliding\", \"page\": 1, \"seed\": 1903, \"spread\": \"mixed\"}": {
+      "local_start": 160
+    },
+    "{\"batch\": 3, \"ctx\": 6000, \"dist\": \"outliers\", \"layer\": \"full\", \"q_len\": 8, \"seed\": 1904}": {
+      "local_start": 0
+    },
+    "{\"batch\": 5, \"ctx\": 5000, \"layer\": \"sliding\", \"page\": 1, \"q_len\": 8, \"seed\": 1905, \"spread\": \"mixed\"}": {
+      "local_start": 160
+    },
+    "{\"batch\": 33, \"ctx\": 20000, \"layer\": \"full\", \"page\": 1, \"seed\": 1906, \"spread\": \"mixed\"}": {
+      "local_start": 160
+    },
+    "{\"batch\": 2, \"ctx\": 300000, \"layer\": \"sliding\", \"q_len\": 8, \"seed\": 1907}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 1048576, \"layer\": \"full\", \"q_len\": 8, \"seed\": 1908}": {
+      "local_start": 32
+    },
+    "{\"batch\": 4, \"ctx\": 7000, \"kv_scale\": 0.015625, \"layer\": \"sliding\", \"page\": 1, \"q_len\": 8, \"seed\": 1909}": {
+      "local_start": 224
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"page\": 1, \"seed\": 1910}": {
+      "local_start": 32
+    },
+    "{\"batch\": 4, \"ctx\": 6000, \"dist\": \"soft\", \"layer\": \"sliding\", \"q_len\": 8, \"seed\": 1911}": {
+      "local_start": 160
+    },
+    "{\"batch\": 16, \"ctx\": 20000, \"dist\": \"soft\", \"layer\": \"full\", \"page\": 1, \"seed\": 1912, \"spread\": \"mixed\"}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"decode 1\", \"page\": 1, \"repeats\": 60, \"seed\": 801, \"weight\": 46}": {
+      "local_start": 32
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"decode 1\", \"page\": 1, \"repeats\": 60, \"seed\": 802, \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 16, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"decode 16\", \"page\": 1, \"seed\": 803, \"spread\": \"agentic\", \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 16, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"decode 16\", \"page\": 1, \"seed\": 804, \"spread\": \"agentic\", \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 32, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"decode 32\", \"page\": 1, \"seed\": 805, \"spread\": \"agentic\", \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 32, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"decode 32\", \"page\": 1, \"seed\": 806, \"spread\": \"agentic\", \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"verify 1\", \"page\": 1, \"q_len\": 8, \"seed\": 807, \"weight\": 46}": {
+      "local_start": 128
+    },
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"verify 1\", \"page\": 1, \"q_len\": 8, \"seed\": 808, \"weight\": 16}": {
+      "local_start": 224
+    },
+    "{\"batch\": 16, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"verify 16\", \"page\": 1, \"q_len\": 8, \"seed\": 809, \"spread\": \"agentic\", \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 16, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"verify 16\", \"page\": 1, \"q_len\": 8, \"seed\": 810, \"spread\": \"agentic\", \"weight\": 16}": {
+      "local_start": 160
+    },
+    "{\"batch\": 32, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"sliding\", \"load\": \"verify 32\", \"page\": 1, \"q_len\": 8, \"seed\": 811, \"spread\": \"agentic\", \"weight\": 46}": {
+      "local_start": 160
+    },
+    "{\"batch\": 32, \"ctx\": 80000, \"dist\": \"soft\", \"layer\": \"full\", \"load\": \"verify 32\", \"page\": 1, \"q_len\": 8, \"seed\": 812, \"spread\": \"agentic\", \"weight\": 16}": {
+      "local_start": 160
+    }
+  },
+  "calibration_us": 3.1679999083280563,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "compiler_diagnostics": [
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 55,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 62,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 49152
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 56,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 56,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 55,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 62,
+      "spills": 0,
+      "shared": 40960
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 49152
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 48,
+      "spills": 0,
+      "shared": 98304
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__mm",
+      "registers": 96,
+      "spills": 0,
+      "shared": 147456
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 24,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 30,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 24,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "dense__reduce",
+      "registers": 32,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__attention",
+      "registers": 95,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__attention",
+      "registers": 161,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__prepare_heads",
+      "registers": 31,
+      "spills": 8,
+      "shared": 0
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__finish_heads",
+      "registers": 64,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention__finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 75,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 111,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 110,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 102,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 102,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 75,
+      "spills": 0,
+      "shared": 4096
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 110,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 96,
+      "spills": 0,
+      "shared": 16384
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__finish",
+      "registers": 28,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "hybrid",
+      "function": "attention_inline__finish_heads",
+      "registers": 96,
+      "spills": 0,
+      "shared": 1024
+    }
+  ],
+  "elapsed_s": 93.863641137,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_decode_layer",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/2bddf929e2ba027db0f56a506625d038fc99b1c1a9780ebeaff44f9fdc4c3208.py",
+      "sha256": "2bddf929e2ba027db0f56a506625d038fc99b1c1a9780ebeaff44f9fdc4c3208"
+    },
+    "hybrid": {
+      "path": "experiments/sources/d7b57b24a010f47444824e1f59c199d88fdfe934f067d5d858b684bd192ab1d5.py",
+      "sha256": "d7b57b24a010f47444824e1f59c199d88fdfe934f067d5d858b684bd192ab1d5"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

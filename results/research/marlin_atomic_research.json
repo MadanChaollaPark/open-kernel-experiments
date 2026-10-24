@@ -1,0 +1,57 @@
+{
+  "status": "Rejected after two GPU rounds: correct but slower on every scored shape",
+  "observed_bottleneck": "Marlin GEMMs are about65percent of fused decoder profile GPU time; current alternatives slower. Native split-K uses serialized global FP32 reduction with workspace locks.",
+  "sources": [
+    "work/marlin_headers/marlin_template.h",
+    "work/marlin_headers/kernel.h",
+    "work/marlin_main.cuh",
+    "work/build_moe_launch_tune.py",
+    "work/moe_launch_v2_sweep/m16_k128_n128_b1.py"
+  ],
+  "candidate_design": [
+    "Use own copied, renamed Marlin template, preserving Apache2copyright. Never alter installed/loaded modules.",
+    "Accumulate raw fragment c0/c1 into caller-owned zeroed FP32 output via atomicAdd, instead of serialized split-K reduction. Do not use existing BF16 atomic mode, which lowers reduction precision.",
+    "Keep original BF16 activations and NVFP4 storage. Finalize FP32 sum to BF16 and global scale with native rounding semantics after inspecting prepare_moe_nvfp4_layer_for_marlin.",
+    "Use original per-slot local expert IDs to select per-expert global scale in finalization. Both GEMMs receive current-call local IDs.",
+    "Remove native atomic BF16 output writes and its initialization/wait protocol only in own template; launch with use_atomic_add=True to bypass serialized reduction. Caller zeros FP32 accumulator every call.",
+    "Own namespace avoids loaded-module changes. Existing custom launch wrapper can dispatch copied template; native helper includes remain installed."
+  ],
+  "fragment_mapping_inference_needs_validation": {
+    "m16": "write(idx,c0,c1): row=idx/(4*c_sh_stride), col=2*(idx%(4*c_sh_stride)); sorted_row=sh_block_sorted_ids[row]; output col += slice_col*(16*thread_n_blocks). c0/c1 same row consecutive columns.",
+    "m8": "write(idx,c0,c1): row=idx/(8*c_sh_stride), col=idx%(8*c_sh_stride); c0 at row and c1 at row+1, each mapped via sh_block_sorted_ids and masked by block_num_valid_tokens."
+  },
+  "unresolved": [],
+  "updated_at": "2026-10-23T23:39:31.384129+00:00",
+  "fragment_mapping_index_check": {
+    "8": {
+      "outputs": 1024,
+      "covered_once": true
+    },
+    "16": {
+      "outputs": 2048,
+      "covered_once": true
+    }
+  },
+  "resolved": [
+    "Processed bank global scale is BF16 original scale times 2^119; finalizer uses that processed scale.",
+    "Host passes caller-owned C_tmp pointer with atomic and fp32 flags enabled."
+  ],
+  "cpu_compile_evidence": "outputs/moe-atomic-compile.json",
+  "gpu_result": {
+    "evidence": "outputs/moe-atomic.json",
+    "b1_speedup": 0.9321,
+    "b2_speedup": 0.9272,
+    "control_speedup": 1.0897,
+    "correctness": "b1/b2/control each11cases passed; b4 rejected for invalid shared memory configuration before timings"
+  },
+  "followup_result": {
+    "evidence": "outputs/moe-atomic-sparse.json",
+    "checks_passed": 55,
+    "checks_total": 55,
+    "best_variant": "fused_act_b1",
+    "best_speedup": 0.9554,
+    "control_speedup": 1.0899,
+    "decision": "Do not promote; active-row zeroing and fused activation did not overcome atomic design overhead."
+  },
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

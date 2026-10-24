@@ -1,0 +1,9 @@
+{
+  "gpu": "NVIDIA H200",
+  "values": 16384,
+  "bit_mismatches": 0,
+  "all_passed": true,
+  "mainloop_shared_bytes": 43008,
+  "kernel_shared_bytes": 56320,
+  "scope": "CUTE folded E4M3 scale layout for all64channels,8groups and2stages; everyK16group independently scaled. Not a GEMM correctness or performance result."
+}

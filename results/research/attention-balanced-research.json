@@ -1,0 +1,30 @@
+{
+  "status": "official check passed; scored run queued",
+  "initial": "outputs/attention-bounded.json",
+  "repeat": "outputs/attention-balanced-hybrid.json",
+  "repeat_checks": {
+    "passed": 90,
+    "total": 90
+  },
+  "repeat_scores": {
+    "control": 1.4825,
+    "balanced_all": 1.4974,
+    "hybrid": 1.5011
+  },
+  "source": "outputs/attention_balanced_hybrid.py",
+  "check": "11c710581a574570",
+  "caution": "Official check improves point estimate about0.9percent over prior scored1.48066, with overlapping intervals; awaiting scored result.",
+  "official_check": {
+    "id": "11c710581a574570",
+    "passed": true,
+    "flags": [],
+    "speedup": 1.4938647136287944,
+    "interval": [
+      1.4714567429243623,
+      1.5228990883163276
+    ],
+    "evidence": "outputs/attention-balanced-hybrid-check-result.json"
+  },
+  "scored_job": "509471d6c70c4e0f",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

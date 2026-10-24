@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "patterns": 65536,
+  "values": 262144,
+  "note": "Integer model only; GPU probe required"
+}

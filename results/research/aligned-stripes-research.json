@@ -1,0 +1,158 @@
+{
+  "updated_at": "2026-10-24T01:43:12.249546+00:00",
+  "status": "rejected: correct but slower",
+  "hypothesis": "Round contiguous native Marlin stripe lengths to half or quarter of K-column length to reduce fragmented partial reductions without forcing whole-column stripes.",
+  "sources": "work/moe_aligned_stripes_sweep",
+  "builder": "work/build_moe_aligned_stripes.py",
+  "cpu_compile": "outputs/moe-aligned-stripes-compile.json",
+  "schedule_proof": "outputs/moe-aligned-stripes-schedule-proof.json",
+  "gpu_result": "outputs/moe-aligned-stripes.json",
+  "controls": [
+    "native best compact metadata dispatch",
+    "same own-source wrapper, original unrounded stripe length"
+  ],
+  "scope": "For compact metadata with <=1024 tokens and BM8/16; original fallback otherwise. BF16 activations and NVFP4/E4M3 group16 weights unchanged.",
+  "promotion": null,
+  "goal_achieved": false,
+  "validation_passed": 76,
+  "validation_total": 76,
+  "local_speedups": {
+    "control": 1.1666,
+    "q0": 1.0771,
+    "q2": 1.0661,
+    "q4": 1.0759
+  },
+  "timings": {
+    "control": [
+      {
+        "bs": 1,
+        "baseline_us": 84.99199897050858,
+        "candidate_us": 80.9599980711937
+      },
+      {
+        "bs": 16,
+        "baseline_us": 177.776001393795,
+        "candidate_us": 171.83999717235565
+      },
+      {
+        "bs": 32,
+        "baseline_us": 259.2960000038147,
+        "candidate_us": 239.9519979953766
+      },
+      {
+        "bs": 8,
+        "baseline_us": 152.92800217866898,
+        "candidate_us": 147.07199484109879
+      },
+      {
+        "bs": 128,
+        "baseline_us": 409.5040112733841,
+        "candidate_us": 305.1680028438568
+      },
+      {
+        "bs": 256,
+        "baseline_us": 591.5040075778961,
+        "candidate_us": 388.92801105976105
+      }
+    ],
+    "q0": [
+      {
+        "bs": 1,
+        "baseline_us": 85.16800031065941,
+        "candidate_us": 85.61599999666214
+      },
+      {
+        "bs": 16,
+        "baseline_us": 176.84800177812576,
+        "candidate_us": 187.40800023078918
+      },
+      {
+        "bs": 32,
+        "baseline_us": 259.3280076980591,
+        "candidate_us": 264.0479952096939
+      },
+      {
+        "bs": 8,
+        "baseline_us": 154.12800014019012,
+        "candidate_us": 163.52000087499619
+      },
+      {
+        "bs": 128,
+        "baseline_us": 407.0879966020584,
+        "candidate_us": 322.9279965162277
+      },
+      {
+        "bs": 256,
+        "baseline_us": 592.3680067062378,
+        "candidate_us": 414.94399309158325
+      }
+    ],
+    "q2": [
+      {
+        "bs": 1,
+        "baseline_us": 85.10399982333183,
+        "candidate_us": 85.75999736785889
+      },
+      {
+        "bs": 16,
+        "baseline_us": 176.89600586891174,
+        "candidate_us": 190.11199474334717
+      },
+      {
+        "bs": 32,
+        "baseline_us": 259.5039904117584,
+        "candidate_us": 270.4799920320511
+      },
+      {
+        "bs": 8,
+        "baseline_us": 154.28800135850906,
+        "candidate_us": 166.1280021071434
+      },
+      {
+        "bs": 128,
+        "baseline_us": 405.91999888420105,
+        "candidate_us": 324.19200241565704
+      },
+      {
+        "bs": 256,
+        "baseline_us": 593.4880077838898,
+        "candidate_us": 416.76799952983856
+      }
+    ],
+    "q4": [
+      {
+        "bs": 1,
+        "baseline_us": 84.99199897050858,
+        "candidate_us": 85.29600128531456
+      },
+      {
+        "bs": 16,
+        "baseline_us": 176.84800177812576,
+        "candidate_us": 190.2719959616661
+      },
+      {
+        "bs": 32,
+        "baseline_us": 259.43998992443085,
+        "candidate_us": 266.54399931430817
+      },
+      {
+        "bs": 8,
+        "baseline_us": 154.2079970240593,
+        "candidate_us": 163.1840020418167
+      },
+      {
+        "bs": 128,
+        "baseline_us": 406.41599893569946,
+        "candidate_us": 322.4959969520569
+      },
+      {
+        "bs": 256,
+        "baseline_us": 591.951996088028,
+        "candidate_us": 411.48799657821655
+      }
+    ]
+  },
+  "conservative_modal_usd": 40.01,
+  "interpretation": "Aligned stripes do not improve on same-launch q0 and all three custom builds lose to native compact dispatch. q0 itself is slower, so the entire custom-vs-native gap cannot be attributed to stripe rounding. No further split-quantum sweep justified. App stopped and budget reconciled.",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

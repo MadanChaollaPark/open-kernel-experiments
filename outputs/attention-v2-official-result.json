@@ -1,0 +1,47 @@
+{
+  "id": "d4cebb1b357749c2",
+  "board": "muse_attention_decode",
+  "mode": "check",
+  "status": "done",
+  "created_at": 1792785183.0846097,
+  "started_at": 1792786594.2296066,
+  "finished_at": 1792786882.210451,
+  "content_hash": "154deaf27eec8d13a64e499f635bcfc301a3256dc48d9be8f634088277d3675d",
+  "duplicate_of": null,
+  "result": {
+    "passed": true,
+    "status": "ok",
+    "speedup": 1.118111082949372,
+    "speedup_ci": [
+      1.1013394167051314,
+      1.1348827491936124
+    ],
+    "score_us": 3368.4488575725336,
+    "baseline_us": 3766.3,
+    "flags": [],
+    "checks": {
+      "flagged": [],
+      "ok": true,
+      "rejected": []
+    },
+    "error": null,
+    "gpu": "H200",
+    "evaluator": {
+      "code_sha256": "1d519ebf2014fef91b41ffea9bcd7e9c5066784ef5a2a5e2cf06a8cec554d188",
+      "files": {
+        "challenge/checks.py": "9a046c3c38db28b325dcd1557baecdf6bc9ef941d2175f9a900ba4c230bb8055",
+        "challenge/nvfp4.py": "cfdf37c7bc14b10f7353aba7d4632f4767401b92b4b073941a8030d9a961aaaf",
+        "configs/muse-spark-open.yaml": "98f07230e4e64fe91b7c76d9a3ce04948053c043d494d5f1fae56cfe2de033af",
+        "harness/eval.py": "0051a1bfac67a9f1fad06086b306653c6643b2bb253e15a794aa672312f070a9",
+        "harness/runner.py": "c905e5c80264c6d27620b6fc7d55b162dccdb8ed7282f8a513a4d2e6f2f226f2",
+        "harness/static_checks.py": "c5588b69e9e86229459a525c61b30096f6f13ff2add6cadf98f272c4ac8ca0c2",
+        "harness/worker.py": "950437610f57ddffbc1176b65d9c2ae909c47bf67b1e3fe0716a81946986f568",
+        "problems/muse_attention_decode/baseline.py": "37f51207283f85a65eb393b1dfb1344759d7df0bdec5450e34d24e7139f56ecc",
+        "problems/muse_attention_decode/reference.py": "386f7f67a1d788501e8fb9005d340423d098a0946e23810ba10878228c11a37b",
+        "problems/muse_attention_decode/task.yml": "645f889fbbd52d1d731bf5eb53356aa7ef6eea8fab3073f0a2a3dd582fe6e4bb"
+      },
+      "image": "localhost:30500/kc/judge@sha256:9a7f287b80d772c6f636bbcb57422c619fe326e2aabc53803b85007bca93f68e"
+    }
+  },
+  "archive_note": "Selected fields from official CLI JSON; logs and host paths omitted."
+}

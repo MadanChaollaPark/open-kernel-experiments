@@ -1,0 +1,3291 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.589e-03 (worst row 4.666e-03)"
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.589e-03 (worst row 4.666e-03)"
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.589e-03 (worst row 4.666e-03)"
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.532e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.530e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.532e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.532e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.532e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.532e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.532e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.568e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.568e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.568e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.568e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.568e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.364e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.364e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.786e-03)"
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 4.636e-03 (worst row 4.773e-03)"
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 4.636e-03 (worst row 4.773e-03)"
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 4.636e-03 (worst row 4.773e-03)"
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.153e-03)"
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.956e-03)"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 84.04799923300743,
+      "candidate_us": 82.60799944400787,
+      "baseline_samples": [
+        89.66399729251862,
+        84.28800106048584,
+        84.19200032949448,
+        82.65600353479385,
+        83.26400071382523,
+        83.90399813652039,
+        83.71199667453766,
+        84.16000008583069,
+        84.48000252246857,
+        83.48800241947174,
+        84.16000008583069,
+        84.16000008583069,
+        83.71199667453766,
+        84.60800349712372,
+        84.28800106048584,
+        83.8719978928566,
+        83.00799876451492,
+        83.77599716186523,
+        84.57600325345993,
+        83.93599838018417
+      ],
+      "candidate_samples": [
+        86.30400151014328,
+        82.94399827718735,
+        83.10399949550629,
+        82.5280025601387,
+        82.2720006108284,
+        81.82399719953537,
+        82.43200182914734,
+        82.11199939250946,
+        83.61600339412689,
+        82.68799632787704,
+        81.98399841785431,
+        83.36000144481659,
+        82.75199681520462,
+        82.17599987983704,
+        82.14399963617325,
+        82.0159986615181,
+        83.23200047016144,
+        82.87999778985977,
+        83.13599973917007,
+        82.43200182914734
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 83.5840031504631,
+      "candidate_us": 83.61600339412689,
+      "baseline_samples": [
+        84.19200032949448,
+        84.06399935483932,
+        83.71199667453766,
+        83.71199667453766,
+        84.89599823951721,
+        83.71199667453766,
+        84.1279998421669,
+        84.03199911117554,
+        83.45600217580795,
+        82.75199681520462,
+        83.36000144481659,
+        83.10399949550629,
+        83.55200290679932,
+        83.55200290679932,
+        83.36000144481659,
+        83.16799998283386,
+        83.16799998283386,
+        84.41600203514099,
+        83.61600339412689,
+        83.26400071382523
+      ],
+      "candidate_samples": [
+        88.41600269079208,
+        85.15200018882751,
+        83.0719992518425,
+        84.63999629020691,
+        83.45600217580795,
+        83.26400071382523,
+        83.67999643087387,
+        83.26400071382523,
+        83.61600339412689,
+        83.29600095748901,
+        83.26400071382523,
+        83.29600095748901,
+        83.55200290679932,
+        84.16000008583069,
+        84.6719965338707,
+        83.61600339412689,
+        83.29600095748901,
+        84.79999750852585,
+        84.32000130414963,
+        83.93599838018417
+      ]
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 83.90399813652039,
+      "candidate_us": 468.6080068349838,
+      "baseline_samples": [
+        84.44800227880478,
+        83.39200168848038,
+        84.09599959850311,
+        84.73599702119827,
+        83.39200168848038,
+        84.22400057315826,
+        84.22400057315826,
+        83.77599716186523,
+        83.45600217580795,
+        83.0719992518425,
+        84.19200032949448,
+        83.3280012011528,
+        85.40800213813782,
+        83.80799740552902,
+        84.48000252246857,
+        83.36000144481659,
+        83.90399813652039,
+        83.36000144481659,
+        83.90399813652039,
+        84.3840017914772
+      ],
+      "candidate_samples": [
+        478.1759977340698,
+        468.76800060272217,
+        469.4400131702423,
+        467.5840139389038,
+        469.5360064506531,
+        467.8719937801361,
+        467.8719937801361,
+        468.76800060272217,
+        468.80000829696655,
+        470.36799788475037,
+        468.57601404190063,
+        467.6800072193146,
+        468.51199865341187,
+        468.639999628067,
+        467.6479995250702,
+        468.6720073223114,
+        468.57601404190063,
+        468.76800060272217,
+        467.77600049972534,
+        467.7119851112366
+      ]
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 83.80799740552902,
+      "candidate_us": 194.57600265741348,
+      "baseline_samples": [
+        84.1279998421669,
+        83.39200168848038,
+        84.35200154781342,
+        84.19200032949448,
+        84.25600081682205,
+        82.75199681520462,
+        84.16000008583069,
+        83.55200290679932,
+        83.26400071382523,
+        83.39200168848038,
+        83.03999900817871,
+        83.80799740552902,
+        83.83999764919281,
+        84.1279998421669,
+        83.96799862384796,
+        83.42400193214417,
+        83.80799740552902,
+        84.54400300979614,
+        83.39200168848038,
+        83.36000144481659
+      ],
+      "candidate_samples": [
+        200.32000541687012,
+        194.62400674819946,
+        193.7279999256134,
+        196.73599302768707,
+        194.2719966173172,
+        196.76800072193146,
+        192.9599940776825,
+        194.5279985666275,
+        194.240003824234,
+        193.4719979763031,
+        194.4960057735443,
+        193.56800615787506,
+        195.90400159358978,
+        195.71200013160706,
+        194.7840005159378,
+        194.17600333690643,
+        194.5600062608719,
+        194.59199905395508,
+        194.68800723552704,
+        197.02400267124176
+      ]
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 83.5840031504631,
+      "candidate_us": 197.55200296640396,
+      "baseline_samples": [
+        83.90399813652039,
+        84.06399935483932,
+        84.48000252246857,
+        84.6719965338707,
+        82.84799754619598,
+        83.93599838018417,
+        83.52000266313553,
+        82.87999778985977,
+        83.61600339412689,
+        83.42400193214417,
+        83.93599838018417,
+        83.13599973917007,
+        84.57600325345993,
+        84.25600081682205,
+        83.03999900817871,
+        83.55200290679932,
+        83.36000144481659,
+        83.52000266313553,
+        83.90399813652039,
+        82.97599852085114
+      ],
+      "candidate_samples": [
+        201.4400064945221,
+        197.40800559520721,
+        197.08800315856934,
+        199.2959976196289,
+        197.2160041332245,
+        197.9839950799942,
+        197.1520036458969,
+        196.6720074415207,
+        197.63199985027313,
+        197.11999595165253,
+        197.85599410533905,
+        197.4720060825348,
+        197.2160041332245,
+        197.2160041332245,
+        197.91999459266663,
+        197.63199985027313,
+        197.24799692630768,
+        198.08000326156616,
+        198.71999323368073,
+        197.85599410533905
+      ]
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 83.72799679636955,
+      "candidate_us": 262.84798979759216,
+      "baseline_samples": [
+        83.45600217580795,
+        84.06399935483932,
+        82.94399827718735,
+        84.44800227880478,
+        83.77599716186523,
+        84.09599959850311,
+        83.71199667453766,
+        84.3840017914772,
+        85.24800091981888,
+        82.87999778985977,
+        83.48800241947174,
+        83.61600339412689,
+        83.3280012011528,
+        82.94399827718735,
+        83.26400071382523,
+        84.1279998421669,
+        83.99999886751175,
+        84.57600325345993,
+        83.74399691820145,
+        83.5840031504631
+      ],
+      "candidate_samples": [
+        266.84799790382385,
+        261.05600595474243,
+        262.5280022621155,
+        263.39200139045715,
+        263.64800333976746,
+        262.62399554252625,
+        264.0320062637329,
+        262.84798979759216,
+        261.79200410842896,
+        262.84798979759216,
+        263.71198892593384,
+        261.50399446487427,
+        263.2319927215576,
+        261.1519992351532,
+        261.24799251556396,
+        261.9520127773285,
+        266.1759853363037,
+        263.93601298332214,
+        263.0400061607361,
+        262.11199164390564
+      ]
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 83.80799740552902,
+      "candidate_us": 188.78399580717087,
+      "baseline_samples": [
+        84.60800349712372,
+        83.90399813652039,
+        84.35200154781342,
+        83.74399691820145,
+        84.19200032949448,
+        84.76799726486206,
+        83.8719978928566,
+        83.55200290679932,
+        84.19200032949448,
+        84.51200276613235,
+        83.29600095748901,
+        83.00799876451492,
+        83.99999886751175,
+        83.48800241947174,
+        83.52000266313553,
+        83.74399691820145,
+        83.39200168848038,
+        83.29600095748901,
+        83.26400071382523,
+        84.83199775218964
+      ],
+      "candidate_samples": [
+        191.67999923229218,
+        188.28800320625305,
+        188.48000466823578,
+        188.960000872612,
+        188.51199746131897,
+        189.31199610233307,
+        188.60800564289093,
+        188.63999843597412,
+        188.960000872612,
+        187.83999979496002,
+        188.51199746131897,
+        188.92799317836761,
+        189.08800184726715,
+        187.77599930763245,
+        189.02400135993958,
+        189.05599415302277,
+        189.28000330924988,
+        189.15200233459473,
+        188.03200125694275,
+        187.8719925880432
+      ]
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.43999511003494,
+      "candidate_us": 180.09600043296814,
+      "baseline_samples": [
+        185.66399812698364,
+        177.34399437904358,
+        177.05599963665009,
+        177.5359958410263,
+        178.0800074338913,
+        178.0479997396469,
+        177.12000012397766,
+        177.2480010986328,
+        177.66399681568146,
+        176.7359972000122,
+        178.56000363826752,
+        177.98399925231934,
+        177.0240068435669,
+        176.89600586891174,
+        176.57600343227386,
+        178.46399545669556,
+        178.1120002269745,
+        176.86399817466736,
+        178.1120002269745,
+        177.3120015859604
+      ],
+      "candidate_samples": [
+        185.59999763965607,
+        181.72800540924072,
+        180.2240014076233,
+        179.1680008172989,
+        179.19999361038208,
+        180.54400384426117,
+        179.6479970216751,
+        181.2479943037033,
+        180.38399517536163,
+        180.16000092029572,
+        179.80800569057465,
+        179.3919950723648,
+        179.71199750900269,
+        180.4479956626892,
+        180.03199994564056,
+        178.43200266361237,
+        181.5039962530136,
+        180.2240014076233,
+        179.87200617790222,
+        179.9360066652298
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.39199846982956,
+      "candidate_us": 177.76000499725342,
+      "baseline_samples": [
+        178.81600558757782,
+        176.89600586891174,
+        178.24000120162964,
+        178.46399545669556,
+        177.95200645923615,
+        178.30400168895721,
+        176.32000148296356,
+        176.92799866199493,
+        177.69600450992584,
+        176.35199427604675,
+        177.66399681568146,
+        176.12800002098083,
+        176.89600586891174,
+        178.30400168895721,
+        176.92799866199493,
+        178.24000120162964,
+        176.4799952507019,
+        177.72799730300903,
+        177.05599963665009,
+        177.12000012397766
+      ],
+      "candidate_samples": [
+        182.27200210094452,
+        177.824005484581,
+        177.47199535369873,
+        178.01600694656372,
+        177.37600207328796,
+        177.50400304794312,
+        178.56000363826752,
+        179.03999984264374,
+        178.0800074338913,
+        177.5359958410263,
+        177.15199291706085,
+        177.50400304794312,
+        177.98399925231934,
+        177.98399925231934,
+        177.69600450992584,
+        177.47199535369873,
+        177.50400304794312,
+        177.91999876499176,
+        177.91999876499176,
+        177.63200402259827
+      ]
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.2959977388382,
+      "candidate_us": 179.53599989414215,
+      "baseline_samples": [
+        178.0800074338913,
+        177.40799486637115,
+        177.44000256061554,
+        177.37600207328796,
+        176.9919991493225,
+        177.34399437904358,
+        177.2480010986328,
+        177.88800597190857,
+        177.18400061130524,
+        176.12800002098083,
+        177.7919977903366,
+        177.15199291706085,
+        177.5359958410263,
+        176.2239933013916,
+        176.67199671268463,
+        177.63200402259827,
+        176.79999768733978,
+        176.67199671268463,
+        177.85599827766418,
+        176.9919991493225
+      ],
+      "candidate_samples": [
+        183.6480051279068,
+        179.87200617790222,
+        178.94400656223297,
+        179.36000227928162,
+        179.1359931230545,
+        179.48800325393677,
+        179.55200374126434,
+        179.74400520324707,
+        179.51999604701996,
+        179.6800047159195,
+        179.45599555969238,
+        180.2240014076233,
+        180.31999468803406,
+        179.36000227928162,
+        179.71199750900269,
+        178.49600315093994,
+        179.9039989709854,
+        179.23200130462646,
+        179.45599555969238,
+        179.58399653434753
+      ]
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.279993891716,
+      "candidate_us": 178.78399789333344,
+      "baseline_samples": [
+        178.65599691867828,
+        175.9359985589981,
+        177.279993891716,
+        177.91999876499176,
+        176.92799866199493,
+        177.12000012397766,
+        176.28799378871918,
+        177.76000499725342,
+        177.08800733089447,
+        177.5680035352707,
+        177.59999632835388,
+        177.279993891716,
+        175.90400576591492,
+        177.2480010986328,
+        177.0240068435669,
+        177.44000256061554,
+        177.72799730300903,
+        176.83200538158417,
+        177.824005484581,
+        177.34399437904358
+      ],
+      "candidate_samples": [
+        182.97599256038666,
+        178.78399789333344,
+        180.1919937133789,
+        178.6240041255951,
+        178.1120002269745,
+        178.27199399471283,
+        179.1680008172989,
+        179.36000227928162,
+        178.78399789333344,
+        178.27199399471283,
+        180.03199994564056,
+        178.43200266361237,
+        179.3919950723648,
+        180.00000715255737,
+        178.5919964313507,
+        179.1040003299713,
+        178.56000363826752,
+        178.97599935531616,
+        177.3120015859604,
+        178.6240041255951
+      ]
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.23199725151062,
+      "candidate_us": 179.80799823999405,
+      "baseline_samples": [
+        177.76000499725342,
+        177.08800733089447,
+        177.63200402259827,
+        177.15199291706085,
+        177.21599340438843,
+        176.7680048942566,
+        177.5680035352707,
+        176.96000635623932,
+        178.3680021762848,
+        176.9919991493225,
+        176.57600343227386,
+        177.824005484581,
+        176.86399817466736,
+        176.70400440692902,
+        177.66399681568146,
+        177.05599963665009,
+        177.2480010986328,
+        178.68800461292267,
+        177.63200402259827,
+        177.76000499725342
+      ],
+      "candidate_samples": [
+        184.51200425624847,
+        179.26399409770966,
+        179.48800325393677,
+        180.57599663734436,
+        179.32799458503723,
+        180.2240014076233,
+        180.35200238227844,
+        179.61600422859192,
+        179.77599799633026,
+        179.45599555969238,
+        179.9039989709854,
+        179.36000227928162,
+        179.51999604701996,
+        179.3919950723648,
+        179.03999984264374,
+        180.63999712467194,
+        180.06399273872375,
+        180.25599420070648,
+        180.03199994564056,
+        179.83999848365784
+      ]
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.0400032401085,
+      "candidate_us": 179.24799770116806,
+      "baseline_samples": [
+        178.39999496936798,
+        178.27199399471283,
+        177.91999876499176,
+        176.35199427604675,
+        177.05599963665009,
+        176.57600343227386,
+        177.0240068435669,
+        177.85599827766418,
+        178.01600694656372,
+        177.5680035352707,
+        176.67199671268463,
+        177.18400061130524,
+        176.9919991493225,
+        176.5120029449463,
+        176.70400440692902,
+        177.3120015859604,
+        176.5120029449463,
+        176.15999281406403,
+        176.89600586891174,
+        178.01600694656372
+      ],
+      "candidate_samples": [
+        184.28799510002136,
+        178.847998380661,
+        178.46399545669556,
+        180.00000715255737,
+        179.83999848365784,
+        180.2240014076233,
+        179.26399409770966,
+        178.78399789333344,
+        179.26399409770966,
+        180.28800189495087,
+        178.75200510025024,
+        179.1680008172989,
+        179.48800325393677,
+        179.1040003299713,
+        178.94400656223297,
+        179.58399653434753,
+        181.34400248527527,
+        179.23200130462646,
+        178.0479997396469,
+        178.81600558757782
+      ]
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.59999632835388,
+      "candidate_us": 178.97599935531616,
+      "baseline_samples": [
+        178.5919964313507,
+        177.37600207328796,
+        177.824005484581,
+        178.14399302005768,
+        177.95200645923615,
+        177.85599827766418,
+        176.96000635623932,
+        176.67199671268463,
+        177.0240068435669,
+        177.59999632835388,
+        177.76000499725342,
+        177.34399437904358,
+        177.69600450992584,
+        177.18400061130524,
+        177.15199291706085,
+        177.66399681568146,
+        176.57600343227386,
+        177.85599827766418,
+        176.79999768733978,
+        177.59999632835388
+      ],
+      "candidate_samples": [
+        184.00000035762787,
+        179.1359931230545,
+        178.75200510025024,
+        179.77599799633026,
+        179.3919950723648,
+        178.78399789333344,
+        179.9039989709854,
+        180.00000715255737,
+        178.56000363826752,
+        178.14399302005768,
+        178.14399302005768,
+        179.58399653434753,
+        178.68800461292267,
+        180.63999712467194,
+        178.81600558757782,
+        178.30400168895721,
+        179.1680008172989,
+        179.1680008172989,
+        178.56000363826752,
+        178.0800074338913
+      ]
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.5359981060028,
+      "candidate_us": 252.6399940252304,
+      "baseline_samples": [
+        264.8319900035858,
+        259.96801257133484,
+        260.3519856929779,
+        258.976012468338,
+        258.04799795150757,
+        259.64799523353577,
+        258.7200105190277,
+        260.8320116996765,
+        260.70401072502136,
+        259.3280076980591,
+        258.14399123191833,
+        258.976012468338,
+        260.3519856929779,
+        258.14399123191833,
+        259.74398851394653,
+        258.62398743629456,
+        258.59200954437256,
+        259.42400097846985,
+        260.3519856929779,
+        260.4160010814667
+      ],
+      "candidate_samples": [
+        254.17599081993103,
+        252.70399451255798,
+        253.6959946155548,
+        253.50400805473328,
+        252.03201174736023,
+        252.48000025749207,
+        251.96799635887146,
+        252.03201174736023,
+        253.31199169158936,
+        252.79998779296875,
+        252.00000405311584,
+        252.6719868183136,
+        253.1839907169342,
+        252.25600600242615,
+        252.9599964618683,
+        252.25600600242615,
+        253.79198789596558,
+        252.60800123214722,
+        251.96799635887146,
+        251.96799635887146
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.2960000038147,
+      "candidate_us": 259.7600072622299,
+      "baseline_samples": [
+        260.47998666763306,
+        258.432000875473,
+        258.33600759506226,
+        259.00799036026,
+        260.70401072502136,
+        259.3280076980591,
+        259.2960000038147,
+        259.71201062202454,
+        260.127991437912,
+        258.2719922065735,
+        258.30399990081787,
+        259.74398851394653,
+        258.432000875473,
+        259.99999046325684,
+        259.2960000038147,
+        257.85601139068604,
+        260.22401452064514,
+        258.2400143146515,
+        259.8080039024353,
+        258.62398743629456
+      ],
+      "candidate_samples": [
+        262.91200518608093,
+        258.7839961051941,
+        258.08000564575195,
+        259.16799902915955,
+        262.2720003128052,
+        258.65599513053894,
+        259.8080039024353,
+        260.70401072502136,
+        261.24799251556396,
+        259.42400097846985,
+        260.6079876422882,
+        259.71201062202454,
+        258.4959864616394,
+        259.16799902915955,
+        260.6399953365326,
+        259.5840096473694,
+        259.93600487709045,
+        259.39199328422546,
+        260.6399953365326,
+        259.8719894886017
+      ]
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.5359981060028,
+      "candidate_us": 252.99200415611267,
+      "baseline_samples": [
+        262.30400800704956,
+        259.96801257133484,
+        260.99199056625366,
+        260.0319981575012,
+        259.552001953125,
+        259.0720057487488,
+        259.5840096473694,
+        259.90399718284607,
+        259.45600867271423,
+        257.6639950275421,
+        259.5199942588806,
+        259.39199328422546,
+        259.93600487709045,
+        258.91199707984924,
+        259.6159875392914,
+        258.39999318122864,
+        258.87998938560486,
+        259.8400115966797,
+        258.4959864616394,
+        258.432000875473
+      ],
+      "candidate_samples": [
+        253.85600328445435,
+        252.128005027771,
+        253.6959946155548,
+        252.6719868183136,
+        252.9279887676239,
+        253.05598974227905,
+        253.02401185035706,
+        253.34399938583374,
+        252.99200415611267,
+        252.70399451255798,
+        252.25600600242615,
+        252.19199061393738,
+        252.86400318145752,
+        253.05598974227905,
+        253.1839907169342,
+        253.4399926662445,
+        251.52000784873962,
+        253.50400805473328,
+        252.99200415611267,
+        252.70399451255798
+      ]
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.30399990081787,
+      "candidate_us": 251.91999971866608,
+      "baseline_samples": [
+        261.56800985336304,
+        259.42400097846985,
+        260.2880001068115,
+        260.3839933872223,
+        259.64799523353577,
+        259.2960000038147,
+        259.2960000038147,
+        258.7519884109497,
+        259.6159875392914,
+        257.53599405288696,
+        257.5039863586426,
+        257.53599405288696,
+        257.1839988231659,
+        256.7040026187897,
+        257.4400007724762,
+        258.84801149368286,
+        257.1519911289215,
+        257.85601139068604,
+        257.7599883079529,
+        257.0880055427551
+      ],
+      "candidate_samples": [
+        253.7280023097992,
+        252.0959973335266,
+        252.25600600242615,
+        252.16001272201538,
+        252.128005027771,
+        253.60000133514404,
+        251.55198574066162,
+        251.19999051094055,
+        252.79998779296875,
+        252.25600600242615,
+        251.0400116443634,
+        251.13600492477417,
+        251.3279914855957,
+        250.75200200080872,
+        250.75200200080872,
+        251.96799635887146,
+        250.71999430656433,
+        252.16001272201538,
+        251.8720030784607,
+        251.80798768997192
+      ]
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.04799795150757,
+      "candidate_us": 251.6319900751114,
+      "baseline_samples": [
+        259.3280076980591,
+        258.39999318122864,
+        257.88798928260803,
+        258.5279941558838,
+        257.31199979782104,
+        257.4400007724762,
+        258.1759989261627,
+        258.2080066204071,
+        258.36798548698425,
+        258.4640085697174,
+        257.56800174713135,
+        257.9520046710968,
+        257.27999210357666,
+        257.31199979782104,
+        257.79199600219727,
+        259.2320144176483,
+        256.54399394989014,
+        257.9199969768524,
+        258.14399123191833,
+        259.10401344299316
+      ],
+      "candidate_samples": [
+        252.9599964618683,
+        250.68798661231995,
+        251.71199440956116,
+        251.52000784873962,
+        251.71199440956116,
+        251.42401456832886,
+        252.19199061393738,
+        250.30401349067688,
+        251.55198574066162,
+        251.77600979804993,
+        250.88000297546387,
+        251.96799635887146,
+        251.8720030784607,
+        251.23199820518494,
+        252.0959973335266,
+        252.51200795173645,
+        250.7840096950531,
+        251.39200687408447,
+        250.84799528121948,
+        252.25600600242615
+      ]
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.03200900554657,
+      "candidate_us": 251.45600736141205,
+      "baseline_samples": [
+        259.13599133491516,
+        259.2960000038147,
+        257.02399015426636,
+        258.59200954437256,
+        257.7280104160309,
+        257.9840123653412,
+        258.432000875473,
+        257.7599883079529,
+        257.27999210357666,
+        257.4720084667206,
+        256.51198625564575,
+        257.4720084667206,
+        258.11201333999634,
+        258.08000564575195,
+        257.0880055427551,
+        257.4400007724762,
+        258.4959864616394,
+        258.1759989261627,
+        258.39999318122864,
+        258.2400143146515
+      ],
+      "candidate_samples": [
+        252.6719868183136,
+        251.80798768997192,
+        251.10399723052979,
+        250.7840096950531,
+        250.36799907684326,
+        251.2960135936737,
+        252.44799256324768,
+        252.03201174736023,
+        250.71999430656433,
+        251.77600979804993,
+        250.5280077457428,
+        250.30401349067688,
+        251.6160011291504,
+        252.3519992828369,
+        249.88800287246704,
+        252.128005027771,
+        251.0400116443634,
+        251.0400116443634,
+        252.19199061393738,
+        253.02401185035706
+      ]
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.06400179862976,
+      "candidate_us": 251.47199630737305,
+      "baseline_samples": [
+        259.0399980545044,
+        258.5600018501282,
+        257.79199600219727,
+        257.7280104160309,
+        258.7839961051941,
+        257.7280104160309,
+        257.60000944137573,
+        257.82400369644165,
+        257.4079930782318,
+        259.00799036026,
+        258.432000875473,
+        258.11201333999634,
+        257.24801421165466,
+        258.33600759506226,
+        257.79199600219727,
+        259.16799902915955,
+        258.0159902572632,
+        258.14399123191833,
+        257.6960027217865,
+        258.4959864616394
+      ],
+      "candidate_samples": [
+        252.6400089263916,
+        251.0719895362854,
+        250.97599625587463,
+        250.84799528121948,
+        252.22399830818176,
+        252.79998779296875,
+        250.36799907684326,
+        251.26400589942932,
+        252.73600220680237,
+        251.19999051094055,
+        251.16801261901855,
+        251.6160011291504,
+        251.8720030784607,
+        251.3279914855957,
+        252.06398963928223,
+        252.54398584365845,
+        251.80798768997192,
+        252.51200795173645,
+        251.2960135936737,
+        251.26400589942932
+      ]
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.20000052452087,
+      "candidate_us": 155.5040031671524,
+      "baseline_samples": [
+        159.93599593639374,
+        153.1520038843155,
+        152.70400047302246,
+        152.73599326610565,
+        152.28800475597382,
+        152.28800475597382,
+        153.6320000886917,
+        152.8320014476776,
+        154.23999726772308,
+        152.3520052433014,
+        152.48000621795654,
+        153.34400534629822,
+        153.6320000886917,
+        152.5759994983673,
+        153.82400155067444,
+        153.53600680828094,
+        153.60000729560852,
+        153.82400155067444,
+        153.24799716472626,
+        152.70400047302246
+      ],
+      "candidate_samples": [
+        159.87199544906616,
+        156.70399367809296,
+        154.65599298477173,
+        155.39200603961945,
+        154.81600165367126,
+        154.91199493408203,
+        156.76799416542053,
+        156.15999698638916,
+        156.0640037059784,
+        154.1759967803955,
+        154.1759967803955,
+        156.09599649906158,
+        155.5519998073578,
+        156.8640023469925,
+        154.1759967803955,
+        154.11199629306793,
+        156.47999942302704,
+        154.7520011663437,
+        156.38400614261627,
+        155.45600652694702
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.3920019865036,
+      "candidate_us": 153.6480039358139,
+      "baseline_samples": [
+        154.04799580574036,
+        153.85599434375763,
+        153.888002038002,
+        152.92799472808838,
+        153.31199765205383,
+        153.56799960136414,
+        153.02400290966034,
+        153.76000106334686,
+        155.2640050649643,
+        152.48000621795654,
+        153.50399911403656,
+        152.63999998569489,
+        153.4080058336258,
+        152.99199521541595,
+        154.27200496196747,
+        153.1520038843155,
+        153.56799960136414,
+        153.3759981393814,
+        152.8639942407608,
+        153.1199961900711
+      ],
+      "candidate_samples": [
+        157.9200029373169,
+        154.2080044746399,
+        155.03999590873718,
+        154.1759967803955,
+        152.319997549057,
+        153.08800339698792,
+        153.28000485897064,
+        155.35999834537506,
+        153.85599434375763,
+        153.82400155067444,
+        153.05599570274353,
+        153.82400155067444,
+        153.6960005760193,
+        152.44799852371216,
+        152.8960019350052,
+        155.008003115654,
+        152.73599326610565,
+        153.4080058336258,
+        152.8639942407608,
+        153.60000729560852
+      ]
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.29600125551224,
+      "candidate_us": 1309.9200129508972,
+      "baseline_samples": [
+        153.98399531841278,
+        152.73599326610565,
+        152.96000242233276,
+        153.08800339698792,
+        153.98399531841278,
+        154.1759967803955,
+        154.23999726772308,
+        153.24799716472626,
+        154.65599298477173,
+        153.6639928817749,
+        153.6960005760193,
+        153.60000729560852,
+        153.31199765205383,
+        153.28000485897064,
+        153.02400290966034,
+        153.1199961900711,
+        152.73599326610565,
+        153.24799716472626,
+        153.24799716472626,
+        153.34400534629822
+      ],
+      "candidate_samples": [
+        1314.8800134658813,
+        1308.1920146942139,
+        1309.7280263900757,
+        1310.2079629898071,
+        1308.8639974594116,
+        1308.5440397262573,
+        1309.2800378799438,
+        1311.8400573730469,
+        1310.1439476013184,
+        1311.2640380859375,
+        1311.776041984558,
+        1311.6799592971802,
+        1311.2000226974487,
+        1309.5040321350098,
+        1309.1520071029663,
+        1309.6959590911865,
+        1310.528039932251,
+        1309.3119859695435,
+        1310.1119995117188,
+        1309.2800378799438
+      ]
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.59999984502792,
+      "candidate_us": 651.887983083725,
+      "baseline_samples": [
+        154.11199629306793,
+        153.31199765205383,
+        153.6639928817749,
+        153.53600680828094,
+        153.1520038843155,
+        153.76000106334686,
+        152.28800475597382,
+        153.888002038002,
+        154.91199493408203,
+        153.1520038843155,
+        152.8960019350052,
+        152.76800096035004,
+        153.08800339698792,
+        154.65599298477173,
+        154.4319987297058,
+        153.85599434375763,
+        153.79199385643005,
+        153.9199948310852,
+        153.05599570274353,
+        153.31199765205383
+      ],
+      "candidate_samples": [
+        655.4239988327026,
+        651.4559984207153,
+        652.7360081672668,
+        652.1599888801575,
+        650.0800251960754,
+        650.5600214004517,
+        651.5200138092041,
+        650.5600214004517,
+        649.4079828262329,
+        649.4719982147217,
+        651.5200138092041,
+        652.4159908294678,
+        652.3839831352234,
+        651.8719792366028,
+        654.2400121688843,
+        652.1599888801575,
+        650.9439945220947,
+        651.9039869308472,
+        653.1519889831543,
+        653.4079909324646
+      ]
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.6640003323555,
+      "candidate_us": 155.37600219249725,
+      "baseline_samples": [
+        154.91199493408203,
+        152.6080071926117,
+        153.50399911403656,
+        152.70400047302246,
+        153.79199385643005,
+        154.6880006790161,
+        153.72799336910248,
+        152.79999375343323,
+        153.08800339698792,
+        153.60000729560852,
+        153.60000729560852,
+        153.72799336910248,
+        154.01600301265717,
+        153.21600437164307,
+        153.53600680828094,
+        153.76000106334686,
+        154.40000593662262,
+        154.52800691127777,
+        153.21600437164307,
+        154.40000593662262
+      ],
+      "candidate_samples": [
+        161.28000617027283,
+        155.4879993200302,
+        156.22399747371674,
+        155.2640050649643,
+        154.88000214099884,
+        155.10399639606476,
+        155.87200224399567,
+        155.8080017566681,
+        154.36799824237823,
+        156.00000321865082,
+        155.5200070142746,
+        155.4879993200302,
+        154.94400262832642,
+        155.83999454975128,
+        154.88000214099884,
+        155.2319973707199,
+        154.4959992170334,
+        155.87200224399567,
+        154.62400019168854,
+        153.82400155067444
+      ]
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.71199697256088,
+      "candidate_us": 154.9919992685318,
+      "baseline_samples": [
+        154.11199629306793,
+        152.12799608707428,
+        153.1199961900711,
+        153.43999862670898,
+        154.7520011663437,
+        154.27200496196747,
+        153.6320000886917,
+        153.18399667739868,
+        153.9520025253296,
+        153.6960005760193,
+        155.39200603961945,
+        152.92799472808838,
+        153.76000106334686,
+        153.6639928817749,
+        153.82400155067444,
+        153.72799336910248,
+        153.82400155067444,
+        153.47200632095337,
+        152.8639942407608,
+        153.9520025253296
+      ],
+      "candidate_samples": [
+        159.4880074262619,
+        154.94400262832642,
+        154.94400262832642,
+        154.27200496196747,
+        156.63999319076538,
+        155.90399503707886,
+        156.15999698638916,
+        155.008003115654,
+        154.59200739860535,
+        155.2640050649643,
+        155.16799688339233,
+        154.4319987297058,
+        153.888002038002,
+        153.60000729560852,
+        154.36799824237823,
+        155.20000457763672,
+        155.61600029468536,
+        155.42399883270264,
+        153.888002038002,
+        154.9759954214096
+      ]
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.96799892187119,
+      "candidate_us": 638.5599970817566,
+      "baseline_samples": [
+        154.4959992170334,
+        154.23999726772308,
+        154.88000214099884,
+        153.6639928817749,
+        153.21600437164307,
+        154.7520011663437,
+        154.62400019168854,
+        153.4080058336258,
+        152.96000242233276,
+        154.6880006790161,
+        154.04799580574036,
+        153.888002038002,
+        153.60000729560852,
+        154.2080044746399,
+        153.43999862670898,
+        153.43999862670898,
+        153.34400534629822,
+        155.10399639606476,
+        154.08000349998474,
+        152.96000242233276
+      ],
+      "candidate_samples": [
+        642.5279974937439,
+        639.5519971847534,
+        638.5279893875122,
+        638.2719874382019,
+        637.6640200614929,
+        638.9439702033997,
+        638.0800008773804,
+        638.7519836425781,
+        638.9439702033997,
+        638.7199759483337,
+        637.2479796409607,
+        638.4639739990234,
+        638.592004776001,
+        639.0720009803772,
+        638.3360028266907,
+        638.975977897644,
+        641.5039896965027,
+        638.1120085716248,
+        637.8880143165588,
+        638.3039951324463
+      ]
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 409.4879925251007,
+      "candidate_us": 423.96798729896545,
+      "baseline_samples": [
+        411.3920032978058,
+        411.0400080680847,
+        409.4719886779785,
+        405.9840142726898,
+        406.97601437568665,
+        407.9680144786835,
+        407.20000863075256,
+        410.3679955005646,
+        412.06398606300354,
+        409.280002117157,
+        409.92000699043274,
+        411.327987909317,
+        409.824013710022,
+        407.0720076560974,
+        405.85601329803467,
+        410.17600893974304,
+        409.5039963722229,
+        410.0480079650879,
+        409.4400107860565,
+        408.6720049381256
+      ],
+      "candidate_samples": [
+        425.8880019187927,
+        423.6159920692444,
+        423.8399863243103,
+        424.22398924827576,
+        422.65599966049194,
+        425.08798837661743,
+        423.96798729896545,
+        424.19201135635376,
+        426.4959990978241,
+        423.20001125335693,
+        424.44801330566406,
+        424.703985452652,
+        423.6159920692444,
+        422.7519929409027,
+        423.96798729896545,
+        425.28000473976135,
+        423.8399863243103,
+        424.3200123310089,
+        422.7199852466583,
+        423.23198914527893
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 407.4400067329407,
+      "candidate_us": 407.600000500679,
+      "baseline_samples": [
+        411.9360148906708,
+        409.7920060157776,
+        408.9600145816803,
+        410.3359878063202,
+        409.34398770332336,
+        407.71201252937317,
+        407.20000863075256,
+        408.70401263237,
+        408.32000970840454,
+        407.8400135040283,
+        407.6800048351288,
+        404.57600355148315,
+        404.35200929641724,
+        405.95200657844543,
+        406.9119989871979,
+        405.0559997558594,
+        404.7040045261383,
+        403.4239947795868,
+        405.0559997558594,
+        404.2559862136841
+      ],
+      "candidate_samples": [
+        411.48799657821655,
+        410.4959964752197,
+        409.11999344825745,
+        410.3679955005646,
+        407.80800580978394,
+        408.9280068874359,
+        407.55200386047363,
+        408.4799885749817,
+        406.9119989871979,
+        407.6479971408844,
+        408.60798954963684,
+        407.80800580978394,
+        404.1599929332733,
+        405.3120017051697,
+        404.448002576828,
+        405.2160084247589,
+        405.08800745010376,
+        404.992014169693,
+        403.55199575424194,
+        405.2160084247589
+      ]
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 404.63998913764954,
+      "candidate_us": 420.6079989671707,
+      "baseline_samples": [
+        405.91999888420105,
+        405.023992061615,
+        403.6799967288971,
+        405.7599902153015,
+        404.1920006275177,
+        404.7679901123047,
+        403.6799967288971,
+        405.11998534202576,
+        402.5920033454895,
+        405.023992061615,
+        404.09600734710693,
+        405.44000267982483,
+        403.2000005245209,
+        404.7679901123047,
+        404.63998913764954,
+        403.84000539779663,
+        404.63998913764954,
+        403.6479890346527,
+        405.023992061615,
+        404.1599929332733
+      ],
+      "candidate_samples": [
+        421.5039908885956,
+        420.7040071487427,
+        420.1599955558777,
+        421.7279851436615,
+        420.3520119190216,
+        422.14399576187134,
+        420.28799653053284,
+        418.5599982738495,
+        419.99998688697815,
+        421.2479889392853,
+        419.2639887332916,
+        421.2160110473633,
+        420.25598883628845,
+        421.05600237846375,
+        420.51199078559875,
+        422.2399890422821,
+        420.415997505188,
+        421.6960072517395,
+        421.63199186325073,
+        419.8080003261566
+      ]
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 405.2640050649643,
+      "candidate_us": 420.6400066614151,
+      "baseline_samples": [
+        406.8480134010315,
+        405.2160084247589,
+        406.5600037574768,
+        405.91999888420105,
+        406.46401047706604,
+        403.6479890346527,
+        405.34400939941406,
+        404.9600064754486,
+        405.3120017051697,
+        404.63998913764954,
+        404.83200550079346,
+        404.35200929641724,
+        403.80799770355225,
+        406.14399313926697,
+        403.4239947795868,
+        406.0479998588562,
+        406.8480134010315,
+        405.1840007305145,
+        405.2160084247589,
+        407.0720076560974
+      ],
+      "candidate_samples": [
+        421.9200015068054,
+        420.960009098053,
+        421.79200053215027,
+        422.2080111503601,
+        421.56800627708435,
+        420.0960099697113,
+        419.2639887332916,
+        420.8959937095642,
+        419.42399740219116,
+        420.1279878616333,
+        421.6960072517395,
+        419.51999068260193,
+        419.71200704574585,
+        420.1279878616333,
+        418.91199350357056,
+        421.2160110473633,
+        421.7599928379059,
+        420.54399847984314,
+        420.03199458122253,
+        420.73601484298706
+      ]
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 405.39200603961945,
+      "candidate_us": 420.27199268341064,
+      "baseline_samples": [
+        405.69600462913513,
+        407.8719913959503,
+        405.023992061615,
+        405.0559997558594,
+        405.34400939941406,
+        404.2240083217621,
+        404.32000160217285,
+        404.32000160217285,
+        406.17600083351135,
+        403.51998805999756,
+        405.88799118995667,
+        406.72001242637634,
+        406.39999508857727,
+        406.0800075531006,
+        407.9360067844391,
+        405.91999888420105,
+        405.44000267982483,
+        405.08800745010376,
+        403.6799967288971,
+        404.9279987812042
+      ],
+      "candidate_samples": [
+        422.65599966049194,
+        421.85598611831665,
+        419.96800899505615,
+        421.79200053215027,
+        420.3520119190216,
+        419.295996427536,
+        420.28799653053284,
+        421.4079976081848,
+        419.6479916572571,
+        420.25598883628845,
+        421.1199879646301,
+        420.6399917602539,
+        419.99998688697815,
+        420.960009098053,
+        418.4960126876831,
+        419.6479916572571,
+        420.0960099697113,
+        420.1279878616333,
+        418.8480079174042,
+        421.88799381256104
+      ]
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 404.87998723983765,
+      "candidate_us": 420.9280014038086,
+      "baseline_samples": [
+        405.2799940109253,
+        406.72001242637634,
+        405.3120017051697,
+        405.91999888420105,
+        403.51998805999756,
+        403.5840034484863,
+        405.2479863166809,
+        404.4800102710724,
+        404.2240083217621,
+        403.51998805999756,
+        405.11998534202576,
+        406.2719941139221,
+        407.584011554718,
+        402.97600626945496,
+        404.57600355148315,
+        404.63998913764954,
+        404.03199195861816,
+        407.48798847198486,
+        404.28799390792847,
+        405.11998534202576
+      ],
+      "candidate_samples": [
+        423.71198534965515,
+        420.1279878616333,
+        419.67999935150146,
+        421.02399468421936,
+        420.9280014038086,
+        419.8080003261566,
+        421.31200432777405,
+        419.3919897079468,
+        419.6160137653351,
+        421.05600237846375,
+        420.1279878616333,
+        421.5039908885956,
+        421.88799381256104,
+        419.840008020401,
+        421.4400053024292,
+        421.56800627708435,
+        419.45600509643555,
+        420.9280014038086,
+        421.5039908885956,
+        420.51199078559875
+      ]
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 405.2639901638031,
+      "candidate_us": 420.3360080718994,
+      "baseline_samples": [
+        408.3839952945709,
+        404.86401319503784,
+        403.55199575424194,
+        404.28799390792847,
+        406.1119854450226,
+        405.15199303627014,
+        406.0159921646118,
+        404.448002576828,
+        405.023992061615,
+        404.1920006275177,
+        405.63198924064636,
+        406.2719941139221,
+        404.448002576828,
+        405.44000267982483,
+        405.69600462913513,
+        405.37598729133606,
+        404.2559862136841,
+        405.66399693489075,
+        404.60801124572754,
+        405.5039882659912
+      ],
+      "candidate_samples": [
+        422.39999771118164,
+        420.48001289367676,
+        421.1199879646301,
+        421.9200015068054,
+        420.1599955558777,
+        420.0960099697113,
+        419.71200704574585,
+        419.871985912323,
+        420.19200325012207,
+        419.0720021724701,
+        420.8639860153198,
+        420.51199078559875,
+        419.48801279067993,
+        419.9039936065674,
+        420.0640022754669,
+        420.48001289367676,
+        420.6719994544983,
+        421.37598991394043,
+        421.9839870929718,
+        420.0640022754669
+      ]
+    },
+    {
+      "candidate": "block8_single",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 589.6959900856018,
+      "candidate_us": 616.4639890193939,
+      "baseline_samples": [
+        591.5200114250183,
+        590.1119709014893,
+        587.3919725418091,
+        591.5200114250183,
+        592.8000211715698,
+        588.4159803390503,
+        589.792013168335,
+        589.4079804420471,
+        589.568018913269,
+        588.3839726448059,
+        589.7279977798462,
+        587.3280167579651,
+        586.3680243492126,
+        589.6639823913574,
+        588.4479880332947,
+        590.7520055770874,
+        590.175986289978,
+        590.6879901885986,
+        592.5760269165039,
+        586.4319801330566
+      ],
+      "candidate_samples": [
+        616.703987121582,
+        614.9439811706543,
+        615.0079965591431,
+        614.0480041503906,
+        617.0880198478699,
+        616.927981376648,
+        616.1280274391174,
+        615.5200004577637,
+        616.2239909172058,
+        616.9919967651367,
+        617.6959872245789,
+        616.703987121582,
+        617.3120141029358,
+        617.2800064086914,
+        615.5840158462524,
+        616.6719794273376,
+        614.6559715270996,
+        613.4719848632812,
+        616.8000102043152,
+        616.2559986114502
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 588.9119803905487,
+      "candidate_us": 588.8960063457489,
+      "baseline_samples": [
+        588.8640284538269,
+        588.3839726448059,
+        587.3919725418091,
+        591.7119979858398,
+        591.9679999351501,
+        588.7680053710938,
+        590.7520055770874,
+        588.9279842376709,
+        588.8000130653381,
+        589.5360112190247,
+        588.8959765434265,
+        591.1039710044861,
+        589.4719958305359,
+        589.1839861869812,
+        587.8400206565857,
+        586.1759781837463,
+        588.5120034217834,
+        587.3600244522095,
+        589.568018913269,
+        591.3919806480408
+      ],
+      "candidate_samples": [
+        590.5920267105103,
+        588.6080265045166,
+        589.631974697113,
+        589.9519920349121,
+        588.8000130653381,
+        588.096022605896,
+        590.175986289978,
+        590.1119709014893,
+        589.4079804420471,
+        585.9839916229248,
+        587.7119898796082,
+        590.719997882843,
+        588.9919996261597,
+        589.3759727478027,
+        588.7680053710938,
+        586.5280032157898,
+        588.3520245552063,
+        588.1919860839844,
+        587.5840187072754,
+        590.6879901885986
+      ]
+    },
+    {
+      "candidate": "n16_k128_m8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 590.3359949588776,
+      "candidate_us": 617.7279949188232,
+      "baseline_samples": [
+        591.1679863929749,
+        588.7359976768494,
+        588.5440111160278,
+        586.7519974708557,
+        591.1679863929749,
+        591.1359786987305,
+        591.0080075263977,
+        588.4799957275391,
+        587.9679918289185,
+        591.3919806480408,
+        590.0800228118896,
+        590.3040170669556,
+        590.1439785957336,
+        591.8400287628174,
+        590.3679728507996,
+        590.8160209655762,
+        591.0080075263977,
+        588.4479880332947,
+        589.3759727478027,
+        592.0000076293945
+      ],
+      "candidate_samples": [
+        619.1999912261963,
+        616.4159774780273,
+        618.8480257987976,
+        618.4319853782654,
+        618.9119815826416,
+        617.7600026130676,
+        616.5440082550049,
+        620.0640201568604,
+        617.3120141029358,
+        617.2159910202026,
+        618.5280084609985,
+        619.2640066146851,
+        617.1839833259583,
+        617.6959872245789,
+        616.8959736824036,
+        618.0800199508667,
+        617.5680160522461,
+        616.8320178985596,
+        618.7199950218201,
+        616.3520216941833
+      ]
+    },
+    {
+      "candidate": "n16_k256_m8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 589.2159938812256,
+      "candidate_us": 615.58398604393,
+      "baseline_samples": [
+        590.5600190162659,
+        587.2640013694763,
+        588.9279842376709,
+        591.4559960365295,
+        589.2800092697144,
+        592.3519730567932,
+        588.9599919319153,
+        590.0800228118896,
+        592.0959711074829,
+        588.3200168609619,
+        590.5280113220215,
+        590.8160209655762,
+        592.0959711074829,
+        587.5200033187866,
+        589.2800092697144,
+        588.2880091667175,
+        589.1519784927368,
+        588.3520245552063,
+        586.5280032157898,
+        588.8959765434265
+      ],
+      "candidate_samples": [
+        617.4079775810242,
+        616.6719794273376,
+        614.3680214881897,
+        618.1120276451111,
+        616.159975528717,
+        616.096019744873,
+        615.0079965591431,
+        614.7519946098328,
+        616.2559986114502,
+        612.1600270271301,
+        615.5200004577637,
+        614.0480041503906,
+        615.776002407074,
+        615.6479716300964,
+        614.1759753227234,
+        615.1679754257202,
+        615.9039735794067,
+        613.6639714241028,
+        615.9679889678955,
+        615.1040196418762
+      ]
+    },
+    {
+      "candidate": "n4_k256_m1",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 590.1599824428558,
+      "candidate_us": 616.320013999939,
+      "baseline_samples": [
+        592.2240018844604,
+        590.2079939842224,
+        590.7840132713318,
+        592.8320288658142,
+        590.3360247612,
+        587.1040225028992,
+        590.1119709014893,
+        589.3759727478027,
+        587.7760052680969,
+        589.2800092697144,
+        588.2239937782288,
+        588.9599919319153,
+        588.15997838974,
+        591.808021068573,
+        592.7680134773254,
+        587.7439975738525,
+        591.1999940872192,
+        591.871976852417,
+        591.6479825973511,
+        587.1040225028992
+      ],
+      "candidate_samples": [
+        619.2960143089294,
+        615.1040196418762,
+        616.2239909172058,
+        617.247998714447,
+        616.2239909172058,
+        616.3840293884277,
+        616.2559986114502,
+        615.4559850692749,
+        616.159975528717,
+        615.3280138969421,
+        618.1759834289551,
+        615.7439947128296,
+        617.4079775810242,
+        616.320013999939,
+        617.7279949188232,
+        617.3120141029358,
+        618.5280084609985,
+        617.1839833259583,
+        616.320013999939,
+        614.2399907112122
+      ]
+    },
+    {
+      "candidate": "n8_k128_m1",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 589.3279910087585,
+      "candidate_us": 614.8319840431213,
+      "baseline_samples": [
+        588.9919996261597,
+        590.5600190162659,
+        592.8639769554138,
+        588.6399745941162,
+        589.4399881362915,
+        588.2239937782288,
+        590.6559824943542,
+        590.2400016784668,
+        591.808021068573,
+        587.6160264015198,
+        587.4559879302979,
+        588.3200168609619,
+        589.2159938812256,
+        593.280017375946,
+        591.8400287628174,
+        588.096022605896,
+        591.0720229148865,
+        586.8480205535889,
+        589.2159938812256,
+        590.5280113220215
+      ],
+      "candidate_samples": [
+        615.8720254898071,
+        614.0480041503906,
+        616.9919967651367,
+        615.2639985084534,
+        615.1999831199646,
+        614.080011844635,
+        614.5280003547668,
+        612.8320097923279,
+        615.0720119476318,
+        614.1440272331238,
+        614.2079830169678,
+        614.9439811706543,
+        614.5920157432556,
+        616.3840293884277,
+        614.2079830169678,
+        615.3920292854309,
+        616.5440082550049,
+        613.7279868125916,
+        615.9359812736511,
+        614.7199869155884
+      ]
+    },
+    {
+      "candidate": "n8_k256_m8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 589.3760025501251,
+      "candidate_us": 616.3679957389832,
+      "baseline_samples": [
+        591.7119979858398,
+        587.1679782867432,
+        589.9519920349121,
+        588.5440111160278,
+        589.3440246582031,
+        589.4079804420471,
+        590.5280113220215,
+        587.5840187072754,
+        586.5920186042786,
+        590.9119844436646,
+        591.1359786987305,
+        588.2239937782288,
+        586.9119763374329,
+        590.4639959335327,
+        587.1359705924988,
+        590.175986289978,
+        592.5120115280151,
+        586.8160128593445,
+        586.687982082367,
+        591.5520191192627
+      ],
+      "candidate_samples": [
+        617.7600026130676,
+        617.1839833259583,
+        616.4799928665161,
+        615.552008152008,
+        616.320013999939,
+        616.4159774780273,
+        619.0400123596191,
+        616.8959736824036,
+        617.3440217971802,
+        617.0880198478699,
+        615.9359812736511,
+        615.5840158462524,
+        614.7199869155884,
+        616.6399717330933,
+        615.9039735794067,
+        615.8720254898071,
+        617.5360083580017,
+        615.6799793243408,
+        615.5840158462524,
+        616.0640120506287
+      ]
+    }
+  ],
+  "calibration_us": 3.295999951660633,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "elapsed_s": 276.837672678,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_moe_w4a16",
+  "source_files": {
+    "block8_single": {
+      "path": "experiments/sources/d65210fdd62cb9babc8033efa73f3d84048283ee0249746858e6e3f7ef987c9f.py",
+      "sha256": "d65210fdd62cb9babc8033efa73f3d84048283ee0249746858e6e3f7ef987c9f"
+    },
+    "control": {
+      "path": "experiments/sources/66abb265321ae0116a7db60d90ae8d320dca1060484105a37ea6eb23509d24d6.py",
+      "sha256": "66abb265321ae0116a7db60d90ae8d320dca1060484105a37ea6eb23509d24d6"
+    },
+    "n16_k128_m8": {
+      "path": "experiments/sources/59f0be186a19a714520b928fc7e9df14e4fedc32043e05a74a074dab6dcf1ac7.py",
+      "sha256": "59f0be186a19a714520b928fc7e9df14e4fedc32043e05a74a074dab6dcf1ac7"
+    },
+    "n16_k256_m8": {
+      "path": "experiments/sources/993b1f145672d07e116f4b5f19ce97d48223c9d07bd7e66c3c49eef4c2a11d31.py",
+      "sha256": "993b1f145672d07e116f4b5f19ce97d48223c9d07bd7e66c3c49eef4c2a11d31"
+    },
+    "n4_k256_m1": {
+      "path": "experiments/sources/3c9f86e1ca671b5ea42b4e86114eb3e03d4a6787f25a14e310ca4d9b678e3e01.py",
+      "sha256": "3c9f86e1ca671b5ea42b4e86114eb3e03d4a6787f25a14e310ca4d9b678e3e01"
+    },
+    "n8_k128_m1": {
+      "path": "experiments/sources/11262ab8c7ee39affe512982751db53cc9916869ce6a3a2b2769dfac963606c8.py",
+      "sha256": "11262ab8c7ee39affe512982751db53cc9916869ce6a3a2b2769dfac963606c8"
+    },
+    "n8_k256_m8": {
+      "path": "experiments/sources/15f9a45e574c99b74b922f74fe3bca77a68ded4f7bddbdabaab0f60c171c94e3.py",
+      "sha256": "15f9a45e574c99b74b922f74fe3bca77a68ded4f7bddbdabaab0f60c171c94e3"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

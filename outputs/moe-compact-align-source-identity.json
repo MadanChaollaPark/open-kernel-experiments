@@ -1,0 +1,12 @@
+{
+  "source": "outputs/moe_compact_align.py",
+  "sha256": "43381cdf3bc6bcf999308ca0feeace88e39c21575be9b3161c0ae7e141f942ff",
+  "validation": "outputs/moe-compact-align-wide.json",
+  "checks": {
+    "passed": 80,
+    "total": 80
+  },
+  "local_score": 1.1351,
+  "control": 1.0894,
+  "scope": "Compaction for up to32tokens; native fallback for larger batches; nine nearby batch sizes added."
+}

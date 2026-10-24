@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+.DS_Store
+work/tooling/
+work/challenge/
+work/kernels/
+outputs/profiles/
+outputs/budget.json
+results/replays/
+*.log

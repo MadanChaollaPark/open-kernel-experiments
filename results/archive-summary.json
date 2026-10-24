@@ -1,0 +1,10 @@
+{
+  "snapshot_at": "2026-10-24T01:56:23.914836+00:00",
+  "goal_status": "paused",
+  "goal_achieved": false,
+  "local_records": 115,
+  "distinct_source_snapshots": 627,
+  "validation_passes_recorded": 18053,
+  "validation_checks_recorded": 18121,
+  "note": "Counts include repeated checks, controls and failed/partial experiments; not independent test cases."
+}

@@ -1,0 +1,24 @@
+{
+  "status": "rejected: correct but slower",
+  "method": "Pack two KV heads along the attention key-column axis with an explicit cross-head mask, keeping head dimension64. Each valid head attends to every key. This avoids the doubled128-wide accumulator of the earlier rejected pair2d design.",
+  "source_builder": "work/build_attention_head_pairs.py",
+  "runner": "work/run_attention_head_pairs.py",
+  "scope": "layer=full",
+  "control": "outputs/attention_balanced_hybrid.py",
+  "prior_distinct_attempt": "outputs/attention-pair2d.json",
+  "precision": "FP8 Q/cache and BF16 probabilities/value dot, same as control.",
+  "evidence": "outputs/attention-head-pairs.json",
+  "checks": {
+    "passed": 90,
+    "total": 90
+  },
+  "scores": {
+    "control": 1.2918,
+    "n256_b2048_w8": 1.2101,
+    "n128_b1024_w4": 1.1992,
+    "n256_b1024_w8": 1.1955,
+    "n128_b512_w4": 1.1299
+  },
+  "decision": "No promotion. Do not repeat paired-head layouts without distinct evidence.",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

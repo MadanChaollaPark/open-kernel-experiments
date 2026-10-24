@@ -1,0 +1,3523 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 4,
+        "sharding": "ep8",
+        "seed": 1800,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.600e-03 (worst row 5.637e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 33,
+        "sharding": "ep8",
+        "seed": 1801,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.531e-03 (worst row 5.909e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 257,
+        "sharding": "ep8",
+        "seed": 1802,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.567e-03 (worst row 6.005e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "seed": 1803,
+        "dist": "skewed"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.363e-03 (worst row 5.695e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 5.477e-03 (worst row 5.477e-03)"
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "seed": 1804,
+        "dist": "normal"
+      },
+      "ok": true,
+      "message": "relative L2 error 4.544e-03 (worst row 4.544e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 5.666e-03 (worst row 5.666e-03)"
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "ok": true,
+      "message": "relative L2 error 4.446e-03 (worst row 4.446e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "ok": true,
+      "message": "relative L2 error 5.553e-03 (worst row 5.781e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "ok": true,
+      "message": "relative L2 error 5.556e-03 (worst row 5.756e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "ok": true,
+      "message": "relative L2 error 5.564e-03 (worst row 5.801e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "ok": true,
+      "message": "relative L2 error 5.544e-03 (worst row 6.150e-03)"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "ok": true,
+      "message": "relative L2 error 5.563e-03 (worst row 5.956e-03)"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 85.05599945783615,
+      "candidate_us": 81.727996468544,
+      "baseline_samples": [
+        90.65599739551544,
+        84.70399677753448,
+        85.56800335645676,
+        84.63999629020691,
+        84.70399677753448,
+        84.83199775218964,
+        85.24800091981888,
+        84.89599823951721,
+        85.21600067615509,
+        85.37600189447403,
+        85.28000116348267,
+        84.3840017914772,
+        84.76799726486206,
+        85.11999994516373,
+        85.08799970149994,
+        85.9839990735054,
+        85.02399921417236,
+        84.86399799585342,
+        85.15200018882751,
+        84.3840017914772
+      ],
+      "candidate_samples": [
+        88.03199976682663,
+        81.50400221347809,
+        82.33600109815598,
+        81.37600123882294,
+        81.727996468544,
+        81.44000172615051,
+        81.53600245714188,
+        81.66400343179703,
+        81.79199695587158,
+        81.28000050783157,
+        81.63200318813324,
+        82.46400207281113,
+        81.24800026416779,
+        81.727996468544,
+        82.46400207281113,
+        81.91999793052673,
+        81.56800270080566,
+        81.91999793052673,
+        82.30400085449219,
+        82.59200304746628
+      ]
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 85.03999933600426,
+      "candidate_us": 102.52799838781357,
+      "baseline_samples": [
+        85.28000116348267,
+        85.28000116348267,
+        84.19200032949448,
+        85.15200018882751,
+        85.02399921417236,
+        84.89599823951721,
+        85.79199761152267,
+        85.85599809885025,
+        84.99199897050858,
+        84.86399799585342,
+        85.37600189447403,
+        84.83199775218964,
+        84.76799726486206,
+        84.927998483181,
+        85.34400165081024,
+        84.79999750852585,
+        85.05599945783615,
+        84.44800227880478,
+        85.7279971241951,
+        85.08799970149994
+      ],
+      "candidate_samples": [
+        107.45599865913391,
+        102.11200267076492,
+        102.36799716949463,
+        102.46399790048599,
+        102.59199887514114,
+        102.33599692583084,
+        103.13600301742554,
+        102.81600058078766,
+        102.4319976568222,
+        102.20800340175629,
+        103.20000350475311,
+        102.4319976568222,
+        102.01600193977356,
+        102.20800340175629,
+        101.98400169610977,
+        102.84800082445145,
+        103.42399775981903,
+        103.26399654150009,
+        102.94400155544281,
+        103.26399654150009
+      ]
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 85.36000177264214,
+      "candidate_us": 102.76800021529198,
+      "baseline_samples": [
+        85.75999736785889,
+        86.46400272846222,
+        85.21600067615509,
+        85.34400165081024,
+        84.63999629020691,
+        85.15200018882751,
+        85.69599688053131,
+        86.14400029182434,
+        85.37600189447403,
+        85.56800335645676,
+        85.24800091981888,
+        86.11200004816055,
+        85.60000360012054,
+        85.40800213813782,
+        84.79999750852585,
+        85.69599688053131,
+        84.99199897050858,
+        85.31200140714645,
+        85.24800091981888,
+        85.28000116348267
+      ],
+      "candidate_samples": [
+        108.06400328874588,
+        102.68799960613251,
+        102.59199887514114,
+        102.14400291442871,
+        102.75200009346008,
+        103.04000228643417,
+        102.91200131177902,
+        102.78400033712387,
+        102.27199643850327,
+        102.9760017991066,
+        102.84800082445145,
+        102.68799960613251,
+        102.7199998497963,
+        102.59199887514114,
+        103.26399654150009,
+        102.7199998497963,
+        102.75200009346008,
+        102.78400033712387,
+        103.35999727249146,
+        103.10400277376175
+      ]
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 85.39200201630592,
+      "candidate_us": 102.09600254893303,
+      "baseline_samples": [
+        85.53600311279297,
+        85.28000116348267,
+        85.37600189447403,
+        86.59200370311737,
+        85.95199882984161,
+        85.60000360012054,
+        85.75999736785889,
+        84.76799726486206,
+        85.60000360012054,
+        84.83199775218964,
+        84.73599702119827,
+        85.02399921417236,
+        84.927998483181,
+        85.40800213813782,
+        84.89599823951721,
+        84.60800349712372,
+        84.73599702119827,
+        85.4720026254654,
+        85.40800213813782,
+        86.04799956083298
+      ],
+      "candidate_samples": [
+        106.9440022110939,
+        102.65599936246872,
+        101.88800096511841,
+        101.6639992594719,
+        102.49599814414978,
+        102.11200267076492,
+        101.72799974679947,
+        102.36799716949463,
+        102.1760031580925,
+        101.85600072145462,
+        102.36799716949463,
+        102.11200267076492,
+        102.20800340175629,
+        101.6319990158081,
+        102.33599692583084,
+        101.6319990158081,
+        101.98400169610977,
+        101.88800096511841,
+        102.08000242710114,
+        101.69599950313568
+      ]
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 85.28000116348267,
+      "candidate_us": 104.52799871563911,
+      "baseline_samples": [
+        85.28000116348267,
+        85.79199761152267,
+        84.95999872684479,
+        85.21600067615509,
+        85.02399921417236,
+        85.85599809885025,
+        84.70399677753448,
+        85.1840004324913,
+        85.79199761152267,
+        85.34400165081024,
+        86.36800199747086,
+        84.41600203514099,
+        85.28000116348267,
+        84.57600325345993,
+        85.40800213813782,
+        84.86399799585342,
+        85.4720026254654,
+        86.62399649620056,
+        85.28000116348267,
+        84.927998483181
+      ],
+      "candidate_samples": [
+        109.92000252008438,
+        104.70400005578995,
+        103.96800190210342,
+        104.35199737548828,
+        104.38399761915207,
+        105.18400371074677,
+        104.22399640083313,
+        104.41599786281586,
+        104.3199971318245,
+        104.44799810647964,
+        104.51199859380722,
+        105.72800040245056,
+        105.15200346708298,
+        104.3199971318245,
+        105.3759977221489,
+        105.43999820947647,
+        104.60799932479858,
+        104.54399883747101,
+        104.67199981212616,
+        104.2879968881607
+      ]
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 85.34400165081024,
+      "candidate_us": 103.2479964196682,
+      "baseline_samples": [
+        85.31200140714645,
+        85.37600189447403,
+        85.79199761152267,
+        85.60000360012054,
+        85.1840004324913,
+        85.1840004324913,
+        85.02399921417236,
+        85.21600067615509,
+        85.31200140714645,
+        84.95999872684479,
+        85.56800335645676,
+        85.88799834251404,
+        85.08799970149994,
+        85.88799834251404,
+        86.20800077915192,
+        85.02399921417236,
+        85.56800335645676,
+        84.99199897050858,
+        85.63199639320374,
+        85.66399663686752
+      ],
+      "candidate_samples": [
+        108.86400192975998,
+        102.59199887514114,
+        102.9760017991066,
+        103.26399654150009,
+        102.7199998497963,
+        103.29599678516388,
+        103.29599678516388,
+        103.20000350475311,
+        103.58399897813797,
+        103.58399897813797,
+        103.42399775981903,
+        103.04000228643417,
+        103.26399654150009,
+        102.59199887514114,
+        104.032002389431,
+        103.2319962978363,
+        102.9760017991066,
+        103.71199995279312,
+        102.94400155544281,
+        101.95200145244598
+      ]
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 1,
+        "sharding": "ep8",
+        "load": "decode 1",
+        "weight": 60,
+        "seed": 401
+      },
+      "baseline_us": 85.50400286912918,
+      "candidate_us": 104.89600151777267,
+      "baseline_samples": [
+        85.4720026254654,
+        85.91999858617783,
+        85.9839990735054,
+        84.70399677753448,
+        85.1840004324913,
+        86.14400029182434,
+        85.24800091981888,
+        85.85599809885025,
+        85.50400286912918,
+        85.31200140714645,
+        85.40800213813782,
+        85.50400286912918,
+        84.89599823951721,
+        85.75999736785889,
+        84.99199897050858,
+        85.11999994516373,
+        85.63199639320374,
+        86.04799956083298,
+        85.66399663686752,
+        85.82399785518646
+      ],
+      "candidate_samples": [
+        109.8880022764206,
+        104.89600151777267,
+        104.16000336408615,
+        104.96000200510025,
+        104.5759990811348,
+        105.92000186443329,
+        104.8320010304451,
+        105.15200346708298,
+        104.51199859380722,
+        104.80000078678131,
+        105.59999942779541,
+        104.41599786281586,
+        105.12000322341919,
+        105.8880016207695,
+        104.89600151777267,
+        104.60799932479858,
+        104.99200224876404,
+        105.85600137710571,
+        104.76800054311752,
+        104.06400263309479
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.64800041913986,
+      "candidate_us": 171.55199497938156,
+      "baseline_samples": [
+        185.15199422836304,
+        179.4240027666092,
+        177.3120015859604,
+        177.59999632835388,
+        177.72799730300903,
+        177.824005484581,
+        178.1120002269745,
+        177.2480010986328,
+        176.92799866199493,
+        177.47199535369873,
+        177.40799486637115,
+        176.38400197029114,
+        177.69600450992584,
+        177.279993891716,
+        177.0240068435669,
+        178.39999496936798,
+        177.34399437904358,
+        178.5919964313507,
+        178.1120002269745,
+        177.72799730300903
+      ],
+      "candidate_samples": [
+        177.12000012397766,
+        171.87200486660004,
+        171.90399765968323,
+        171.61600291728973,
+        170.27199268341064,
+        170.78399658203125,
+        170.68800330162048,
+        171.87200486660004,
+        170.52799463272095,
+        170.75200378894806,
+        172.06400632858276,
+        171.07200622558594,
+        171.10399901866913,
+        171.51999473571777,
+        172.31999337673187,
+        171.58399522304535,
+        170.59199512004852,
+        172.38399386405945,
+        170.9440052509308,
+        172.03199863433838
+      ]
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.66400426626205,
+      "candidate_us": 171.63199931383133,
+      "baseline_samples": [
+        178.6240041255951,
+        177.63200402259827,
+        177.69600450992584,
+        178.27199399471283,
+        177.72799730300903,
+        176.70400440692902,
+        176.67199671268463,
+        177.7919977903366,
+        177.63200402259827,
+        177.21599340438843,
+        177.40799486637115,
+        177.76000499725342,
+        178.0800074338913,
+        178.1120002269745,
+        177.34399437904358,
+        176.67199671268463,
+        176.7680048942566,
+        178.49600315093994,
+        176.67199671268463,
+        177.69600450992584
+      ],
+      "candidate_samples": [
+        178.14399302005768,
+        171.90399765968323,
+        170.3999936580658,
+        171.51999473571777,
+        171.36000096797943,
+        171.9360053539276,
+        171.7119961977005,
+        171.36000096797943,
+        172.06400632858276,
+        171.1679995059967,
+        171.1679995059967,
+        171.55200242996216,
+        171.23199999332428,
+        171.77599668502808,
+        172.03199863433838,
+        171.90399765968323,
+        171.29600048065186,
+        170.71999609470367,
+        172.67200350761414,
+        172.35200107097626
+      ]
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.18399316072464,
+      "candidate_us": 171.39200121164322,
+      "baseline_samples": [
+        178.17600071430206,
+        178.17600071430206,
+        178.0800074338913,
+        176.7680048942566,
+        177.37600207328796,
+        176.4799952507019,
+        177.85599827766418,
+        176.4480024576187,
+        177.91999876499176,
+        176.4480024576187,
+        177.08800733089447,
+        177.15199291706085,
+        178.1120002269745,
+        177.05599963665009,
+        177.34399437904358,
+        176.83200538158417,
+        176.96000635623932,
+        177.88800597190857,
+        177.15199291706085,
+        177.21599340438843
+      ],
+      "candidate_samples": [
+        177.44000256061554,
+        172.15999960899353,
+        171.36000096797943,
+        171.4559942483902,
+        171.9679981470108,
+        170.8800047636032,
+        170.3999936580658,
+        172.31999337673187,
+        170.17599940299988,
+        171.9679981470108,
+        171.03999853134155,
+        171.4559942483902,
+        171.424001455307,
+        171.58399522304535,
+        170.6240028142929,
+        170.9440052509308,
+        170.84799706935883,
+        171.51999473571777,
+        170.84799706935883,
+        171.03999853134155
+      ]
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.42399871349335,
+      "candidate_us": 171.34399712085724,
+      "baseline_samples": [
+        178.847998380661,
+        177.50400304794312,
+        177.95200645923615,
+        177.85599827766418,
+        178.17600071430206,
+        176.7680048942566,
+        177.44000256061554,
+        178.01600694656372,
+        178.847998380661,
+        177.40799486637115,
+        177.40799486637115,
+        176.96000635623932,
+        176.9919991493225,
+        177.47199535369873,
+        176.7359972000122,
+        176.9919991493225,
+        176.03200674057007,
+        178.20799350738525,
+        177.05599963665009,
+        177.12000012397766
+      ],
+      "candidate_samples": [
+        177.5680035352707,
+        171.61600291728973,
+        171.64799571037292,
+        171.87200486660004,
+        171.4559942483902,
+        171.07200622558594,
+        169.79199647903442,
+        170.56000232696533,
+        171.23199999332428,
+        170.43200135231018,
+        171.36000096797943,
+        171.39199376106262,
+        170.75200378894806,
+        172.06400632858276,
+        171.32799327373505,
+        171.87200486660004,
+        170.75200378894806,
+        170.68800330162048,
+        170.78399658203125,
+        171.87200486660004
+      ]
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.50400304794312,
+      "candidate_us": 171.05600237846375,
+      "baseline_samples": [
+        178.68800461292267,
+        176.64000391960144,
+        176.70400440692902,
+        176.60799622535706,
+        177.50400304794312,
+        177.2480010986328,
+        177.15199291706085,
+        177.50400304794312,
+        177.15199291706085,
+        177.50400304794312,
+        177.69600450992584,
+        177.66399681568146,
+        177.76000499725342,
+        178.8800060749054,
+        177.91999876499176,
+        177.95200645923615,
+        177.05599963665009,
+        177.66399681568146,
+        177.21599340438843,
+        177.12000012397766
+      ],
+      "candidate_samples": [
+        176.83200538158417,
+        170.84799706935883,
+        170.97599804401398,
+        171.6800034046173,
+        170.3680008649826,
+        172.28800058364868,
+        170.33599317073822,
+        170.9440052509308,
+        170.75200378894806,
+        171.32799327373505,
+        172.44799435138702,
+        171.51999473571777,
+        170.8800047636032,
+        170.75200378894806,
+        170.78399658203125,
+        170.0800061225891,
+        171.1360067129135,
+        171.23199999332428,
+        171.77599668502808,
+        172.15999960899353
+      ]
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.2959977388382,
+      "candidate_us": 171.53599858283997,
+      "baseline_samples": [
+        178.6240041255951,
+        177.44000256061554,
+        177.279993891716,
+        177.2480010986328,
+        177.279993891716,
+        177.40799486637115,
+        177.59999632835388,
+        177.279993891716,
+        177.44000256061554,
+        177.2480010986328,
+        176.83200538158417,
+        177.69600450992584,
+        177.3120015859604,
+        176.89600586891174,
+        177.08800733089447,
+        177.85599827766418,
+        177.69600450992584,
+        176.32000148296356,
+        176.9919991493225,
+        177.40799486637115
+      ],
+      "candidate_samples": [
+        177.824005484581,
+        171.58399522304535,
+        171.29600048065186,
+        171.26399278640747,
+        172.67200350761414,
+        171.29600048065186,
+        171.58399522304535,
+        171.03999853134155,
+        171.23199999332428,
+        172.09599912166595,
+        170.71999609470367,
+        170.30400037765503,
+        171.64799571037292,
+        171.48800194263458,
+        171.9360053539276,
+        172.5119948387146,
+        173.2800006866455,
+        170.46399414539337,
+        170.59199512004852,
+        171.83999717235565
+      ]
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 16,
+        "sharding": "ep8",
+        "load": "decode 16",
+        "weight": 60,
+        "seed": 402
+      },
+      "baseline_us": 177.19999700784683,
+      "candidate_us": 171.36000096797943,
+      "baseline_samples": [
+        177.91999876499176,
+        176.92799866199493,
+        178.5919964313507,
+        177.21599340438843,
+        177.3120015859604,
+        177.15199291706085,
+        176.09600722789764,
+        177.18400061130524,
+        177.40799486637115,
+        177.91999876499176,
+        177.05599963665009,
+        177.08800733089447,
+        177.2480010986328,
+        177.66399681568146,
+        177.2480010986328,
+        177.12000012397766,
+        176.54399573802948,
+        176.60799622535706,
+        176.67199671268463,
+        177.21599340438843
+      ],
+      "candidate_samples": [
+        178.1120002269745,
+        171.80800437927246,
+        171.87200486660004,
+        171.03999853134155,
+        170.78399658203125,
+        170.59199512004852,
+        171.58399522304535,
+        171.424001455307,
+        171.58399522304535,
+        172.38399386405945,
+        170.97599804401398,
+        171.29600048065186,
+        171.51999473571777,
+        170.56000232696533,
+        170.49600183963776,
+        171.36000096797943,
+        171.61600291728973,
+        170.6559956073761,
+        170.30400037765503,
+        171.36000096797943
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.66399908065796,
+      "candidate_us": 240.27200043201447,
+      "baseline_samples": [
+        263.61599564552307,
+        260.3519856929779,
+        257.82400369644165,
+        259.00799036026,
+        259.5199942588806,
+        259.7759962081909,
+        259.00799036026,
+        259.16799902915955,
+        259.64799523353577,
+        259.45600867271423,
+        259.8719894886017,
+        260.96001267433167,
+        260.8320116996765,
+        260.09601354599,
+        259.68000292778015,
+        258.65599513053894,
+        258.87998938560486,
+        260.25599241256714,
+        259.39199328422546,
+        259.7759962081909
+      ],
+      "candidate_samples": [
+        243.03999543190002,
+        240.54400622844696,
+        239.58399891853333,
+        240.86399376392365,
+        240.22400379180908,
+        242.20800399780273,
+        239.42400515079498,
+        239.6160066127777,
+        239.87199366092682,
+        238.8480007648468,
+        240.03200232982635,
+        240.1600033044815,
+        240.31999707221985,
+        240.76800048351288,
+        240.38399755954742,
+        239.96800184249878,
+        240.7359927892685,
+        238.97600173950195,
+        240.57599902153015,
+        240.7039999961853
+      ]
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.69600677490234,
+      "candidate_us": 240.4159978032112,
+      "baseline_samples": [
+        261.9520127773285,
+        259.39199328422546,
+        259.5840096473694,
+        259.0399980545044,
+        258.7200105190277,
+        259.93600487709045,
+        259.48798656463623,
+        260.6079876422882,
+        260.3519856929779,
+        260.3839933872223,
+        259.90399718284607,
+        259.16799902915955,
+        259.68000292778015,
+        260.9280049800873,
+        260.8320116996765,
+        260.9280049800873,
+        259.68000292778015,
+        259.48798656463623,
+        259.48798656463623,
+        259.71201062202454
+      ],
+      "candidate_samples": [
+        241.56799912452698,
+        241.34400486946106,
+        239.45599794387817,
+        239.26399648189545,
+        239.96800184249878,
+        239.51999843120575,
+        239.16800320148468,
+        240.57599902153015,
+        239.77600038051605,
+        240.25599658489227,
+        240.12799561023712,
+        239.55200612545013,
+        242.33600497245789,
+        240.83200097084045,
+        240.76800048351288,
+        241.2479966878891,
+        240.7359927892685,
+        239.51999843120575,
+        240.86399376392365,
+        240.89600145816803
+      ]
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 259.8879933357239,
+      "candidate_us": 240.01599848270416,
+      "baseline_samples": [
+        260.99199056625366,
+        261.24799251556396,
+        260.6079876422882,
+        260.09601354599,
+        260.672003030777,
+        260.96001267433167,
+        260.8639895915985,
+        259.8719894886017,
+        259.96801257133484,
+        259.90399718284607,
+        260.25599241256714,
+        258.87998938560486,
+        259.2960000038147,
+        259.0720057487488,
+        257.6639950275421,
+        259.0720057487488,
+        258.59200954437256,
+        257.53599405288696,
+        257.82400369644165,
+        258.91199707984924
+      ],
+      "candidate_samples": [
+        243.68000030517578,
+        240.31999707221985,
+        239.32799696922302,
+        239.87199366092682,
+        239.71199989318848,
+        240.1600033044815,
+        241.7600005865097,
+        240.31999707221985,
+        239.80799317359924,
+        240.1600033044815,
+        240.60800671577454,
+        240.22400379180908,
+        240.4160052537918,
+        241.5360063314438,
+        238.52799832820892,
+        239.6160066127777,
+        239.26399648189545,
+        239.58399891853333,
+        239.19999599456787,
+        238.68800699710846
+      ]
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.6880028247833,
+      "candidate_us": 239.4080013036728,
+      "baseline_samples": [
+        260.25599241256714,
+        258.0159902572632,
+        259.2320144176483,
+        258.08000564575195,
+        258.87998938560486,
+        258.4959864616394,
+        257.6960027217865,
+        258.6880028247833,
+        258.11201333999634,
+        258.91199707984924,
+        258.6880028247833,
+        258.59200954437256,
+        258.6880028247833,
+        258.7839961051941,
+        257.4720084667206,
+        257.9199969768524,
+        257.9199969768524,
+        259.0399980545044,
+        258.8160037994385,
+        258.7839961051941
+      ],
+      "candidate_samples": [
+        240.54400622844696,
+        238.68800699710846,
+        240.6720072031021,
+        238.36800456047058,
+        239.07199501991272,
+        240.9919947385788,
+        239.32799696922302,
+        239.45599794387817,
+        238.91200125217438,
+        239.3600046634674,
+        239.45599794387817,
+        238.97600173950195,
+        240.35200476646423,
+        239.71199989318848,
+        239.87199366092682,
+        240.06399512290955,
+        238.62400650978088,
+        240.83200097084045,
+        238.36800456047058,
+        239.04000222682953
+      ]
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.7679922580719,
+      "candidate_us": 239.23199623823166,
+      "baseline_samples": [
+        261.21601462364197,
+        257.3759853839874,
+        258.7839961051941,
+        257.6639950275421,
+        257.2160065174103,
+        258.4959864616394,
+        258.36798548698425,
+        259.45600867271423,
+        258.2400143146515,
+        258.7519884109497,
+        259.90399718284607,
+        258.1759989261627,
+        257.88798928260803,
+        259.68000292778015,
+        259.48798656463623,
+        258.2080066204071,
+        258.91199707984924,
+        259.2960000038147,
+        258.976012468338,
+        258.87998938560486
+      ],
+      "candidate_samples": [
+        239.9359941482544,
+        239.6479994058609,
+        239.58399891853333,
+        239.3919974565506,
+        237.7920001745224,
+        238.78400027751923,
+        238.81599307060242,
+        238.68800699710846,
+        239.6160066127777,
+        239.26399648189545,
+        238.87999355793,
+        239.19999599456787,
+        238.68800699710846,
+        238.71999979019165,
+        239.07199501991272,
+        239.45599794387817,
+        239.74399268627167,
+        239.9040013551712,
+        239.26399648189545,
+        239.04000222682953
+      ]
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.7200105190277,
+      "candidate_us": 239.26400393247604,
+      "baseline_samples": [
+        260.19200682640076,
+        258.0159902572632,
+        257.85601139068604,
+        258.7200105190277,
+        258.2080066204071,
+        258.4640085697174,
+        258.87998938560486,
+        258.08000564575195,
+        259.42400097846985,
+        259.0399980545044,
+        257.85601139068604,
+        258.7200105190277,
+        258.5600018501282,
+        258.9440047740936,
+        260.5440020561218,
+        258.4959864616394,
+        258.5600018501282,
+        259.20000672340393,
+        259.2320144176483,
+        258.976012468338
+      ],
+      "candidate_samples": [
+        241.2160038948059,
+        239.42400515079498,
+        239.45599794387817,
+        238.81599307060242,
+        238.87999355793,
+        239.9040013551712,
+        239.51999843120575,
+        239.1040027141571,
+        239.74399268627167,
+        238.8480007648468,
+        238.20799589157104,
+        238.46399784088135,
+        239.9359941482544,
+        238.304004073143,
+        239.45599794387817,
+        239.87199366092682,
+        237.98400163650513,
+        238.11200261116028,
+        240.38399755954742,
+        238.75199258327484
+      ]
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 32,
+        "sharding": "ep8",
+        "load": "decode 32",
+        "weight": 60,
+        "seed": 403
+      },
+      "baseline_us": 258.9599937200546,
+      "candidate_us": 239.376001060009,
+      "baseline_samples": [
+        260.6399953365326,
+        258.4959864616394,
+        258.39999318122864,
+        258.30399990081787,
+        258.7200105190277,
+        258.7200105190277,
+        259.2639923095703,
+        258.36798548698425,
+        259.00799036026,
+        259.13599133491516,
+        259.2320144176483,
+        258.62398743629456,
+        259.3599855899811,
+        258.6880028247833,
+        259.39199328422546,
+        258.2719922065735,
+        259.3280076980591,
+        259.45600867271423,
+        259.2960000038147,
+        258.91199707984924
+      ],
+      "candidate_samples": [
+        239.58399891853333,
+        238.62400650978088,
+        239.3919974565506,
+        241.11999571323395,
+        238.68800699710846,
+        240.60800671577454,
+        238.5919988155365,
+        239.07199501991272,
+        241.18399620056152,
+        238.39999735355377,
+        239.3600046634674,
+        239.77600038051605,
+        239.58399891853333,
+        238.5600060224533,
+        240.12799561023712,
+        239.1040027141571,
+        239.1359955072403,
+        239.74399268627167,
+        239.42400515079498,
+        239.07199501991272
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.85599434375763,
+      "candidate_us": 147.536002099514,
+      "baseline_samples": [
+        161.56800091266632,
+        154.2080044746399,
+        153.9199948310852,
+        152.76800096035004,
+        154.04799580574036,
+        154.14400398731232,
+        153.28000485897064,
+        152.92799472808838,
+        153.79199385643005,
+        153.05599570274353,
+        153.28000485897064,
+        154.4319987297058,
+        153.1199961900711,
+        154.04799580574036,
+        154.30399775505066,
+        153.1199961900711,
+        153.9199948310852,
+        153.24799716472626,
+        154.04799580574036,
+        153.6639928817749
+      ],
+      "candidate_samples": [
+        153.60000729560852,
+        146.88000082969666,
+        146.84799313545227,
+        147.16799557209015,
+        147.35999703407288,
+        147.5519984960556,
+        146.68799936771393,
+        147.8399932384491,
+        147.39200472831726,
+        147.5200057029724,
+        146.88000082969666,
+        147.23199605941772,
+        147.71200716495514,
+        147.90399372577667,
+        147.61599898338318,
+        147.42399752140045,
+        147.96799421310425,
+        147.74399995803833,
+        147.64800667762756,
+        147.77599275112152
+      ]
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 153.6480039358139,
+      "candidate_us": 148.19200336933136,
+      "baseline_samples": [
+        155.2319973707199,
+        152.76800096035004,
+        152.70400047302246,
+        153.1199961900711,
+        154.23999726772308,
+        153.79199385643005,
+        153.47200632095337,
+        153.6960005760193,
+        153.1520038843155,
+        154.08000349998474,
+        154.2080044746399,
+        153.60000729560852,
+        154.94400262832642,
+        152.96000242233276,
+        153.1520038843155,
+        153.4080058336258,
+        153.50399911403656,
+        154.14400398731232,
+        154.23999726772308,
+        153.76000106334686
+      ],
+      "candidate_samples": [
+        154.11199629306793,
+        148.15999567508698,
+        147.45600521564484,
+        148.70400726795197,
+        148.51200580596924,
+        148.22399616241455,
+        148.19200336933136,
+        147.20000326633453,
+        147.8399932384491,
+        147.96799421310425,
+        149.1519957780838,
+        147.64800667762756,
+        148.73600006103516,
+        148.03199470043182,
+        148.19200336933136,
+        148.28799664974213,
+        148.19200336933136,
+        147.8080004453659,
+        148.0640023946762,
+        148.80000054836273
+      ]
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 154.33599799871445,
+      "candidate_us": 148.14399927854538,
+      "baseline_samples": [
+        155.10399639606476,
+        154.9759954214096,
+        154.4319987297058,
+        153.6960005760193,
+        154.7199934720993,
+        153.3759981393814,
+        153.4080058336258,
+        154.59200739860535,
+        154.08000349998474,
+        153.4080058336258,
+        154.23999726772308,
+        154.7520011663437,
+        154.9759954214096,
+        153.28000485897064,
+        156.031996011734,
+        153.6960005760193,
+        153.28000485897064,
+        154.4319987297058,
+        153.02400290966034,
+        154.81600165367126
+      ],
+      "candidate_samples": [
+        154.01600301265717,
+        148.3840048313141,
+        148.6400067806244,
+        147.23199605941772,
+        148.22399616241455,
+        147.90399372577667,
+        148.19200336933136,
+        147.5200057029724,
+        147.87200093269348,
+        148.67199957370758,
+        149.4400054216385,
+        149.34399724006653,
+        148.22399616241455,
+        148.0640023946762,
+        149.47199821472168,
+        147.77599275112152,
+        147.16799557209015,
+        148.0959951877594,
+        147.5519984960556,
+        147.64800667762756
+      ]
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 154.23999726772308,
+      "candidate_us": 148.5920026898384,
+      "baseline_samples": [
+        155.35999834537506,
+        154.7520011663437,
+        154.14400398731232,
+        154.23999726772308,
+        155.2319973707199,
+        153.6320000886917,
+        155.13600409030914,
+        153.24799716472626,
+        155.20000457763672,
+        154.65599298477173,
+        153.34400534629822,
+        154.4959992170334,
+        153.4080058336258,
+        153.9520025253296,
+        153.53600680828094,
+        154.84799444675446,
+        153.72799336910248,
+        153.98399531841278,
+        154.40000593662262,
+        154.23999726772308
+      ],
+      "candidate_samples": [
+        155.03999590873718,
+        148.70400726795197,
+        148.3200043439865,
+        148.3840048313141,
+        149.27999675273895,
+        148.41599762439728,
+        148.28799664974213,
+        149.08799529075623,
+        148.67199957370758,
+        149.85600113868713,
+        147.74399995803833,
+        148.0959951877594,
+        149.08799529075623,
+        148.8640010356903,
+        148.22399616241455,
+        148.44800531864166,
+        148.3200043439865,
+        148.51200580596924,
+        148.8640010356903,
+        149.4079977273941
+      ]
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 154.1600003838539,
+      "candidate_us": 148.43200147151947,
+      "baseline_samples": [
+        155.20000457763672,
+        154.23999726772308,
+        154.11199629306793,
+        153.60000729560852,
+        154.27200496196747,
+        153.888002038002,
+        153.31199765205383,
+        154.91199493408203,
+        155.10399639606476,
+        153.85599434375763,
+        154.27200496196747,
+        154.7520011663437,
+        153.76000106334686,
+        153.79199385643005,
+        154.2080044746399,
+        153.47200632095337,
+        154.04799580574036,
+        155.10399639606476,
+        154.04799580574036,
+        154.4319987297058
+      ],
+      "candidate_samples": [
+        154.08000349998474,
+        148.47999811172485,
+        147.67999947071075,
+        147.8080004453659,
+        148.03199470043182,
+        147.32800424098969,
+        149.4079977273941,
+        147.61599898338318,
+        148.3840048313141,
+        148.8959938287735,
+        148.28799664974213,
+        148.67199957370758,
+        148.3519971370697,
+        148.67199957370758,
+        147.39200472831726,
+        149.08799529075623,
+        149.4079977273941,
+        147.61599898338318,
+        148.54399859905243,
+        148.92800152301788
+      ]
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 154.28800135850906,
+      "candidate_us": 148.97599816322327,
+      "baseline_samples": [
+        155.96799552440643,
+        153.888002038002,
+        154.78399395942688,
+        154.08000349998474,
+        155.39200603961945,
+        153.31199765205383,
+        153.28000485897064,
+        154.08000349998474,
+        154.65599298477173,
+        155.42399883270264,
+        155.64799308776855,
+        153.98399531841278,
+        154.84799444675446,
+        154.36799824237823,
+        154.2080044746399,
+        154.01600301265717,
+        154.14400398731232,
+        154.62400019168854,
+        152.96000242233276,
+        154.81600165367126
+      ],
+      "candidate_samples": [
+        156.031996011734,
+        149.75999295711517,
+        149.08799529075623,
+        148.92800152301788,
+        148.3840048313141,
+        147.67999947071075,
+        149.31200444698334,
+        148.3840048313141,
+        149.02399480342865,
+        149.9519944190979,
+        149.50400590896606,
+        149.47199821472168,
+        149.6960073709488,
+        148.44800531864166,
+        147.64800667762756,
+        149.82399344444275,
+        148.51200580596924,
+        148.3519971370697,
+        148.54399859905243,
+        148.3519971370697
+      ]
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 8,
+        "sharding": "ep8",
+        "load": "verify 1",
+        "weight": 60,
+        "seed": 404
+      },
+      "baseline_us": 154.41600233316422,
+      "candidate_us": 149.31200444698334,
+      "baseline_samples": [
+        156.0640037059784,
+        154.27200496196747,
+        153.60000729560852,
+        155.13600409030914,
+        154.59200739860535,
+        154.91199493408203,
+        154.04799580574036,
+        154.1759967803955,
+        155.2319973707199,
+        154.40000593662262,
+        154.2080044746399,
+        153.76000106334686,
+        154.4319987297058,
+        155.5200070142746,
+        153.85599434375763,
+        155.2640050649643,
+        154.27200496196747,
+        154.4640064239502,
+        154.36799824237823,
+        155.16799688339233
+      ],
+      "candidate_samples": [
+        153.98399531841278,
+        149.79200065135956,
+        148.44800531864166,
+        149.4079977273941,
+        150.4960060119629,
+        150.176003575325,
+        148.44800531864166,
+        148.83199334144592,
+        150.14399588108063,
+        148.0640023946762,
+        147.5840061903,
+        147.67999947071075,
+        149.31200444698334,
+        149.3760049343109,
+        149.02399480342865,
+        149.34399724006653,
+        149.08799529075623,
+        149.4079977273941,
+        148.3840048313141,
+        149.31200444698334
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 409.295991063118,
+      "candidate_us": 309.1199994087219,
+      "baseline_samples": [
+        414.3039882183075,
+        410.3679955005646,
+        411.5839898586273,
+        409.0240001678467,
+        409.11999344825745,
+        408.2239866256714,
+        410.20798683166504,
+        409.37599539756775,
+        410.40000319480896,
+        407.9039990901947,
+        408.57601165771484,
+        409.6960127353668,
+        410.65600514411926,
+        407.6479971408844,
+        408.60798954963684,
+        408.8959991931915,
+        409.824013710022,
+        407.4240028858185,
+        409.2159867286682,
+        410.68801283836365
+      ],
+      "candidate_samples": [
+        310.11199951171875,
+        309.4399869441986,
+        309.1520071029663,
+        306.87999725341797,
+        309.471994638443,
+        309.2159926891327,
+        308.83198976516724,
+        308.54400992393494,
+        307.8399896621704,
+        308.19201469421387,
+        309.4399869441986,
+        307.8399896621704,
+        309.4080090522766,
+        309.28000807762146,
+        310.07999181747437,
+        309.08799171447754,
+        309.08799171447754,
+        308.9599907398224,
+        307.8399896621704,
+        309.28000807762146
+      ]
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 409.2159867286682,
+      "candidate_us": 309.02400612831116,
+      "baseline_samples": [
+        409.05600786209106,
+        410.2399945259094,
+        409.40800309181213,
+        411.0719859600067,
+        410.4959964752197,
+        407.61598944664,
+        409.1840088367462,
+        407.74399042129517,
+        407.9680144786835,
+        409.824013710022,
+        407.6479971408844,
+        410.5280041694641,
+        410.6239974498749,
+        409.0240001678467,
+        410.46398878097534,
+        407.45601058006287,
+        409.2159867286682,
+        408.8959991931915,
+        409.2159867286682,
+        409.4719886779785
+      ],
+      "candidate_samples": [
+        310.43198704719543,
+        308.8639974594116,
+        309.2480003833771,
+        310.7840120792389,
+        311.1039996147156,
+        309.05601382255554,
+        308.51200222969055,
+        308.9280128479004,
+        308.19201469421387,
+        308.31998586654663,
+        308.4160089492798,
+        310.5599880218506,
+        310.68798899650574,
+        310.016006231308,
+        308.896005153656,
+        308.9919984340668,
+        310.11199951171875,
+        307.96799063682556,
+        307.13599920272827,
+        309.7600042819977
+      ]
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 409.0080112218857,
+      "candidate_us": 308.6079955101013,
+      "baseline_samples": [
+        409.5039963722229,
+        407.55200386047363,
+        408.8959991931915,
+        409.92000699043274,
+        410.0160002708435,
+        409.280002117157,
+        408.28800201416016,
+        408.86399149894714,
+        409.05600786209106,
+        410.40000319480896,
+        408.2239866256714,
+        407.80800580978394,
+        408.6399972438812,
+        410.1119935512543,
+        408.9600145816803,
+        409.4719886779785,
+        409.63199734687805,
+        408.735990524292,
+        407.0720076560974,
+        409.15200114250183
+      ],
+      "candidate_samples": [
+        309.02400612831116,
+        310.68798899650574,
+        311.8399977684021,
+        308.9599907398224,
+        306.5280020236969,
+        308.47999453544617,
+        307.48799443244934,
+        309.1840147972107,
+        308.73599648475647,
+        309.59999561309814,
+        308.83198976516724,
+        306.94401264190674,
+        309.9200129508972,
+        310.88000535964966,
+        307.5520098209381,
+        308.25600028038025,
+        307.93601274490356,
+        307.0079982280731,
+        306.68801069259644,
+        308.31998586654663
+      ]
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 410.0800007581711,
+      "candidate_us": 308.83198976516724,
+      "baseline_samples": [
+        410.65600514411926,
+        412.06398606300354,
+        410.0160002708435,
+        410.5600118637085,
+        410.14400124549866,
+        410.5600118637085,
+        409.7920060157776,
+        410.8160138130188,
+        410.65600514411926,
+        408.8959991931915,
+        409.85599160194397,
+        410.3359878063202,
+        411.00800037384033,
+        408.32000970840454,
+        409.5360040664673,
+        408.4480106830597,
+        407.6800048351288,
+        409.88799929618835,
+        410.5280041694641,
+        408.4160029888153
+      ],
+      "candidate_samples": [
+        308.47999453544617,
+        309.6640110015869,
+        309.56798791885376,
+        308.73599648475647,
+        309.7600042819977,
+        309.56798791885376,
+        309.88800525665283,
+        309.34399366378784,
+        309.6640110015869,
+        308.83198976516724,
+        308.83198976516724,
+        309.4080090522766,
+        307.8080117702484,
+        308.51200222969055,
+        308.76800417900085,
+        308.4479868412018,
+        307.8080117702484,
+        308.7039887905121,
+        308.57598781585693,
+        309.59999561309814
+      ]
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 409.7599983215332,
+      "candidate_us": 308.9760094881058,
+      "baseline_samples": [
+        413.02400827407837,
+        410.94401478767395,
+        408.5119962692261,
+        409.7599983215332,
+        410.68801283836365,
+        408.9280068874359,
+        408.4799885749817,
+        409.2159867286682,
+        410.3359878063202,
+        409.7599983215332,
+        407.51999616622925,
+        408.4160029888153,
+        408.09598565101624,
+        411.16800904273987,
+        411.0400080680847,
+        409.9520146846771,
+        409.37599539756775,
+        410.6239974498749,
+        409.7920060157776,
+        409.15200114250183
+      ],
+      "candidate_samples": [
+        309.471994638443,
+        309.9519908428192,
+        309.56798791885376,
+        308.47999453544617,
+        308.83198976516724,
+        308.9280128479004,
+        308.4479868412018,
+        308.4479868412018,
+        306.68801069259644,
+        310.5599880218506,
+        309.02400612831116,
+        309.08799171447754,
+        308.6720108985901,
+        310.7520043849945,
+        309.08799171447754,
+        308.4160089492798,
+        308.51200222969055,
+        308.28800797462463,
+        309.7279965877533,
+        309.88800525665283
+      ]
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 409.15200114250183,
+      "candidate_us": 308.9760094881058,
+      "baseline_samples": [
+        410.3679955005646,
+        410.20798683166504,
+        412.0959937572479,
+        411.8080139160156,
+        408.70401263237,
+        408.54400396347046,
+        406.5920114517212,
+        408.60798954963684,
+        408.80000591278076,
+        407.61598944664,
+        407.3280096054077,
+        408.6720049381256,
+        408.60798954963684,
+        411.296010017395,
+        411.6159975528717,
+        407.61598944664,
+        409.66400504112244,
+        409.5039963722229,
+        410.5280041694641,
+        411.1039936542511
+      ],
+      "candidate_samples": [
+        310.07999181747437,
+        310.8159899711609,
+        309.88800525665283,
+        309.2159926891327,
+        308.76800417900085,
+        308.6400032043457,
+        308.47999453544617,
+        307.3279857635498,
+        307.99999833106995,
+        308.351993560791,
+        308.6400032043457,
+        308.31998586654663,
+        308.57598781585693,
+        309.7279965877533,
+        309.56798791885376,
+        309.7600042819977,
+        309.1840147972107,
+        308.6079955101013,
+        309.3760013580322,
+        309.2480003833771
+      ]
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 128,
+        "sharding": "ep8",
+        "load": "verify 16",
+        "weight": 60,
+        "seed": 405
+      },
+      "baseline_us": 409.2479944229126,
+      "candidate_us": 309.05601382255554,
+      "baseline_samples": [
+        410.14400124549866,
+        409.59998965263367,
+        409.9520146846771,
+        410.3679955005646,
+        410.3679955005646,
+        408.83201360702515,
+        408.1279933452606,
+        410.2720022201538,
+        408.86399149894714,
+        410.65600514411926,
+        410.20798683166504,
+        410.0160002708435,
+        408.5119962692261,
+        407.6479971408844,
+        408.09598565101624,
+        407.8400135040283,
+        407.61598944664,
+        408.8959991931915,
+        410.40000319480896,
+        407.29600191116333
+      ],
+      "candidate_samples": [
+        310.4639947414398,
+        309.6959888935089,
+        309.9519908428192,
+        309.53601002693176,
+        309.3760013580322,
+        307.0079982280731,
+        308.76800417900085,
+        309.1840147972107,
+        308.1279993057251,
+        308.351993560791,
+        309.79201197624207,
+        310.7199966907501,
+        308.25600028038025,
+        308.896005153656,
+        308.1600069999695,
+        309.5040023326874,
+        308.83198976516724,
+        308.8639974594116,
+        311.0080063343048,
+        308.9280128479004
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 592.8320288658142,
+      "candidate_us": 394.75199580192566,
+      "baseline_samples": [
+        599.6479988098145,
+        593.0560231208801,
+        591.3919806480408,
+        598.0160236358643,
+        593.4079885482788,
+        596.8319773674011,
+        595.8399772644043,
+        592.8320288658142,
+        592.8320288658142,
+        592.3519730567932,
+        593.6319828033447,
+        595.4239964485168,
+        594.2080020904541,
+        590.6879901885986,
+        591.3599729537964,
+        590.0800228118896,
+        590.9759998321533,
+        591.0080075263977,
+        590.5600190162659,
+        591.1359786987305
+      ],
+      "candidate_samples": [
+        396.38400077819824,
+        395.04000544548035,
+        396.60799503326416,
+        393.72798800468445,
+        394.75199580192566,
+        395.7439959049225,
+        395.7439959049225,
+        396.09599113464355,
+        396.06401324272156,
+        396.2880074977875,
+        394.75199580192566,
+        395.9679901599884,
+        391.6800022125244,
+        393.5680091381073,
+        393.69601011276245,
+        393.3440148830414,
+        392.89599657058716,
+        394.20801401138306,
+        392.41600036621094,
+        393.21601390838623
+      ]
+    },
+    {
+      "candidate": "group_w16",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 591.3919806480408,
+      "candidate_us": 392.91200041770935,
+      "baseline_samples": [
+        591.6799902915955,
+        594.3679809570312,
+        591.3919806480408,
+        590.7520055770874,
+        591.808021068573,
+        593.5680270195007,
+        592.9279923439026,
+        592.2560095787048,
+        590.7520055770874,
+        590.7520055770874,
+        591.3919806480408,
+        590.6879901885986,
+        590.175986289978,
+        591.3919806480408,
+        590.4639959335327,
+        590.9119844436646,
+        592.5440192222595,
+        592.8320288658142,
+        590.719997882843,
+        590.719997882843
+      ],
+      "candidate_samples": [
+        393.47198605537415,
+        394.1760063171387,
+        392.7040100097656,
+        393.2799994945526,
+        392.5760090351105,
+        394.27199959754944,
+        393.887996673584,
+        393.3440148830414,
+        392.2879993915558,
+        392.5760090351105,
+        393.40800046920776,
+        392.7359879016876,
+        392.8320109844208,
+        393.66400241851807,
+        392.8639888763428,
+        392.5440013408661,
+        393.92000436782837,
+        391.7759954929352,
+        392.9600119590759,
+        392.4799859523773
+      ]
+    },
+    {
+      "candidate": "group_w4",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 591.4559960365295,
+      "candidate_us": 392.5600051879883,
+      "baseline_samples": [
+        591.3599729537964,
+        590.399980545044,
+        592.0320153236389,
+        589.9519920349121,
+        594.3999886512756,
+        590.9439921379089,
+        592.0640230178833,
+        592.0000076293945,
+        593.4079885482788,
+        591.4239883422852,
+        589.9839997291565,
+        592.2560095787048,
+        593.1519865989685,
+        587.5840187072754,
+        591.4559960365295,
+        593.7920212745667,
+        591.1359786987305,
+        591.5200114250183,
+        591.4559960365295,
+        591.4559960365295
+      ],
+      "candidate_samples": [
+        393.92000436782837,
+        392.5440013408661,
+        391.36001467704773,
+        393.15199851989746,
+        392.35201478004456,
+        391.87198877334595,
+        391.36001467704773,
+        392.63999462127686,
+        391.29599928855896,
+        392.60798692703247,
+        392.5440013408661,
+        392.5760090351105,
+        392.7359879016876,
+        391.7120099067688,
+        391.9999897480011,
+        392.8320109844208,
+        391.84001088142395,
+        393.312007188797,
+        392.67200231552124,
+        393.47198605537415
+      ]
+    },
+    {
+      "candidate": "group_w8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 590.6239748001099,
+      "candidate_us": 392.7839994430542,
+      "baseline_samples": [
+        589.6959900856018,
+        589.6959900856018,
+        591.3599729537964,
+        590.175986289978,
+        588.9599919319153,
+        592.5760269165039,
+        591.5200114250183,
+        589.2800092697144,
+        589.8879766464233,
+        590.6239748001099,
+        591.264009475708,
+        592.2880172729492,
+        591.1999940872192,
+        589.8879766464233,
+        590.2079939842224,
+        591.6159749031067,
+        592.2240018844604,
+        589.3759727478027,
+        590.6239748001099,
+        590.9759998321533
+      ],
+      "candidate_samples": [
+        393.6319947242737,
+        393.92000436782837,
+        393.92000436782837,
+        393.2479918003082,
+        390.9760117530823,
+        392.8320109844208,
+        392.09601283073425,
+        392.5440013408661,
+        392.5760090351105,
+        392.192006111145,
+        392.41600036621094,
+        392.8000032901764,
+        392.7359879016876,
+        392.767995595932,
+        392.32000708580017,
+        393.50399374961853,
+        392.8320109844208,
+        393.21601390838623,
+        392.8000032901764,
+        391.61598682403564
+      ]
+    },
+    {
+      "candidate": "scaled_w16",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 590.8800065517426,
+      "candidate_us": 392.8159922361374,
+      "baseline_samples": [
+        592.1919941902161,
+        591.6799902915955,
+        588.6719822883606,
+        592.1279788017273,
+        591.4239883422852,
+        589.8560285568237,
+        590.719997882843,
+        591.808021068573,
+        590.4960036277771,
+        591.3599729537964,
+        590.4319882392883,
+        591.7440056800842,
+        591.0400152206421,
+        592.3839807510376,
+        590.2079939842224,
+        591.3280248641968,
+        587.6160264015198,
+        588.2880091667175,
+        586.4319801330566,
+        587.2640013694763
+      ],
+      "candidate_samples": [
+        394.1760063171387,
+        392.60798692703247,
+        392.9600119590759,
+        392.9919898509979,
+        393.1199908256531,
+        392.8639888763428,
+        394.1119909286499,
+        393.50399374961853,
+        394.1760063171387,
+        392.767995595932,
+        391.58400893211365,
+        391.64799451828003,
+        392.06400513648987,
+        394.7199881076813,
+        392.2559916973114,
+        393.15199851989746,
+        390.4320001602173,
+        389.2480134963989,
+        390.30399918556213,
+        392.2240138053894
+      ]
+    },
+    {
+      "candidate": "scaled_w4",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 587.8559947013855,
+      "candidate_us": 391.90399646759033,
+      "baseline_samples": [
+        588.6399745941162,
+        588.0320072174072,
+        588.1279706954956,
+        588.15997838974,
+        588.5440111160278,
+        585.6320261955261,
+        587.9679918289185,
+        586.8160128593445,
+        586.624026298523,
+        591.6799902915955,
+        588.2880091667175,
+        588.096022605896,
+        587.2960090637207,
+        586.5920186042786,
+        586.7840051651001,
+        588.0320072174072,
+        587.6799821853638,
+        587.7439975738525,
+        587.7119898796082,
+        586.8160128593445
+      ],
+      "candidate_samples": [
+        392.63999462127686,
+        392.89599657058716,
+        391.4560079574585,
+        392.0319974422455,
+        391.29599928855896,
+        390.52799344062805,
+        391.4879858493805,
+        393.3759927749634,
+        389.3760144710541,
+        392.5760090351105,
+        390.81600308418274,
+        392.92800426483154,
+        392.12799072265625,
+        390.75198769569397,
+        392.89599657058716,
+        391.80800318717957,
+        389.44000005722046,
+        392.767995595932,
+        390.49598574638367,
+        391.9999897480011
+      ]
+    },
+    {
+      "candidate": "scaled_w8",
+      "case": {
+        "bs": 256,
+        "sharding": "ep8",
+        "load": "verify 32",
+        "weight": 60,
+        "seed": 406
+      },
+      "baseline_us": 588.9439880847931,
+      "candidate_us": 392.11200177669525,
+      "baseline_samples": [
+        588.9919996261597,
+        587.6160264015198,
+        588.6719822883606,
+        587.5200033187866,
+        589.3120169639587,
+        587.9999995231628,
+        589.568018913269,
+        590.4639959335327,
+        588.4159803390503,
+        590.5600190162659,
+        591.0080075263977,
+        587.007999420166,
+        587.3280167579651,
+        589.5360112190247,
+        588.8959765434265,
+        590.2400016784668,
+        590.3679728507996,
+        588.3200168609619,
+        590.8480286598206,
+        588.3200168609619
+      ],
+      "candidate_samples": [
+        393.50399374961853,
+        391.87198877334595,
+        392.38399267196655,
+        390.1120126247406,
+        391.6800022125244,
+        391.64799451828003,
+        390.5920088291168,
+        392.67200231552124,
+        391.4879858493805,
+        393.0880129337311,
+        391.64799451828003,
+        390.8799886703491,
+        392.7040100097656,
+        392.60798692703247,
+        390.3999924659729,
+        392.9600119590759,
+        392.5440013408661,
+        393.40800046920776,
+        392.192006111145,
+        392.0319974422455
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"bs\": 4, \"dist\": \"normal\", \"seed\": 1800, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 33, \"dist\": \"normal\", \"seed\": 1801, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 257, \"dist\": \"normal\", \"seed\": 1802, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 128, \"dist\": \"skewed\", \"seed\": 1803, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"dist\": \"normal\", \"seed\": 1804, \"sharding\": \"ep8\"}": {},
+    "{\"bs\": 1, \"load\": \"decode 1\", \"seed\": 401, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 16, \"load\": \"decode 16\", \"seed\": 402, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 32, \"load\": \"decode 32\", \"seed\": 403, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 8, \"load\": \"verify 1\", \"seed\": 404, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 128, \"load\": \"verify 16\", \"seed\": 405, \"sharding\": \"ep8\", \"weight\": 60}": {},
+    "{\"bs\": 256, \"load\": \"verify 32\", \"seed\": 406, \"sharding\": \"ep8\", \"weight\": 60}": {}
+  },
+  "calibration_us": 3.3279999624937773,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "scaled_w4",
+    "case": {
+      "bs": 256,
+      "sharding": "ep8",
+      "load": "verify 32",
+      "weight": 60,
+      "seed": 406
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       1.492ms        87.05%       1.492ms     186.549us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     150.820us         8.80%     150.820us      37.705us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      23.039us         1.34%      23.039us       5.760us             4  \nvoid group_routes<256>(int const*, int*, int*, int*,...         0.00%       0.000us         0.00%       0.000us       0.000us      22.721us         1.33%      22.721us       5.680us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      21.984us         1.28%      21.984us       5.496us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.488us         0.20%       3.488us       0.872us             4  \n                                        cudaGraphLaunch         3.54%     112.616us        47.64%       1.514ms     378.418us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        44.09%       1.401ms        44.09%       1.401ms       1.401ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        52.36%       1.664ms        52.36%       1.664ms     831.850us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 3.177ms\nSelf CUDA time total: 1.714ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid sglang::device::marlin_moe::Marlin<__nv_bfloat1...         0.00%       0.000us         0.00%       0.000us       0.000us       2.249ms        90.09%       2.249ms     281.111us             8  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     151.360us         6.06%     151.360us      37.840us             4  \nvoid sglang::act_and_mul_kernel<__nv_bfloat16, (sgla...         0.00%       0.000us         0.00%       0.000us       0.000us      22.304us         0.89%      22.304us       5.576us             4  \n                  _post_expert_norm_weighted_sum_kernel         0.00%       0.000us         0.00%       0.000us       0.000us      21.312us         0.85%      21.312us       5.328us             4  \nvoid at::native::index_elementwise_kernel<128, 4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      13.376us         0.54%      13.376us       3.344us             4  \nvoid at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      13.056us         0.52%      13.056us       3.264us             4  \nvoid moe_align_block_size_kernel<int>(int const*, in...         0.00%       0.000us         0.00%       0.000us       0.000us      11.904us         0.48%      11.904us       2.976us             4  \nvoid count_and_sort_expert_tokens_kernel<int>(int co...         0.00%       0.000us         0.00%       0.000us       0.000us      10.176us         0.41%      10.176us       2.544us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.904us         0.16%       3.904us       0.976us             4  \n                                        cudaGraphLaunch         2.80%     108.818us        37.22%       1.445ms     361.341us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        34.42%       1.337ms        34.42%       1.337ms       1.337ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        62.78%       2.438ms        62.78%       2.438ms       1.219ms       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 3.883ms\nSelf CUDA time total: 2.496ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 22,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "group_w16",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "group_w16",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "group_w16",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "group_w16",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "group_w4",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "group_w4",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "group_w4",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "group_w4",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "group_w8",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "group_w8",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "group_w8",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "group_w8",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "scaled_w16",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "scaled_w16",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "scaled_w16",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "scaled_w16",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "scaled_w4",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "scaled_w4",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "scaled_w4",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "scaled_w4",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    },
+    {
+      "candidate": "scaled_w8",
+      "function": "_compact_align",
+      "registers": 28,
+      "spills": 0,
+      "shared": 128
+    },
+    {
+      "candidate": "scaled_w8",
+      "function": "_compact_align",
+      "registers": 62,
+      "spills": 0,
+      "shared": 512
+    },
+    {
+      "candidate": "scaled_w8",
+      "function": "_compact_align",
+      "registers": 95,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "scaled_w8",
+      "function": "_compact_align",
+      "registers": 40,
+      "spills": 0,
+      "shared": 256
+    }
+  ],
+  "elapsed_s": 25.294274515999998,
+  "case_scope": "full problem suite",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_moe_w4a16",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/757047f55753e2d4c48702a02d3302f39ab4673cfe4959d4dd66ad131b32c72f.py",
+      "sha256": "757047f55753e2d4c48702a02d3302f39ab4673cfe4959d4dd66ad131b32c72f"
+    },
+    "group_w16": {
+      "path": "experiments/sources/0b28b4890fc44ab25ebc1ae50a5dc9ccd090066d5a53b26344eec7576640a699.py",
+      "sha256": "0b28b4890fc44ab25ebc1ae50a5dc9ccd090066d5a53b26344eec7576640a699"
+    },
+    "group_w4": {
+      "path": "experiments/sources/641aca30bdb198d30f2ce051830c9c04cd787d3541db600a48e330fd1e991c5c.py",
+      "sha256": "641aca30bdb198d30f2ce051830c9c04cd787d3541db600a48e330fd1e991c5c"
+    },
+    "group_w8": {
+      "path": "experiments/sources/e28812280fb7c6bb11a431a42d18e5f276b32e120730bed9d2611dc8550775af.py",
+      "sha256": "e28812280fb7c6bb11a431a42d18e5f276b32e120730bed9d2611dc8550775af"
+    },
+    "scaled_w16": {
+      "path": "experiments/sources/c46edc89d50ec22aa005ea46b10fd903dc11825a7f8928d705a14fdeed22a445.py",
+      "sha256": "c46edc89d50ec22aa005ea46b10fd903dc11825a7f8928d705a14fdeed22a445"
+    },
+    "scaled_w4": {
+      "path": "experiments/sources/6eb294b0b259b5e9d258ab5e21799a304617bad64a41de4645b9c3885c9fcfdf.py",
+      "sha256": "6eb294b0b259b5e9d258ab5e21799a304617bad64a41de4645b9c3885c9fcfdf"
+    },
+    "scaled_w8": {
+      "path": "experiments/sources/c6c6c995e25253c080db27027ffc5ceceb83f74eba11fcdde6c2ac751fc0f1fb.py",
+      "sha256": "c6c6c995e25253c080db27027ffc5ceceb83f74eba11fcdde6c2ac751fc0f1fb"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

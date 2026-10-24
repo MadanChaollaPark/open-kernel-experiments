@@ -1,0 +1,16 @@
+{
+  "status": "Rejected: correctness passed but slower on every scored shape",
+  "hypothesis": "Round each Marlin stripe to whole K columns, eliminating cross-block reductions at a potential occupancy cost. Distinct from rejected atomic accumulation.",
+  "change": "iters = k_tiles * ceil(n_tiles * parallel / gridDim.x)",
+  "precision": "Unchanged BF16 activations, NVFP4 storage and FP32 accumulators. Native BF16 finalization retained.",
+  "scope": "Four configurations: K64/128 and one/two blocks per SM, adaptive m8/m16 from current best.",
+  "source": "work/moe_fullk.cu",
+  "compile_log": "work/moe-fullk-compile.log",
+  "compile_session": 38504,
+  "updated_at": "2026-10-23T23:48:05.113559+00:00",
+  "result": "outputs/moe-fullk.json",
+  "best_variant": "k128_b1",
+  "best_speedup": 0.98,
+  "control_speedup": 1.0875,
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

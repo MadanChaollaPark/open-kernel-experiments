@@ -1,0 +1,4301 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.709e-02 (worst row 9.066e-02) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.709e-02 (worst row 9.066e-02) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.709e-02 (worst row 9.066e-02) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.709e-02 (worst row 9.066e-02) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "seed": 1703,
+        "batch": 4,
+        "ctx": 3000,
+        "heads": "tp8",
+        "layer": "full"
+      },
+      "ok": true,
+      "message": "relative L2 error 7.709e-02 (worst row 9.066e-02) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.423e-02 (worst row 8.899e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.423e-02 (worst row 8.900e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.423e-02 (worst row 8.899e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.423e-02 (worst row 8.899e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "seed": 1704,
+        "batch": 8,
+        "ctx": 8192,
+        "heads": "dp",
+        "layer": "full",
+        "spread": "mixed"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.422e-02 (worst row 8.898e-02) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.789e-02 (worst row 1.211e-01) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.789e-02 (worst row 1.211e-01) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.789e-02 (worst row 1.211e-01) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.789e-02 (worst row 1.211e-01) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "seed": 1705,
+        "batch": 2,
+        "ctx": 100000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 8.789e-02 (worst row 1.211e-01) [bound 0.150: 2.5 x the reference's 0.086 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.296e-02 (worst row 1.199e-01) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.296e-02 (worst row 1.199e-01) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.296e-02 (worst row 1.199e-01) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.296e-02 (worst row 1.199e-01) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "seed": 1707,
+        "batch": 4,
+        "ctx": 6000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "edges"
+      },
+      "ok": true,
+      "message": "relative L2 error 8.296e-02 (worst row 1.199e-01) [bound 0.150: 2.5 x the reference's 0.085 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 9.396e-02 (worst row 1.243e-01) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 9.396e-02 (worst row 1.243e-01) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 9.396e-02 (worst row 1.243e-01) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 9.396e-02 (worst row 1.243e-01) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "seed": 1708,
+        "batch": 1,
+        "ctx": 1048576,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8
+      },
+      "ok": true,
+      "message": "relative L2 error 9.396e-02 (worst row 1.243e-01) [bound 0.150: 2.5 x the reference's 0.101 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.637e-02 (worst row 1.068e-01) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.637e-02 (worst row 1.068e-01) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.637e-02 (worst row 1.068e-01) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.637e-02 (worst row 1.068e-01) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "seed": 1710,
+        "batch": 2,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "kv_scale": 0.015625
+      },
+      "ok": true,
+      "message": "relative L2 error 8.637e-02 (worst row 1.068e-01) [bound 0.150: 2.5 x the reference's 0.075 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.760e-02 (worst row 7.862e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.760e-02 (worst row 7.862e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.760e-02 (worst row 7.862e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.760e-02 (worst row 7.862e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "seed": 1711,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.760e-02 (worst row 7.862e-02) [bound 0.150: 2.5 x the reference's 0.069 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.974e-02 (worst row 7.854e-02) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.974e-02 (worst row 7.854e-02) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.974e-02 (worst row 7.854e-02) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.974e-02 (worst row 7.854e-02) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "seed": 1713,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "soft"
+      },
+      "ok": true,
+      "message": "relative L2 error 6.974e-02 (worst row 7.854e-02) [bound 0.150: 2.5 x the reference's 0.070 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.506e-02 (worst row 5.625e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.506e-02 (worst row 5.625e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.506e-02 (worst row 5.625e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.506e-02 (worst row 5.625e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "seed": 1714,
+        "batch": 4,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "spread": "mixed",
+        "dist": "coherent",
+        "page": 1
+      },
+      "ok": true,
+      "message": "relative L2 error 4.506e-02 (worst row 5.625e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.791e-02 (worst row 4.354e-02) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.791e-02 (worst row 4.354e-02) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.791e-02 (worst row 4.354e-02) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.791e-02 (worst row 4.354e-02) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "seed": 1715,
+        "batch": 2,
+        "ctx": 20000,
+        "heads": "dp",
+        "layer": "full",
+        "q_len": 8,
+        "dist": "coherent"
+      },
+      "ok": true,
+      "message": "relative L2 error 3.791e-02 (worst row 4.354e-02) [bound 0.109: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 64,
+        "kv_scale": 0.015625,
+        "dist": "soft",
+        "spread": "mixed",
+        "seed": 1888
+      },
+      "ok": true,
+      "message": "relative L2 error 6.497e-02 (worst row 8.876e-02) [bound 0.150: 2.5 x the reference's 0.064 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 64,
+        "kv_scale": 0.015625,
+        "dist": "soft",
+        "spread": "mixed",
+        "seed": 1888
+      },
+      "ok": true,
+      "message": "relative L2 error 6.497e-02 (worst row 8.876e-02) [bound 0.150: 2.5 x the reference's 0.064 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 64,
+        "kv_scale": 0.015625,
+        "dist": "soft",
+        "spread": "mixed",
+        "seed": 1888
+      },
+      "ok": true,
+      "message": "relative L2 error 6.497e-02 (worst row 8.876e-02) [bound 0.150: 2.5 x the reference's 0.064 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 64,
+        "kv_scale": 0.015625,
+        "dist": "soft",
+        "spread": "mixed",
+        "seed": 1888
+      },
+      "ok": true,
+      "message": "relative L2 error 6.497e-02 (worst row 8.876e-02) [bound 0.150: 2.5 x the reference's 0.064 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 9,
+        "ctx": 5000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 8,
+        "page": 64,
+        "kv_scale": 0.015625,
+        "dist": "soft",
+        "spread": "mixed",
+        "seed": 1888
+      },
+      "ok": true,
+      "message": "relative L2 error 6.497e-02 (worst row 8.876e-02) [bound 0.150: 2.5 x the reference's 0.064 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 12,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 1,
+        "page": 1,
+        "dist": "coherent",
+        "spread": "mixed",
+        "seed": 1889
+      },
+      "ok": true,
+      "message": "relative L2 error 6.597e-02 (worst row 8.249e-02) [bound 0.150: 2.5 x the reference's 0.066 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 12,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 1,
+        "page": 1,
+        "dist": "coherent",
+        "spread": "mixed",
+        "seed": 1889
+      },
+      "ok": true,
+      "message": "relative L2 error 6.597e-02 (worst row 8.249e-02) [bound 0.150: 2.5 x the reference's 0.066 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 12,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 1,
+        "page": 1,
+        "dist": "coherent",
+        "spread": "mixed",
+        "seed": 1889
+      },
+      "ok": true,
+      "message": "relative L2 error 6.597e-02 (worst row 8.249e-02) [bound 0.150: 2.5 x the reference's 0.066 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 12,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 1,
+        "page": 1,
+        "dist": "coherent",
+        "spread": "mixed",
+        "seed": 1889
+      },
+      "ok": true,
+      "message": "relative L2 error 6.599e-02 (worst row 8.239e-02) [bound 0.150: 2.5 x the reference's 0.066 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 12,
+        "ctx": 9000,
+        "heads": "tp8",
+        "layer": "full",
+        "q_len": 1,
+        "page": 1,
+        "dist": "coherent",
+        "spread": "mixed",
+        "seed": 1889
+      },
+      "ok": true,
+      "message": "relative L2 error 6.599e-02 (worst row 8.239e-02) [bound 0.150: 2.5 x the reference's 0.066 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.226e-02 (worst row 4.226e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.226e-02 (worst row 4.226e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.226e-02 (worst row 4.226e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.226e-02 (worst row 4.226e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "ok": true,
+      "message": "relative L2 error 4.226e-02 (worst row 4.226e-02) [bound 0.124: 2.5 x the reference's 0.043 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.075e-02 (worst row 5.435e-02) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.075e-02 (worst row 5.434e-02) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.074e-02 (worst row 5.434e-02) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.074e-02 (worst row 5.430e-02) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "ok": true,
+      "message": "relative L2 error 4.075e-02 (worst row 5.434e-02) [bound 0.111: 2.5 x the reference's 0.038 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.694e-02 (worst row 6.440e-02) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.696e-02 (worst row 6.449e-02) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.695e-02 (worst row 6.450e-02) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.696e-02 (worst row 6.450e-02) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "ok": true,
+      "message": "relative L2 error 4.695e-02 (worst row 6.450e-02) [bound 0.130: 2.5 x the reference's 0.046 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 2.737e-02 (worst row 4.052e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 2.737e-02 (worst row 4.052e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 2.737e-02 (worst row 4.052e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 2.737e-02 (worst row 4.052e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "ok": true,
+      "message": "relative L2 error 2.737e-02 (worst row 4.052e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.219e-02 (worst row 6.115e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.219e-02 (worst row 6.115e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.219e-02 (worst row 6.115e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.219e-02 (worst row 6.115e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "ok": true,
+      "message": "relative L2 error 3.219e-02 (worst row 6.115e-02) [bound 0.086: 2.5 x the reference's 0.028 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.456e-02 (worst row 6.988e-02) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.456e-02 (worst row 6.988e-02) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.456e-02 (worst row 6.988e-02) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.456e-02 (worst row 6.988e-02) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "ok": true,
+      "message": "relative L2 error 3.456e-02 (worst row 6.988e-02) [bound 0.080: 2.5 x the reference's 0.026 with FP8 E4M3 queries + 0.015]"
+    }
+  ],
+  "timings": [
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 35.19999980926514,
+      "candidate_us": 22.86399994045496,
+      "baseline_samples": [
+        36.959998309612274,
+        34.912001341581345,
+        35.711999982595444,
+        35.26400029659271,
+        35.00799834728241,
+        35.551998764276505,
+        34.88000109791756,
+        35.74400022625923,
+        34.65599939227104,
+        35.13599932193756,
+        34.94400158524513,
+        35.679999738931656,
+        35.45600175857544,
+        35.10399907827377,
+        35.13599932193756,
+        36.3520011305809,
+        35.51999852061272,
+        35.16799956560135,
+        34.591998904943466,
+        35.232000052928925
+      ],
+      "candidate_samples": [
+        23.104000836610794,
+        22.272000089287758,
+        22.84800074994564,
+        22.336000576615334,
+        23.19999970495701,
+        22.84800074994564,
+        23.360000923275948,
+        22.943999618291855,
+        22.943999618291855,
+        22.816000506281853,
+        23.744000121951103,
+        22.5600004196167,
+        22.84800074994564,
+        23.231999948620796,
+        23.231999948620796,
+        22.23999984562397,
+        22.6879995316267,
+        22.71999977529049,
+        24.000000208616257,
+        22.87999913096428
+      ]
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 35.45600175857544,
+      "candidate_us": 22.84800074994564,
+      "baseline_samples": [
+        35.58399900794029,
+        35.45600175857544,
+        36.0959991812706,
+        35.32800078392029,
+        35.551998764276505,
+        35.32800078392029,
+        35.45600175857544,
+        35.74400022625923,
+        34.912001341581345,
+        35.551998764276505,
+        35.999998450279236,
+        35.2960005402565,
+        34.752000123262405,
+        35.96799820661545,
+        35.13599932193756,
+        35.551998764276505,
+        34.81600061058998,
+        35.64799949526787,
+        35.16799956560135,
+        35.45600175857544
+      ],
+      "candidate_samples": [
+        24.000000208616257,
+        22.592000663280487,
+        23.391999304294586,
+        22.495999932289124,
+        23.903999477624893,
+        22.336000576615334,
+        22.84800074994564,
+        23.04000034928322,
+        22.975999861955643,
+        23.104000836610794,
+        22.975999861955643,
+        22.752000018954277,
+        22.911999374628067,
+        22.71999977529049,
+        22.71999977529049,
+        22.84800074994564,
+        22.816000506281853,
+        22.655999287962914,
+        23.135999217629433,
+        22.71999977529049
+      ]
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 34.94400158524513,
+      "candidate_us": 22.911999374628067,
+      "baseline_samples": [
+        35.551998764276505,
+        34.94400158524513,
+        35.711999982595444,
+        34.94400158524513,
+        34.912001341581345,
+        34.94400158524513,
+        34.78400036692619,
+        36.159999668598175,
+        34.71999987959862,
+        34.78400036692619,
+        35.071998834609985,
+        34.591998904943466,
+        35.10399907827377,
+        34.912001341581345,
+        35.2960005402565,
+        35.2960005402565,
+        34.94400158524513,
+        34.94400158524513,
+        35.16799956560135,
+        35.00799834728241
+      ],
+      "candidate_samples": [
+        23.840000852942467,
+        22.495999932289124,
+        23.296000435948372,
+        23.04000034928322,
+        23.391999304294586,
+        22.87999913096428,
+        22.752000018954277,
+        22.816000506281853,
+        22.71999977529049,
+        22.36800082027912,
+        23.072000592947006,
+        22.272000089287758,
+        23.455999791622162,
+        23.423999547958374,
+        22.816000506281853,
+        22.943999618291855,
+        23.04000034928322,
+        22.52800017595291,
+        22.943999618291855,
+        22.495999932289124
+      ]
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 35.151999443769455,
+      "candidate_us": 22.752000018954277,
+      "baseline_samples": [
+        35.232000052928925,
+        36.031998693943024,
+        35.61599925160408,
+        34.4959981739521,
+        34.4959981739521,
+        35.26400029659271,
+        35.071998834609985,
+        34.97600182890892,
+        34.591998904943466,
+        34.97600182890892,
+        35.87200120091438,
+        34.84800085425377,
+        34.81600061058998,
+        35.679999738931656,
+        34.71999987959862,
+        34.94400158524513,
+        35.61599925160408,
+        35.48799827694893,
+        35.45600175857544,
+        35.32800078392029
+      ],
+      "candidate_samples": [
+        23.16799946129322,
+        22.36800082027912,
+        23.360000923275948,
+        22.336000576615334,
+        23.552000522613525,
+        22.5600004196167,
+        22.752000018954277,
+        22.6879995316267,
+        22.784000262618065,
+        22.304000332951546,
+        22.5600004196167,
+        22.943999618291855,
+        23.391999304294586,
+        22.752000018954277,
+        22.784000262618065,
+        22.495999932289124,
+        22.816000506281853,
+        22.655999287962914,
+        23.679999634623528,
+        22.624000906944275
+      ]
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "dist": "coherent",
+        "load": "decode 1",
+        "weight": 16,
+        "seed": 602
+      },
+      "baseline_us": 35.18399968743324,
+      "candidate_us": 22.784000262618065,
+      "baseline_samples": [
+        35.74400022625923,
+        35.551998764276505,
+        35.00799834728241,
+        35.071998834609985,
+        35.232000052928925,
+        34.94400158524513,
+        34.78400036692619,
+        35.551998764276505,
+        35.61599925160408,
+        35.19999980926514,
+        34.78400036692619,
+        35.26400029659271,
+        35.071998834609985,
+        35.77600046992302,
+        34.94400158524513,
+        35.16799956560135,
+        35.232000052928925,
+        35.13599932193756,
+        35.551998764276505,
+        34.912001341581345
+      ],
+      "candidate_samples": [
+        23.32800067961216,
+        22.52800017595291,
+        22.752000018954277,
+        22.463999688625336,
+        23.32800067961216,
+        22.975999861955643,
+        23.16799946129322,
+        22.463999688625336,
+        22.784000262618065,
+        22.784000262618065,
+        23.552000522613525,
+        22.624000906944275,
+        22.784000262618065,
+        23.711999878287315,
+        23.16799946129322,
+        22.624000906944275,
+        22.624000906944275,
+        22.39999920129776,
+        23.679999634623528,
+        22.84800074994564
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 205.79199492931366,
+      "candidate_us": 145.6799954175949,
+      "baseline_samples": [
+        207.96799659729004,
+        206.40000700950623,
+        204.8639953136444,
+        206.59199357032776,
+        205.63200116157532,
+        205.24799823760986,
+        205.9199959039688,
+        204.70400154590607,
+        205.9839963912964,
+        205.05599677562714,
+        205.72799444198608,
+        204.51200008392334,
+        204.8960030078888,
+        206.56000077724457,
+        205.28000593185425,
+        206.08000457286835,
+        205.28000593185425,
+        205.85599541664124,
+        206.33600652217865,
+        206.68800175189972
+      ],
+      "candidate_samples": [
+        146.7519998550415,
+        145.11999487876892,
+        145.34400403499603,
+        146.55999839305878,
+        146.27200365066528,
+        145.9839940071106,
+        146.27200365066528,
+        144.3520039319992,
+        145.1520025730133,
+        145.85599303245544,
+        144.76799964904785,
+        144.6080058813095,
+        145.1520025730133,
+        143.8719928264618,
+        148.3200043439865,
+        146.11199498176575,
+        145.34400403499603,
+        145.50399780273438,
+        146.14400267601013,
+        145.9839940071106
+      ]
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 205.53600043058395,
+      "candidate_us": 185.88799983263016,
+      "baseline_samples": [
+        207.519993185997,
+        204.79999482631683,
+        204.8639953136444,
+        208.064004778862,
+        205.47200739383698,
+        204.79999482631683,
+        205.59999346733093,
+        205.85599541664124,
+        204.67199385166168,
+        205.1520049571991,
+        205.05599677562714,
+        205.1199972629547,
+        205.79199492931366,
+        206.30399882793427,
+        205.9199959039688,
+        206.2399983406067,
+        206.04799687862396,
+        204.96000349521637,
+        205.21600544452667,
+        206.43199980258942
+      ],
+      "candidate_samples": [
+        185.92000007629395,
+        187.26399540901184,
+        184.4159960746765,
+        187.80800700187683,
+        187.55200505256653,
+        185.44000387191772,
+        187.45599687099457,
+        184.12800133228302,
+        186.24000251293182,
+        184.25600230693817,
+        189.2160028219223,
+        185.18400192260742,
+        185.85599958896637,
+        184.1920018196106,
+        188.86399269104004,
+        186.71999871730804,
+        183.16799402236938,
+        185.15199422836304,
+        184.79999899864197,
+        188.38399648666382
+      ]
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 205.55199682712555,
+      "candidate_us": 216.35200083255768,
+      "baseline_samples": [
+        205.56800067424774,
+        205.05599677562714,
+        206.01600408554077,
+        206.59199357032776,
+        204.73599433898926,
+        205.34400641918182,
+        205.9520035982132,
+        205.1199972629547,
+        206.33600652217865,
+        206.2080055475235,
+        205.47200739383698,
+        205.72799444198608,
+        205.53599298000336,
+        206.33600652217865,
+        205.34400641918182,
+        205.1520049571991,
+        206.01600408554077,
+        204.41600680351257,
+        203.93599569797516,
+        206.56000077724457
+      ],
+      "candidate_samples": [
+        217.0879989862442,
+        216.63999557495117,
+        224.63999688625336,
+        217.8879976272583,
+        221.15199267864227,
+        224.16000068187714,
+        216.99200570583344,
+        214.59199488162994,
+        213.28000724315643,
+        226.27200186252594,
+        214.59199488162994,
+        216.06400609016418,
+        213.50400149822235,
+        214.4320011138916,
+        215.96799790859222,
+        216.95999801158905,
+        214.65599536895752,
+        216.0000056028366,
+        216.73600375652313,
+        214.84799683094025
+      ]
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 205.05599677562714,
+      "candidate_us": 185.82400679588318,
+      "baseline_samples": [
+        204.79999482631683,
+        205.79199492931366,
+        205.1199972629547,
+        207.0080041885376,
+        206.1759978532791,
+        204.6400010585785,
+        204.83200252056122,
+        205.50400018692017,
+        206.36799931526184,
+        203.87199521064758,
+        204.79999482631683,
+        203.5840004682541,
+        206.1759978532791,
+        204.22400534152985,
+        204.8639953136444,
+        204.99199628829956,
+        205.24799823760986,
+        206.08000457286835,
+        205.88800311088562,
+        204.99199628829956
+      ],
+      "candidate_samples": [
+        187.80800700187683,
+        185.92000007629395,
+        185.40799617767334,
+        185.56800484657288,
+        185.98400056362152,
+        185.37600338459015,
+        185.95199286937714,
+        186.20799481868744,
+        187.23200261592865,
+        186.62400543689728,
+        184.79999899864197,
+        187.1359944343567,
+        185.34399569034576,
+        185.88800728321075,
+        185.56800484657288,
+        186.88000738620758,
+        185.2799952030182,
+        185.59999763965607,
+        185.63200533390045,
+        185.7600063085556
+      ]
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 16",
+        "weight": 16,
+        "seed": 604
+      },
+      "baseline_us": 205.35999536514282,
+      "candidate_us": 177.47200280427933,
+      "baseline_samples": [
+        205.1839977502823,
+        204.6079933643341,
+        205.76000213623047,
+        206.11199736595154,
+        206.43199980258942,
+        205.79199492931366,
+        203.07199656963348,
+        205.56800067424774,
+        205.63200116157532,
+        204.54399287700653,
+        205.53599298000336,
+        205.02400398254395,
+        204.67199385166168,
+        206.2399983406067,
+        204.41600680351257,
+        205.1839977502823,
+        202.87999510765076,
+        205.6960016489029,
+        204.54399287700653,
+        206.2080055475235
+      ],
+      "candidate_samples": [
+        178.46399545669556,
+        177.824005484581,
+        175.99999904632568,
+        175.9680062532425,
+        176.79999768733978,
+        176.89600586891174,
+        177.63200402259827,
+        177.3120015859604,
+        177.76000499725342,
+        177.95200645923615,
+        175.80799758434296,
+        176.7359972000122,
+        178.20799350738525,
+        177.0240068435669,
+        178.65599691867828,
+        176.83200538158417,
+        178.68800461292267,
+        178.847998380661,
+        176.70400440692902,
+        178.52799594402313
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 387.7919912338257,
+      "candidate_us": 273.0719894170761,
+      "baseline_samples": [
+        389.2480134963989,
+        388.2560133934021,
+        387.9680037498474,
+        386.75200939178467,
+        389.5359933376312,
+        385.888010263443,
+        388.12801241874695,
+        385.6639862060547,
+        387.29599118232727,
+        385.8560025691986,
+        386.3680064678192,
+        387.5519931316376,
+        390.1439905166626,
+        387.64798641204834,
+        385.343998670578,
+        387.935996055603,
+        388.44799995422363,
+        389.8879885673523,
+        386.0799968242645,
+        389.21600580215454
+      ],
+      "candidate_samples": [
+        276.95998549461365,
+        274.3679881095886,
+        277.536004781723,
+        276.7679989337921,
+        274.1119861602783,
+        275.1680016517639,
+        271.807998418808,
+        275.61599016189575,
+        271.0399925708771,
+        270.3680098056793,
+        271.07200026512146,
+        270.3999876976013,
+        271.84000611305237,
+        274.81600642204285,
+        273.24798703193665,
+        272.8959918022156,
+        273.6000120639801,
+        272.2879946231842,
+        271.90399169921875,
+        270.3680098056793
+      ]
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 387.35999166965485,
+      "candidate_us": 334.4639986753464,
+      "baseline_samples": [
+        388.2560133934021,
+        387.4239921569824,
+        386.4000141620636,
+        389.3760144710541,
+        384.8640024662018,
+        387.10400462150574,
+        388.0000114440918,
+        387.29599118232727,
+        388.7360095977783,
+        386.04798913002014,
+        390.1120126247406,
+        387.2640132904053,
+        386.49600744247437,
+        383.1680119037628,
+        387.61600852012634,
+        387.4559998512268,
+        384.38400626182556,
+        391.5199935436249,
+        387.29599118232727,
+        387.935996055603
+      ],
+      "candidate_samples": [
+        338.4320139884949,
+        334.78400111198425,
+        333.8879942893982,
+        336.06401085853577,
+        332.832008600235,
+        338.75200152397156,
+        334.20801162719727,
+        331.0079872608185,
+        335.35999059677124,
+        334.81600880622864,
+        333.8879942893982,
+        331.712007522583,
+        332.99198746681213,
+        337.119996547699,
+        332.41599798202515,
+        334.7199857234955,
+        336.2880051136017,
+        332.89599418640137,
+        333.75999331474304,
+        337.40800619125366
+      ]
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 387.5200003385544,
+      "candidate_us": 404.31998670101166,
+      "baseline_samples": [
+        388.70400190353394,
+        386.59200072288513,
+        386.1759901046753,
+        386.46399974823,
+        389.8560106754303,
+        385.21599769592285,
+        386.78398728370667,
+        389.18399810791016,
+        386.75200939178467,
+        388.5439932346344,
+        386.1120045185089,
+        389.72800970077515,
+        385.15201210975647,
+        390.0800049304962,
+        384.89601016044617,
+        387.9680037498474,
+        389.3760144710541,
+        388.5439932346344,
+        387.32799887657166,
+        387.7120018005371
+      ],
+      "candidate_samples": [
+        405.7919979095459,
+        405.7280123233795,
+        402.68799662590027,
+        402.46400237083435,
+        402.9119908809662,
+        405.3120017051697,
+        399.1999924182892,
+        405.66399693489075,
+        404.9279987812042,
+        401.8239974975586,
+        404.12798523902893,
+        404.63998913764954,
+        404.5119881629944,
+        406.2719941139221,
+        405.95200657844543,
+        402.3680090904236,
+        405.60001134872437,
+        403.77599000930786,
+        400.191992521286,
+        403.6799967288971
+      ]
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 387.7760022878647,
+      "candidate_us": 340.0319963693619,
+      "baseline_samples": [
+        389.2799913883209,
+        387.4239921569824,
+        389.60000872612,
+        388.2879912853241,
+        385.21599769592285,
+        388.12801241874695,
+        387.10400462150574,
+        384.89601016044617,
+        391.55200123786926,
+        387.61600852012634,
+        387.10400462150574,
+        388.41599225997925,
+        389.0239894390106,
+        387.87201046943665,
+        388.60800862312317,
+        386.59200072288513,
+        387.64798641204834,
+        387.6799941062927,
+        386.75200939178467,
+        388.35200667381287
+      ],
+      "candidate_samples": [
+        340.4799997806549,
+        339.87200260162354,
+        341.0879969596863,
+        343.29599142074585,
+        340.09599685668945,
+        338.8800024986267,
+        338.9120101928711,
+        340.64000844955444,
+        340.4160141944885,
+        337.2479975223541,
+        343.00801157951355,
+        338.55998516082764,
+        339.9679958820343,
+        341.6000008583069,
+        338.4000062942505,
+        342.97600388526917,
+        336.92800998687744,
+        337.7920091152191,
+        336.38399839401245,
+        340.4479920864105
+      ]
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "decode 32",
+        "weight": 16,
+        "seed": 606
+      },
+      "baseline_us": 387.90400326251984,
+      "candidate_us": 328.3199965953827,
+      "baseline_samples": [
+        387.1999979019165,
+        390.9760117530823,
+        390.3999924659729,
+        389.1200125217438,
+        387.4239921569824,
+        385.18399000167847,
+        388.51198554039,
+        386.7200016975403,
+        389.5680010318756,
+        387.1999979019165,
+        388.63998651504517,
+        390.8799886703491,
+        388.2240056991577,
+        387.58400082588196,
+        386.1759901046753,
+        387.1360123157501,
+        388.7679874897003,
+        388.480007648468,
+        385.6639862060547,
+        387.1999979019165
+      ],
+      "candidate_samples": [
+        330.6559920310974,
+        329.53599095344543,
+        329.50401306152344,
+        327.07199454307556,
+        328.73600721359253,
+        327.8079926967621,
+        327.0399868488312,
+        327.7119994163513,
+        331.4560055732727,
+        328.5120129585266,
+        330.4640054702759,
+        328.3520042896271,
+        329.3440043926239,
+        329.0559947490692,
+        328.2879889011383,
+        326.84800028800964,
+        327.84000039100647,
+        327.0399868488312,
+        327.455997467041,
+        326.52801275253296
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 40.04799947142601,
+      "candidate_us": 30.912000685930252,
+      "baseline_samples": [
+        42.49599948525429,
+        41.08799993991852,
+        40.64000025391579,
+        40.44799879193306,
+        39.68000039458275,
+        40.383998304605484,
+        40.672000497579575,
+        39.96799886226654,
+        39.583999663591385,
+        40.16000032424927,
+        39.872001856565475,
+        39.84000161290169,
+        39.96799886226654,
+        39.583999663591385,
+        40.47999903559685,
+        40.192000567913055,
+        39.744000881910324,
+        40.12800008058548,
+        39.135999977588654,
+        39.8080013692379
+      ],
+      "candidate_samples": [
+        32.19199925661087,
+        30.7839997112751,
+        30.688000842928886,
+        30.912000685930252,
+        30.912000685930252,
+        30.81599995493889,
+        31.199999153614044,
+        31.360000371932983,
+        31.007999554276466,
+        30.719999223947525,
+        31.808000057935715,
+        30.46399913728237,
+        30.880000442266464,
+        30.368000268936157,
+        31.679999083280563,
+        30.880000442266464,
+        30.912000685930252,
+        30.527999624609947,
+        31.072000041604042,
+        31.199999153614044
+      ]
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 40.09599983692169,
+      "candidate_us": 30.767999589443207,
+      "baseline_samples": [
+        40.063999593257904,
+        40.511999279260635,
+        39.264000952243805,
+        39.135999977588654,
+        39.23200070858002,
+        39.61599990725517,
+        39.93599861860275,
+        40.76800122857094,
+        40.25600105524063,
+        40.70400074124336,
+        40.32000154256821,
+        39.29600119590759,
+        40.063999593257904,
+        41.08799993991852,
+        40.383998304605484,
+        40.70400074124336,
+        39.61599990725517,
+        40.383998304605484,
+        40.12800008058548,
+        39.583999663591385
+      ],
+      "candidate_samples": [
+        32.86400064826012,
+        30.400000512599945,
+        31.136000528931618,
+        30.432000756263733,
+        31.5839983522892,
+        30.592000111937523,
+        30.6560005992651,
+        30.62400035560131,
+        30.7839997112751,
+        31.39200061559677,
+        30.912000685930252,
+        30.751999467611313,
+        31.231999397277832,
+        30.527999624609947,
+        30.848000198602676,
+        30.62400035560131,
+        30.880000442266464,
+        30.33600002527237,
+        31.55200183391571,
+        30.46399913728237
+      ]
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 39.96799886226654,
+      "candidate_us": 30.848000198602676,
+      "baseline_samples": [
+        40.608000010252,
+        40.44799879193306,
+        39.903998374938965,
+        39.64800015091896,
+        39.39199820160866,
+        40.32000154256821,
+        40.57599976658821,
+        39.99999910593033,
+        39.744000881910324,
+        39.93599861860275,
+        40.863998234272,
+        39.903998374938965,
+        39.903998374938965,
+        40.063999593257904,
+        40.063999593257904,
+        39.93599861860275,
+        39.8080013692379,
+        39.39199820160866,
+        40.192000567913055,
+        40.383998304605484
+      ],
+      "candidate_samples": [
+        31.072000041604042,
+        30.6560005992651,
+        31.231999397277832,
+        30.7839997112751,
+        30.848000198602676,
+        31.520001590251923,
+        31.072000041604042,
+        31.168000772595406,
+        31.295999884605408,
+        30.527999624609947,
+        31.199999153614044,
+        30.719999223947525,
+        30.6560005992651,
+        30.848000198602676,
+        31.5839983522892,
+        30.6560005992651,
+        31.136000528931618,
+        30.592000111937523,
+        30.719999223947525,
+        30.81599995493889
+      ]
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 39.92000035941601,
+      "candidate_us": 30.672000721096992,
+      "baseline_samples": [
+        39.77600112557411,
+        40.12800008058548,
+        40.800001472234726,
+        40.28800129890442,
+        39.872001856565475,
+        39.744000881910324,
+        39.96799886226654,
+        39.872001856565475,
+        40.64000025391579,
+        40.22400081157684,
+        39.29600119590759,
+        39.423998445272446,
+        40.063999593257904,
+        40.063999593257904,
+        39.744000881910324,
+        39.872001856565475,
+        39.8080013692379,
+        40.44799879193306,
+        39.29600119590759,
+        40.800001472234726
+      ],
+      "candidate_samples": [
+        30.912000685930252,
+        30.46399913728237,
+        30.880000442266464,
+        30.62400035560131,
+        30.81599995493889,
+        30.6560005992651,
+        31.295999884605408,
+        30.592000111937523,
+        30.97599931061268,
+        30.368000268936157,
+        30.49599938094616,
+        30.400000512599945,
+        30.912000685930252,
+        30.527999624609947,
+        30.688000842928886,
+        30.49599938094616,
+        30.688000842928886,
+        30.527999624609947,
+        30.94400092959404,
+        30.848000198602676
+      ]
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 1,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "dist": "coherent",
+        "load": "verify 1",
+        "weight": 16,
+        "seed": 608
+      },
+      "baseline_us": 40.24000093340874,
+      "candidate_us": 30.943999998271465,
+      "baseline_samples": [
+        40.352001786231995,
+        39.96799886226654,
+        40.672000497579575,
+        40.64000025391579,
+        39.5519994199276,
+        39.744000881910324,
+        40.54399952292442,
+        40.64000025391579,
+        40.44799879193306,
+        40.54399952292442,
+        39.712000638246536,
+        39.77600112557411,
+        40.73600098490715,
+        39.68000039458275,
+        40.063999593257904,
+        40.22400081157684,
+        40.25600105524063,
+        40.41599854826927,
+        40.22400081157684,
+        39.23200070858002
+      ],
+      "candidate_samples": [
+        31.968001276254654,
+        30.688000842928886,
+        31.231999397277832,
+        30.81599995493889,
+        31.840000301599503,
+        30.33600002527237,
+        31.10400028526783,
+        30.97599931061268,
+        31.10400028526783,
+        30.912000685930252,
+        31.072000041604042,
+        30.751999467611313,
+        31.679999083280563,
+        30.6560005992651,
+        31.039999797940254,
+        30.7839997112751,
+        32.22399950027466,
+        30.527999624609947,
+        30.527999624609947,
+        30.400000512599945
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 204.75199818611145,
+      "candidate_us": 197.39200174808502,
+      "baseline_samples": [
+        207.07200467586517,
+        203.64800095558167,
+        204.22400534152985,
+        204.54399287700653,
+        205.79199492931366,
+        205.4080069065094,
+        203.71200144290924,
+        205.08800446987152,
+        204.67199385166168,
+        204.44799959659576,
+        203.87199521064758,
+        205.76000213623047,
+        205.05599677562714,
+        204.22400534152985,
+        205.6960016489029,
+        203.19999754428864,
+        204.83200252056122,
+        204.0639966726303,
+        205.1520049571991,
+        205.21600544452667
+      ],
+      "candidate_samples": [
+        198.7520009279251,
+        197.37599790096283,
+        197.28000462055206,
+        197.56799936294556,
+        196.48000597953796,
+        197.66399264335632,
+        196.83200120925903,
+        196.03200256824493,
+        196.8960016965866,
+        195.99999487400055,
+        196.25599682331085,
+        197.7279931306839,
+        197.60000705718994,
+        196.79999351501465,
+        195.93599438667297,
+        197.91999459266663,
+        197.66399264335632,
+        199.3280053138733,
+        197.40800559520721,
+        197.50399887561798
+      ]
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 204.79999482631683,
+      "candidate_us": 197.88800179958344,
+      "baseline_samples": [
+        204.99199628829956,
+        205.1199972629547,
+        205.59999346733093,
+        203.5519927740097,
+        206.496000289917,
+        205.47200739383698,
+        204.99199628829956,
+        204.6079933643341,
+        203.61599326133728,
+        205.9199959039688,
+        204.99199628829956,
+        206.81600272655487,
+        204.25599813461304,
+        203.39199900627136,
+        204.3839991092682,
+        203.36000621318817,
+        204.0960043668747,
+        204.25599813461304,
+        204.0960043668747,
+        206.08000457286835
+      ],
+      "candidate_samples": [
+        200.25600492954254,
+        198.91199469566345,
+        196.96000218391418,
+        198.0160027742386,
+        196.22400403022766,
+        197.88800179958344,
+        196.8960016965866,
+        199.10399615764618,
+        197.88800179958344,
+        197.4399983882904,
+        196.76800072193146,
+        197.9839950799942,
+        196.57599925994873,
+        196.99199497699738,
+        198.08000326156616,
+        198.36799800395966,
+        196.73599302768707,
+        197.50399887561798,
+        198.14400374889374,
+        198.36799800395966
+      ]
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 204.78399842977524,
+      "candidate_us": 197.40799814462662,
+      "baseline_samples": [
+        205.4399996995926,
+        204.22400534152985,
+        204.25599813461304,
+        204.79999482631683,
+        204.96000349521637,
+        204.70400154590607,
+        203.64800095558167,
+        205.08800446987152,
+        204.44799959659576,
+        205.53599298000336,
+        203.5199999809265,
+        204.8960030078888,
+        205.37599921226501,
+        204.19199764728546,
+        205.05599677562714,
+        204.76800203323364,
+        204.3839991092682,
+        205.24799823760986,
+        204.8639953136444,
+        204.73599433898926
+      ],
+      "candidate_samples": [
+        201.05600357055664,
+        198.65599274635315,
+        197.1839964389801,
+        199.61600005626678,
+        196.25599682331085,
+        197.1520036458969,
+        196.6720074415207,
+        199.45600628852844,
+        199.13600385189056,
+        198.4959989786148,
+        197.4399983882904,
+        196.99199497699738,
+        197.1520036458969,
+        197.7279931306839,
+        197.37599790096283,
+        197.37599790096283,
+        197.31199741363525,
+        197.60000705718994,
+        197.79199361801147,
+        196.0960030555725
+      ]
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 204.46400344371796,
+      "candidate_us": 196.99200242757797,
+      "baseline_samples": [
+        204.96000349521637,
+        204.79999482631683,
+        203.16800475120544,
+        204.25599813461304,
+        203.8400024175644,
+        205.4399996995926,
+        204.0960043668747,
+        203.0400037765503,
+        203.87199521064758,
+        205.47200739383698,
+        206.14400506019592,
+        205.34400641918182,
+        205.1520049571991,
+        204.16000485420227,
+        203.19999754428864,
+        205.34400641918182,
+        204.99199628829956,
+        204.44799959659576,
+        204.48000729084015,
+        203.10400426387787
+      ],
+      "candidate_samples": [
+        199.8080015182495,
+        199.20000433921814,
+        196.6399997472763,
+        195.68000733852386,
+        196.51199877262115,
+        196.57599925994873,
+        197.4399983882904,
+        196.70400023460388,
+        196.83200120925903,
+        198.08000326156616,
+        198.7520009279251,
+        198.11199605464935,
+        198.14400374889374,
+        196.96000218391418,
+        197.02400267124176,
+        196.60800695419312,
+        196.383997797966,
+        198.5280066728592,
+        195.51999866962433,
+        198.04799556732178
+      ]
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 16,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 16",
+        "weight": 16,
+        "seed": 610
+      },
+      "baseline_us": 204.54400032758713,
+      "candidate_us": 197.1840038895607,
+      "baseline_samples": [
+        204.352006316185,
+        204.0960043668747,
+        203.5199999809265,
+        204.57600057125092,
+        203.74399423599243,
+        204.92799580097198,
+        204.99199628829956,
+        205.1839977502823,
+        204.51200008392334,
+        204.76800203323364,
+        203.99999618530273,
+        207.0399969816208,
+        204.352006316185,
+        204.44799959659576,
+        205.72799444198608,
+        205.21600544452667,
+        206.59199357032776,
+        204.12799715995789,
+        203.45599949359894,
+        204.70400154590607
+      ],
+      "candidate_samples": [
+        198.7839937210083,
+        198.2399970293045,
+        197.56799936294556,
+        197.1520036458969,
+        197.88800179958344,
+        196.19199633598328,
+        197.28000462055206,
+        196.0960030555725,
+        197.60000705718994,
+        195.51999866962433,
+        197.952002286911,
+        197.2160041332245,
+        195.68000733852386,
+        197.952002286911,
+        197.05599546432495,
+        196.96000218391418,
+        197.08800315856934,
+        198.36799800395966,
+        196.6720074415207,
+        196.22400403022766
+      ]
+    },
+    {
+      "candidate": "control",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 392.43200421333313,
+      "candidate_us": 384.94399189949036,
+      "baseline_samples": [
+        394.8799967765808,
+        391.4879858493805,
+        392.4480080604553,
+        392.9600119590759,
+        391.4240002632141,
+        392.8320109844208,
+        390.3680145740509,
+        393.5680091381073,
+        392.2879993915558,
+        391.07200503349304,
+        393.21601390838623,
+        392.60798692703247,
+        392.60798692703247,
+        392.41600036621094,
+        392.9919898509979,
+        391.2639915943146,
+        394.463986158371,
+        392.12799072265625,
+        391.07200503349304,
+        390.75198769569397
+      ],
+      "candidate_samples": [
+        386.8800103664398,
+        382.9120099544525,
+        383.4879994392395,
+        386.6240084171295,
+        385.2800130844116,
+        386.7200016975403,
+        384.95999574661255,
+        384.5120072364807,
+        385.343998670578,
+        384.92798805236816,
+        386.59200072288513,
+        383.4879994392395,
+        386.01601123809814,
+        383.5200071334839,
+        384.0320110321045,
+        384.38400626182556,
+        383.7119936943054,
+        385.888010263443,
+        384.70399379730225,
+        385.79198718070984
+      ]
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 392.304003238678,
+      "candidate_us": 385.21599769592285,
+      "baseline_samples": [
+        393.44000816345215,
+        390.04799723625183,
+        392.192006111145,
+        392.9919898509979,
+        390.5920088291168,
+        392.38399267196655,
+        392.15999841690063,
+        391.4560079574585,
+        392.41600036621094,
+        391.80800318717957,
+        391.4879858493805,
+        393.44000816345215,
+        392.89599657058716,
+        392.5119936466217,
+        392.767995595932,
+        392.4799859523773,
+        390.6239867210388,
+        393.0880129337311,
+        392.2240138053894,
+        391.1679983139038
+      ],
+      "candidate_samples": [
+        385.0559890270233,
+        384.64000821113586,
+        385.919988155365,
+        384.67198610305786,
+        386.30399107933044,
+        385.6959939002991,
+        385.79198718070984,
+        386.6879940032959,
+        386.0799968242645,
+        384.223997592926,
+        385.24800539016724,
+        383.5200071334839,
+        385.47199964523315,
+        385.18399000167847,
+        383.64800810813904,
+        385.5679929256439,
+        384.0639889240265,
+        385.6320083141327,
+        383.67998600006104,
+        383.7760090827942
+      ]
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 392.0319974422455,
+      "candidate_us": 384.94399189949036,
+      "baseline_samples": [
+        390.9440040588379,
+        392.35201478004456,
+        391.9360041618347,
+        391.29599928855896,
+        394.01599764823914,
+        392.4480080604553,
+        391.29599928855896,
+        394.6880102157593,
+        390.30399918556213,
+        391.2000060081482,
+        393.21601390838623,
+        392.15999841690063,
+        392.12799072265625,
+        390.8799886703491,
+        392.8000032901764,
+        390.8799886703491,
+        391.64799451828003,
+        393.0880129337311,
+        390.720009803772,
+        392.35201478004456
+      ],
+      "candidate_samples": [
+        386.3680064678192,
+        385.15201210975647,
+        385.72800159454346,
+        385.6000006198883,
+        383.90401005744934,
+        387.61600852012634,
+        384.73600149154663,
+        383.83999466896057,
+        385.24800539016724,
+        384.92798805236816,
+        381.6959857940674,
+        384.6080005168915,
+        385.6000006198883,
+        382.84799456596375,
+        383.87200236320496,
+        385.0879967212677,
+        384.4799995422363,
+        383.67998600006104,
+        384.95999574661255,
+        385.6639862060547
+      ]
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 392.41600036621094,
+      "candidate_us": 385.1200044155121,
+      "baseline_samples": [
+        392.92800426483154,
+        392.67200231552124,
+        392.63999462127686,
+        392.7040100097656,
+        390.0800049304962,
+        392.67200231552124,
+        391.84001088142395,
+        392.767995595932,
+        392.8000032901764,
+        392.35201478004456,
+        392.41600036621094,
+        392.35201478004456,
+        392.2240138053894,
+        391.4560079574585,
+        394.27199959754944,
+        390.9760117530823,
+        392.192006111145,
+        393.75999569892883,
+        391.87198877334595,
+        392.41600036621094
+      ],
+      "candidate_samples": [
+        386.6240084171295,
+        385.888010263443,
+        387.29599118232727,
+        384.0959966182709,
+        386.1120045185089,
+        386.3680064678192,
+        384.67198610305786,
+        385.0879967212677,
+        384.3519985675812,
+        384.4799995422363,
+        385.6639862060547,
+        386.78398728370667,
+        384.64000821113586,
+        385.3119909763336,
+        385.0240111351013,
+        383.9679956436157,
+        384.4799995422363,
+        384.3519985675812,
+        385.15201210975647,
+        385.18399000167847
+      ]
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "case": {
+        "batch": 32,
+        "ctx": 80000,
+        "heads": "tp8",
+        "layer": "full",
+        "page": 1,
+        "q_len": 8,
+        "spread": "agentic",
+        "dist": "coherent",
+        "load": "verify 32",
+        "weight": 16,
+        "seed": 612
+      },
+      "baseline_us": 391.3920074701309,
+      "candidate_us": 384.8479986190796,
+      "baseline_samples": [
+        392.32000708580017,
+        391.2000060081482,
+        390.78399538993835,
+        391.2320137023926,
+        392.0319974422455,
+        392.2559916973114,
+        391.4560079574585,
+        391.07200503349304,
+        391.5199935436249,
+        391.55200123786926,
+        391.2639915943146,
+        392.5119936466217,
+        390.6880021095276,
+        391.2000060081482,
+        391.36001467704773,
+        390.9440040588379,
+        391.4240002632141,
+        392.0319974422455,
+        391.2000060081482,
+        391.7120099067688
+      ],
+      "candidate_samples": [
+        386.1120045185089,
+        384.0959966182709,
+        384.0320110321045,
+        385.43999195098877,
+        385.24800539016724,
+        386.33599877357483,
+        386.1120045185089,
+        383.67998600006104,
+        384.6080005168915,
+        386.24000549316406,
+        384.2560052871704,
+        384.16001200675964,
+        385.21599769592285,
+        384.3199908733368,
+        385.0240111351013,
+        385.0559890270233,
+        385.18399000167847,
+        384.0959966182709,
+        384.44799184799194,
+        384.67198610305786
+      ]
+    }
+  ],
+  "weight_fields": {},
+  "case_fields": {
+    "{\"batch\": 4, \"ctx\": 3000, \"heads\": \"tp8\", \"layer\": \"full\", \"seed\": 1703}": {},
+    "{\"batch\": 8, \"ctx\": 8192, \"heads\": \"dp\", \"layer\": \"full\", \"seed\": 1704, \"spread\": \"mixed\"}": {},
+    "{\"batch\": 2, \"ctx\": 100000, \"heads\": \"tp8\", \"layer\": \"full\", \"page\": 1, \"q_len\": 8, \"seed\": 1705}": {},
+    "{\"batch\": 4, \"ctx\": 6000, \"dist\": \"edges\", \"heads\": \"tp8\", \"layer\": \"full\", \"q_len\": 8, \"seed\": 1707}": {},
+    "{\"batch\": 1, \"ctx\": 1048576, \"heads\": \"tp8\", \"layer\": \"full\", \"q_len\": 8, \"seed\": 1708}": {},
+    "{\"batch\": 2, \"ctx\": 9000, \"heads\": \"tp8\", \"kv_scale\": 0.015625, \"layer\": \"full\", \"seed\": 1710}": {},
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"soft\", \"heads\": \"tp8\", \"layer\": \"full\", \"seed\": 1711, \"spread\": \"mixed\"}": {},
+    "{\"batch\": 2, \"ctx\": 20000, \"dist\": \"soft\", \"heads\": \"dp\", \"layer\": \"full\", \"q_len\": 8, \"seed\": 1713}": {},
+    "{\"batch\": 4, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"page\": 1, \"seed\": 1714, \"spread\": \"mixed\"}": {},
+    "{\"batch\": 2, \"ctx\": 20000, \"dist\": \"coherent\", \"heads\": \"dp\", \"layer\": \"full\", \"q_len\": 8, \"seed\": 1715}": {},
+    "{\"batch\": 9, \"ctx\": 5000, \"dist\": \"soft\", \"heads\": \"tp8\", \"kv_scale\": 0.015625, \"layer\": \"full\", \"page\": 64, \"q_len\": 8, \"seed\": 1888, \"spread\": \"mixed\"}": {},
+    "{\"batch\": 12, \"ctx\": 9000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"page\": 1, \"q_len\": 1, \"seed\": 1889, \"spread\": \"mixed\"}": {},
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"load\": \"decode 1\", \"page\": 1, \"seed\": 602, \"weight\": 16}": {},
+    "{\"batch\": 16, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"load\": \"decode 16\", \"page\": 1, \"seed\": 604, \"spread\": \"agentic\", \"weight\": 16}": {},
+    "{\"batch\": 32, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"load\": \"decode 32\", \"page\": 1, \"seed\": 606, \"spread\": \"agentic\", \"weight\": 16}": {},
+    "{\"batch\": 1, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"load\": \"verify 1\", \"page\": 1, \"q_len\": 8, \"seed\": 608, \"weight\": 16}": {},
+    "{\"batch\": 16, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"load\": \"verify 16\", \"page\": 1, \"q_len\": 8, \"seed\": 610, \"spread\": \"agentic\", \"weight\": 16}": {},
+    "{\"batch\": 32, \"ctx\": 80000, \"dist\": \"coherent\", \"heads\": \"tp8\", \"layer\": \"full\", \"load\": \"verify 32\", \"page\": 1, \"q_len\": 8, \"seed\": 612, \"spread\": \"agentic\", \"weight\": 16}": {}
+  },
+  "calibration_us": 3.4079999895766377,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "profile_bottleneck_case": {
+    "candidate_name": "n256_b2048_w8",
+    "case": {
+      "batch": 32,
+      "ctx": 80000,
+      "heads": "tp8",
+      "layer": "full",
+      "page": 1,
+      "q_len": 8,
+      "spread": "agentic",
+      "dist": "coherent",
+      "load": "verify 32",
+      "weight": 16,
+      "seed": 612
+    },
+    "candidate_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.498ms        88.02%       1.498ms     374.418us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     149.988us         8.81%     149.988us      37.497us             4  \nvoid cutlass::device_kernel<flash::FlashAttnFwdCombi...         0.00%       0.000us         0.00%       0.000us       0.000us      15.840us         0.93%      15.840us       3.960us             4  \nvoid flash::prepare_varlen_num_blocks_kernel<2, true...         0.00%       0.000us         0.00%       0.000us       0.000us      15.745us         0.93%      15.745us       3.936us             4  \n                                         _prepare_heads         0.00%       0.000us         0.00%       0.000us       0.000us      10.048us         0.59%      10.048us       2.512us             4  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us       9.023us         0.53%       9.023us       2.256us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.232us         0.19%       3.232us       0.808us             4  \n                                        cudaGraphLaunch         4.92%     147.171us        46.77%       1.400ms     350.117us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        41.86%       1.253ms        41.86%       1.253ms       1.253ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        53.23%       1.594ms        53.23%       1.594ms     796.922us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 2.994ms\nSelf CUDA time total: 1.702ms\n",
+    "baseline_table": "-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \n                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nvoid cutlass::device_kernel<flash::enable_sm90_or_la...         0.00%       0.000us         0.00%       0.000us       0.000us       1.501ms        86.63%       1.501ms     375.167us             4  \nvoid at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     150.917us         8.71%     150.917us      37.729us             4  \nvoid flash::prepare_varlen_num_blocks_kernel<2, true...         0.00%       0.000us         0.00%       0.000us       0.000us      15.456us         0.89%      15.456us       3.864us             4  \nvoid cutlass::device_kernel<flash::FlashAttnFwdCombi...         0.00%       0.000us         0.00%       0.000us       0.000us      15.359us         0.89%      15.359us       3.840us             4  \nvoid at::native::elementwise_kernel<128, 4, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us      12.640us         0.73%      12.640us       3.160us             4  \nvoid at::native::vectorized_elementwise_kernel<8, at...         0.00%       0.000us         0.00%       0.000us       0.000us      10.014us         0.58%      10.014us       1.252us             8  \nvoid sglang::norm_gate_kernel<__nv_bfloat16, 64l, 16...         0.00%       0.000us         0.00%       0.000us       0.000us       9.409us         0.54%       9.409us       2.352us             4  \n                                _qk_rms_norm_fwd_kernel         0.00%       0.000us         0.00%       0.000us       0.000us       8.191us         0.47%       8.191us       2.048us             4  \nvoid sglang::store_kvcache_kernel<128l, 128l, 32u, t...         0.00%       0.000us         0.00%       0.000us       0.000us       5.952us         0.34%       5.952us       1.488us             4  \n                                       Memset (Unknown)         0.00%       0.000us         0.00%       0.000us       0.000us       3.584us         0.21%       3.584us       0.896us             4  \n                                        cudaGraphLaunch         4.74%     155.261us        50.36%       1.648ms     411.998us       0.000us         0.00%       0.000us       0.000us             4  \n                                Activity Buffer Request        45.62%       1.493ms        45.62%       1.493ms       1.493ms       0.000us         0.00%       0.000us       0.000us             1  \n                                  cudaDeviceSynchronize        49.64%       1.624ms        49.64%       1.624ms     812.139us       0.000us         0.00%       0.000us       0.000us             2  \n-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  \nSelf CPU time total: 3.272ms\nSelf CUDA time total: 1.732ms\n"
+  },
+  "algorithm_counts": {},
+  "compiler_diagnostics": [
+    {
+      "candidate": "control",
+      "function": "_prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 72,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 37,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "inline__finish_heads",
+      "registers": 127,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__prepare",
+      "registers": 16,
+      "spills": 0,
+      "shared": 8
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__prepare",
+      "registers": 16,
+      "spills": 0,
+      "shared": 8
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__finish",
+      "registers": 25,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__finish",
+      "registers": 39,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "control",
+      "function": "balanced__finish_heads",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "_prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__attention_inline",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__finish",
+      "registers": 72,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__finish",
+      "registers": 37,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "inline__finish_heads",
+      "registers": 127,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "balanced__prepare_heads",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "balanced__prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "_paired_n_attention",
+      "registers": 168,
+      "spills": 0,
+      "shared": 18432
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "_paired_n_attention",
+      "registers": 168,
+      "spills": 0,
+      "shared": 18432
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "_paired_n_attention",
+      "registers": 168,
+      "spills": 0,
+      "shared": 18432
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "_paired_n_attention",
+      "registers": 168,
+      "spills": 0,
+      "shared": 18432
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "_paired_n_finish",
+      "registers": 28,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "_paired_n_finish",
+      "registers": 64,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "_paired_n_finish",
+      "registers": 40,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b1024_w4",
+      "function": "_paired_n_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "_prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__attention_inline",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__finish",
+      "registers": 72,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__finish",
+      "registers": 37,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "inline__finish_heads",
+      "registers": 127,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "balanced__prepare_heads",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "balanced__prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "_paired_n_attention",
+      "registers": 168,
+      "spills": 0,
+      "shared": 18432
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "_paired_n_attention",
+      "registers": 168,
+      "spills": 0,
+      "shared": 18432
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "_paired_n_attention",
+      "registers": 168,
+      "spills": 0,
+      "shared": 18432
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "_paired_n_attention",
+      "registers": 168,
+      "spills": 0,
+      "shared": 18432
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "_paired_n_finish",
+      "registers": 25,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "_paired_n_finish",
+      "registers": 40,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "_paired_n_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n128_b512_w4",
+      "function": "_paired_n_finish",
+      "registers": 28,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "_prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__finish",
+      "registers": 72,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__finish",
+      "registers": 37,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "inline__finish_heads",
+      "registers": 127,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "balanced__prepare_heads",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "balanced__prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "_paired_n_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 34816
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "_paired_n_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 34816
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "_paired_n_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 34816
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "_paired_n_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 34816
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "_paired_n_finish",
+      "registers": 25,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "_paired_n_finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "_paired_n_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b1024_w8",
+      "function": "_paired_n_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "_prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__attention_inline",
+      "registers": 113,
+      "spills": 0,
+      "shared": 28672
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__attention_inline",
+      "registers": 109,
+      "spills": 0,
+      "shared": 8192
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__attention_inline",
+      "registers": 128,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__attention_inline",
+      "registers": 190,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__attention_inline",
+      "registers": 168,
+      "spills": 0,
+      "shared": 22528
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__attention_inline",
+      "registers": 238,
+      "spills": 0,
+      "shared": 45056
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__finish",
+      "registers": 30,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__finish",
+      "registers": 72,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__finish",
+      "registers": 37,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__finish",
+      "registers": 80,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "inline__finish_heads",
+      "registers": 127,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "balanced__prepare_heads",
+      "registers": 22,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "balanced__prepare_heads",
+      "registers": 20,
+      "spills": 0,
+      "shared": 0
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "_paired_n_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 34816
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "_paired_n_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 34816
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "_paired_n_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 34816
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "_paired_n_attention",
+      "registers": 128,
+      "spills": 0,
+      "shared": 34816
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "_paired_n_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "_paired_n_finish",
+      "registers": 48,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "_paired_n_finish",
+      "registers": 72,
+      "spills": 0,
+      "shared": 1024
+    },
+    {
+      "candidate": "n256_b2048_w8",
+      "function": "_paired_n_finish",
+      "registers": 32,
+      "spills": 0,
+      "shared": 1024
+    }
+  ],
+  "elapsed_s": 48.944396755,
+  "case_scope": "layer=full",
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_attention_decode",
+  "source_files": {
+    "control": {
+      "path": "experiments/sources/a4c2ab31edd4cdf088df05e6035a13274a86171bf65a266af0ce1141a1802d69.py",
+      "sha256": "a4c2ab31edd4cdf088df05e6035a13274a86171bf65a266af0ce1141a1802d69"
+    },
+    "n128_b1024_w4": {
+      "path": "experiments/sources/52cc23cd3427f715ca8e259b1812d90ba14e8884d3185e0d9493ec48d8448208.py",
+      "sha256": "52cc23cd3427f715ca8e259b1812d90ba14e8884d3185e0d9493ec48d8448208"
+    },
+    "n128_b512_w4": {
+      "path": "experiments/sources/fea2d7728a04027fa6ab7d79aff209bc60bdffb14539ce8d71a54b9296716b08.py",
+      "sha256": "fea2d7728a04027fa6ab7d79aff209bc60bdffb14539ce8d71a54b9296716b08"
+    },
+    "n256_b1024_w8": {
+      "path": "experiments/sources/a257f0f710b00ee2de47a8431e3e3bfde8201a70effb63aafa3653f0a83dfb36.py",
+      "sha256": "a257f0f710b00ee2de47a8431e3e3bfde8201a70effb63aafa3653f0a83dfb36"
+    },
+    "n256_b2048_w8": {
+      "path": "experiments/sources/367a8b6dee3569ea0f2d24ef18ad083f36df3069748c52e1d64c7f57c30a6bcf.py",
+      "sha256": "367a8b6dee3569ea0f2d24ef18ad083f36df3069748c52e1d64c7f57c30a6bcf"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

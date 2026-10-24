@@ -1,0 +1,35 @@
+{
+  "status": "All77checks passed; all6variants slower than current control, rejected",
+  "basis": "Previous lookup scalar GEMV tied M1 native; new exact paired BF16 exponent-shift conversion removes per-value warp shuffles. Matrix version improved versus prior custom but lost to native; this tests scalar kernel separately.",
+  "builder": "work/build_moe_scaled_gemv.py",
+  "runner": "work/run_moe_scaled_gemv.py",
+  "precompile": "outputs/moe-scaled-gemv-precompile.json",
+  "variants": [
+    "scaled_w4",
+    "scaled_w8",
+    "scaled_w16",
+    "group_w4",
+    "group_w8",
+    "group_w16"
+  ],
+  "control": "outputs/moe_cuda_align.py",
+  "scope": "M1 custom only; unchanged current best fallback otherwise. Lossless local32expert NVFP4nibble packing; scaled version appliesFP8SFbefore FP32accumulation;groupversion appliesSFafter each16-valueFP32sum. Bothrestore2^8at epilogue.",
+  "validation": "All correctness cases before timing; expected77checks.",
+  "updated_at": "2026-10-24T10:14:12.359938+09:00",
+  "result": "outputs/moe-scaled-gemv.json",
+  "local_scores": {
+    "control": 1.161,
+    "group_w4": 1.1162,
+    "group_w8": 1.1161,
+    "group_w16": 1.1145,
+    "scaled_w4": 1.1133,
+    "scaled_w16": 1.112,
+    "scaled_w8": 1.1109
+  },
+  "m1_us_including_graph_overhead": {
+    "control": 81.728,
+    "best_new_group_w8": 102.096
+  },
+  "next": "Do not repeat scalar paired BF16 conversion or MMA scaled-bit variants without new bottleneck evidence. Earlier warp lookup was faster; both remain slower than current native fallback.",
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "8290bde5fbb24dbd",
+  "board": "muse_decode_layer",
+  "mode": "run",
+  "status": "queued",
+  "created_at": 1792805122.8677022,
+  "content_hash": "4b6bbd6430826025836ac1d42d33fca6638fda44a52f7fa66116447971d857f9",
+  "duplicate_of": null,
+  "archive_note": "Selected fields from official CLI JSON; logs and host paths omitted."
+}

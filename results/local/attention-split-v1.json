@@ -1,0 +1,36 @@
+{
+  "environment": {
+    "gpu": "NVIDIA H200",
+    "torch": "2.14.1+cu130",
+    "triton": "3.8.0",
+    "python": "3.12.3",
+    "cuda": "13.0"
+  },
+  "validation": [
+    {
+      "candidate": "attention-split-v1",
+      "case": {
+        "seed": 1700,
+        "batch": 1,
+        "ctx": 10,
+        "heads": "tp8",
+        "layer": "sliding"
+      },
+      "ok": false,
+      "message": "attention-split-v1: CompilationError: at 10:6:\ndef _attention(Q,KC,VC,KS,VS,PT,SEQ,P,LSE,\n               HQ:tl.constexpr,HK:tl.constexpr,QL:tl.constexpr,PAGE:tl.constexpr,MAXP:tl.constexpr,\n               WINDOW:tl.constexpr,SCALE:tl.constexpr,SPLITS:tl.constexpr,CHUNK:tl.constexpr,\n               BM:tl.constexpr,BN:tl.constexpr):\n    b=tl.program_id(0);h=tl.program_id(1);s=tl.program_id(2)\n    group:tl.constexpr=HQ//HK\n    r=tl.arange(0,BM);d=tl.arange(0,64);nn=tl.arange(0,BN)\n    token=r//group;head=h*group+r%group\n    seq=tl.load(SEQ+b)\n    q=tl.load(Q+((b*QL+token[:,None])*HQ+head[:,None])*64+d[None,:],r[:,None]<QL*group,0).to(tl.bfloat16)\n      ^\ncannot cast int32[constexpr[16], constexpr[64]] to <['16', '64'], fp8e4nv>"
+    }
+  ],
+  "timings": [],
+  "calibration_us": 3.0720001086592674,
+  "timing_method": "Events inside a replayed CUDA graph, after a 128MiB cache read; subtract measured empty-graph event interval.",
+  "elapsed_s": 42.128247589999994,
+  "image": "lmsysorg/sglang@sha256:8cfc5a72cb296771f5f8a4a4688cb6d05685610a830cbb616fa4ab0eb7bb2b0a",
+  "problem": "muse_attention_decode",
+  "source_files": {
+    "attention-split-v1": {
+      "path": "experiments/sources/8c46217a6bc3e413484fee1b60dfdf298fea080c9173e5b73fa5cd583c701325.py",
+      "sha256": "8c46217a6bc3e413484fee1b60dfdf298fea080c9173e5b73fa5cd583c701325"
+    }
+  },
+  "archive_note": "Historical local measurement; not an official leaderboard score. Source files are content-addressed and unchanged."
+}

@@ -1,0 +1,37 @@
+{
+  "status": "No candidate promoted; route-loop scheduling also ties at M1 and loses at M8",
+  "experiments": [
+    {
+      "result": "outputs/moe-warp-gemv.json",
+      "checks": "44/44 passed",
+      "m1_best_us": 128.9,
+      "m1_control_us": 87.28
+    },
+    {
+      "result": "outputs/moe-warp-group.json",
+      "checks": "44/44 passed",
+      "m1_best_us": 116.19,
+      "m1_control_us": 87.65
+    },
+    {
+      "result": "outputs/moe-warp-lookup.json",
+      "checks": "44/44 passed",
+      "m1_best_us": 86.58,
+      "m1_control_us": 86.98,
+      "decision": "tie within noise; M8 slower, no promotion"
+    },
+    {
+      "result": "outputs/moe-warp-persistent.json",
+      "checks": "44/44 passed",
+      "m1_best_us": 87.12,
+      "m1_control_us": 87.66,
+      "decision": "tie within noise, M8 slower; reject"
+    }
+  ],
+  "codegen_evidence": "outputs/moe-warp-codegen-summary.json",
+  "next": "Explore a different bottleneck, such as dense BF16 single-token warp GEMV, or inspect attention tiling. Do not repeat scalar FP4 variants without a distinct measured bottleneck.",
+  "compile_session": null,
+  "compile_script": "work/precompile_moe_warp_persistent.py",
+  "gpu_runner": null,
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}

@@ -1,0 +1,42 @@
+{
+  "updated_at": "2026-10-24T09:16:18.910604+09:00",
+  "status": "both serial and batched WGMMA rejected; no source promoted",
+  "probe": {
+    "evidence": "outputs/wgmma-probe.json",
+    "passed": 12,
+    "total": 12
+  },
+  "serial": {
+    "evidence": "outputs/moe-wgmma.json",
+    "passed": 44,
+    "total": 44,
+    "scores": {
+      "control": 1.0894,
+      "second": 0.3204,
+      "first": 0.178,
+      "both": 0.1288
+    },
+    "m1_us": {
+      "control": 87.23,
+      "second": 227.87,
+      "first": 422.78,
+      "both": 563.28
+    },
+    "promoted": false
+  },
+  "hypothesis": "Serial source waits after each K16 WGMMA pair. Batch 4 or 8 K16 slices with distinct register operands to expose independent loads and reduce synchronization. Preserve FP32 accumulation, NVFP4 storage, and BF16 activation boundaries.",
+  "prepared": [],
+  "precision": "FP4 times FP8 block scale converted to BF16 inside each call, original FP32 global scale applied to result. No persistent dequantized weights.",
+  "pipeline": {
+    "evidence": "outputs/moe-wgmma-pipeline.json",
+    "passed": 33,
+    "total": 33,
+    "scores": {
+      "control": 1.0931,
+      "s4": 0.1269,
+      "s8": 0.145
+    },
+    "conclusion": "Batching 4 or 8 K16 operations does not resolve the performance gap. Do not repeat this layout without new evidence."
+  },
+  "archive_note": "Historical research note. Status wording reflects its original timestamp; experiments are now stopped. Some work/ references name unpublished construction scripts or upstream inspection files."
+}
